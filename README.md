@@ -1,5 +1,6 @@
 # 100DaysOfCode
 learnings and projects done/doing during 100Days Of Code
+
 [DAY1](#Day1) [DAY2](#Day2) 
 ## Day1
 ### DOCTYPE
@@ -61,6 +62,9 @@ It helps tell search engines what the topic of the page is. Meta keywords are di
 <meta name="keywords" content="keyword , secondary keyword , final keyword" >
 </head>
 ```
+
+[Back to top](#100DaysOfCode)
+
 ## Day2
 ### Emoji as a text
 we can include emoji in anywhere on document using decimal or hexadecimal reference.
