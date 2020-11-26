@@ -5,7 +5,6 @@ DOCTYPE declaration in html version 5 (HTML5). This ensures that the browser mak
 ```
 ## Language attribute
 The HTML lang attribute is used to identify the language of text content on the web. This information helps search engines return language specific results, and it is also used by screen readers that switch language profiles to provide the correct accent and pronunciation.
-(https://www.sitepoint.com/iso-2-letter-language-codes OR search iso language code)
 The lang attribute is forgotten surprisingly often, perhaps because it makes no apparent difference unless you use a screen reader or you are a search engine.
 ```
 <html lang="en">
@@ -61,7 +60,8 @@ It helps tell search engines what the topic of the page is. Meta keywords are di
 ## Emoji as a text
 we can include emoji in anywhere on document using decimal or hexadecimal reference.
 Decimal(DEC) or Hexadecimal(HEX) reference must start the entity number with &# and end it with ; (semicolon).
-following code includes yellow heart in title using decimal code reference.
+
+** following code includes yellow heart in title using decimal code reference.**
 ```
 <head>
 <title>This is TITLE &#128155;</title>
