@@ -56,7 +56,7 @@ Search engines use your description to determine the relevancy with the keywords
 <meta name="description" content="summary the describing the web page including it's all key word appearedin title " >
 </head>
 ```
-### keywords
+### Keywords
 It helps tell search engines what the topic of the page is. Meta keywords are distinguished from keywords because they appear "behind the scenes" in the source code of your page.
 ```
 <head>
@@ -80,4 +80,47 @@ Decimal(DEC) or Hexadecimal(HEX) reference must start the entity number with &# 
 <meta charset="utf-8">
 </head>
 ```
-###
+### Author
+It defines the name of the document's author. It is important because it gives credit to the person that made the website.
+```
+<meta name="author" content="Author Name" >
+```
+### Viewport
+Viewport elements gives the browser instructions on how to control the page's dimensions and scaling. The initial-scale=1 part sets the initial zoom level when the page is first loaded by the browser.
+```
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+### Canonical
+The Canonical meta tag is actually a link element. When you have duplicate content on your website or pages that are very similar to one another, it tells Google which page is the original and should have traffic driven to it.
+```
+<meta rel="canonical" href="https://css-tricks.com/essential-meta-tags-social-media" >
+```
+### Social media preview
+These meta tags are only used for Social media preview. These tags dosen't affect your SEO.
+#### Og:Title
+Og:Title only appear in social media sharing peview.
+```
+<meta property="og:title" content="European Travel Destinations">
+
+```
+#### Og:Description
+Og:Description only appear in social media sharing peview.
+```
+<meta property="og:description" content="Offering tour packages for individuals or groups.">
+```
+#### Og:image
+Og:image appear in social media sharing peview. This image is mostly overview or preview of the webpage.
+The URL of the image for your object. It should be at least 600×315 pixels, but 1200×630 or larger is preferred (up to 5MB). Stay close to a 1.91:1 aspect ratio to avoid cropping.
+```
+<meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg">
+```
+#### Og:url
+Og:url appear in social media sharing peview.
+```
+<meta property="og:url" content="http://euro-travel-example.com/index.htm">
+```
+#### twitter:card 
+if we dosent include this Sometime description won't appear and Og:image won't appear fully ony square sizely cropped center part of the image only displayed like icon.
+```
+<meta name="twitter:card" content="summary_large_image">
+```
