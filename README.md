@@ -120,7 +120,7 @@ Og:url appear in social media sharing peview.
 <meta property="og:url" content="http://euro-travel-example.com/index.htm">
 ```
 #### twitter:card 
-if we dosent include this Sometime description won't appear and Og:image won't appear fully ony square sizely cropped center part of the image only displayed like icon.
+if we dosent include this Sometime description won't appear and Og:image won't appear fully only square sizely cropped center part of the image is displayed like icon.
 ```
 <meta name="twitter:card" content="summary_large_image">
 ```
