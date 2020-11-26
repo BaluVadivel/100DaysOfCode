@@ -61,7 +61,7 @@ It helps tell search engines what the topic of the page is. Meta keywords are di
 we can include emoji in anywhere on document using decimal or hexadecimal reference.
 Decimal(DEC) or Hexadecimal(HEX) reference must start the entity number with &# and end it with ; (semicolon).
 
-** following code includes yellow heart in title using decimal code reference.**
+**following code includes yellow heart in title using decimal code reference.**
 ```
 <head>
 <title>This is TITLE &#128155;</title>
