@@ -1,7 +1,7 @@
 # 100DaysOfCode
 learnings and projects done/doing during 100Days Of Code
 
-**[DAY1](#Day1)    [DAY2](#Day2)** 
+**[DAY1](#Day1) ---- [DAY2](#Day2)** 
 
 ## Day1
 ### DOCTYPE
