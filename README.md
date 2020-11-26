@@ -1,7 +1,8 @@
 # 100DaysOfCode
 learnings and projects done/doing during 100Days Of Code
 
-[DAY1](#Day1) [DAY2](#Day2) 
+**[DAY1](#Day1)    [DAY2](#Day2)** 
+
 ## Day1
 ### DOCTYPE
 DOCTYPE declaration in html version 5 (HTML5). This ensures that the browser makes a relevant and specific rendering mode that is compatible with HTML5 Document.
