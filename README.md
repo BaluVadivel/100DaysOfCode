@@ -272,3 +272,5 @@ output:<p>send your <del>contact</del> <ins>whatsapp</ins> number</p>
 <br>Soldout</p>
 ```
 output:<p><s>only few stocks left</s><br>Sold out</p>
+
+[Back to top](#100DaysOfCode)
