@@ -3,7 +3,7 @@ learnings and projects done/doing during 100Days Of Code.
 
 **Here we can see all my 100days learning without going into large number of folders**
 
-**[DAY1](#Day1) - [DAY2](#Day2)** 
+**[DAY1](#Day1) - [DAY2](#Day2) - [DAY3](#Day3)** 
 
 ## Day1
 ### DOCTYPE
@@ -146,3 +146,131 @@ if we dosent include this Sometime description won't appear and Og:image won't a
 ```
 
 [Back to top](#100DaysOfCode)
+
+## Day1
+### Heading Tags
+Heading tags has six sizes
+```
+<h1>h1 tag</h1> --> h1 tag
+<h2>h2 tag</h2> --> h2 tag
+<h3>h3 tag</h3> --> h3 tag
+<h4>h4 tag</h4> --> h4 tag
+<h5>h5 tag</h5> --> h5 tag
+<h6>h6 tag</h6> --> h6 tag
+
+```
+### Bold, italic and paragraph
+Bold and italic with paragraph tag.Bold and Italic tags dosen't have any meaning. Only for presentation.
+
+```
+<p><b>This</b> is a <i>paragraph</i></p>
+```
+output:
+**This** is a *paragraph*.
+
+### Line Break
+
+
+`<br>`this tag give line break (new line).This tag has no closing tag.
+
+### Horizontal rule
+Horizontal rule `<hr>` This tag has no closing tag.
+### Strong, Emphasis
+Strong and Emphasis tags have meaning. These two tags give importance to words.`<strong>` tag for highlight particular word `<i>` tag differentiate particular word.
+```
+<p><strong>This</strong> is a <em>paragraph</em></p>
+```
+output:
+**This** is a *paragraph.*
+
+### Superscript
+```
+a<sup>2</sup>
+```
+output:
+a<sup>2</sup>
+### Subscript
+```
+H<sub>2</sub>O
+```
+H<sub>2</sub>O
+
+### Quote
+quote tag giv double quotes
+```
+<q>Double quotes</q>
+```
+output:
+"Double quotes"
+### Block Quote
+This gives empty space on left side. Optionally we can give cite attribute if that section is quoted from another website.
+```
+<blockquote cite="https://www.w3schools.com/index.html">Block quote</blockquote>
+```
+output:
+<-blank space->Block quote
+### Abbreviation
+when you hover your mouse pointer it's expansion will be shown.
+```
+<abbr title="Doctor">Dr</abbr>
+<abbr title="Indian Adminiatrative Service">IAS</abbr>
+```
+output:
+Dr
+IAS
+<abbr title="Doctor">Dr</abbr>
+<abbr title="Indian Adminiatrative Service">IAS</abbr>
+### Acronym
+when you hover your mouse pointer it's expansion will be shown.
+<abbr title="National Aeronautics and Space Adminiatration">NASA</abbr> -> NASA
+<abbr title="Indian Space Research Organisation">NASA</abbr> ------------> ISRO
+### Citation
+Citation refering Book which has many parts.
+```
+<cite>Ponnien Selvan</cite> is a tamil book which is wrote by Kalki.
+```
+Ponnien Selvan is a tamil book which is wrote by Kalki.
+### Definition
+Definition mean's refering a meaning of a word.
+```
+<def>Ponnien Selvan</def> mean The son of Ponni(Cauvery) river.
+```
+Ponnien Selvan mean The son of Ponni(Cauvery) river.
+### Address
+Address tag tells the search engine that was a address
+```
+Address:
+<address> <p> <b>Gandhi</b><br>
+Four cross road,<br>
+Gujrath,<br>
+India.<br>
+</p>
+</address>
+```
+output:
+Address:
+
+Gandhi
+Four cross road,
+Gujrath,
+India.
+
+### Delete, Insert and Strikeout
+**Text with deleted part and inserted part.**
+```
+<p>send your <del>contact</del> <ins>whatsapp</ins>number</p>
+```
+output:
+send your contact whatsapp number
+<p>send your <del>contact</del> <ins>whatsapp</ins>number</p>
+
+**text with strike part**
+```
+<p><s>only few stocks left</s>
+<br>Soldout</p>
+```
+output:
+only few stocks left
+Soldout
+<p><s>only few stocks left</s>
+<br>Soldout</p>
