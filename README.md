@@ -158,14 +158,7 @@ Heading tags has six sizes
 <h5>h5 tag</h5>
 <h6>h6 tag</h6>
 ```
-output:
-# h1 tag
-## h2 tag
-### h3 tag
-#### h4 tag
-##### h5 tag
-###### h6 tag
-
+output:<p><h1>h1 tag</h1><h2>h2 tag</h2><h3>h3 tag</h3><h4>h4 tag</h4><h5>h5 tag</h5><h6>h6 tag</h6></p>
 ### Bold, italic and paragraph
 Bold and italic with paragraph tag.Bold and Italic tags dosen't have any meaning. Only for presentation.
 
