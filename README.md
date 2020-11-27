@@ -30,14 +30,28 @@ Head tags includes metadata for seo and linking css and script logo ico file. it
 <head>
 </head>
 ```
+### Link tag
+Link tags are used to Link stylesheets, scripts and font to the html document.
+```
+<link attribute="value" attribute="value" attribute="value">
+```
 ### Logo or favicon
 A favicon is a small file used as a tab icon, website icon, URL icon, or a bookmark icon.
 This icon is actually displayed on the address bar, browser's tab, browser history, bookmark bar, etc.
 The image of a favicon is in .ico file format. There are various file formats, but .ico format is supported by all the browsers.
 ```
 <head>
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
+<link rel="shortcut icon="href="favicon.ico" type="image/x-icon">  
 </head>
+```
+### Meta tag
+Meta tags are only appear within the head. This meta tags used in many ways for SEO.
+
+Meta tag Syntax
+```
+<meta attribute="value">
+
+<meta name="term" content="explanation of the term">
 ```
 ### Charset UTF8
 This ensures that you can use characters from just about any human language in your HTML document, and they will display reliably.
