@@ -258,6 +258,7 @@ Gujrath,<br>
 India.<br>
 </p>
 </address>
+
 ### Delete, Insert and Strikeout
 **Text with deleted part and inserted part.**
 ```
