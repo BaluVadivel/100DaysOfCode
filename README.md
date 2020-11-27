@@ -12,7 +12,8 @@ DOCTYPE declaration in html version 5 (HTML5). This ensures that the browser mak
 <!DOCTYPE html>
 ```
 ### Html tag & Language attribute
-The <html> tag represents the root of an HTML document. This <html> is the container for all other tags.This tags direct child tags are <head> & <body>
+The `<html>` tag represents the root of an HTML document. This `<html>` is the container for all other tags.This tags direct child tags are `<head>` & `<body>`
+
 The HTML lang attribute is used to identify the language of text content on the web. This information helps search engines return language specific results, and it is also used by screen readers that switch language profiles to provide the correct accent and pronunciation.
 The lang attribute is forgotten surprisingly often, perhaps because it makes no apparent difference unless you use a screen reader or you are a search engine.
 ```
