@@ -264,11 +264,11 @@ India.<br>
 ```
 <p>send your <del>contact</del> <ins>whatsapp</ins> number</p>
 ```
-output:<p>send your <del>contact</del> <ins>whatsapp</ins> number</p>
+output:send your <del>contact</del> <ins>whatsapp</ins> number
 
 **text with strike part**
 ```
 <p><s>only few stocks left</s>
 <br>Soldout</p>
 ```
-output:<p><s>only few stocks left</s><br>Sold out</p>
+output:<s>only few stocks left</s><br>Sold out
