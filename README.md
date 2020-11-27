@@ -212,32 +212,31 @@ This gives empty space on left side. Optionally we can give cite attribute if th
 output:
 <-blank space->Block quote
 ### Abbreviation
-when you hover your mouse pointer it's expansion will be shown.
+when you hover your mouse pointer it's expansion will be shown but **it won't work in markdown**
 ```
 <abbr title="Doctor">Dr</abbr>
 <abbr title="Indian Adminiatrative Service">IAS</abbr>
 ```
-output:
-Dr
-IAS
-<abbr title="Doctor">Dr</abbr>
-<abbr title="Indian Adminiatrative Service">IAS</abbr>
+output: Dr IAS
 ### Acronym
-when you hover your mouse pointer it's expansion will be shown.
+when you hover your mouse pointer it's expansion will be shown but **it won't work in markdown**
+```
 <abbr title="National Aeronautics and Space Adminiatration">NASA</abbr> -> NASA
 <abbr title="Indian Space Research Organisation">NASA</abbr> ------------> ISRO
+```
+output: NASA ISRO
 ### Citation
 Citation refering Book which has many parts.
 ```
 <cite>Ponnien Selvan</cite> is a tamil book which is wrote by Kalki.
 ```
-Ponnien Selvan is a tamil book which is wrote by Kalki.
+output: Ponnien Selvan is a tamil book which is wrote by Kalki.
 ### Definition
 Definition mean's refering a meaning of a word.
 ```
 <def>Ponnien Selvan</def> mean The son of Ponni(Cauvery) river.
 ```
-Ponnien Selvan mean The son of Ponni(Cauvery) river.
+output: Ponnien Selvan mean The son of Ponni(Cauvery) river.
 ### Address
 Address tag tells the search engine that was a address
 ```
@@ -251,28 +250,22 @@ India.<br>
 ```
 output:
 Address:
-
-Gandhi
-Four cross road,
-Gujrath,
-India.
-
+<address> <p> <b>Gandhi</b><br>
+Four cross road,<br>
+Gujrath,<br>
+India.<br>
+</p>
+</address>
 ### Delete, Insert and Strikeout
 **Text with deleted part and inserted part.**
 ```
 <p>send your <del>contact</del> <ins>whatsapp</ins>number</p>
 ```
-output:
-send your contact whatsapp number
-<p>send your <del>contact</del> <ins>whatsapp</ins>number</p>
+output: <p>send your <del>contact</del> <ins>whatsapp</ins>number</p>
 
 **text with strike part**
 ```
 <p><s>only few stocks left</s>
 <br>Soldout</p>
 ```
-output:
-only few stocks left
-Soldout
-<p><s>only few stocks left</s>
-<br>Soldout</p>
+output:<p><s>only few stocks left</s><br> Soldout</p>
