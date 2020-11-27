@@ -147,56 +147,58 @@ if we dosent include this Sometime description won't appear and Og:image won't a
 
 [Back to top](#100DaysOfCode)
 
-## Day1
+## Day3
 ### Heading Tags
 Heading tags has six sizes
 ```
-<h1>h1 tag</h1> --> h1 tag
-<h2>h2 tag</h2> --> h2 tag
-<h3>h3 tag</h3> --> h3 tag
-<h4>h4 tag</h4> --> h4 tag
-<h5>h5 tag</h5> --> h5 tag
-<h6>h6 tag</h6> --> h6 tag
-
+<h1>h1 tag</h1>
+<h2>h2 tag</h2>
+<h3>h3 tag</h3>
+<h4>h4 tag</h4>
+<h5>h5 tag</h5>
+<h6>h6 tag</h6>
 ```
+output:
+# h1 tag
+## h2 tag
+### h3 tag
+#### h4 tag
+##### h5 tag
+###### h6 tag
+
 ### Bold, italic and paragraph
 Bold and italic with paragraph tag.Bold and Italic tags dosen't have any meaning. Only for presentation.
 
 ```
 <p><b>This</b> is a <i>paragraph</i></p>
 ```
-output:
-**This** is a *paragraph*.
+output: **This** is a *paragraph*.
 
 ### Line Break
-
-
 `<br>`this tag give line break (new line).This tag has no closing tag.
-
 ### Horizontal rule
 Horizontal rule `<hr>` This tag has no closing tag.
+output:
+***
 ### Strong, Emphasis
 Strong and Emphasis tags have meaning. These two tags give importance to words.`<strong>` tag for highlight particular word `<i>` tag differentiate particular word.
 ```
 <p><strong>This</strong> is a <em>paragraph</em></p>
 ```
-output:
-**This** is a *paragraph.*
+output: **This** is a *paragraph.*
 
 ### Superscript
 ```
 a<sup>2</sup>
 ```
-output:
-a<sup>2</sup>
+output: a<sup>2</sup>
 ### Subscript
 ```
 H<sub>2</sub>O
 ```
-H<sub>2</sub>O
-
+output: H<sub>2</sub>O
 ### Quote
-quote tag giv double quotes
+quote tag giv double quotes.
 ```
 <q>Double quotes</q>
 ```
