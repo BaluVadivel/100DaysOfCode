@@ -264,7 +264,7 @@ India.<br>
 ```
 <p>send your <del>contact</del> <ins>whatsapp</ins> number</p>
 ```
-output: <p>send your <del>contact</del> <ins>whatsapp</ins> number</p>
+output:<p>send your <del>contact</del> <ins>whatsapp</ins> number</p>
 
 **text with strike part**
 ```
