@@ -1,6 +1,7 @@
 # 100DaysOfCode
 learnings and projects done/doing during 100Days Of Code.
-**Here we can see all my learning without going into large number of folders**
+
+**Here we can see all my 100days learning without going into large number of folders**
 
 **[DAY1](#Day1) -- [DAY2](#Day2)** 
 
