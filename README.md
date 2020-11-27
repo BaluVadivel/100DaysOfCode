@@ -262,13 +262,13 @@ India.<br>
 ### Delete, Insert and Strikeout
 **Text with deleted part and inserted part.**
 ```
-<p>send your <del>contact</del> <ins>whatsapp</ins>number</p>
+<p>send your <del>contact</del> <ins>whatsapp</ins> number</p>
 ```
-output: <p>send your <del>contact</del> <ins>whatsapp</ins>number</p>
+output: <p>send your <del>contact</del> <ins>whatsapp</ins> number</p>
 
 **text with strike part**
 ```
 <p><s>only few stocks left</s>
 <br>Soldout</p>
 ```
-output:<p><s>only few stocks left</s><br> Soldout</p>
+output:<p><s>only few stocks left</s><br>Sold out</p>
