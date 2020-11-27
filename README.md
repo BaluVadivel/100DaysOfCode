@@ -215,8 +215,8 @@ output:</p>Dr <br> IAS</p>
 ### Acronym
 when you hover your mouse pointer it's expansion will be shown but **it won't work in markdown**
 ```
-<abbr title="National Aeronautics and Space Adminiatration">NASA</abbr> -> NASA
-<abbr title="Indian Space Research Organisation">NASA</abbr> ------------> ISRO
+<abbr title="National Aeronautics and Space Adminiatration">NASA</abbr>
+<abbr title="Indian Space Research Organisation">NASA</abbr>
 ```
 output:<p>NASA <br> ISRO</p>
 ### Citation
