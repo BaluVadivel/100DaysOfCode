@@ -183,7 +183,6 @@ Horizontal rule tag has no closing tag.
 ```
 output:
 ***
-<hr>
 ### Strong, Emphasis
 Strong and Emphasis tags have meaning. These two tags give importance to words.`<strong>` tag for highlight particular word `<i>` tag differentiate particular word.
 ```
