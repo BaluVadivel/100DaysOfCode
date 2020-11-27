@@ -202,15 +202,13 @@ quote tag giv double quotes.
 ```
 <q>Double quotes</q>
 ```
-output:
-"Double quotes"
+output:<q>Double quotes</q>
 ### Block Quote
 This gives empty space on left side. Optionally we can give cite attribute if that section is quoted from another website.
 ```
 <blockquote cite="https://www.w3schools.com/index.html">Block quote</blockquote>
 ```
-output:
-<-blank space->Block quote
+output:<blockquote cite="https://www.w3schools.com/index.html">Block quote</blockquote>
 ### Abbreviation
 when you hover your mouse pointer it's expansion will be shown but **it won't work in markdown**
 ```
@@ -230,13 +228,13 @@ Citation refering Book which has many parts.
 ```
 <cite>Ponnien Selvan</cite> is a tamil book which is wrote by Kalki.
 ```
-output: Ponnien Selvan is a tamil book which is wrote by Kalki.
+output:<cite>Ponnien Selvan</cite> is a tamil book which is wrote by Kalki.
 ### Definition
 Definition mean's refering a meaning of a word.
 ```
-<def>Ponnien Selvan</def> mean The son of Ponni(Cauvery) river.
+<dfn>Ponnien Selvan</dfn> mean The son of Ponni(Cauvery) river.
 ```
-output: Ponnien Selvan mean The son of Ponni(Cauvery) river.
+output:<dfn>Ponnien Selvan</dfn> mean The son of Ponni(Cauvery) river.
 ### Address
 Address tag tells the search engine that was a address
 ```
@@ -249,6 +247,7 @@ India.<br>
 </address>
 ```
 output:
+
 Address:
 <address> <p> <b>Gandhi</b><br>
 Four cross road,<br>
