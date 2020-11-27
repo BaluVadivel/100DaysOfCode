@@ -172,7 +172,7 @@ Bold and italic with paragraph tag.Bold and Italic tags dosen't have any meaning
 ```
 <p><b>This</b> is a <i>paragraph</i></p>
 ```
-output: **This** is a *paragraph*.
+output:<p><b>This</b> is a <i>paragraph</i></p>
 
 ### Line Break
 `<br>`this tag give line break (new line).This tag has no closing tag.
@@ -188,56 +188,56 @@ Strong and Emphasis tags have meaning. These two tags give importance to words.`
 ```
 <p><strong>This</strong> is a <em>paragraph</em></p>
 ```
-output: **This** is a *paragraph.*
+output:<p><strong>This</strong> is a <em>paragraph</em></p>
 
 ### Superscript
 ```
 a<sup>2</sup>
 ```
-output: a<sup>2</sup>
+output:<p>a<sup>2</sup></p>
 ### Subscript
 ```
 H<sub>2</sub>O
 ```
-output: H<sub>2</sub>O
+output:<p>H<sub>2</sub>O</p>
 ### Quote
 quote tag giv double quotes.
 ```
 <q>Double quotes</q>
 ```
-output:<q>Double quotes</q>
+output:<p><q>Double quotes</q></p>
 ### Block Quote
 This gives empty space on left side. Optionally we can give cite attribute if that section is quoted from another website.
 ```
 <blockquote cite="https://www.w3schools.com/index.html">Block quote</blockquote>
 ```
-output:<blockquote cite="https://www.w3schools.com/index.html">Block quote</blockquote>
+output:<p><blockquote cite="https://www.w3schools.com/index.html">Block quote</blockquote></p>
 ### Abbreviation
 when you hover your mouse pointer it's expansion will be shown but **it won't work in markdown**
 ```
 <abbr title="Doctor">Dr</abbr>
 <abbr title="Indian Adminiatrative Service">IAS</abbr>
 ```
-output: Dr IAS
+output:</p>Dr <br> IAS</p>
 ### Acronym
 when you hover your mouse pointer it's expansion will be shown but **it won't work in markdown**
 ```
 <abbr title="National Aeronautics and Space Adminiatration">NASA</abbr> -> NASA
 <abbr title="Indian Space Research Organisation">NASA</abbr> ------------> ISRO
 ```
-output: NASA ISRO
+output:<p>NASA <br> ISRO</p>
 ### Citation
 Citation refering Book which has many parts.
 ```
 <cite>Ponnien Selvan</cite> is a tamil book which is wrote by Kalki.
 ```
-output:<cite>Ponnien Selvan</cite> is a tamil book which is wrote by Kalki.
+output:<p><cite>Ponnien Selvan</cite> is a tamil book which is wrote by Kalki.</p>
 ### Definition
 Definition mean's refering a meaning of a word.
 ```
 <dfn>Ponnien Selvan</dfn> mean The son of Ponni(Cauvery) river.
 ```
-output:<dfn>Ponnien Selvan</dfn> mean The son of Ponni(Cauvery) river.
+output:<p><dfn>Ponnien Selvan</dfn> mean The son of Ponni(Cauvery) river.</p>
 ### Address
 Address tag tells the search engine that was a address
 ```
@@ -250,25 +250,25 @@ India.<br>
 </address>
 ```
 output:
-
+<p>
 Address:
-<address> <p> <b>Gandhi</b><br>
+<address> <b>Gandhi</b><br>
 Four cross road,<br>
 Gujrath,<br>
 India.<br>
-</p>
 </address>
+</p>
 
 ### Delete, Insert and Strikeout
 **Text with deleted part and inserted part.**
 ```
 <p>send your <del>contact</del> <ins>whatsapp</ins> number</p>
 ```
-output:send your <del>contact</del> <ins>whatsapp</ins> number
+output:<p>send your <del>contact</del> <ins>whatsapp</ins> number</p>
 
 **text with strike part**
 ```
 <p><s>only few stocks left</s>
 <br>Soldout</p>
 ```
-output:<s>only few stocks left</s><br>Sold out
+output:<p><s>only few stocks left</s><br>Sold out</p>
