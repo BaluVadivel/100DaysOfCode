@@ -336,3 +336,9 @@ output:<p>send your <del>contact</del> <ins>whatsapp</ins> number</p>
 output:<p><s>only few stocks left</s><br>Sold out</p>
 
 [Back to top](#100DaysOfCode)
+
+## DAY4
+**Date:** 28 November 2020
+
+[Back to top](#100DaysOfCode)
+
