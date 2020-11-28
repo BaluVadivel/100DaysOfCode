@@ -359,11 +359,11 @@ Giving height only or width only dosen't affect your aspect ratio.
 
 **Code:**
 ```
-<img src="ubuntu.png" alt="Ubuntu groovy gorila desktop image" title="Ubuntu Desktop" width="360px">
+<img src="ubuntu.png" alt="Ubuntu groovy gorila desktop image" title="Ubuntu Desktop" width="240px">
 ```
 **Output:**
-![Ubuntu groovy gorila desktop image](https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/004/ubuntu.png "Ubuntu Desktop" {width=240px})
-Ubuntu groovy gorila desktop image
+<br>
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/004/ubuntu.png" alt="Your image title" width="240" />
 
 #### Figure Caption
 Figure caption tag is used to give caption to image.
@@ -376,9 +376,10 @@ Figure caption tag is used to give caption to image.
 </figure>
 ```
 **Approx Output:**
-| ![Ubuntu groovy gorila desktop image](https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/004/ubuntu.png "Ubuntu Desktop" {width=240px}) | 
-|:--:| 
-| *Caption of the above image* |
+<p>
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/004/ubuntu.png" alt="Your image title" width="240" />
+</p>
+Caption of the above image
 
 ### Linking Web Page
 Anchor Tag or a Tag is used to link web pages.
@@ -388,8 +389,9 @@ Anchor Tag or a Tag is used to link web pages.
 <a href="https://www.google.com">Google</a> is a search engine
 ```
 **Outout:**
-[Google](https://www.google.com) is a search engine
-
+<p>
+<a href="https://www.google.com">Google</a> is a search engine
+</p>
 #### Opening web pages in the NEW TAB
 (**this feature dosen't work in md**)
 **Code:**
@@ -397,18 +399,19 @@ Anchor Tag or a Tag is used to link web pages.
 <a href="https://www.google.com" target="_blank">Google</a> is a search engine
 ```
 Outout:
-[Google](https://www.google.com) is a search engine
-
+<p>
+<a href="https://www.google.com" target="_blank">Google</a> is a search engine
+</p>
 ### Email Link
 (**this feature dosen't work in md**)
 
 #### Email link will open email app and fills the corresponding email address in TO field.
 **Code:**
 ```
-< a href="mailto:mailid@domain.com">Click</a> to contact
+<a href="mailto:mailid@domain.com">Click</a> to contact
 ```
 **Output:**
-[Click](mailto:mailid@domain.com) to contact
+<a href="mailto:mailid@domain.com">Click</a> to contact
 
 #### Fills the corresponding email address in TO field and filling text in subject field
 **Code:**
@@ -416,18 +419,18 @@ Outout:
 <a href"mailto:mailid@domain.com?subject=FEEDBACK">Click</a> to contact
 ```
 **Output:**
-[Click](mailto:mailid@domain.com?subject=FEEDBACK) to contact
+<a href"mailto:mailid@domain.com?subject=FEEDBACK">Click</a> to contact
 
 ### Named Anchor tag or Link within the page
 This linking is created with the help of id attribute. Value of the id attribute must be unique.
 Code:
 ```
-<h4 id="link">This tags id="link"</h4> <br><br><br><br><br><br><br><br>
+<h5 id="link">This tags id="link"</h5> <br><br><br><br><br><br><br><br>
 <a href="#link">Click here</a> to scroll to "This tags id="link" "
 ```
 **Output:**
 
-##### link tags
+##### Link Tags
 
 
 
@@ -438,7 +441,7 @@ Code:
 
 
 
-[Click](#link-tags) here to scroll to "link tags"
+[Click](#link-tags) here to scroll to "Link Tags"
 
 ### Lists
 #### Unordered list
