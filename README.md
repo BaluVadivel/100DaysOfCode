@@ -375,7 +375,7 @@ Figure caption tag is used to give caption to image.
 <figcaption>Caption of the above image</figcaption>
 </figure>
 ```
-**Approx Output:**
+**Output:**
 <figure>
 <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/004/ubuntu.png" alt="Ubuntu groovy gorila desktop image" title="Ubuntu Desktop" width="360px">
 <figcaption>Caption of the above image</figcaption>
