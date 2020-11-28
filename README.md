@@ -376,10 +376,10 @@ Figure caption tag is used to give caption to image.
 </figure>
 ```
 **Approx Output:**
-<p>
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/004/ubuntu.png" alt="Your image title" width="240" />
-</p>
-Caption of the above image
+<figure>
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/004/ubuntu.png" alt="Ubuntu groovy gorila desktop image" title="Ubuntu Desktop" width="360px">
+<figcaption>Caption of the above image</figcaption>
+</figure>
 
 ### Linking Web Page
 Anchor Tag or a Tag is used to link web pages.
@@ -392,6 +392,7 @@ Anchor Tag or a Tag is used to link web pages.
 <p>
 <a href="https://www.google.com">Google</a> is a search engine
 </p>
+
 #### Opening web pages in the NEW TAB
 (**this feature dosen't work in md**)
 **Code:**
