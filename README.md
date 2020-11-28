@@ -434,16 +434,12 @@ Code:
 
 ##### Link Tags
 
+<br>
+<br>
+<br>
+<br>
 
-
-
-
-
-
-
-
-
-[Click](#link-tags) here to scroll to "Link Tags"
+[Click](#link-tags) here to scroll to "Link Tags" which appear above.
 
 ### Lists
 #### Unordered list
@@ -505,30 +501,4 @@ Expansion of abbrevation
 <dd>Casscading Style sheet</dd>
 </dl>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 [Back to top](#100DaysOfCode)
-
