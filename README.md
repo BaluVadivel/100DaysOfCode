@@ -350,7 +350,9 @@ Giving height and width values without considering aspect ratio.
 ```
 <img src="ubuntu.png" alt="Ubuntu groovy gorila desktop image" title="Ubuntu Desktop" width="380px" height="220px">
 ```
-**Output:** ![Ubuntu groovy gorila desktop image](https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/004/ubuntu.png "Ubuntu Desktop" {width=240px height=240px})
+**Output:**
+<img src="ubuntu.png" alt="Ubuntu groovy gorila desktop image" title="Ubuntu Desktop" width="380px" height="220px">
+
 #### Without affecting aspect ratio
 Giving height only or width only dosen't affect your aspect ratio.
 
@@ -358,7 +360,8 @@ Giving height only or width only dosen't affect your aspect ratio.
 ```
 <img src="ubuntu.png" alt="Ubuntu groovy gorila desktop image" title="Ubuntu Desktop" width="360px">
 ```
-**Output:** ![Ubuntu groovy gorila desktop image](https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/004/ubuntu.png "Ubuntu Desktop" {width=240px})
+**Output:**
+![Ubuntu groovy gorila desktop image](https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/004/ubuntu.png "Ubuntu Desktop" {width=240px})
 Ubuntu groovy gorila desktop image
 
 #### Figure Caption
