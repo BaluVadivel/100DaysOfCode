@@ -422,8 +422,8 @@ Outout:
 <a href="mailto:mailid@domain.com?subject=FEEDBACK">Click</a> to contact
 
 ### Named Anchor tag or Link within the page
-This linking is created with the help of id attribute. Value of the id attribute must be unique.
-Code:
+This linking is created with the help of id attribute. Value of the id attribute must be unique.<br>
+**Code:**
 ```
 <h5 id="link">This tags id="link"</h5> <br><br><br><br><br><br><br><br>
 <a href="#link">Click here</a> to scroll to "This tags id="link" "
@@ -441,7 +441,7 @@ Code:
 
 ### Lists
 #### Unordered list
-Unordered list is used to list the items with bullet symbol. This represents list items can be in any order.
+Unordered list is used to list the items with bullet symbol. This represents list items can be in any order.<br>
 **Code:**
 ```
 Programming Languages
@@ -462,7 +462,7 @@ Programming Languages
 </p>
 
 #### Ordered list
-Ordered list is used to list the items with numbers. This represents list items must be in given order.
+Ordered list is used to list the items with numbers. This represents list items must be in given order.<br>
 **Code:**
 ```
 Programming Languages in top 3 rank for less compiling time
@@ -483,7 +483,7 @@ Programming Languages in top 3 rank for less compiling time
 </p>
 
 #### Definition list
-Definition list is a list of terms and corresponding definitions.Definition list is formated with the term in left side with the definition on next line on the right side.
+Definition list is a list of terms and corresponding definitions.Definition list is formated with the term in left side with the definition on next line on the right side.<br>
 **Code:**
 ```
 Expansion of abbrevation
