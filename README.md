@@ -405,8 +405,6 @@ Outout:
 </p>
 
 ### Email Link
-(**this feature dosen't work in md**)
-
 #### Email link will open email app and fills the corresponding email address in TO field.
 **Code:**
 ```
@@ -454,12 +452,14 @@ Programming Languages
 </ul>
 ```
 **Output:**
+<p>
 Programming Languages
 <ul>
 <li>Go</li>
 <li>C</li>
 <li>Python</li>
 </ul>
+</p>
 
 #### Ordered list
 Ordered list is used to list the items with numbers. This represents list items must be in given order.
@@ -473,12 +473,14 @@ Programming Languages in top 3 rank for less compiling time
 </ol>
 ```
 **Output:**
+<p>
 Programming Languages in top 3 rank for less compiling time
 <ol>
 <li>Go</li>
 <li>C</li>
 <li>Python</li>
 </ol>
+</p>
 
 #### Definition list
 Definition list is a list of terms and corresponding definitions.Definition list is formated with the term in left side with the definition on next line on the right side.
@@ -493,6 +495,7 @@ Expansion of abbrevation
 </dl>
 ```
 **Output:**
+<p>
 Expansion of abbrevation
 <dl>
 <dt>HTML</dt>
@@ -500,5 +503,6 @@ Expansion of abbrevation
 <dt>CSS</dt>
 <dd>Casscading Style sheet</dd>
 </dl>
+</p>
 
 [Back to top](#100DaysOfCode)
