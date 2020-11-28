@@ -5,7 +5,7 @@ learnings and projects done/doing during 100Days Of Code.
 
 **[DAY1](#DAY1) - [DAY2](#DAY2) - [DAY3](#DAY3) - [DAY4](#DAY4)**
 
-## DAY1
+# DAY1
 **Date:** 25 November 2020
 ### DOCTYPE
 DOCTYPE declaration in html version 5 (HTML5). This ensures that the browser makes a relevant and specific rendering mode that is compatible with HTML5 Document.
@@ -87,7 +87,7 @@ It helps tell search engines what the topic of the page is. Meta keywords are di
 
 [Back to top](#100DaysOfCode)
 
-## DAY2
+# DAY2
 **Date:** 26 November 2020
 ### Emoji as a text
 we can include emoji in anywhere on document using decimal or hexadecimal reference.
@@ -149,7 +149,7 @@ if we dosent include this Sometime description won't appear and Og:image won't a
 
 [Back to top](#100DaysOfCode)
 
-## DAY3
+# DAY3
 **Date:** 27 November 2020
 ### Body Tag
 Contents and text which all need to be displayed in browser and tags other than placed within the `<head>` all must be placed inside the `<body>`.
@@ -337,7 +337,7 @@ output:<p><s>only few stocks left</s><br>Sold out</p>
 
 [Back to top](#100DaysOfCode)
 
-## DAY4
+# DAY4
 **Date:** 28 November 2020
 
 [Back to top](#100DaysOfCode)
