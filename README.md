@@ -148,22 +148,39 @@ if we dosent include this Sometime description won't appear and Og:image won't a
 [Back to top](#100DaysOfCode)
 
 ## Day3
+### Body Tag
+Contents and text which all need to be displayed in browser and tags other than placed within the `<head>` all must be placed inside the `<body>`.
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       ....
+</head>
+<body>
+       ....
+</body>
+</html>
+```
 ### Heading Tags
 Heading tags has six sizes
 ```
+<body>
 <h1>h1 tag</h1>
 <h2>h2 tag</h2>
 <h3>h3 tag</h3>
 <h4>h4 tag</h4>
 <h5>h5 tag</h5>
 <h6>h6 tag</h6>
+</body>
 ```
 output:<p><h1>h1 tag</h1><h2>h2 tag</h2><h3>h3 tag</h3><h4>h4 tag</h4><h5>h5 tag</h5><h6>h6 tag</h6></p>
 ### Bold, italic and paragraph
 Bold and italic with paragraph tag.Bold and Italic tags dosen't have any meaning. Only for presentation.
 
 ```
+<body>
 <p><b>This</b> is a <i>paragraph</i></p>
+</body>
 ```
 output:<p><b>This</b> is a <i>paragraph</i></p>
 
@@ -172,68 +189,108 @@ output:<p><b>This</b> is a <i>paragraph</i></p>
 ### Horizontal rule
 Horizontal rule tag has no closing tag.
 ```
+<body>
 <hr>
+</body>
 ```
 output:
 ***
 ### Strong, Emphasis
 Strong and Emphasis tags have meaning. These two tags give importance to words.`<strong>` tag for highlight particular word `<i>` tag differentiate particular word.
 ```
-<p><strong>This</strong> is a <em>paragraph</em></p>
+<body>
+<p>
+<strong>This</strong> is a <em>paragraph</em>
+</p>
+</body>
 ```
 output:<p><strong>This</strong> is a <em>paragraph</em></p>
 
 ### Superscript
 ```
+<body>
+<p>
 a<sup>2</sup>
+</p>
+</body>
 ```
 output:<p>a<sup>2</sup></p>
 ### Subscript
 ```
+<body>
+<p>
 H<sub>2</sub>O
+</p>
+</body>
 ```
 output:<p>H<sub>2</sub>O</p>
 ### Quote
 quote tag giv double quotes.
 ```
+<body>
+<p>
 <q>Double quotes</q>
+</p>
+</body>
 ```
 output:<p><q>Double quotes</q></p>
 ### Block Quote
 This gives empty space on left side. Optionally we can give cite attribute if that section is quoted from another website.
 ```
+<body>
+<p>
 <blockquote cite="https://www.w3schools.com/index.html">Block quote</blockquote>
+</p>
+</body>
 ```
 output:<p><blockquote cite="https://www.w3schools.com/index.html">Block quote</blockquote></p>
 ### Abbreviation
 when you hover your mouse pointer it's expansion will be shown but **it won't work in markdown**
 ```
+<body>
+<p>
 <abbr title="Doctor">Dr</abbr>
 <abbr title="Indian Adminiatrative Service">IAS</abbr>
+</p>
+</body>
 ```
 output:</p>Dr <br> IAS</p>
 ### Acronym
 when you hover your mouse pointer it's expansion will be shown but **it won't work in markdown**
 ```
+<body>
+<p>
 <abbr title="National Aeronautics and Space Adminiatration">NASA</abbr>
 <abbr title="Indian Space Research Organisation">NASA</abbr>
+</p>
+</body>
 ```
 output:<p>NASA <br> ISRO</p>
 ### Citation
 Citation refering Book which has many parts.
 ```
+<body>
+<p>
 <cite>Ponnien Selvan</cite> is a tamil book which is wrote by Kalki.
+</p>
+</body>
 ```
 output:<p><cite>Ponnien Selvan</cite> is a tamil book which is wrote by Kalki.</p>
 ### Definition
 Definition mean's refering a meaning of a word.
 ```
+<body>
+<p>
 <dfn>Ponnien Selvan</dfn> mean The son of Ponni(Cauvery) river.
+</p>
+</body>
 ```
 output:<p><dfn>Ponnien Selvan</dfn> mean The son of Ponni(Cauvery) river.</p>
 ### Address
 Address tag tells the search engine that was a address
 ```
+<body>
+<p>
 Address:
 <address> <p> <b>Gandhi</b><br>
 Four cross road,<br>
@@ -241,6 +298,8 @@ Gujrath,<br>
 India.<br>
 </p>
 </address>
+</p>
+</body>
 ```
 output:
 <p>
@@ -255,14 +314,21 @@ India.<br>
 ### Delete, Insert and Strikeout
 **Text with deleted part and inserted part.**
 ```
+<body>
+<p>
 <p>send your <del>contact</del> <ins>whatsapp</ins> number</p>
+</p>
+</body>
 ```
 output:<p>send your <del>contact</del> <ins>whatsapp</ins> number</p>
 
 **text with strike part**
 ```
-<p><s>only few stocks left</s>
-<br>Soldout</p>
+<body>
+<p>
+<s>only few stocks left</s> <br>Soldout
+</p>
+</body>
 ```
 output:<p><s>only few stocks left</s><br>Sold out</p>
 
