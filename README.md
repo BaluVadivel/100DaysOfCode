@@ -1,5 +1,7 @@
 # 100DaysOfCode
 learnings and projects done/doing during 100Days Of Code.
+### Why am i taking this 100DaysOfCode challenge?
+Am taking this challenge to learn and take notes Everyday. Which helps to revise the learned things in future.Once everyday learning is habituated, it doesn't end at 100 days.
 
 **Here we can see all my 100days learning without going into large number of folders**
 
