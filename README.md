@@ -342,5 +342,184 @@ output:<p><s>only few stocks left</s><br>Sold out</p>
 # DAY4
 **Date:** 28 November 2020
 
+### Image Tag
+#### Affecting aspect ratio
+Giving height and width values without considering aspect ratio.
+
+**Code:**
+```
+<img src="ubuntu.png" alt="Ubuntu groovy gorila desktop image" title="Ubuntu Desktop" width="380px" height="220px">
+```
+**Output:** ![Ubuntu groovy gorila desktop image](https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/004/ubuntu.png "Ubuntu Desktop" {width=240px height=240px})
+#### Without affecting aspect ratio
+Giving height only or width only dosen't affect your aspect ratio.
+
+**Code:**
+```
+<img src="ubuntu.png" alt="Ubuntu groovy gorila desktop image" title="Ubuntu Desktop" width="360px">
+```
+**Output:** ![Ubuntu groovy gorila desktop image](https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/004/ubuntu.png "Ubuntu Desktop" {width=240px})
+Ubuntu groovy gorila desktop image
+
+#### Figure Caption
+Figure caption tag is used to give caption to image.
+
+**Code:**
+```
+<figure>
+<img src="ubuntu.png" alt="Ubuntu groovy gorila desktop image" title="Ubuntu Desktop" width="360px">
+<figcaption>Caption of the above image</figcaption>
+</figure>
+```
+**Approx Output:**
+| ![Ubuntu groovy gorila desktop image](https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/004/ubuntu.png "Ubuntu Desktop" {width=240px}) | 
+|:--:| 
+| *Caption of the above image* |
+
+### Linking Web Page
+Anchor Tag or a Tag is used to link web pages.
+#### Opening web pages in the CURRENT TAB
+**Code:**
+```
+<a href="https://www.google.com">Google</a> is a search engine
+```
+**Outout:**
+[Google](https://www.google.com) is a search engine
+
+#### Opening web pages in the NEW TAB
+(**this feature dosen't work in md**)
+**Code:**
+```
+<a href="https://www.google.com" target="_blank">Google</a> is a search engine
+```
+Outout:
+[Google](https://www.google.com) is a search engine
+
+### Email Link
+(**this feature dosen't work in md**)
+
+#### Email link will open email app and fills the corresponding email address in TO field.
+**Code:**
+```
+< a href="mailto:mailid@domain.com">Click</a> to contact
+```
+**Output:**
+[Click](mailto:mailid@domain.com) to contact
+
+#### Fills the corresponding email address in TO field and filling text in subject field
+**Code:**
+```
+<a href"mailto:mailid@domain.com?subject=FEEDBACK">Click</a> to contact
+```
+**Output:**
+[Click](mailto:mailid@domain.com?subject=FEEDBACK) to contact
+
+### Named Anchor tag or Link within the page
+This linking is created with the help of id attribute. Value of the id attribute must be unique.
+Code:
+```
+<h4 id="link">This tags id="link"</h4> <br><br><br><br><br><br><br><br>
+<a href="#link">Click here</a> to scroll to "This tags id="link" "
+```
+**Output:**
+
+##### link tags
+
+
+
+
+
+
+
+
+
+
+[Click](#link-tags) here to scroll to "link tags"
+
+### Lists
+#### Unordered list
+Unordered list is used to list the items with bullet symbol. This represents list items can be in any order.
+**Code:**
+```
+Programming Languages
+<ul>
+<li>Go</li>
+<li>C</li>
+<li>Python</li>
+</ul>
+```
+**Output:**
+Programming Languages
+<ul>
+<li>Go</li>
+<li>C</li>
+<li>Python</li>
+</ul>
+
+#### Ordered list
+Ordered list is used to list the items with numbers. This represents list items must be in given order.
+**Code:**
+```
+Programming Languages in top 3 rank for less compiling time
+<ol>
+<li>Go</li>
+<li>C</li>
+<li>Python</li>
+</ol>
+```
+**Output:**
+Programming Languages in top 3 rank for less compiling time
+<ol>
+<li>Go</li>
+<li>C</li>
+<li>Python</li>
+</ol>
+
+#### Definition list
+Definition list is a list of terms and corresponding definitions.Definition list is formated with the term in left side with the definition on next line on the right side.
+**Code:**
+```
+Expansion of abbrevation
+<dl>
+<dt>HTML</dt>
+<dd>Hyper Text Markup Language</dd>
+<dt>CSS</dt>
+<dd>Casscading Style sheet</dd>
+</dl>
+```
+**Output:**
+Expansion of abbrevation
+<dl>
+<dt>HTML</dt>
+<dd>Hyper Text Markup Language</dd>
+<dt>CSS</dt>
+<dd>Casscading Style sheet</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 [Back to top](#100DaysOfCode)
 
