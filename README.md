@@ -351,7 +351,7 @@ Giving height and width values without considering aspect ratio.
 <img src="ubuntu.png" alt="Ubuntu groovy gorila desktop image" title="Ubuntu Desktop" width="380px" height="220px">
 ```
 **Output:**
-![Ubuntu groovy gorila desktop image](https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/004/ubuntu.png)
+![Ubuntu groovy gorila desktop image](https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/004/ubuntu.png = 380x220)
 
 #### Without affecting aspect ratio
 Giving height only or width only dosen't affect your aspect ratio.
