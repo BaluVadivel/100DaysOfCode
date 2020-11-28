@@ -403,6 +403,7 @@ Outout:
 <p>
 <a href="https://www.google.com" target="_blank">Google</a> is a search engine
 </p>
+
 ### Email Link
 (**this feature dosen't work in md**)
 
@@ -417,10 +418,10 @@ Outout:
 #### Fills the corresponding email address in TO field and filling text in subject field
 **Code:**
 ```
-<a href"mailto:mailid@domain.com?subject=FEEDBACK">Click</a> to contact
+<a href="mailto:mailid@domain.com?subject=FEEDBACK">Click</a> to contact
 ```
 **Output:**
-<a href"mailto:mailid@domain.com?subject=FEEDBACK">Click</a> to contact
+<a href="mailto:mailid@domain.com?subject=FEEDBACK">Click</a> to contact
 
 ### Named Anchor tag or Link within the page
 This linking is created with the help of id attribute. Value of the id attribute must be unique.
