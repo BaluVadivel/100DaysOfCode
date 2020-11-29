@@ -5,7 +5,7 @@ Am taking this challenge to learn and take notes Everyday. Which helps to revise
 
 **Here we can see all my 100days learning without going into large number of folders**
 
-**[DAY1](#DAY1) - [DAY2](#DAY2) - [DAY3](#DAY3) - [DAY4](#DAY4)**
+**[DAY1](#DAY1) - [DAY2](#DAY2) - [DAY3](#DAY3) - [DAY4](#DAY4) - [DAY5](#DAY5)**
 
 # DAY1
 **Date:** 25 November 2020
@@ -508,5 +508,12 @@ Expansion of abbrevation
 <dd>Casscading Style sheet</dd>
 </dl>
 </p>
+
+[Back to top](#100DaysOfCode)
+
+# DAY5
+**Date:** 29 November 2020
+### Screenshot of 5th day learning
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/005/day5.png" alt="Your image title" width="100%"/>
 
 [Back to top](#100DaysOfCode)
