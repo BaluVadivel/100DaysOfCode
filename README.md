@@ -520,13 +520,14 @@ Expansion of abbrevation
 
 
 # DAY6
+**Date:** 25 November 2020
 
 ## Input Checkbox Important Point
-Name attributes value without "[]" (array) symbol. This cause data loss or confusion at server side. If we are selecting more than one option then only last selected value will be stored. Previously stored values are over written by succeeding (upcoming or incoming) values. OR maybe the server get confused because of Same variable appearing more time but each time having different values.
+Name attributes value without `[]` (array square bracket) symbol. This cause data loss or confusion at server side. If we are selecting more than one option then only last selected value will be stored. Previously stored values are over written by succeeding (upcoming or incoming) values. OR maybe the server get confused because of Same variable appearing more time but each time having different values.
 
 ## Below code & screen shot explains the above Problem</h2>
 
-### WITHOUT ARRAY SYMBOL []
+### WITHOUT ARRAY SYMBOL `[]`
 
 <b>CODE:</b>
 ```
@@ -599,7 +600,7 @@ Select your Hobbies<br>
 <br><br>
 <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/WithArrayOutputSelectedOutput.png" alt="Clicking the submit button of the form with the selected checkbox" width="100%" />
 <p>
-In the above image we can see the url has two times hobbies[] appearing. Here [] (square brackets) represents the that hobbies is a array. So this stores each hobbies values in array. This is proper way to use checkbox.
+In the above image we can see the url has two times `hobbies[]` appearing. Here `[]` (square brackets) represents the that hobbies is a array. So this stores each hobbies values in array. This is proper way to use checkbox.
 </p>
 <br><br><br>
 # Select within form
