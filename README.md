@@ -641,19 +641,22 @@ In the above image we can see the url has two times hobbies[] appearing. Here []
 
 ## OUTPUT:
 <p>
-<form>
-<p>Select your Profession</p>
-<select name="profession" id="profession" required>
-<option value="select" selected disabled>select</option>
-<option value="web"> Web developer</option>
-<option value="android"> Android developer</option>
-<option value="ios">IOS developer</option>
-<option value="flutter">Flutter developer</option>
-<option value="other">Other</option>
-<select>
-<br><br>
-<input type="submit" value="SUBMIT">
-</form>
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/SelectOutput.png" alt="Above code output 1" width="100%" />
+</p>
+
+## OUTPUT Of clicking Enter without Selecting:
+<p>
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/SelectOutputEnter.png" alt="Above code output 2" width="100%" />
+</p>
+
+## OUTPUT Of clicking the Select:
+<p>
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/SelectOutputOpen.png" alt="Above code output 3" width="100%" />
+</p>
+
+## OUTPUT Of clicking the Select:
+<p>
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/SelectOutputOpen Select.png" alt="Above code output 4" width="100%" />
 </p>
 
 [Back to top](#100DaysOfCode)
