@@ -599,10 +599,9 @@ Select your Hobbies<br>
 <b>AFTER CLICKING SUBMIT BUTTON:</b>
 <br><br>
 <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/WithArrayOutputSelectedOutput.png" alt="Clicking the submit button of the form with the selected checkbox" width="100%" />
-<p>
+<br>
 In the above image we can see the url has two times `hobbies[]` appearing. Here `[]` (square brackets) represents the that hobbies is a array. So this stores each hobbies values in array. This is proper way to use checkbox.
-</p>
-<br><br><br>
+<br>
 # Select within form
 
 ## CODE:
