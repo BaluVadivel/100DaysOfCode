@@ -561,7 +561,7 @@ Select your Hobbies<br>
 <br><br>
 <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/WithoutArrayOutputSelectedOutput.png" alt="Clicking the submit button of the form with the selected checkbox" width="100%" />
 <p>
-In the above image we can see the url has two times hobbies appearing. Each it has different value. This may create a confusion at backend or only the last one value will be sored at backend. Just over write the existing values so only stores the last value. 
+In the above image we can see the url has two times hobbies appearing. Each it has different value. This may create a confusion at backend or only the last one value will be stored at backend. Just over write the existing values so only stores the last value. 
 </p>
 
 <br><br>
