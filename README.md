@@ -566,7 +566,7 @@ In the above image we can see the url has two times hobbies appearing. Each it h
 </p>
 
 <br><br>
-### WITH ARRAY SYMBOL []
+### WITH ARRAY SYMBOL `[]`
 <b>CODE:</b>
 ```
 <form>
