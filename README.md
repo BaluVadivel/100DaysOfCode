@@ -549,7 +549,6 @@ Select your Hobbies<br>
 <br><br>
 <b>OUTPUT OF CODE:</b>
 <br><br>
-https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/Output.png
 <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/Output.png" alt="Above code output" width="100%" />
 
 <br><br>
@@ -588,7 +587,6 @@ Select your Hobbies<br>
 <br><br>
 <b>OUTPUT OF CODE:</b>
 <br><br>
-https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/Output.png
 <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/Output.png" title="" alt="Above code output" width="100%" />
 
 <br><br>
