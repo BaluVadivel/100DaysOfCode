@@ -5,7 +5,7 @@ Am taking this challenge to learn and take notes Everyday. Which helps to revise
 
 **Here we can see all my 100days learning without going into large number of folders**
 
-**[DAY1](#DAY1) - [DAY2](#DAY2) - [DAY3](#DAY3) - [DAY4](#DAY4) - [DAY5](#DAY5)**
+**[DAY1](#DAY1) - [DAY2](#DAY2) - [DAY3](#DAY3) - [DAY4](#DAY4) - [DAY5](#DAY5) - [DAY6](#DAY6)**
 
 # DAY1
 **Date:** 25 November 2020
@@ -515,5 +515,147 @@ Expansion of abbrevation
 **Date:** 29 November 2020
 ### Screenshot of 5th day learning
 <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/005/day5.png" alt="Your image title" width="100%"/>
+
+[Back to top](#100DaysOfCode)
+
+
+# DAY6
+
+## Input Checkbox Important Point
+Name attributes value without "[]" (array) symbol. This cause data loss or confusion at server side. If we are selecting more than one option then only last selected value will be stored. Previously stored values are over written by succeeding (upcoming or incoming) values. OR maybe the server get confused because of Same variable appearing more time but each time having different values.
+
+## Below code & screen shot explains the above Problem</h2>
+
+### WITHOUT ARRAY SYMBOL []
+
+<b>CODE:</b>
+```
+<form>
+Select your Hobbies<br>
+<label for="photography">
+<input type="checkbox" id="photography" name="hobbies" value="photography"> Photography
+</label>
+<label for="video-gaming">
+<input type="checkbox" id="video-gaming" name="hobbies" value="video-gaming"> Video Gaming
+</label>
+<label for="dance">
+<input type="checkbox" id="dance" name="hobbies" value="dance"> Dance
+</label>
+<br><br>
+<input type="submit" value="SUBMIT">
+</form>
+```
+
+<br><br>
+<b>OUTPUT OF CODE:</b>
+<br><br>
+https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/Output.png
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/Output.png" alt="Above code output" width="100%" />
+
+<br><br>
+<b>OUTPUT OF CODE WITH SELECTED CHECKBOX:</b>
+<br><br>
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/OutputSelected.png" alt="Above code output with selected checkbox" width="100%" />
+
+<br><br>
+<b>AFTER CLICKING SUBMIT BUTTON:</b>
+<br><br>
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/WithoutArrayOutputSelectedOutput.png" alt="Clicking the submit button of the form with the selected checkbox" width="100%" />
+<p>
+In the above image we can see the url has two times hobbies appearing. Each it has different value. This may create a confusion at backend or only the last one value will be sored at backend. Just over write the existing values so only stores the last value. 
+</p>
+
+<br><br>
+### WITH ARRAY SYMBOL []
+<b>CODE:</b>
+```
+<form>
+Select your Hobbies<br>
+<label for="photography">
+<input type="checkbox" id="photography" name="hobbies[]" value="photography"> Photography
+</label>
+<label for="video-gaming">
+<input type="checkbox" id="video-gaming" name="hobbies[]" value="video-gaming"> Video Gaming
+</label>
+<label for="dance">
+<input type="checkbox" id="dance" name="hobbies[]" value="dance"> Dance
+</label>
+<br><br>
+<input type="submit" value="SUBMIT">
+</form>
+```
+
+<br><br>
+<b>OUTPUT OF CODE:</b>
+<br><br>
+https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/Output.png
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/Output.png" title="" alt="Above code output" width="100%" />
+
+<br><br>
+<b>OUTPUT OF CODE WITH SELECTED CHECKBOX:</b>
+<br><br>
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/OutputSelected.png" alt="Above code output with selected checkbox" width="100%" />
+
+<br><br>
+<b>AFTER CLICKING SUBMIT BUTTON:</b>
+<br><br>
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/WithArrayOutputSelectedOutput.png" alt="Clicking the submit button of the form with the selected checkbox" width="100%" />
+<p>
+In the above image we can see the url has two times hobbies[] appearing. Here [] (square brackets) represents the that hobbies is a array. So this stores each hobbies values in array. This is proper way to use checkbox.
+</p>
+<br><br><br>
+# Select within form
+
+## CODE:
+```
+<form>
+<p>Select your Profession</p>
+<select name="profession" id="profession" required>
+<option value="select" selected disabled>select</option>
+<option value="web"> Web developer</option>
+<option value="android"> Android developer</option>
+<option value="ios">IOS developer</option>
+<option value="flutter">Flutter developer</option>
+<option value="other">Other</option>
+<select>
+<br><br>
+<input type="submit" value="SUBMIT">
+</form>
+```
+<br><br><br>
+
+## CODE explanation:
+<p>
+<dl>
+<dt><b>SELECT TAG</b></dt>
+<dd>Select tag is like the radio button. But this is more simple than the RadioButton input. Here select tag has "name" attribute with "profession" value.</dd>
+<dt><b>Required</b></dt>
+<dd>Select elements has required keyword which makes the form un submitable when th user didn't select any option in the select elelment.<dd>
+<dt><b>name="profession"</b></dt>
+<dd>Inside the select element maultiple option elements are placed which has only value attribute and it's value.</dd>
+<dt><b>Selected</b></dt>
+<dd>First option element has value select.It has selected keyword which indicates this option is defaultly selected.</dd>
+<dt><b>Disabled</b></dt>
+<dd>Disabled option used to disable that option so that the user can't submit the defaultly selected value in the select element.</dd>
+<dl>
+</p>
+<br><br><br>
+
+## OUTPUT:
+<p>
+<form>
+<p>Select your Profession</p>
+<select name="profession" id="profession" required>
+<option value="select" selected disabled>select</option>
+<option value="web"> Web developer</option>
+<option value="android"> Android developer</option>
+<option value="ios">IOS developer</option>
+<option value="flutter">Flutter developer</option>
+<option value="other">Other</option>
+<select>
+<br><br>
+<input type="submit" value="SUBMIT">
+</form>
+</p>
 
 [Back to top](#100DaysOfCode)
