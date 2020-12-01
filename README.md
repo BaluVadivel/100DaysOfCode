@@ -5,7 +5,7 @@ Am taking this challenge to learn and take notes Everyday. Which helps to revise
 
 **Here we can see all my 100days learning without going into large number of folders**
 
-**[DAY1](#DAY1)_[DAY2](#DAY2)_[DAY3](#DAY3)_[DAY4](#DAY4)_[DAY5](#DAY5)_[DAY6](#DAY6)_[DAY7](#DAY7)**
+**[DAY1](#DAY1) [DAY2](#DAY2) [DAY3](#DAY3) [DAY4](#DAY4) [DAY5](#DAY5) [DAY6](#DAY6) [DAY7](#DAY7)**
 
 # DAY1
 **Date:** 25 November 2020
