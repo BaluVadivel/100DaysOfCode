@@ -749,7 +749,7 @@ Div tag is used to group block level element. Span tag is used to group inline l
 </p>
 
 ## IFRAME
-<p>IFRAME tag is use to embeed one website into another one</p>
+IFRAME tag is use to embeed one website into another one
 ### CODE :
 
 ```
