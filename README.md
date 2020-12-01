@@ -765,9 +765,8 @@ iframe tag must have width and height values. If you don't giv widthand height v
 ## HTML ENTITIES
 Entities codes are used to display symols in html. THIs is the standard way to use symbols in html.
 
-<br>
 
-**Source from [https://dev.w3.org](https://dev.w3.org/html5/html-author/charref)**
+**HTML ENTITIES Source [https://dev.w3.org](https://dev.w3.org/html5/html-author/charref)**
 
 
 [Back to top](#100DaysOfCode)
