@@ -520,7 +520,7 @@ Expansion of abbrevation
 
 
 # DAY6
-**Date:** 25 November 2020
+**Date:** 30 November 2020
 
 ## Input Checkbox Important Point
 Name attributes value without `[]` (array square bracket) symbol. This cause data loss or confusion at server side. If we are selecting more than one option then only last selected value will be stored. Previously stored values are over written by succeeding (upcoming or incoming) values. OR maybe the server get confused because of Same variable appearing more time but each time having different values.
@@ -658,5 +658,112 @@ In the above image we can see the url has two times `hobbies[]` appearing. Here 
 <p>
 <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/006/SelectOutputOpen Select.png" alt="Above code output 4" width="100%" />
 </p>
+
+[Back to top](#100DaysOfCode)
+
+# DAY7
+**Date:** 1 December 2020
+
+## SELECT MULTIPLE, FIELDSET, LEGEND, FILE INPUT, RANGE INPUT, TIME
+### CODE :
+```
+<form enctype="multipart/form-data">
+<fieldset>
+<legend>Job Details</legend>
+<label for="profession">
+Select your professions<br><br>
+<select name="profession[]" id="profession" multiple required>
+<option value="web"> Web developer</option>
+<option value="android"> Android developer</option>
+<option value="ios">IOS developer</option>
+<option value="flutter">Flutter developer</option>
+<option value="other">Other</option>
+<select>
+</label>
+<br><br>
+<label for="resume">Attach your resume<br><br>
+<input type="file" name="resume" id="resume" required>
+<label>
+<br><br>
+<label for="salary">Enter your Salary expectation per month<br><br>
+18000<input type="range" name="salary" id="salary" min="18000" max="46000" step="1000">46000
+<label>
+<br><br>
+<label for="time">Select interview time<br><br>
+<input type="time" name="time" id="time">
+</label>
+</fieldset>
+
+<fieldset>
+<legend>Education Details</legend>
+<label for="education">
+Select your Education<br><br>
+<select name="education" id="education" required>
+<option value="select" selected disabled>select</option>
+<option value="be"> B.E</option>
+<option value="btech"> B.Tech</option>
+<option value="bsc"> B.Sc</option>
+<select>
+</label>
+<br><br>
+<label for="year">Year of passed out<br><br>
+<input type="number" name="year" id="year" min="2018" max="2021" placeholder="yyyy" required>
+</label>
+<br><br>
+</fieldset>
+
+<fieldset>
+<legend>Contact Details</legend>
+<label for="email">Enter your email<br><br>
+<input type="email" name="email" id="email" required>
+</label>
+<br><br>
+<label for="githubid">Enter your github profile<br><br>
+<input type="url" name="githubid" id="githubid" placeholder="https://github.com/user" required>
+</label>
+<br><br>
+</fieldset>
+
+<input type="submit" value="SUBMIT">
+</form>
+```
+
+### OUTPUT :
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/007/SelectMultiple.png" alt="Above code output" width="100%" />
+
+## DIV & SPAN TAGS
+<p>Div tag is used to group block level element. Span tag is used to group inline level element. This tag has both opening and closing tags</p>
+### CODE :
+```
+<div>this is div</div>
+<span>this is span</span>
+<div>this is div</div>
+```
+
+### OUTPUT :
+<p>
+<div>this is div</div><br>
+<span>this is span</span><br>
+<div>this is div</div>
+</p>
+
+## IFRAME
+<p>IFRAME tag is use to embeed one website into another one</p>
+### CODE :
+<p>
+&lt;iframe src="https://www.youtube.com/embed/7cVpA4rME8w" width="380" height="210px"&gt;&lt;/iframe&gt;
+</p>
+
+### OUTPUT :
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/007/IframeOutput.png" alt="Above code output" width="100%" />
+<br><br>
+<b>Explanation :</b>
+<br><br>
+<p>iframe tag must have width and height values. If you don't giv widthand height values it automatically takes 0 value to both. This tag must have closing tag. If you don't give closing tag you content after the iframe won't be displayed. Just now got and clear this issue by addind closing iframe tag.</p>
+## HTML ENTITIES
+<p>Entities codes are used to display symols in html. THIs is the standard way to use symbols in html.</p>
+<br>
+**Source from [https://dev.w3.org](https://dev.w3.org/html5/html-author/charref)**
+
 
 [Back to top](#100DaysOfCode)
