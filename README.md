@@ -732,8 +732,9 @@ Select your Education<br><br>
 <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/007/SelectMultiple.png" alt="Above code output" width="100%" />
 
 ## DIV & SPAN TAGS
-<p>Div tag is used to group block level element. Span tag is used to group inline level element. This tag has both opening and closing tags</p>
+Div tag is used to group block level element. Span tag is used to group inline level element. This tag has both opening and closing tags
 ### CODE :
+
 ```
 <div>this is div</div>
 <span>this is span</span>
@@ -750,19 +751,22 @@ Select your Education<br><br>
 ## IFRAME
 <p>IFRAME tag is use to embeed one website into another one</p>
 ### CODE :
-<p>
-&lt;iframe src="https://www.youtube.com/embed/7cVpA4rME8w" width="380" height="210px"&gt;&lt;/iframe&gt;
-</p>
+
+```
+<iframe src="https://www.youtube.com/embed/7cVpA4rME8w" width="380" height="210px"></iframe>
+```
 
 ### OUTPUT :
 <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/007/IframeOutput.png" alt="Above code output" width="100%" />
-<br><br>
-<b>Explanation :</b>
-<br><br>
-<p>iframe tag must have width and height values. If you don't giv widthand height values it automatically takes 0 value to both. This tag must have closing tag. If you don't give closing tag you content after the iframe won't be displayed. Just now got and clear this issue by addind closing iframe tag.</p>
+
+### Explanation :
+iframe tag must have width and height values. If you don't giv widthand height values it automatically takes 0 value to both. This tag must have closing tag. If you don't give closing tag you content after the iframe won't be displayed. Just now got and clear this issue by addind closing iframe tag.
+
 ## HTML ENTITIES
-<p>Entities codes are used to display symols in html. THIs is the standard way to use symbols in html.</p>
+Entities codes are used to display symols in html. THIs is the standard way to use symbols in html.
+
 <br>
+
 **Source from [https://dev.w3.org](https://dev.w3.org/html5/html-author/charref)**
 
 
