@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>DAY8</title>
+<meta charset="UTF-8">
+</head>
+<body>
+<h1>Audio Tag</h1>
+
+<h2>Single Format</h2>
+
+<h3>CODE :</h3>
+<p>
+&lt;audio src="SampleAudiomp3.mp3" controls&gt;<br>This fall back message only displayed when the browser dosen't support audio tag.<br>&lt;/audio&gt;
+<p>
+
+<h3>OUTPUT :</h3>
+<p>
+<audio src="SampleAudiomp3.mp3" controls>This fall back message only displayed when the browser dosen't support audio tag.</audio>
+</p>
+
+<h2>Multiple Format using SOURCE tag</h2>
+
+<h3>CODE :</h3>
+<p>
+&lt;audio controls&gt;<br>
+This fall back message only displayed when the browser dosen't support audio tag.<br>
+&lt;source type="audio/ogg"  src="SampleAudioogg.ogg"&gt;<br>
+&lt;source type="audio/wav"  src="SampleAudiowav.wav"&gt;<br>
+&lt;source type="audio/mpeg" src="SampleAudiomp3.mp3"&gt;<br>
+&lt;source type="audio/m4a"  src="SampleAudiom4a.m4a"&gt;<br>
+&lt;/audio&gt;<br>
+<p>
+
+<h3>OUTPUT :</h3>
+<p>
+<audio controls>
+This fall back message only displayed when the browser dosen't support audio tag.
+
+<source type="audio/ogg"  src="SampleAudioogg.ogg">
+<source type="audio/wav"  src="SampleAudiowav.wav">
+<source type="audio/mpeg" src="SampleAudiomp3.mp3">
+<source type="audio/m4a"  src="SampleAudiom4a.m4a">
+</audio>
+
+</p>
+
+
+<h1>Video Tag</h1>
+
+<h2>Single Format</h2>
+
+<h3>CODE :</h3>
+<p>
+&lt;video src="SampleVideomp4.mp4" controls&gt;<br>This fall back message only displayed when the browser dosen't support video tag.<br>&lt;/video&gt;
+<p>
+
+<h3>OUTPUT :</h3>
+<p>
+<video src="SampleVideomp4.mp4" controls>This fall back message only displayed when the browser dosen't support video tag.</video>
+</p>
+
+<h2>Multiple Format using SOURCE tag</h2>
+
+<h3>CODE :</h3>
+<p>
+&lt;video controls&gt;<br>
+This fall back message only displayed when the browser dosen't support audio tag.<br>
+&lt;source type="video/quicktime"  src="SampleVideomov.mov"&gt;<br>
+&lt;source type="video/x-msvideo"  src="SampleVideoavi.avi"&gt;<br>
+&lt;source type="video/webm"       src="SampleVideowebm.webm"&gt;<br>
+&lt;source type="video/x-ms-wmv"   src="SampleVideowmv.wmv"&gt;<br>
+&lt;source type="video/ogg"        src="SampleVideoogg.ogg"&gt;<br>
+&lt;source type="video/mp4"        src="SampleVideomp4.mp4"&gt;<br>
+&lt;/video&gt;<br>
+<p>
+
+<h3>OUTPUT :</h3>
+<p>
+<video controls>
+This fall back message only displayed when the browser dosen't support audio tag.
+
+<source type="video/quicktime"  src="SampleVideomov.mov">
+<source type="video/x-msvideo"  src="SampleVideoavi.avi">
+<source type="video/webm"       src="SampleVideowebm.webm">
+<source type="video/x-ms-wmv"   src="SampleVideowmv.wmv">
+<source type="video/ogg"        src="SampleVideoogg.ogg">
+<source type="video/mp4"        src="SampleVideomp4.mp4">
+</video>
+
+</p>
+
+</body>
+</html
