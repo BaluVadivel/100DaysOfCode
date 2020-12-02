@@ -5,7 +5,7 @@ Am taking this challenge to learn and take notes Everyday. Which helps to revise
 
 **Here we can see all my 100days learning without going into large number of folders**
 
-**[DAY1](#DAY1) - [DAY2](#DAY2) - [DAY3](#DAY3) - [DAY4](#DAY4) - [DAY5](#DAY5) - [DAY6](#DAY6) - [DAY7](#DAY7)**
+**[DAY1](#DAY1) - [DAY2](#DAY2) - [DAY3](#DAY3) - [DAY4](#DAY4) - [DAY5](#DAY5) - [DAY6](#DAY6) - [DAY7](#DAY7) - [DAY8](#DAY8)**
 
 # DAY1
 **Date:** 25 November 2020
@@ -768,5 +768,70 @@ Entities codes are used to display symols in html. THIs is the standard way to u
 
 **HTML ENTITIES Source [https://dev.w3.org](https://dev.w3.org/html5/html-author/charref)**
 
+
+[Back to top](#100DaysOfCode)
+
+
+# DAY8
+**Date:** 2 December 2020
+
+## Audio Tag
+
+### Single Format
+
+#### CODE :
+```
+<audio src="SampleAudiomp3.mp3" controls>This fall back message only displayed when the browser dosen't support audio tag.</audio>
+```
+#### OUTPUT :
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/008/OutputAudio.png" alt="Above code output" width="100%" />
+
+### Multiple Format using SOURCE tag
+
+#### CODE :
+```
+<audio controls>
+This fall back message only displayed when the browser dosen't support audio tag.
+
+<source type="audio/ogg"  src="SampleAudioogg.ogg">
+<source type="audio/wav"  src="SampleAudiowav.wav">
+<source type="audio/mpeg" src="SampleAudiomp3.mp3">
+<source type="audio/m4a"  src="SampleAudiom4a.m4a">
+</audio>
+```
+
+#### OUTPUT :
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/008/OutputAudio.png" alt="Above code output" width="100%" />
+
+## Video Tag
+
+### Single Format
+
+#### CODE :
+```
+<video src="SampleVideomp4.mp4" controls>This fall back message only displayed when the browser dosen't support video tag.</video>
+```
+
+#### OUTPUT :
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/008/OutputVideo.png" alt="Above code output" width="100%" />
+
+### Multiple Format using SOURCE tag
+
+#### CODE :
+```
+<video controls>
+This fall back message only displayed when the browser dosen't support audio tag.
+
+<source type="video/quicktime"  src="SampleVideomov.mov">
+<source type="video/x-msvideo"  src="SampleVideoavi.avi">
+<source type="video/webm"       src="SampleVideowebm.webm">
+<source type="video/x-ms-wmv"   src="SampleVideowmv.wmv">
+<source type="video/ogg"        src="SampleVideoogg.ogg">
+<source type="video/mp4"        src="SampleVideomp4.mp4">
+</video>
+```
+
+#### OUTPUT :
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/008/OutputVideo.png" alt="Above code output" width="100%" />
 
 [Back to top](#100DaysOfCode)
