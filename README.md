@@ -743,8 +743,8 @@ Div tag is used to group block level element. Span tag is used to group inline l
 
 ### OUTPUT :
 <p>
-<div>this is div</div><br>
-<span>this is span</span><br>
+<div>this is div</div>
+<span>this is span</span>
 <div>this is div</div>
 </p>
 
