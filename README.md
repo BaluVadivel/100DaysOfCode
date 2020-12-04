@@ -5,7 +5,7 @@ Am taking this challenge to learn and take notes Everyday. Which helps to revise
 
 **Here we can see all my 100days learning without going into large number of folders**
 
-**[DAY1](#DAY1) - [DAY2](#DAY2) - [DAY3](#DAY3) - [DAY4](#DAY4) - [DAY5](#DAY5) - [DAY6](#DAY6) - [DAY7](#DAY7) - [DAY8](#DAY8) - [DAY9](#DAY9)**
+**[DAY1](#DAY1) - [DAY2](#DAY2) - [DAY3](#DAY3) - [DAY4](#DAY4) - [DAY5](#DAY5) - [DAY6](#DAY6) - [DAY7](#DAY7) - [DAY8](#DAY8) - [DAY9](#DAY9) - [DAY10](#DAY10)**
 
 # DAY1
 **Date:** 25 November 2020
@@ -841,5 +841,14 @@ This fall back message only displayed when the browser dosen't support audio tag
 **Date:** 3 December 2020
 
 <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/009/Day9.png" alt="Above code output" width="100%" />
+
+[Back to top](#100DaysOfCode)
+
+# DAY10
+**Date:** 4 December 2020
+
+Not learned any new things at Day 10. Completely revised all the things learned in HTML5 from day 1 to day 9. Successfully learned html5 from day 1 to day 10.
+<br>
+**From tomorrow learning CSS**
 
 [Back to top](#100DaysOfCode)
