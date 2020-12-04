@@ -849,6 +849,6 @@ This fall back message only displayed when the browser dosen't support audio tag
 
 Not learned any new things at Day 10. Completely revised all the things learned in HTML5 from day 1 to day 9. Successfully learned html5 from day 1 to day 10.
 <br>
-**From tomorrow learning CSS**
+**From tomorrow onwards learning CSS**
 
 [Back to top](#100DaysOfCode)
