@@ -1183,20 +1183,22 @@ Audio tag is used to include audio file in the web page.
 </p>
 <b>CODE :</b>
 <p>
-&lt;audio src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleAudiomp3.mp3" controls&gt;<br>This fall back message only displayed when the browser dosen't support audio tag.<br>&lt;/audio&gt;
+&lt;audio preload="none" src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleAudiomp3.mp3" controls&gt;<br>This fall back message only displayed when the browser dosen't support audio tag.<br>&lt;/audio&gt;
 <p>
 <b>OUTPUT :</b>
 <p>
-<audio src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleAudiomp3.mp3" controls>This fall back message only displayed when the browser dosen't support audio tag.</audio>
+<audio preload="none" src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleAudiomp3.mp3" controls>This fall back message only displayed when the browser dosen't support audio tag.</audio>
 </p>
 
 <h2>Multiple Format using SOURCE tag</h2>
 <p>
 Audio tag is used to include audio file in the web page. Source tag is used inside audio tag to attach multiple audio files in different format.
+<b>preload="none"</b><br>
+This attribute won't pre load the video until th user clicking the video or play button.
 </p>
 <b>CODE :</b>
 <p>
-&lt;audio controls&gt;<br>
+&lt;audio preload="none" controls&gt;<br>
 This ia fall back message which only displayed when the browser dosen't support audio tag.<br>
 &lt;source type="audio/ogg"  src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleAudioogg.ogg"&gt;<br>
 &lt;source type="audio/wav"  src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleAudiowav.wav"&gt;<br>
@@ -1206,7 +1208,7 @@ This ia fall back message which only displayed when the browser dosen't support 
 <p>
 <b>OUTPUT :</b>
 <p>
-<audio controls>
+<audio  preload="none" controls>
 This ia fall back message which only displayed when the browser dosen't support audio tag.
 <source type="audio/ogg"  src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleAudioogg.ogg">
 <source type="audio/wav"  src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleAudiowav.wav">
