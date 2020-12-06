@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Balu from Day 1 to 10</title>
+<meta name="description" content="Balu Vadivel's day 1 to day 10 learing at 100DaysOfCode">
+<meta ="keywords" content="Balu at 100Daysofcode , Balu Vadivel at 100Daysofcode">
+<meta name="author" content="Balu Vadivel">
+<meta name="viewport" content="width=device‐width, initial‐scale=1.0">
+<meta rel="canonical" href="https://100.balu.dev">
+<meta rel="canonical" href="https://css‐tricks.com/essential‐meta‐tags‐social‐media">
+<meta rel="canonical" href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+<meta property="og:title" content="Balu from Day 1 to 10">
+<meta property="og:description" content="Hi i am Balu Vadivel, and this is my day 1 to day 10 learing notes at 100DaysOfCode">
+<meta property="og:url" content="https://100.balu.dev/001-to-010">
+
+
+</head>
+<body>
+<h1>Day 1 to Day 10 learning<h1>
+
+<!----------------------------- Nav Link ------------------------------>
+<h2 id="nav">Nav Link</h2>
+
+<p><a href="#day1">Day1</a> - <a href="#day2">Day2</a> - <a href="#day3">Day3</a> - <a href="#day4">Day4</a> - <a href="#day5">Day5</a> - <a href="#day6">Day6</a> - <a href="#day7">Day7</a> - <a href="#day8">Day8</a> - <a href="#day9">Day9</a> - <a href="#day10">Day10</a></p>
+
+<!----------------------------- Day1 ------------------------------>
+
+<h2 id="day1">Day1</h2>
+
+
+<h2>DOCTYPE</h2>
+<p>DOCTYPE declaration in html version 5 (HTML5). This ensures that the browser makes a relevant and specific rendering mode that is compatible with HTML5 Document. <strong>This tells the browser this html document is html5 version.</strong></p>
+<b>CODE :</b>
+<p>&lt;!DOCTYPE html&gt;</p>
+
+<h2>Html Tag and Lang attribute</h2>
+<p>The html tag represents the root of an HTML document. This html is the container for all other tags.This tags direct child tags are head tag &amp; body tag. The HTML <b>lang</b> attribute is used to identify the language of text content on the web. This information helps search engines return language specific results, and it is also used by screen readers that switch language profiles to provide the correct accent and pronunciation. The lang attribute is forgotten surprisingly often, perhaps because it makes no apparent difference unless you use a screen reader or you are a search engine.</p>
+<b>CODE :</b>
+<p>&lt;html lang="en"&gt;</p>
+&lt;p lang"zh"&gt;<span lang="zh">中华人民共和国<span>&lt;p&gt;
+
+<h2>Head Tag</h2>
+<p>Head tags includes metadata for seo and linking css, script and logo etc.</p>
+<b>CODE :</b>
+<p>&lt;head&gt; &lt;/head&gt;</p>
+
+<h2>Title Tag</h2>
+<p>The content of the title is one of the components used by search engine algorithms to decide the order in which to list pages in search results. Title tag defines documents title which appear in browser or page's tab.It contains only text.<br>This tag is the child tag of &lt;head&gt; .</p>
+<b>CODE :</b>
+<p>
+&lt;head&gt;<br>
+&lt;title&gt;primary keyword ‐ secondary key word &lt;/title&gt;<br>
+&lt;/head&gt;
+</p>
+
+<h2>Link Tag</h2>
+<p>Link tags are used to Link stylesheets, scripts and font to the html document. This tag is the child tag of &lt;head&gt; .</p>
+<b>CODE :</b>
+<p>
+&lt;head&gt;<br>
+&lt;link rel="stylesheet" href="style.css" type="text/css"&gt;<br>
+&lt;/head&gt;
+</p>
+
+<h2>Favicon</h2>
+<p>A FAVICON is a small image file used as a tab icon, website icon, URL icon, or a bookmark icon. This icon is actually displayed on the address bar, browser's tab, browser history, bookmark bar, etc. The image of a favicon is in .ico file format. There are various file formats, but .ico format is supported by all the browsers.</p>
+<b>CODE :</b>
+<p>&lt;link rel="shortcut icon" href="favicon.ico" type="image/x‐icon" &gt;</p>
+
+<h2>Meta Tag</h2>
+<p>Meta tag  contains the essential information for browser and SEO. This tag is the child tag of &lt;head&gt;</p>
+<b>CODE :</b>
+<p>
+&lt;head&gt;<br>
+&lt;meta charset="UTF‐8" &gt;<br>
+&lt;/head&gt;
+</p>
+
+<h2>Character encoding</h2>
+<p>Character encoding defines a mapping between bytes and text. A sequence of bytes allows for different textual interpretations. By specifying a particular encoding (such as UTF-8), we specify how the sequence of bytes is to be interpreted.
+<br><br>
+<b>UTF&hyphen;8</b> ensures that you can use characters from just about any human language in your HTML document, and they will display reliably.
+<br><br>
+UTF&hyphen;8 is the World Wide Web's most common character encoding. Each character is represented by one to four bytes. UTF&hyphen;8 is backward-compatible with ASCII and can represent any standard Unicode character.
+</p>
+<b>CODE :</b>
+<p>
+&lt;meta charset="UTF‐8" &gt;
+</p>
+
+<h2>Description</h2>
+<p>Search engines use your description to determine the relevancy with the keywords. This is mainly used for SEO.</p>
+<b>CODE :</b>
+<p>
+&lt;meta name="description" content="Detailed summary that describing the web page including it's all key word appeared in title tag" &gt;
+</p>
+
+<h2>Keywords</h2>
+<p>It helps tell search engines what the topic of the page. Meta keywords are distinguished from keywords because they appear "behind the scenes" in the source code of your page.</p>
+<b>CODE :</b>
+<p>
+&lt;meta name="keywords" content="keyword , secondary keyword , third keyword , final keyword" &gt;
+</p>
+
+<p><a href="#nav">Back to Nav Link</a></p>
+
+<!----------------------------- Day2 ------------------------------>
+
+<h2 id="day2">Day2</h2>
+
+<h2>Author</h2>
+<p>It defines the name of the document's author. It is important because it gives credit to the person that made the website.</p>
+<b>CODE :</b>
+<p>
+&lt;meta name="author" content="Author Name" &gt;
+</p>
+
+<h2>viewport</h2>
+<p>Viewport elements gives the browser instructions on how to control the page's dimensions and scaling. The initial-scale=1 part sets the initial zoom level when the page is first loaded by the browser.</p>
+<b>CODE :</b>
+<p>
+&lt;meta name="viewport" content="width=device‐width, initial‐scale=1.0" &gt;
+</p>
+
+<h2>Canonical</h2>
+<p>The Canonical meta tag is actually a link element. When you have duplicate content on your website or pages that are very similar to one another&comma; it tells Google which page is the original and should have traffic driven to it.</p>
+<b>CODE :</b>
+<p>
+&lt;meta rel="canonical" href="https://css‐tricks.com/essential‐meta‐tags‐social‐media" &gt;
+</p>
+
+<!---------------- Social media preview ----------------->
+
+<h2>&lt;!----------------- Social media preview -----------------</h2>
+
+<h2>OG:Title</h2>
+<p>OG:Title doesn't affect your SEO this only appear in social media peview.</p>
+<b>CODE :</b>
+<p>
+&lt;meta property="og:title" content="European Travel Destinations"&gt;
+</p>
+
+<h2>OG:Description</h2>
+<p>OG:Description doesn't affect your SEO this only appear in social media sharing peview.</p>
+<b>CODE :</b>
+<p>
+&lt;meta property="og:description" content="Description for social media preview"&gt;
+</p>
+
+<h2>OG:Image</h2>
+<p>OG:Image appear in social media sharing peview. This image is mostly overview or preview of the webpage. It should be at least 600×315 pixels, but 1200×630 or larger is preferred (up to 5MB). Stay close to a 1.91:1 aspect ratio to avoid cropping.</p>
+<b>CODE :</b>
+<p>
+&lt;meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg"&gt;
+</p>
+
+<h2>OG:URL</h2>
+<p>OG:URL appear in social media sharing peview.</p>
+<b>CODE :</b>
+<p>
+&lt;meta property="og:url" content="http://balu.dev/index.html"&gt;
+</p>
+
+<h2>twitter:card</h2>
+<p>if we dosent include TWITTER:CARD Sometime description won't appear and Og:image won't appear fully only square sizely cropped center part of the image is displayed like icon.</p>
+<b>CODE :</b>
+<p>
+&lt;meta name="twitter:card" content="summary_large_image"&gt;
+</p>
+
+<p><a href="#nav">Back to Nav Link</a></p>
+
+<!----------------------------- Day3 ------------------------------>
+
+<h2 id="day3">Day3</h2>
+
+
+
+
+<p><a href="#nav">Back to Nav Link</a></p>
+
+
+
+
+<h2>Heading Tags</h2>
+<p>Heading tags has six tags in six sizes.<p>
+<b>CODE :</b>
+<P>
+&lt;h1&gt;h1 tag&lt;/h1&gt;<br>
+&lt;h2&gt;h2 tag&lt;/h2&gt;<br>
+&lt;h3&gt;h3 tag&lt;/h3&gt;<br>
+&lt;h4&gt;h4 tag&lt;/h4&gt;<br>
+&lt;h5&gt;h5 tag&lt;/h5&gt;<br>
+&lt;h6&gt;h6 tag&lt;/h6&gt;<br>
+</P>
+<b>OUTPUT:</b>
+<P>
+<h1>h1 tag</h1>
+<h2>h2 tag</h2>
+<h3>h3 tag</h3>
+<h4>h4 tag</h4>
+<h5>h5 tag</h5>
+<h6>h6 tag</h6>
+</P>
+
+<h2>Paragraph</h2>
+<p>
+Paragraph tag gives line break before and after paragraph tag. Two neighour paragraphs have only one line break between them.
+</p>
+<b>CODE :</b>
+<P>
+Just text.&lt;p&gt;First paragraph.&lt;/p&gt;&lt;p&gt;Second paragraph.&lt;/p&gt; Just text.
+</P>
+<b>OUTPUT:</b>
+<P>
+Just text.<p>First paragraph.</p><p>Second paragraph.</p> Just text.
+</P>
+
+<h2>Line Break</h2>
+<p>
+Line break tag is &lt;br&gt; .This gives new line (blank line) in it's position.
+</p>
+<b>CODE :</b>
+<P>
+Just text.&lt;br&gt;Just text.
+</P>
+<b>OUTPUT:</b>
+<P>
+Just text.<br>Just text.
+</P>
+
+<h2>Horizontal rule</h2>
+<p>
+Line break tag is &lt;hr&gt; .This gives black line in it's position. This seprates the above and below content.
+</p>
+<b>CODE :</b>
+<P>
+Just text.&lt;hr&gt;Just text.
+</P>
+<b>OUTPUT:</b>
+<P>
+Just text.<hr>Just text.
+</P>
+
+<h2>Bold and Italic</h2>
+<p>
+Bold and italic tags gives only bold and italic styles. These tags dosen't have any meaning.
+</p>
+<b>CODE :</b>
+<P>
+&lt;b&gt;Bold gives bold style.&lt;/b&gt;&lt;i&gt;Italic gives italic style.&lt;/i&gt;
+</P>
+<b>OUTPUT:</b>
+<P>
+<b>Bold gives bold style.</b><i>Italic gives italic style.</i>
+</P>
+
+<h2>Strong and Emphasis</h2>
+<p>
+&lt;Strong&gt; and &lt;em&gt; gives also gives importance to the words.
+</p>
+<b>CODE :</b>
+<P>
+&lt;strong&gt;Strong gives bold style and gives importance.&lt;/strong&gt;&lt;em&gt;Emphasis gives italic style and special importance.&lt;/em&gt;
+</P>
+<b>OUTPUT:</b>
+<P>
+<strong>Strong gives bold style and gives importance.</strong><em>Emphasis gives italic style and special importance.</em>
+</P>
+
+<h2>Superscript and Superscript</h2>
+<p>
+Superscript gives power value or text like <em>a plus b the whole square</em>.
+</p>
+<b>CODE :</b>
+<P>
+(a+b)&lt;sup&gt;2&lt;/sup&gt; , H&lt;sub&gt;2&lt;/sub&gt;O
+</P>
+<b>OUTPUT:</b>
+<P>
+(a+b)<sup>2</sup> , H<sub>2</sub>O
+</P>
+
+<h2>Quote</h2>
+<p>
+Quote tag give double quotation.a group of words taken from a text or speech and repeated by someone other than the original author or speaker.
+</p>
+<b>CODE :</b>
+<P>
+Class advicer said &lt;q&gt;Tomorrow you have internal exam&lt;/q&gt;
+</P>
+<b>OUTPUT:</b>
+<P>
+Class advicer said <q>Tomorrow you have internal exam</q>
+</P>
+
+<h2>Block Quote</h2>
+<p>
+Block Quote tag giv quotation to block of words.a group of words taken from a text or speech and repeated by someone other than the original author or speaker. This gives empty space on left side.<b>Optionally</b> we an add cite attribute which value is actual resource of that block quote content.
+</p>
+<b>CODE :</b>
+<P>
+As Johnson (2010) explained,&lt;blockquote cite="https://academicguides.waldenu.edu/writingcenter/apa/citations/blockquotations"&gt;Digital cameras now make up 90% of all camera sales at the leading electronic stores.&lt;/blockquote&gt;
+</P>
+<b>OUTPUT:</b>
+<P>
+As Johnson (2010) explained,<blockquote cite="https://academicguides.waldenu.edu/writingcenter/apa/citations/blockquotations">Digital cameras now make up 90% of all camera sales at the leading electronic stores.</blockquote>
+</P>
+
+<h2>Abbreviation and Acronym</h2>
+<p>
+Abbreviation and Acronym tags shows the expantion of the which we given as a value to the title attribute of &lt;abbr&gt;.<br><b>Note:</b>The &lt;acronym&gt; element has been deprecated in HTML5. Use the &lt;abbr&gt; element instead.
+</p>
+<b>CODE :</b>
+<P>
+&lt;abbr title="Indian administrative Service"&gt;IAS&lt/abbr&gt; officer and &lt;abbr title="Indian Space Research Organization"&gt;ISRO&lt;/abbr&gt; scientist.
+</P>
+<b>OUTPUT:</b>
+<P>
+<abbr title="Indian administrative Service">IAS</abbr> officer and <abbr title="Indian Space Research Organization">ISRO</abbr> scientist.
+</P>
+
+<h2>Citation</h2>
+<p>
+Citation refers a creative work.
+</p>
+<b>CODE :</b>
+<P>
+&lt;cite&gt;Ponnien Selvan&lt;/cite&gt; is a tamil book which is wrote by Kalki.
+</p>
+<b>OUTPUT:</b>
+<P>
+<cite>Ponnien Selvan</cite> is a tamil book which is wrote by Kalki.
+</P>
+
+<h2>Definition</h2>
+<p>
+Definition mean's refering a meaning of a word. This is a term which has the definition in th sentence.
+</p>
+<b>CODE :</b>
+<P>
+&lt;dfn&gt;Ponnien Selvan&lt;/dfn&gt; mean The son of Ponni(Cauvery) river.
+</p>
+<b>OUTPUT:</b>
+<P>
+<dfn>Ponnien Selvan</dfn> mean The son of Ponni(Cauvery) river.
+</P>
+
+<h2>Address</h2>
+<p>
+Address tag tells the search engine content inside address tag is a address of some loaction. It also emphasis that address.
+</p>
+<b>CODE :</b>
+<P>
+Address:<br>
+&lt;address&gt;<br>
+Gandhi&lt;br&gt; <br>
+Four cross road,&lt;br&gt; <br>
+Gujrath,&lt;br&gt;<br>
+India.&lt;br&gt;<br>
+&lt;/address&gt;
+</p>
+<b>OUTPUT:</b>
+<P>
+Address:
+<address>
+Gandhi<br>
+Four cross road,<br>
+Gujrath,<br>
+India.<br>
+</address>
+</P>
+
+<h2>Delete, Insert and Strikeout</h2>
+<p>Text with deleted part and inserted part.</p>
+<b>CODE :</b>
+<p>
+send your &lt;del&gt;contact&lt;/del&gt; &lt;ins&gt;whatsapp&lt;/ins&gt; number
+</p>
+<b>OUTPUT :</b>
+<p>
+send your <del>contact</del> <ins>whatsapp</ins> number
+</p>
+<p>text with strike part</p>
+<b>CODE :</b>
+<p>
+&lt;s&gt;only few stocks left&lt;/s&gt; <br> &lt;br&gt;Soldout
+</p>
+<b>OUTPUT :</b>
+<p>
+<s>only few stocks left</s>
+<br>
+Soldout
+</p>
+
+
+<!----------------------------- Day4 ------------------------------>
+
+<h2 id="day4">Day4</h2>
+
+<h2>Image Tag</h2>
+
+<h3>Affecting aspect ratio</h3>
+<p>
+Giving height and width values without considering aspect ratio.
+<p>
+<b>CODE:</b>
+<p>
+&lt;img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day4-Ubuntu.png" alt="Image of Ubuntu Desktop window" title="Ubuntu Desktop" width="120px" height="120px"&gt;
+</p>
+<b>OUTPUT:</b>
+<p>
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day4-Ubuntu.png" alt="Image of Ubuntu Desktop window" title="Ubuntu Desktop" width="120px" height="120px">
+</p>
+
+<h3>Without affecting aspect ratio</h3>
+<p>
+Giving height only or width only dosen't affect your aspect ratio.
+</p>
+<b>CODE:</b>
+<p>
+&lt;img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day4-Ubuntu.png" alt="Image of Ubuntu Desktop window" title="Ubuntu Desktop" height="120px"&gt;
+</p>
+<b>OUTPUT:</b>
+<p>
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day4-Ubuntu.png" alt="Image of Ubuntu Desktop window" title="Ubuntu Desktop" height="120px">
+</p>
+
+<h3>Image with Caption</h3>
+<p>
+Figure caption tag is used to give caption to image.
+</p>
+<b>Code:</b>
+<p>
+&lt;figure&gt;<br>
+&lt;img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day4-Ubuntu.png" alt="Image of Ubuntu Desktop window" title="Ubuntu Desktop" height="120px"&gt;<br>
+&lt;figcaption&gt;Caption of the above image&lt;/figcaption&gt;<br>
+&lt;/figure&gt;<br>
+</p>
+<b>Output:</b>
+<p>
+<figure>
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day4-Ubuntu.png" alt="Image of Ubuntu Desktop window" title="Ubuntu Desktop" height="120px">
+<figcaption>Caption of the above image</figcaption><br>
+</figure>
+</p>
+
+<h2>Linking Web Page</h2>
+<p>
+Anchor Tag or a Tag is used to link web pages.
+</p>
+<h3>Opening web pages in the CURRENT TAB</h3>
+<b>Code:</b>
+<p>
+&lt;a href="https://balu.dev"&gt;balu.dev&lt;/a&gt; is my portfolio
+</p>
+<b>Outout:</b>
+<p>
+<a href="https://balu.dev">balu.dev</a> is my portfolio
+</p>
+
+<h3>Opening web pages in the NEW TAB</h3>
+<b>Code:</b>
+<p>
+&lt;a href="https://balu.dev" target="_blank"&gt;balu.dev&lt;/a&gt; is my portfolio
+</p>
+<b>Outout:</b>
+<p>
+<a href="https://balu.dev" target="_blank">balu.dev</a> is my portfolio
+</p>
+
+<h2>Email Link</h2>
+
+<h3>Email link will open email app and fills the corresponding email address in TO field.</h3>
+<b>Code:</b>
+<p>
+&lt; a href="mailto:mailid@domain.com"&gt;Click&lt;/a&gt; to contact
+</p>
+<b>Output:</b>
+<p>
+<a href="mailto:mailid@domain.com">Click</a> to contact
+</p>
+
+<h3>fills the corresponding email address in TO field and filling text in subject field</h3>
+<b>Code:</b>
+<p>
+&lt; a "mailto:mailid@domain.com?subject=FEEDBACK"&gt;Click&lt;/a&gt; to contact
+</p>
+<b>Output:</b>
+<p>
+<a href="mailto:mailid@domain.com?subject=FEEDBACK">Click</a> to contact
+</p>
+
+<h2>Named Anchor tag or Link within the page</h2>
+<p>
+This linking is created with the help of id attribute. Value of the id attribute must be unique.
+</p>
+<b>Code:</b>
+<p>
+&lt;h4 id="link">This tags id="link"&lt;/h4&gt;<br>
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;<br>
+&lt;a href="#link"&gt;Click here&lt;/a&gt; to scroll to above "This tags id="link" "
+</p>
+<b>Output:</b>
+<p>
+<h4 id="link">This tags id="link"</h4>
+<br><br><br><br><br><br><br><br>
+<a href="#link">Click here</a> to scroll to above "This tags id="link" "
+</p>
+
+<h2>Lists</h2>
+
+<h3>Unordered list</h3>
+<p>
+Unordered list is used to list the items with bullet symbol. This represents list items can be in any order.
+</p>
+<b>Code:</b>
+<p>
+Programming Languages<br>
+&lt;ul&gt;<br>
+&lt;li&gt;Go&lt;/li&gt;<br>
+&lt;li&gt;C&lt;/li&gt;<br>
+&lt;li&gt;Python&lt;/li&gt;<br>
+&lt;/ul&gt;<br>
+</p>
+<b>Output:</b>
+<p>
+Programming Languages
+<ul>
+<li>Go</li>
+<li>C</li>
+<li>Python</li>
+</ul>
+</p>
+
+<h3>Ordered list</h3>
+<p>
+Ordered list is used to list the items with numbers. This represents list items must be in given order.
+</p>
+<b>Code:</b>
+<p>
+Programming Languages in top 3 rank for less compiling time<br>
+&lt;ol&gt;<br>
+&lt;li&gt;Go&lt;/li&gt;<br>
+&lt;li&gt;C&lt;/li&gt;<br>
+&lt;li&gt;Python&lt;/li&gt;<br>
+&lt;/ol&gt;<br>
+</p>
+<b>Output:</b>
+<p>
+Programming Languages in top 3 rank for less compiling time
+<ol>
+<li>Go</li>
+<li>C</li>
+<li>Python</li>
+</ol>
+</p>
+
+<h3>Definition list</h3>
+<p>
+Definition list is a list of terms and corresponding definitions.Definition list is formated with the term in left side with the definition on next line on the right side.
+</p>
+<b>Code:</b>
+<p>
+Expansion of abbrevation<br>
+&lt;dl&gt;<br>
+&lt;dt&gt;HTML&lt;/dt&gt;<br>
+&lt;dd&gt;Hyper Text Markup Language&lt;/dd&gt;<br>
+&lt;dt&gt;CSS&lt;/dt&gt;<br>
+&lt;dd&gt;Casscading Style sheet&lt;/dd&gt;<br>
+&lt;/dl&gt;<br>
+</p>
+<b>Output:</b>
+<p>
+Expansion of abbrevation<br>
+<dl>
+<dt>HTML</dt>
+<dd>Hyper Text Markup Language</dd>
+<dt>CSS</dt>
+<dd>Casscading Style sheet</dd>
+</dl>
+</p>
+
+<p><a href="#nav">Back to Nav Link</a></p>
+
+<!----------------------------- Day5 ------------------------------>
+
+<h2 id="day5">Day5</h2>
+
+<h2>Nested list</h2>
+<p>
+List placed inside the list item is called nested list.
+</p>
+<b>CODE:</b>
+<p>K.S.R Educational Institutions<br>
+&lt;ul&gt;<br>
+&lt;li&gt;K.S.R PC<br>
+&lt;ol&gt;<br>
+&lt;li&gt;CT Department&lt;/li&gt;<br>
+&lt;li&gt;CE Department&lt;/li&gt;<br>
+&lt;/ol&gt;<br>
+&lt;/li&gt;<br>
+&lt;li&gt;K.S.R IT<br>
+&lt;ol&gt;<br>
+&lt;li&gt;CSE Department&lt;/li&gt;<br>
+&lt;li&gt;CE Department&lt;/li&gt;<br>
+&lt;/ol&gt;<br>
+&lt;/li&gt;<br>
+&lt;/ul&gt;<br>
+</p>
+<b>OUTPUT:</b>
+<p>K.S.R Educational Institutions
+<ul>
+<li>K.S.R PC
+<ol>
+<li>CT Department</li>
+<li>CE Department</li>
+</ol>
+</li>
+<li>K.S.R IT
+<ol>
+<li>CSE Department</li>
+<li>CE Department</li>
+</ol>
+</li>
+</ul>
+</p>
+
+<h2>Table</h2>
+<p>
+Border is must if we dosen't give border attribute and it's value to Table only content of the table  will be displayed without border. Without border it is difficult to understand it was a Table.
+</p>
+<b>CODE:</b>
+<p>
+&lt;table border="2"&gt;<br>
+&lt;tr&gt;<br>
+&lt;th&gt;&lt;/th&gt; &lt;th&gt;9-10&lt;/th&gt; &lt;th&gt;10-11&lt;/th&gt; &lt;th&gt;11-12&lt;/th&gt; &lt;th&gt;12-12:30&lt;/th&gt; &lt;th&gt;1-2&lt;/th&gt; &lt;th&gt;2-3&lt;/th&gt; &lt;th&gt;3-4&lt;/th&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;th&gt;Monday&lt;/th&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;th&gt;Tuesday&lt;/th&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;/table&gt;
+</p>
+<b>OUTPUT:</b>
+<p>
+<table border="2">
+<tr>
+<th></th> <th>9-10</th> <th>10-11</th> <th>11-12</th> <th>12-12:30</th> <th>1-2</th> <th>2-3</th> <th>3-4</th>
+</tr>
+<tr>
+<th>Monday</th> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+</tr>
+<tr>
+<th>Tuesday</th> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+</tr>
+</table>
+</p>
+
+<h2>Table with empty span</h2>
+<b>CODE:</b>
+<p>
+&lt;table border="2"&gt;<br>
+&lt;tr&gt;<br>
+&lt;th rowspan="2"&gt;DAY&lt;/th&gt; &lt;th colspan="9"&gt;TIME&lt;/th&gt;
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;th&gt;09-10&lt;/th&gt; &lt;th&gt;10-11&lt;/th&gt; &lt;th&gt;11-12&lt;/th&gt; &lt;th&gt;12-12:30&lt;/th&gt; &lt;th rowspan="6"&gt;LUNCH&lt;/th&gt; &lt;th&gt;01:30-02&lt;/th&gt; &lt;th&gt;02-03&lt;/th&gt; &lt;th&gt;03-04:30&lt;/th&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;th&gt;Monday&lt;/th&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;th&gt;Tuesday&lt;/th&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;/table&gt;
+</p>
+
+<b>OUTPUT:</b>
+<p>
+<table border="2">
+<tr>
+<th rowspan="2">DAY</th> <th colspan="9">TIME</th>
+</tr>
+<tr>
+<th>09-10</th> <th>10-11</th> <th>11-12</th> <th>12-12:30</th> <th rowspan="6">LUNCH</th> <th>01:30-02</th> <th>02-03</th> <th>03-04:30</th>
+</tr>
+<tr>
+<th>Monday</th> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+</tr>
+<tr>
+<th>Tuesday</th> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+</tr>
+</table>
+</p>
+
+<h2>Table with TableHeader & TableFooter</h2>
+<b>CODE:</b>
+<p>
+&lt;table border="2"&gt;<br>
+&lt;thead&gt;<br>
+&lt;tr&gt;<br>
+&lt;th&gt;S.No&lt;/th&gt;&lt;th&gt;Reg.No&lt;/th&gt;&lt;th&gt;Name&lt;/th&gt;<br>
+&lt;/tr&gt;<br>
+&lt;/thead&gt;<br>
+&lt;tr&gt;<br>
+&lt;td&gt;1&lt;/td&gt; &lt;td&gt;19010741&lt;/td&gt; &lt;td&gt;Arjun&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;td&gt;2&lt;/td&gt; &lt;td&gt;19010742&lt;/td&gt; &lt;td&gt;Ashok&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;td&gt;3&lt;/td&gt; &lt;td&gt;19010743&lt;/td&gt; &lt;td&gt;Bala&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tfoot&gt;<br>
+&lt;tr&gt;<br>
+&lt;th colspan="2"&gt;Total Students&lt;/th&gt; &lt;th&gt;3&lt;/th&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;th colspan="2"&gt;Total Students without Reg.No&lt;/th&gt; &lt;th&gt;1&lt;/th&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tfoot&gt;<br>
+&lt;/table&gt;<br>
+</p>
+
+<b>OUTPUT:</b>
+<p>
+<table border="2">
+<thead>
+<tr>
+<th>S.No</th><th>Reg.No</th><th>Name</th>
+</tr>
+</thead>
+<tr>
+<td>1</td> <td>19010741</td> <td>Arjun</td>
+</tr>
+<tr>
+<td>2</td> <td>19010742</td> <td>Ashok</td>
+</tr>
+<tr>
+<td>3</td> <td></td> <td>Bala</td>
+</tr>
+<tfoot>
+<tr>
+<th colspan="2">Total Students</th> <th>3</th>
+</tr>
+<tr>
+<th colspan="2">Total Students without Reg.No</th> <th>1</th>
+</tr>
+<tfoot>
+</table>
+</p>
+
+<h2>Form</h2>
+<p>
+Form is used to collect data from the user commonly using input tags.
+</p>
+<dl>
+<h3>Attributes mostly used in form element</h3>
+<dt><b>method: GET (Default)</b></dt>
+<dd>Collected form data is send through URL.URL length is limited to 3000 characters due to this form data lengthis also limited. Sensitive data can not used suc as password.
+Example: When you search something in google your searched word must be in the URL. When someone else opened the same link he will the same result.</dd>
+<dt><b>method: POST</b></dt>
+<dd>Send the data in HTTP or HTTPs request. Form data is not shown in the URL. Form data length or size is not limited like GET method.</dd>
+<dt><b>action: URL</b></dt>
+<dd>Url is a internal or external form processing unit. like "process.php"</dd>
+</dl>
+
+<h3>Input tag name</h3>
+<p>
+In the form input tag dosen;t have name attribue and it's value Only the user entered value will be sent. This makes confusion at backend. Giving the name in input tag Form sends the both the name attribute value and the user entered value Sothis won't make confusion at backend.
+</p>
+<h3>Checkbox and radio button</h3>
+<p>
+Giving same name to the radio button connect those Radio buttons.<br>
+Giving same name to the checkbox connect those checkbox.
+</p>
+<h3>Password type input</h3>
+<p>
+Password type input masks the user input as * for each character.
+</p>
+<h3>Input name as Array</h3>
+<p>
+If any one of the input tag holding more than one value then it's name must be in array type. Below code has <strong>checkbox</strong> which can hold more than one value So it's name is "technology[]"<br>
+<strong>Radio</strong> button can't hold more than one value So it dosen't need the array type name.
+</p>
+
+<h3>Iunput Tag Attributes</h3>
+<dl>
+<dt>size="20"</dt>
+<dd>means input box can display maximum 20 characters. When you type more than that it only displays last 20 characters.<dd>
+<dt>maxlength="46"</dt>
+<dd>means the name can't more than 46 characters. It can only hold maximum 46 characters.<dd>
+<dt>required</dt>
+<dd>required attribute dosen't hold any value. When place this attribute to input user can't submit the form without filling the corresponging input field<dd>
+<dt>min="18" max="96"</dt>
+<dd>When we are using input tags type attribute value as number we can set the minimum and maximum value for it<dd>
+
+</dl>
+
+<b>CODE:</b>
+<p>
+&lt;form&gt;<br>
+&lt;label for="name"&gt;Name:<br>
+&lt;input type="text" id="name" name="username" size="20" maxlength="46" placeholder="Enter your Name" required&gt;<br>
+&lt;/label&gt;<br>
+&lt;br&gt;<br>
+&lt;label for="email"&gt;Email:<br>
+&lt;input type="email" id="email" name="email" placeholder="Enter your Email" required&gt;<br>
+&lt;/label&gt;<br>
+&lt;br&gt;<br>
+&lt;label for="age"&gt;Age:<br>
+&lt;input type="number" id="age" name="age" min="18" max="96" placeholder="Enter your Age" required&gt;<br>
+&lt;/label&gt;<br>
+&lt;br&gt;<br>
+&lt;label for="dob"&gt;DOB:<br>
+&lt;input type="date" id="dob" name="dob" placeholder="Enter your DOB" required&gt;<br>
+&lt;/label&gt;<br>
+&lt;br&gt;<br>
+&lt;p&gt;Select Gender&lt;br&gt;<br>
+&lt;label for="male"&gt;<br>
+&lt;input type="radio" id="male" name="gender" value="male" required&gt;Male<br>
+&lt;/label&gt;&lt;br&gt;<br>
+&lt;label for="female"&gt;<br>
+&lt;input type="radio" id="female" name="gender" value="female" &gt;Female<br>
+&lt;/label&gt;&lt;br&gt;<br>
+&lt;label for="other"&gt;<br>
+&lt;input type="radio" id="other" name="gender" value="other" &gt;Other<br>
+&lt;/label&gt;<br>
+&lt;/p&gt;<br>
+&lt;p&gt;Technologies you use&lt;br&gt;<br>
+&lt;label for="reactjs"&gt;<br>
+&lt;input type="checkbox" id="reactjs" name="technology[]" value="reactjs" &gt;React js<br>
+&lt;/label&gt;&lt;br&gt;<br>
+&lt;label for="angularjs"&gt;<br>
+&lt;input type="checkbox" id="angularjs" name="technology[]" value="angularjs" &gt;Angular js<br>
+&lt;/label&gt;&lt;br&gt;<br>
+&lt;label for="vuejs"&gt;<br>
+&lt;input type="checkbox" id="vuejs" name="technology[]" value="vuejs" &gt;Vue js<br>
+&lt;/label&gt;<br>
+&lt;/p&gt;<br>
+&lt;p&gt;Comments:&lt;br&gt;<br>
+&lt;textarea type="text" rows="6" cols="40" maxlength="250"&gt;&lt;/textarea&gt;<br>
+&lt;/p&gt;<br>
+&lt;br&gt;&lt;br&gt;<br>
+&lt;label for="pwd"&gt;Password:<br>
+&lt;input type="password" id="pwd" name="password" minlength="8" maxlength="26" placeholder="Enter your password"&gt;<br>
+&lt;/label&gt;<br>
+&lt;br&gt;&lt;br&gt;<br>
+&lt;input type="submit" value="Submit"&gt;<br>
+&lt;/form&gt;
+</p>
+<b>OUTPUT:</b>
+<p>
+<form>
+<label for="name">Name:
+<input type="text" id="name" name="username" size="20" maxlength="46" placeholder="Enter your Name" required>
+</label>
+<br>
+<label for="email">Email:
+<input type="email" id="email" name="email" placeholder="Enter your Email" required>
+</label>
+<br>
+<label for="age">Age:
+<input type="number" id="age" name="age" min="18" max="96" placeholder="Enter your Age" required>
+</label>
+<br>
+<label for="dob">DOB:
+<input type="date" id="dob" name="dob" placeholder="Enter your DOB" required>
+</label>
+<br>
+<p>Select Gender<br>
+<label for="male">
+<input type="radio" id="male" name="gender" value="male" required>Male
+</label><br>
+<label for="female">
+<input type="radio" id="female" name="gender" value="female" >Female
+</label><br>
+<label for="other">
+<input type="radio" id="other" name="gender" value="other" >Other
+</label>
+</p>
+<p>Technologies you use<br>
+<label for="reactjs">
+<input type="checkbox" id="reactjs" name="technology" value="reactjs" >React js
+</label><br>
+<label for="angularjs">
+<input type="checkbox" id="angularjs" name="technology" value="angularjs" >Angular js
+</label><br>
+<label for="vuejs">
+<input type="checkbox" id="vuejs" name="technology" value="vuejs" >Vue js
+</label>
+</p>
+<p>Comments:<br>
+<textarea type="text" rows="6" cols="40" maxlength="250"></textarea>
+</p>
+<br><br>
+<label for="pwd">Password:
+<input type="password" id="pwd" name="password" minlength="8" maxlength="26" placeholder="Enter your password">
+<!--
+type="password"  When you type the password the actual password won't be displayed. Bullet symbol only displayed instead of each character you type.
+-->
+</label>
+<br><br>
+<input type="submit" value="Submit">
+</form>
+</p>
+<p><a href="#nav">Back to Nav Link</a></p>
+
+<!----------------------------- Day6 ------------------------------>
+
+<h2 id="day6">Day6</h2>
+
+<h2>Select within form</h2>
+<p>
+<dl>
+<dt><b>SELECT TAG</b></dt>
+<dd>Select tag is like the radio button. But this is more simple than the RadioButton input. Here select tag has "name" attribute with "profession" value.</dd>
+<dt><b>Required</b></dt>
+<dd>Select elements has required keyword which makes the form un submitable when th user didn't select any option in the select elelment.<dd>
+<dt><b>name="profession"</b></dt>
+<dd>Inside the select element maultiple option elements are placed which has only value attribute and it's value.</dd>
+<dt><b>Selected</b></dt>
+<dd>First option element has value select.It has selected keyword which indicates this option is defaultly selected.</dd>
+<dt><b>Disabled</b></dt>
+<dd>Disabled option used to disable that option so that the user can't submit the defaultly selected value in the select element.</dd>
+<dl>
+</p>
+<b>CODE :</b>
+<p>
+&lt;form&gt;<br>
+&lt;p&gt;Select your Profession&lt;/p&gt;<br>
+&lt;select name="profession" id="profession" required&gt;<br>
+&lt;option value="select" selected disabled&gt;select&lt;/option&gt;<br>
+&lt;option value="web"&gt; Web developer&lt;/option&gt;<br>
+&lt;option value="android"&gt; Android developer&lt;/option&gt;<br>
+&lt;option value="ios"&gt;IOS developer&lt;/option&gt;<br>
+&lt;option value="flutter"&gt;Flutter developer&lt;/option&gt;<br>
+&lt;option value="other"&gt;Other&lt;/option&gt;<br>
+&lt;select&gt;<br>
+&lt;br&gt;&lt;br&gt;<br>
+&lt;input type="submit" value="SUBMIT"&gt;<br>
+&lt;/form&gt;
+</p>
+<b>OUTOUT :</b>
+<p>
+<form>
+<p>Select your Profession</p>
+<select name="profession" id="profession" required>
+<option value="select" selected disabled>select</option>
+<option value="web"> Web developer</option>
+<option value="android"> Android developer</option>
+<option value="ios">IOS developer</option>
+<option value="flutter">Flutter developer</option>
+<option value="other">Other</option>
+<select>
+<br><br>
+<input type="submit" value="SUBMIT">
+</form>
+</p>
+
+<p><a href="#nav">Back to Nav Link</a></p>
+
+<!----------------------------- Day7 ------------------------------>
+
+<h2 id="day7">Day7</h2>
+
+<h2>Html Entites</h2>
+<p>
+Html Entites is used to display special characters and symbols without affecting the native element symbols in html.<br>
+&amp;gt&semi; is used to display &gt;<br>
+&amp;lt&semi; is used to display &lt;<br>
+&amp;amp&semi; is used to display &amp;<br>
+&amp;semi&semi; is used to display &semi;<br><br>
+Checkout all entites in <a href="https://dev.w3.org/html5/html-author/charref">https://dev.w3.org/html5/html-author/charref</a>
+</p>
+<b>CODE :</b>
+<p>
+&amp;lt&semi;meta&amp;gt&semi;
+</p>
+<b>OUTPUT :</b>
+<p>
+&lt;meta&gt;
+</p>
+<h2>Comment in html</h2>
+<p>Comment is used to giv text content which is won't appear in brower. This only used for giving explanation to some elements and section.<br>Html comment start with &lt;!-- and ends with --&gt;</p>
+<b>CODE :</b>
+<p>&lt;!--     This is html comment     --&gt;</p>
+
+<h2>SELECT MULTIPLE, FIELDSET, LEGEND, FILE INPUT, RANGE INPUT, TIME INPUT</h2>
+<dl>
+<dt><b>enctype in form</b></dt>
+<dd>enctype is the way of submitting the form data.<strong>multipart/form-data</strong> is given as enctype attribute value in the form element. This value used to submit <strong>files(binary-datd)</strong> in the form.</dd>
+<dt><b>Fieldset</b></dt>
+<dd>Fieldset tag is used to seprate the single form into different sections.</dd>
+<dt><b>Legend</b></dt>
+<dd>Legend tag is used to give the headings to different sections in the form which is created using fieldset tag. </dd>
+<dt>Input type Range</dt>
+<dd>Input type Range is used to select select value froma range</dd>
+<dt></dt>
+<dd></dd>
+<dt><b>Input type file</b></dt>
+<dd>Input elements type attribute value as "file" is used to attach files in the form.</dd>
+<dt><b>Input file accept</b></dt>
+<dd>accpect attribute tells which file fomat can be attached<br>
+<b>Accept multiple format -</b> accept=".pdf, .doc, .docx"
+</dd>
+</dl>
+<b>CODE :</b>
+</p>
+&lt;form enctype="multipart/form-data"&gt;<br>
+&lt;!---------------------- Job Details ---------------------&gt;<br>
+&lt;fieldset&gt;<br>
+&lt;legend&gt;Job Details&lt;/legend&gt;<br>
+&lt;label for="profession"&gt;<br>
+Select your professions&lt;br&gt;&lt;br&gt;<br>
+&lt;select name="profession[]" id="profession" multiple required&gt;<br>
+&lt;option value="web"&gt; Web developer&lt;/option&gt;<br>
+&lt;option value="android"&gt; Android developer&lt;/option&gt;<br>
+&lt;option value="ios"&gt;IOS developer&lt;/option&gt;<br>
+&lt;option value="flutter"&gt;Flutter developer&lt;/option&gt;<br>
+&lt;option value="other"&gt;Other&lt;/option&gt;<br>
+&lt;select&gt;<br>
+&lt;/label&gt;<br>
+&lt;br&gt;&lt;br&gt;<br>
+&lt;label for="resume"&gt;Attach your resume&lt;br&gt;&lt;br&gt;<br>
+&lt;input type="file" name="resume" id="resume" accept=".pdf, .doc, .docx" required&gt;<br>
+&lt;label&gt;<br>
+&lt;br&gt;&lt;br&gt;<br>
+&lt;label for="salary"&gt;Enter your Salary expectation per month&lt;br&gt;&lt;br&gt;<br>
+18000&lt;input type="range" name="salary" id="salary" min="18000" max="46000" step="1000"&gt;46000<br>
+&lt;label&gt;<br>
+&lt;br&gt;&lt;br&gt;<br>
+&lt;label for="time"&gt;Select interview time&lt;br&gt;&lt;br&gt;<br>
+&lt;input type="time" name="time" id="time"&gt;<br>
+&lt;/label&gt;<br>
+&lt;/fieldset&gt;
+<br><br>
+&lt;!---------------------- Education Details ---------------------&gt;<br>
+&lt;fieldset&gt;<br>
+&lt;legend&gt;Education Details&lt;/legend&gt;<br>
+&lt;label for="education"&gt;<br>
+Select your Education&lt;br&gt;&lt;br&gt;<br>
+&lt;select name="education" id="education" required&gt;<br>
+&lt;option value="select" selected disabled&gt;select&lt;/option&gt;<br>
+&lt;option value="be"&gt; B.E&lt;/option&gt;<br>
+&lt;option value="btech"&gt; B.Tech&lt;/option&gt;<br>
+&lt;option value="bsc"&gt; B.Sc&lt;/option&gt;<br>
+&lt;select&gt;<br>
+&lt;/label&gt;<br>
+&lt;br&gt;&lt;br&gt;<br>
+&lt;label for="year"&gt;Year of passed out&lt;br&gt;&lt;br&gt;<br>
+&lt;input type="number" name="year" id="year" min="2018" max="2021" placeholder="yyyy" required&gt;<br>
+&lt;/label&gt;<br>
+&lt;br&gt;&lt;br&gt;<br>
+&lt;/fieldset&gt;<br><br>
+&lt;!---------------------- Contact Details ---------------------&gt;<br>
+&lt;fieldset&gt;<br>
+&lt;legend&gt;Contact Details&lt;/legend&gt;<br>
+&lt;label for="email"&gt;Enter your email&lt;br&gt;&lt;br&gt;<br>
+&lt;input type="email" name="email" id="email" required&gt;<br>
+&lt;/label&gt;<br>
+&lt;br&gt;&lt;br&gt;<br>
+&lt;label for="portfolio"&gt;Enter your portfolio&lt;br&gt;&lt;br&gt;<br>
+&lt;input type="url" name="portfolio" id="portfolio" placeholder="https://www.portfolio.com" required&gt;<br>
+&lt;/label&gt;<br>
+&lt;br&gt;&lt;br&gt;<br>
+&lt;/fieldset&gt;<br><br>
+&lt;input type="submit" value="SUBMIT"&gt;<br>
+&lt;/form&gt;<br>
+</p>
+
+<b>OUTPUT :</b>
+<p>
+<form enctype="multipart/form-data">
+<fieldset>
+<legend>Job Details</legend>
+<label for="profession">
+Select your professions<br><br>
+<select name="profession[]" id="profession" multiple required>
+<option value="web"> Web developer</option>
+<option value="android"> Android developer</option>
+<option value="ios">IOS developer</option>
+<option value="flutter">Flutter developer</option>
+<option value="other">Other</option>
+<select>
+</label>
+<br><br>
+<label for="resume">Attach your resume<br><br>
+<input type="file" name="resume" id="resume" accept=".pdf, .doc, .docx" required>
+<label>
+<br><br>
+<label for="salary">Enter your Salary expectation per month<br><br>
+18000<input type="range" name="salary" id="salary" min="18000" max="46000" step="1000">46000
+<label>
+<br><br>
+<label for="time">Select interview time<br><br>
+<input type="time" name="time" id="time">
+</label>
+</fieldset>
+<fieldset>
+<legend>Education Details</legend>
+<label for="education">
+Select your Education<br><br>
+<select name="education" id="education" required>
+<option value="select" selected disabled>select</option>
+<option value="be"> B.E</option>
+<option value="btech"> B.Tech</option>
+<option value="bsc"> B.Sc</option>
+<select>
+</label>
+<br><br>
+<label for="year">Year of passed out<br><br>
+<input type="number" name="year" id="year" min="2018" max="2021" placeholder="yyyy" required>
+</label>
+<br><br>
+</fieldset>
+<fieldset>
+<legend>Contact Details</legend>
+<label for="email">Enter your email<br><br>
+<input type="email" name="email" id="email" required>
+</label>
+<br><br>
+<label for="portfolio">Enter your portfolio<br><br>
+<input type="url" name="portfolio" id="portfolio" placeholder="https://www.portfolio.com" required>
+</label>
+<br><br>
+</fieldset>
+<input type="submit" value="SUBMIT">
+</form>
+</p>
+
+<h2>DIV & SPAN TAGS</h1>
+<p>Div tag is used to group block level element. Span tag is used to group inline level element.</p>
+<b>CODE :</b>
+<p>
+&lt;div&gt;this is div&lt;/div&gt;<br>
+&lt;div&gt;this is div&lt;/div&gt;<br>
+&lt;span&gt;this is span&lt;/span&gt;<br>
+&lt;span&gt;this is span&lt;/span&gt;<br>
+</p>
+
+<b>OUTPUT :</b>
+<p>
+<div>this is div</div>
+<div>this is div</div>
+<span>this is span</span>
+<span>this is span</span>
+</p>
+
+<h2>IFRAME</h1>
+<p>
+IFRAME tag is use to embeed one website into another one.
+</p>
+<b>CODE :</b>
+<p>
+&lt;iframe src="https://www.youtube.com/embed/7cVpA4rME8w" width="380" height="210px"&gt;This browser dosen't support iframe&lt;/iframe&gt;
+</p>
+
+<b>OUTPUT :</b>
+<p>
+<iframe src="https://www.youtube.com/embed/7cVpA4rME8w" width="380px" height="210px">This browser dosen't support iframe</iframe>
+</p>
+<b>Explanation</b>
+<p> this iframe tag must have width and height values. If you don't giv width and height values it automatically takes 0 value to both. This tag must have closing tag. If you don't give closing tag you content after the iframe won't be displayed. Just now got and clear this issue by addind closing iframe tag. Content inside the opening and closing iframe only displayed the when the browser dosen't support iframe. Content inside the opening and closing iframe acts as a fall back message.</p>
+
+
+
+<p><a href="#nav">Back to Nav Link</a></p>
+
+
+<!----------------------------- Day8 ------------------------------>
+
+<h2 id="day8">Day8</h2>
+
+<h2>Audio Tag</h2>
+<h2>Single Format</h2>
+<p>
+Audio tag is used to include audio file in the web page.
+</p>
+<b>CODE :</b>
+<p>
+&lt;audio src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleAudiomp3.mp3" controls&gt;<br>This fall back message only displayed when the browser dosen't support audio tag.<br>&lt;/audio&gt;
+<p>
+<b>OUTPUT :</b>
+<p>
+<audio src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleAudiomp3.mp3" controls>This fall back message only displayed when the browser dosen't support audio tag.</audio>
+</p>
+
+<h2>Multiple Format using SOURCE tag</h2>
+<p>
+Audio tag is used to include audio file in the web page. Source tag is used inside audio tag to attach multiple audio files in different format.
+</p>
+<b>CODE :</b>
+<p>
+&lt;audio controls&gt;<br>
+This ia fall back message which only displayed when the browser dosen't support audio tag.<br>
+&lt;source type="audio/ogg"  src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleAudioogg.ogg"&gt;<br>
+&lt;source type="audio/wav"  src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleAudiowav.wav"&gt;<br>
+&lt;source type="audio/mpeg" src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleAudiomp3.mp3"&gt;<br>
+&lt;source type="audio/m4a"  src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleAudiom4a.m4a"&gt;<br>
+&lt;/audio&gt;<br>
+<p>
+<b>OUTPUT :</b>
+<p>
+<audio controls>
+This ia fall back message which only displayed when the browser dosen't support audio tag.
+<source type="audio/ogg"  src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleAudioogg.ogg">
+<source type="audio/wav"  src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleAudiowav.wav">
+<source type="audio/mpeg" src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleAudiomp3.mp3">
+<source type="audio/m4a"  src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleAudiom4a.m4a">
+</audio>
+</p>
+
+<h2>Video Tag</h2>
+<p>We can't change the aspect ratio of the a video. Giving same values for width and height will allocate that space for video but the video only play in it's aspect ratio in it's maximum width or height value which fit in the allocated space.
+<br>
+<b>preload="none"</b><br>
+This attribute won't pre load the video until th user clicking the video or play button. But it needs to load the bit video to show the thumbnail preview.Below poster attribute solve's this problem.
+<br>
+<b>Poster="image-URL"</b><br>
+poster attributes URL image act as the thumbnail preview ofthe video. So the video won't until clicking the poster or play button.
+<br>
+</p>
+<h2>Single Format</h2>
+<p>
+Video tag is used to include audio file in the web page.
+</p>
+<b>CODE :</b>
+<p>
+&lt;video src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleVideomp4.mp4" preload="none" poster="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day4-Ubuntu.png" width="300px" controls&gt;<br>This fall back message only displayed when the browser dosen't support video tag.<br>&lt;/video&gt;
+<p>
+<b>OUTPUT :</b>
+<p>
+<video src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleVideomp4.mp4" preload="none" poster="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day4-Ubuntu.png" width="300px" controls>This fall back message only displayed when the browser dosen't support video tag.</video>
+</p>
+
+<h2>Multiple Format using SOURCE tag</h2>
+<b>CODE :</b>
+<p>
+&lt;video preload="none" poster="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day4-Ubuntu.png" width="300px" controls&gt;<br>
+This fall back message only displayed when the browser dosen't support audio tag.<br>
+&lt;source type="video/quicktime"  src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleVideomov.mov"&gt;<br>
+&lt;source type="video/x-msvideo"  src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleVideoavi.avi"&gt;<br>
+&lt;source type="video/webm"       src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleVideowebm.webm"&gt;<br>
+&lt;source type="video/x-ms-wmv"   src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleVideowmv.wmv"&gt;<br>
+&lt;source type="video/mp4"        src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleVideomp4.mp4"&gt;<br>
+&lt;/video&gt;<br>
+<p>
+<b>OUTPUT :</b>
+<p>
+<video preload="none" poster="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day4-Ubuntu.png" width="300px" controls>
+This fall back message only displayed when the browser dosen't support audio tag.
+<source type="video/quicktime"  src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleVideomov.mov">
+<source type="video/x-msvideo"  src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleVideoavi.avi">
+<source type="video/webm"       src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleVideowebm.webm">
+<source type="video/x-ms-wmv"   src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleVideowmv.wmv">
+<source type="video/mp4"        src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day8-SampleVideomp4.mp4">
+</video>
+</p>
+
+<p><a href="#nav">Back to Nav Link</a></p>
+
+<!----------------------------- Day9 ------------------------------>
+
+<h2 id="day9">Day9</h2>
+
+<h2 id="time-tag">Time element</h2>
+<p>
+&lt;time&gt; elelment is used to represent the specific time period. This dosen't include any style change only for beter SEO.<br> Here html entities used to to display &lt; &gt; symbols. Ref <a href="https://dev.w3.org/html5/html-author/charref">dev.w3.org</a>
+</p>
+<b>CODE:</b>
+<p>
+My birthday on &lt;time datetime="1999-09-17"&gt;September 7&lt;&sol;time&gt;
+</p>
+<b>OUTPUT:</b>
+<p>
+My birthday on <time datetime="1999-09-17">September 7</time>
+</p>
+Refer <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time">MDN</a>
+
+<h2>Small element</h2>
+<p>
+&lt;small&gt; elelment is used to represent the specific content in smaller font size than standard size<br>
+</p>
+<b>CODE:</b>
+<p>
+Follwing text needs to small&lt;small&gt;This is licensed under MIT&lt;&sol;small&gt;
+</p>
+<b>OUTPUT:</b>
+<p>
+Follwing text needs to small<small>This is licensed under MIT</small>
+</p>
+Ref <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/small">MDN</a>
+
+<h2>Code element</h2>
+<p>
+&lt;code&gt; elelment is used to display contents in styled fashion to indicate that was fragment of computer code.
+</p>
+<b>CODE:</b>
+<p>
+Terminal displayed &lt;code&gt;No such directory exist&lt;&sol;code&gt;
+</p>
+<b>OUTPUT:</b>
+<p>
+Terminal displayed <code>No such directory exist</code>
+</p>
+Ref <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code">MDN</a>
+
+<h2>Header element</h2>
+<p>
+&lt;header&gt; elelment is used to display logo, author name and other elements
+</p>
+<b>CODE:</b>
+<p>
+&lt;header&gt;This is a header&lt;&sol;header&gt;
+</p>
+<b>OUTPUT:</b>
+<p>
+<header>This is a header</header>
+</p>
+Ref <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header">MDN</a>
+
+<h2 id="main-tag">Main element</h2>
+<p>
+&lt;main&gt; elelment contins the important content of &lt;body&gt; in centeral topic.
+</p>
+<b>CODE:</b>
+<p>
+&lt;main&gt;This the important content of &lt;body&gt; element&lt;&sol;main&gt;
+</p>
+<b>OUTPUT:</b>
+<p>
+<main>This the important content of &lt;body&gt; element</main>
+</p>
+Ref <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main">MDN</a>
+
+<h2>Footer element</h2>
+<p>
+&lt;footer&gt; elelment is used to display author, copywrite, links related to document
+</p>
+<b>CODE:</b>
+<p>
+&lt;footer&gt;copywrite 2020&lt;&sol;footer&gt;
+</p>
+<b>OUTPUT:</b>
+<p>
+<footer>copywrite 2020</footer>
+</p>
+Ref <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer">MDN</a>
+
+<h2>Article element</h2>
+<p>
+&lt;article&gt; element contains self-contained composition in a document which intented to be reusable e.g blog
+</p>
+<b>CODE:</b>
+<p>
+&lt;article&gt;this is article&lt;&sol;article&gt;
+</p>
+<b>OUTPUT:</b>
+<p>
+<article>this is article</article>
+</p>
+Ref <a href="https://dfile:///home/balu/git/gith/100DaysOfCode/001-to-010/index.html?userid=eipcw&password=BIQO#day10eveloper.mozilla.org/en-US/docs/Web/HTML/Element/article">MDN</a>
+
+<h2>Aside element</h2>
+<p>
+&lt;Aside&gt; element contains content indirectly related to main content.
+</p>
+<b>CODE:</b>
+<p>
+&lt;aside&gt;Non related content&lt;&sol;aside&gt;
+</p>
+<b>OUTPUT:</b>
+<p>
+<aside>Non related content</aside>
+</p>
+Refer <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">MDN</a>
+
+<h2>Nav element</h2>
+<p>
+&lt;nave&gt; is a section of page that contains mainly navigation links.
+</p>
+<b>CODE:</b>
+<p>
+&lt;nav&gt; &lt;a href="#time"&gt;time&lt;a&gt;  &lt;a href="#main"&gt;main&lt;a&gt; &lt;&sol;nav&gt;
+</p>
+<b>OUTPUT:</b>
+<p>
+<nav> <a href="#time">time</a>  <a href="#main">main</a> </nav>
+</p>
+Refer <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">MDN</a>
+
+<p><a href="#nav">Back to Nav Link</a></p>
+
+
+<!----------------------------- Day10 ------------------------------>
+
+<h2 id="day10">Day10</h2>
+
+<h2>Button</h2>
+<p>
+The HTML &lt;button&gt; element represents a clickable button, used to submit forms or anywhere in a document for accessible, standard button functionality.
+</p>
+<b>CODE:</b>
+<p>
+&lt;form&gt;<br>
+&lt;input type="userid" name="userid" placeholder="userid"&gt;&lt;br&gt;<br>
+&lt;input type="password" name="password" placeholder="password"&gt;&lt;br&gt;<br>
+&lt;button type="submit"&gt;submit&lt;/button&gt;<br>
+&lt;/form&gt;
+</p>
+<b>OUTPUT:</b>
+<p>
+<form>
+<input type="userid" name="userid" placeholder="userid"><br>
+<input type="password" name="password" placeholder="password"><br>
+<button type="submit">submit</button>
+</form>
+</p>
+
+<h2>datalist</h2>
+<p>
+The HTML &lt;datalist&gt; element contains a set of &lt;option%gt; elements that represent the permissible or recommended options available to choose from within other controls. Datalist tag has option tag which contains list of items. Datalist tag is connected with input tag by placing the datalist tags id attribute value in the input tags list attribute value. 
+</p>
+<b>CODE:</b>
+<p>
+&lt;form&gt;<br>
+&lt;input type="userid" name="userid" placeholder="userid"  required&gt;<br>
+&lt;input list="ice-cream-flavors" nam="my-ice-cream-flavors" id="my-ice-cream-flavors" placeholder="ICE cream flavoue" required&gt;<br>
+&lt;datalist id="ice-cream-flavors"&gt;<br>
+    &lt;option value="Chocolate"&gt;<br>
+    &lt;option value="Coconut"&gt;<br>
+    &lt;option value="Mint"&gt;<br>
+    &lt;option value="Strawberry"&gt;<br>
+    &lt;option value="Vanilla"&gt;<br>
+&lt;/datalist&gt;<br>
+&lt;button type="submit"&gt;submit&lt;/button&gt;<br>
+&lt;/form&gt;
+</p>
+<b>OUTPUT:</b>
+<p>
+<form>
+<input type="userid" name="userid" placeholder="userid" required><br>
+<input list="ice-cream-flavors" nam="my-ice-cream-flavors" id="my-ice-cream-flavors" placeholder="ICE cream flavoue" required><br>
+<datalist id="ice-cream-flavors">
+    <option value="Chocolate">
+    <option value="Coconut">
+    <option value="Mint">
+    <option value="Strawberry">
+    <option value="Vanilla">
+</datalist>
+<button type="submit">submit</button>
+</form>
+</p>
+
+<h2>noscript</h2>
+<p>
+The HTML &lt;noscript&gt; element can be used as a fall back message. This section of content only displayed when script is disabled or unsupported by the browser
+</p>
+<b>CODE:</b>
+<p>
+&lt;p&gt;Just text&lt;/p&gt;<br>
+&lt;noscript&gt;script is disabled&lt;noscript&gt;<br>
+&lt;p&gt;Just text&lt;/p&gt;<br>
+</p>
+<b>OUTPUT of script enabled :</b>
+<p>
+<div>Just text</div>
+<noscript>script is disabled</noscript>
+<div>Just text</div>
+</p>
+<b>OUTPUT of script disabled :</b>
+<p>
+<div>Just text</div>
+<div>script is disabled</div>
+<div>Just text</div>
+</p>
+
+<h2>picture</h2>
+<p>
+The HTML &lt;picture&gt; element is used with &lt;source&gt; and &lt;img&gt; tag to include multiple images in different format and different images for different devices.
+</p>
+<b>CODE:</b>
+<p>
+&lt;picture&gt;<br>
+  &lt;source srcset="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day10-SampleImagewebp.webp" type="image/webp"&gt;<br>
+  &lt;source srcset="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day10-SampleImagejpg.jpg" type="image/jpg"&gt;<br>
+  &lt;img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day10-SampleImagepng.png" width="200px" alt="logo"&gt;<br>
+&lt;/picture&gt;<br>
+</p>
+<b>OUTPUT :</b>
+<p>
+<picture>
+  <source srcset="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day10-SampleImagewebp.webp" type="image/webp">
+  <source srcset="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day10-SampleImagejpg.jpg" type="image/jpg">
+  <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day10-SampleImagepng.png" width="200px" alt="logo">
+</picture>
+</p>
+Refer for more details <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture</a>
+
+<h2>pre</h2>
+<p>
+The HTML &lt;pre&gt; element represents preformatted text which is to be presented exactly as written in the HTML file.
+</p>
+<b>CODE:</b>
+<p>
+&lt;pre&gt;<br>
+<pre>
+    |     |
+     |   |
+      | |
+       |
+      | |
+     |   |
+    |     |
+</pre>
+&lt;/pre&gt;
+</p>
+<b>OUTPUT :</b>
+<p>
+<pre>
+    |     |
+     |   |
+      | |
+       |
+      | |
+     |   |
+    |     |
+</pre>
+</p>
+Refer for more details <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre</a>
+
+<h2>script</h2>
+<p>
+The HTML &lt;script&gt; element is used to embed executable code or data; this is typically used to embed or refer to JavaScript code.
+</p>
+<p>
+Refer for more details <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script</a>
+</p>
+
+<h2>script</h2>
+<p>
+The HTML &lt;style&gt; element contains style information for a document, or part of a document. It contains CSS, which is applied to the contents of the document containing the &lt;style&gt; element.
+</p>
+<p>
+Refer for more details <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style</a>
+</p>
+
+<p><a href="#nav">Back to Nav Link</a></p>
+
+</body>
+</html>
