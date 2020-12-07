@@ -6,12 +6,16 @@ Am taking this challenge to learn and take notes Everyday. Which helps to revise
 
 **Main reason :** Before taking this challenge i learned HTML5, CSS3 and completed [Responsive web design](https://www.freecodecamp.org/certification/baluvadivel/responsive-web-design) at [FreeCodeCamp](https://www.freecodecamp.org/baluvadivel "Balu Vadivel at FreeCodeCamp") (checkout [BaluVadivel/FreeCodeCamp](https://github.com/BaluVadivel/FreeCodeCamp)). After this one month i don't even revised learned things due to *laziness*. When i realise that i need to revise i don't have taken any notes during learning. So that i am learning from scratch and taking notes everyday.
 
-# learning Screenshot
+# Learning Screenshot
 
 ## Day 1 to day 10
 
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/screenshot-2020-12-07.png" title="Day 1 to 10" width="100%">
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/screenshot-2020-12-07.png" title="Day 1to10" width="100%">
+
+[Back to top](#learning-screenshot)
 
 ## Day 11
 
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/011/screenshot-2020-12-07.png" title="Day 1 to 10" width="100%">
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/011/screenshot-2020-12-07.png" title="Day 11" width="100%">
+
+[Back to top](#learning-screenshot)
