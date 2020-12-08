@@ -4,11 +4,15 @@
 <meta charset="UTF-8">
 <title>Balu from Day 11</title>
 <style>
-body {
-color:white;
-background-color:black;
-font-size: 18px;
-}
+    html, body {
+        width: 100%;
+        margin: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+    }
 .red {
 color:red;
 }
@@ -26,6 +30,15 @@ color:orange;
       font-size: 3rem;
       font-weight: bold;
 }
+    @media (prefers-color-scheme: dark) {
+        html, body {
+            color: #eee;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+        }
+    }
 </style>
 </head>
 <body>
