@@ -32,3 +32,9 @@ Am taking this challenge to learn and take notes Everyday. Which helps to revise
 <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/013/screenshot-2020-12-09.png" title="Day 12" width="100%">
 
 ### [Back to top](#)
+
+## Day 14
+
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/014/screenshot-2020-12-10.png" title="Day 12" width="100%">
+
+### [Back to top](#)

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Day 14</title>
+<meta charset="UTF-8">
+<style>
+html, body {
+        width: 100%;
+        margin: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background: url(index.jpeg) no-repeat center center fixed;
+        background-color: white;
+        font-size: 18px;
+    }
+ul {
+width: 100%;
+margin:0px;
+padding:0px;
+height: 80px;
+background-color: orange;
+}
+li {
+display:inline-block;
+height: 100%;
+background-color: #333;
+line-height: 80px;
+font-size: 1.4rem;
+margin: 0 20px;
+padding: 0 22px;
+}
+a {
+text-decoration:none;
+color: red;
+}
+li:hover {
+background-color:#ddd;
+}
+div {
+display:inline-block;
+width: 80px;
+height: 80px;
+border: 3px solid black;
+margin: 20px;
+}
+#bottom-right {
+box-shadow: 6px 6px red;
+}
+#top-left {
+box-shadow: -6px -6px red;
+}
+#top-left-blur {
+box-shadow: -6px -6px 6px red;
+}
+#top-left-blur-spread {
+box-shadow: -6px -6px 6px 6px red;
+}
+#outer-blur {
+box-shadow: 0 0 4px red;
+/*Blur always gives a minor spread. If we need more spread we can add 4th value as spread */
+}
+#inner-blur {
+box-shadow: inset 0 0 4px red;
+/*Blur always gives a minor spread. If we need more spread we can add 4th value as spread */
+}
+#single-value {
+border-radius: 20px;
+}
+#circle {
+border-radius: 50%;
+text-align: center;
+}
+#double-value {
+border-radius:0 20px;
+}
+#multi-value {
+border-radius:0 10px 20px 40px ;
+}
+@media (prefers-color-scheme: dark) {
+        html, body {
+            color: #eee;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+        }
+        div {
+        border: 4px solid white;
+        }
+</style>
+</head>
+<body>
+<h1>Display inline,block and inline-block</h1>
+<dl>
+<dt><b>inline</b></dt>
+<dd> inline element heights are automatically taken as same as line height. We can't change it's height.</dd>
+<dt><b>block</b></dt>
+<dd>block level elements always appear in new line</dd>
+<dt><b>inline-block</b></dt>
+<dd>inline-block element acts as an inline element also we change set the size.</dd>
+</dl>
+<b>CODE :</b>
+<pre>
+---CSS---
+ul {
+width: 100%;
+margin:0px;
+padding:0px;
+height: 80px;
+background-color: orange;
+}
+li {
+display:inline-block;
+height: 100%;
+background-color: black;
+line-height: 80px;
+font-size: 1.4rem;
+margin: 0 20px;
+padding: 0 22px;
+}
+a {
+text-decoration:none;
+color: red;
+}
+li:hover {
+background-color:#ddd;
+}
+---HTML---
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#"&gt;HOME&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;ABOUT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;SKILL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;CONTACT&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+<b>OUTPUT :</b>
+<p>
+<ul>
+<li><a href="#">HOME</a></li>
+<li><a href="#">ABOUT</a></li>
+<li><a href="#">SKILL</a></li>
+<li><a href="#">CONTACT</a></li>
+</ul>
+</p>
+
+<h1>Box shadow</h1>
+
+<b>CODE :</b>
+<p>
+---CSS---<br>
+div {<br>
+display:inline-block;<br>
+width: 80px;<br>
+height: 80px;<br>
+border: 3px solid black;<br>
+margin: 20px;<br>
+}<br>
+#bottom-right {<br>
+box-shadow: 6px 6px red;<br>
+}<br>
+#top-left {<br>
+box-shadow: -6px -6px red;<br>
+}<br>
+#top-left-blur {<br>
+box-shadow: -6px -6px 6px red;<br>
+}<br>
+#top-left-blur-spread {<br>
+box-shadow: -6px -6px 6px 6px red;<br>
+}<br>
+#outer-blur {<br>
+box-shadow: 0 0 4px red;<br>
+/*Blur always gives a minor spread. If we need more spread we can add 4th value as spread */<br>
+}<br>
+#inner-blur {<br>
+box-shadow: inset 0 0 4px red;<br>
+/*Blur always gives a minor spread. If we need more spread we can add 4th value as spread */<br>
+}<br>
+---HTML---<br>
+&lt;div id="bottom-right"&gt;bottom-right&lt;/div&gt;<br>
+&lt;div id="top-left"&gt;top-left&lt;/div&gt;<br>
+&lt;div id="top-left-blur"&gt;top-left-blur&lt;/div&gt;<br>
+&lt;div id="top-left-blur-spread"&gt;top-left-blur-spread&lt;/div&gt;<br>
+&lt;div id="outer-blur"&gt;outer-blur / spread&lt;/div&gt;<br>
+&lt;div id="inner-blur"&gt;inner-blur / spread&lt;/div&gt;<br>
+</p>
+
+<b>OUTPUT :</b>
+<p>
+<div id="bottom-right">bottom-right</div>
+<div id="top-left">top-left</div>
+<div id="top-left-blur">top-left-blur</div>
+<div id="top-left-blur-spread">top-left-blur-spread</div>
+<div id="outer-blur">outer-blur / spread</div>
+<div id="inner-blur">inner-blur / spread</div>
+</p>
+
+<h1>Border-radius</h1>
+<b>CODE :</b>
+<p>
+---CSS---<br>
+#single-value {<br>
+border-radius: 20px;<br>
+}<br>
+#circle {<br>
+border-radius: 50%;<br>
+text-align: center;<br>
+}<br>
+#double-value {<br>
+border-radius:0 20px;<br>
+}<br>
+#multi-value {<br>
+border-radius:0 10px 20px 40px ;<br>
+}<br>
+---HTML---<br>
+&lt;div id="single-value"&gt;single value&lt;/div&gt;<br>
+&lt;div id="circle"&gt;single value circle&lt;/div&gt;<br>
+&lt;div id="double-value"&gt;double value&lt;/div&gt;<br>
+&lt;div id="multi-value"&gt;multi value&lt;/div&gt;<br>
+</p>
+<b>OUTPUT :</b>
+<p>
+<div id="single-value">single value</div>
+<div id="circle">single value circle</div>
+<div id="double-value">double value</div>
+<div id="multi-value">multi value</div>
+</p>
+
+<h1>background-image</h1>
+<b>CODE :</b>
+<p>
+---CSS---<br>
+body {<br>
+background: url(index.jpeg) no-repeat center center fixed;<br>
+}<br>
+</p>
+</body>
+</html>
