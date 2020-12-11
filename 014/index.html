@@ -10,7 +10,7 @@ html, body {
         min-height: 100%;
         scroll-behavior: smooth;
         color: black;
-        background: url(index.jpeg) no-repeat center center fixed;
+        background: url(background.jpeg) no-repeat center center fixed;
         background-color: white;
         font-size: 18px;
     }
@@ -227,12 +227,23 @@ border-radius:0 10px 20px 40px ;<br>
 </p>
 
 <h1>background-image</h1>
-<b>CODE :</b>
+<h3>CODE :</h3>
 <p>
 ---CSS---<br>
 body {<br>
-background: url(index.jpeg) no-repeat center center fixed;<br>
+background: url(background.jpeg) no-repeat center center fixed;<br>
+/* Size cover cover the whole background with the image */
+background-size: cover;
 }<br>
 </p>
+<h3>OUTPUT :</h3>
+<b>With Cover</b>
+<br>
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/014/backgroundWithCover.png" title="Day 12" width="100%">
+<br>
+<b>Without Cover</b>
+<br>
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/014/backgroundWithoutCover.png" title="Day 12" width="100%">
+<br>
 </body>
 </html>
