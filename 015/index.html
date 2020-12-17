@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Day 15</title>
+<meta charset="UTF-8">
+<style>
+    html, body {
+        width: 100%;
+        margin: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+    }
+a:visited {
+color:#0000FF;
+}
+table {
+    border-collapse: collapse;
+}
+th , td {
+    border: 6px solid black;
+    /**
+    border collapse default value is seprate which has two seprate borders
+    border-collapse: collapse; will set only single line border
+    **/
+}
+@media (prefers-color-scheme: dark) {
+        html, body {
+            color: #eee;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+            font-weight: 400;
+        }
+        th , td {
+            border-color: brown;
+        }
+        table {
+            color: darkblue;
+        }
+    }
+</style>
+</head>
+<body>
+<h1>List Style</h1>
+<h3>CODE :</h3>
+<p>
+    &lt;b&gt;NO style&lt;/b&gt;<br>
+    &lt;ul style="list-style-type:none"&gt;<br>
+    &lt;li&gt;html&lt;/li&gt;<br>
+    &lt;li&gt;css&lt;/li&gt;<br>
+    &lt;/ul&gt;<br>
+    &lt;b&gt;DISC style&lt;/b&gt;<br>
+    &lt;ul style="list-style-type:disc"&gt;<br>
+    &lt;li&gt;html&lt;/li&gt;<br>
+    &lt;li&gt;css&lt;/li&gt;<br>
+    &lt;/ul&gt;<br>
+    &lt;b&gt;Circle style&lt;/b&gt;<br>
+    &lt;ul style="list-style-type:circle"&gt;<br>
+    &lt;li&gt;html&lt;/li&gt;<br>
+    &lt;li&gt;css&lt;/li&gt;<br>
+    &lt;/ul&gt;<br>
+    &lt;b&gt;Square style&lt;/b&gt;<br>
+    &lt;ul style="list-style-type:square"&gt;<br>
+    &lt;li&gt;html&lt;/li&gt;<br>
+    &lt;li&gt;css&lt;/li&gt;<br>
+    &lt;/ul&gt;<br>
+    &lt;b&gt;Decimal style&lt;/b&gt;<br>
+    &lt;ol&gt;<br>
+    &lt;!-- default style in ordered list--&gt;<br>
+    &lt;li&gt;html&lt;/li&gt;<br>
+    &lt;li&gt;css&lt;/li&gt;<br>
+    &lt;/ol&gt;<br>
+    &lt;/p&gt;<br>
+    &lt;b&gt;Decimal style&lt;/b&gt;<br>
+    &lt;ol style="list-style-type:decimal-leading-zero"&gt;<br>
+    &lt;li&gt;html&lt;/li&gt;<br>
+    &lt;li&gt;css&lt;/li&gt;<br>
+    &lt;/ol&gt;<br>
+    &lt;b&gt;Lower Alpha style&lt;/b&gt;<br>
+    &lt;ol style="list-style-type:lower-alpha"&gt;<br>
+    &lt;li&gt;html&lt;/li&gt;<br>
+    &lt;li&gt;css&lt;/li&gt;<br>
+    &lt;/ol&gt;<br>
+    &lt;b&gt;Upper Alpha style&lt;/b&gt;<br>
+    &lt;ol style="list-style-type:upper-alpha"&gt;<br>
+    &lt;li&gt;html&lt;/li&gt;<br>
+    &lt;li&gt;css&lt;/li&gt;<br>
+    &lt;/ol&gt;<br>
+    &lt;b&gt;Lower Roman style&lt;/b&gt;<br>
+    &lt;ol style="list-style-type:lower-roman"&gt;<br>
+    &lt;li&gt;html&lt;/li&gt;<br>
+    &lt;li&gt;css&lt;/li&gt;<br>
+    &lt;/ol&gt;<br>
+    &lt;b&gt;Upper Roman style&lt;/b&gt;<br>
+    &lt;ol style="list-style-type:upper-roman"&gt;<br>
+    &lt;li&gt;html&lt;/li&gt;<br>
+    &lt;li&gt;css&lt;/li&gt;<br>
+    &lt;/ol&gt;
+</p>
+<h3>OUTPUT :</h3>
+<p>
+<b>NO style</b>
+<ul style="list-style-type:none">
+<li>html</li>
+<li>css</li>
+</ul>
+<b>DISC style</b>
+<ul style="list-style-type:disc">
+<li>html</li>
+<li>css</li>
+</ul>
+<b>Circle style</b>
+<ul style="list-style-type:circle">
+<li>html</li>
+<li>css</li>
+</ul>
+<b>Square style</b>
+<ul style="list-style-type:square">
+<li>html</li>
+<li>css</li>
+</ul>
+<b>Decimal style</b>
+<ol>
+<!-- default style in ordered list-->
+<li>html</li>
+<li>css</li>
+</ol>
+</p>
+<b>Decimal style</b>
+<ol style="list-style-type:decimal-leading-zero">
+<li>html</li>
+<li>css</li>
+</ol>
+<b>Lower Alpha style</b>
+<ol style="list-style-type:lower-alpha">
+<li>html</li>
+<li>css</li>
+</ol>
+<b>Upper Alpha style</b>
+<ol style="list-style-type:upper-alpha">
+<li>html</li>
+<li>css</li>
+</ol>
+<b>Lower Roman style</b>
+<ol style="list-style-type:lower-roman">
+<li>html</li>
+<li>css</li>
+</ol>
+<b>Upper Roman style</b>
+<ol style="list-style-type:upper-roman">
+<li>html</li>
+<li>css</li>
+</ol>
+</p>
+
+<h1>List style position</h1>
+<h3>CODE</h3>
+<p>
+    &lt;b&gt;inside&lt;/b&gt;<br>
+    &lt;ul style="list-style-position:inside"&gt;<br>
+    &lt;li&gt;<br>
+    HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language.<br>
+    &lt;/li&gt;<br>
+    &lt;li&gt;<br>
+    CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page.<br>
+    &lt;/li&gt;<br>
+    &lt;/ul&gt;<br>
+    &lt;b&gt;outside default&lt;/b&gt;<br>
+    &lt;ul style="list-style-position:outside"&gt;<br>
+    &lt;li&gt;<br>
+    HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language.<br>
+    &lt;/li&gt;<br>
+    &lt;li&gt;<br>
+    CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page.<br>
+    &lt;/li&gt;<br>
+    &lt;/ul&gt;<br>
+</p>
+<h3>OUTPUT</h3>
+<b>inside</b>
+<ul style="list-style-position:inside">
+<li>
+HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language.
+</li>
+<li>
+CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page.
+</li>
+</ul>
+<b>outside default</b>
+<ul style="list-style-position:outside">
+<li>
+HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language. HTML is  not a programming language it is a markup language.
+</li>
+<li>
+CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page. CSS is used to give style to the html page.
+</li>
+</ul>
+
+<h1>Styling Table</h1>
+
+<h3>CODE</h3>
+<p>
+    ----CSS----<br><br>
+    table {<br>
+        border-collapse: collapse;<br>
+    }<br>
+    th , td {<br>
+        border: 6px solid black;<br>
+        /**<br>
+        border collapse default value is seprate which has two seprate borders<br>
+        border-collapse: collapse; will set only single line border<br>
+        **/<br>
+    }<br><br>
+    ----HTML----<br><br>
+&lt;table style="width:80%;margin:0 auto;"&gt;<br>
+&lt;colgroup&gt;<br>
+&lt;col span="1" style="background-color:lightgreen;"&gt;<br>
+&lt;col&gt;<br>
+&lt;col&gt;<br>
+&lt;col span="6" style="background-color:orange;"&gt;<br>
+&lt;/colgroup&gt;<br>
+&lt;tr&gt;<br>
+&lt;th rowspan="2" style="background-color:lightblue;"&gt;DAY&lt;/th&gt; &lt;th colspan="8" style="background-color:gray;"&gt;TIME&lt;/th&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+    &lt;!--<br>
+        larger than the required rowspan or colspan remove the border<br>
+    --&gt;<br>
+&lt;th&gt;09-10&lt;/th&gt; &lt;th&gt;10-11&lt;/th&gt; &lt;th&gt;11-12&lt;/th&gt; &lt;th&gt;12-12:30&lt;/th&gt; &lt;th rowspan="3"&gt;LUNCH&lt;/th&gt; &lt;th&gt;01:30-02&lt;/th&gt; &lt;th&gt;02-03&lt;/th&gt; &lt;th&gt;03-04:30&lt;/th&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;th&gt;Monday&lt;/th&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;th&gt;Tuesday&lt;/th&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;/table&gt;<br>
+<p>
+
+<h3>OUTPUT</h3>
+<p>
+<table style="width:80%;margin:0 auto;">
+<colgroup>
+<col span="1" style="background-color:lightgreen;">
+<col>
+<col>
+<col span="6" style="background-color:orange;">
+</colgroup>
+<tr>
+<th rowspan="2" style="background-color:lightblue;">DAY</th> <th colspan="8" style="background-color:gray;">TIME</th>
+</tr>
+<tr>
+    <!--
+        larger than the required rowspan or colspan remove the border
+    -->
+<th>09-10</th> <th>10-11</th> <th>11-12</th> <th>12-12:30</th> <th rowspan="3">LUNCH</th> <th>01:30-02</th> <th>02-03</th> <th>03-04:30</th>
+</tr>
+<tr>
+<th>Monday</th> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+</tr>
+<tr>
+<th>Tuesday</th> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+</tr>
+</table>
+<p>
+</body>
+</html>
