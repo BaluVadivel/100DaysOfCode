@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 16</title>
+    <style>
+            html, body {
+        width: 100%;
+        margin: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+        }
+        a:visited {
+            color:#0000FF;
+            }
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 100%;
+            height: 240px;
+            background-color: aqua;
+            display: block;
+        }
+        .container > div {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(214, 145, 54, 0.644);
+            border: 4px solid gray;
+        }
+        .relative {
+            position: relative;
+            background-color: rgba(212, 57, 1, 0.637);
+            top: -60px;
+            right: -20px;
+        }
+        .ab-container {
+            width: 100%;
+            height: 240px;
+            margin: 10px 0px;
+            background-color: aqua;
+            display: flex;
+            border: 10px solid green;
+        }
+        .ab-container > div {
+            width: 100px;
+            height: 140px;
+            background-color: rgba(214, 145, 54, 0.644);
+            border: 4px solid gray;
+        }
+        .child {
+            width: 80px;
+            height: 60px;
+            background-color: rgba(137, 43, 226, 0.473);
+        }
+        .par-relative {
+            position: relative;
+        }
+        .absolute {
+            font-size: .8rem;
+            position: absolute;
+            top: 0px;
+            left: 140px;
+        }
+        .fix {
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            top: 0px;
+            right:0px;
+            background-color: orange;
+            border: 4px solid gray;
+        }
+        .sti {
+            width: 100px;
+            height:40px;
+            position: sticky;
+            top: 0px;
+            left: calc( 50vw - 50px );
+            background-color: red;
+            border: 4px solid gray;
+        }
+        @media (prefers-color-scheme: dark) {
+        html, body {
+            color: #eee;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+            font-weight: 400;
+        }
+    }
+    </style>
+</head>
+<body>
+    <h1>Position</h1>
+    <h3>Static</h3>
+    <p>This is the default position of every elements. These elements can placed to only it's default position.</p>
+    
+    <h3>Relative</h3>
+    <p>Position of this element ca be changed relatives to it's default position.</p>
+    <b>OUTPUT</b>
+    <div class="container">
+        <div>static</div>
+        <div class="relative">relative</div>
+    </div>
+
+    <h3>Absolute</h3>
+    <p>This is position is ralative to body elements position. This element is relative to it's parent element if the parent element position is other than static(default) positon.</p>
+    <b>CODE</b>
+    <p>
+    ----CSS----<br>
+    .ab-container {<br>
+        width: 100%;<br>
+        height: 240px;<br>
+        margin: 10px 0px;<br>
+        background-color: aqua;<br>
+        display: flex;<br>
+        border: 10px solid green;<br>
+    }<br>
+    .ab-container > div {<br>
+        width: 100px;<br>
+        height: 140px;<br>
+        background-color: rgba(214, 145, 54, 0.644);<br>
+        border: 4px solid gray;<br>
+    }<br>
+    .child {<br>
+        width: 80px;<br>
+        height: 60px;<br>
+        background-color: rgba(137, 43, 226, 0.473);<br>
+    }<br>
+    .relative {<br>
+        position: relative;<br>
+    }<br>
+    .absolute {<br>
+        font-size: .8rem;<br>
+        position: absolute;<br>
+        top: 0px;<br>
+        left: 140px;<br>
+    }<br>
+    ----HTML----<br>
+    &lt;div class="container"&gt;<br>
+        &lt;div class="parent"&gt;static<br>
+            &lt;div class="child absolute"&gt;parent : static &lt;br&gt; child : absolute&lt;/div&gt;<br>
+        &lt;/div&gt;<br>
+    &lt;/div&gt;<br>
+    &lt;div class="container"&gt;<br>
+        &lt;div class="parent par-relative"&gt;relative<br>
+        &lt;div class="child absolute"&gt;parent : relative &lt;br&gt; child : absolute&lt;/div&gt;<br>
+        &lt;/div&gt;<br>
+    &lt;/div&gt;<br>
+    </p>
+    
+    <b>OUTPUT</b>
+    <div class="ab-container">
+        <div class="parent">static
+            <div class="child absolute">parent : static <br> child : absolute</div>
+        </div>
+    </div>
+    <div class="ab-container">
+        <div class="parent par-relative">relative
+        <div class="child absolute">parent : relative <br> child : absolute</div>
+        </div>
+    </div>
+
+    <h3>Fixed</h3>
+    <p>This fixed position is ralative to viewport so fixed position element is always appear on viewport it won't hide even on the page scroll.</p>
+    <b>OUTPUT</b>
+    <p>
+        ----CSS----<br><br>
+        .fix {<br>
+            width: 100px;<br>
+            height: 100px;<br>
+            position: fixed;<br>
+            top: 0px;<br>
+            right:0px;<br>
+            background-color: orange;<br>
+            border: 4px solid gray;<br>
+        }<br><br>
+        ----HTML----<br><br>
+        &lt;div class="fix"&gt;position fixed top right&lt;/div&gt;
+    </p>
+    <b>OUTPUT</b>
+    <p>output will appear on browser's top right corner.</p>
+    <div class="fix">position fixed top right</div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <h3>Sticky</h3>
+    <p>This position is acts as a relative psition when it is visible in the view port. During the scroll it won's hide like relative at the edge of the viewport it act as fixed position.</p>
+    <b>CODE</b>
+    <p>
+        ----CSS----<br><br>
+        .sti {<br>
+            width: 100px;<br>
+            height:40px;<br>
+            position: sticky;<br>
+            top: 0px;<br>
+            left: calc( 50vw - 50px );<br>
+            background-color: red;<br>
+            border: 4px solid gray;<br>
+        }<br><br>
+        ----HTML----<br><br>
+        &lt;div class="sti"&gt;Sticky&lt;/div&gt;
+    </p>
+    <b>OUTPUT</b>
+    <div class="sti">Sticky</div>
+    <p>Scroll to the bottom to see the working of sticky position.</p>
+    <div style="height: 150vh;"></div>
+    <p>Successfully tested working of sticky position</p>
+</body>
+</html>
