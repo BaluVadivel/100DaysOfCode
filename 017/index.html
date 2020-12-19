@@ -368,6 +368,20 @@
 </div>
 <!-------------------- TRANSLATE -------------------->
 <h2>translatex</h2>
+<b>CODE</b>
+<p>
+----CSS----<br><br>
+.translatex:hover {<br>
+    transform: translateX(40px);<br>
+}<br>
+<br><br>
+----HTML----<br><br>
+&lt;div&gt;<br>
+    &lt;div class="container"&gt;<br>
+        &lt;div class="child translatex"&gt;&lt;/div&gt;<br>
+    &lt;/div&gt;<br>
+&lt;/div&gt;
+</p>
 <b>OUTPUT</b>
 <div>
     <div class="container">
@@ -376,6 +390,20 @@
 </div>
 
 <h2>translatey</h2>
+<b>CODE</b>
+<p>
+----CSS----<br><br>
+.translatey:hover {<br>
+    transform: translateY(40px);<br>
+}<br>
+<br><br>
+----HTML----<br><br>
+&lt;div&gt;<br>
+    &lt;div class="container"&gt;<br>
+        &lt;div class="child translatey"&gt;&lt;/div&gt;<br>
+    &lt;/div&gt;<br>
+&lt;/div&gt;
+</p>
 <b>OUTPUT</b>
 <div>
     <div class="container">
@@ -384,6 +412,24 @@
 </div>
 
 <h2>translatez</h2>
+<p>This needs perspective in its parent</p>
+<b>CODE</b>
+<p>
+----CSS----<br><br>
+.container {<br>
+perspective:100px;<br>
+}<br>
+.translatez:hover {<br>
+    transform: translateZ(40px);<br>
+}<br>
+<br><br>
+----HTML----<br><br>
+&lt;div&gt;<br>
+    &lt;div class="container"&gt;<br>
+        &lt;div class="child translateZ"&gt;&lt;/div&gt;<br>
+    &lt;/div&gt;<br>
+&lt;/div&gt;
+</p>
 <b>OUTPUT</b>
 <div>
     <div class="container">
@@ -393,6 +439,20 @@
 
 <h2>translate single value</h2>
 <p>This single value is taken for x axis.</p>
+<b>CODE</b>
+<p>
+----CSS----<br><br>
+.translate1:hover {<br>
+    transform: translate(40px);<br>
+}<br>
+<br><br>
+----HTML----<br><br>
+&lt;div&gt;<br>
+    &lt;div class="container"&gt;<br>
+        &lt;div class="child translate1"&gt;&lt;/div&gt;<br>
+    &lt;/div&gt;<br>
+&lt;/div&gt;
+</p>
 <b>OUTPUT</b>
 <div>
     <div class="container">
@@ -402,6 +462,20 @@
 
 <h2>translate double value</h2>
 <p>This double value is taken for x and y axis.</p>
+<b>CODE</b>
+<p>
+----CSS----<br><br>
+.translate2:hover {<br>
+    transform: translate(40px,40px);<br>
+}<br>
+<br><br>
+----HTML----<br><br>
+&lt;div&gt;<br>
+    &lt;div class="container"&gt;<br>
+        &lt;div class="child translate2"&gt;&lt;/div&gt;<br>
+    &lt;/div&gt;<br>
+&lt;/div&gt;
+</p>
 <b>OUTPUT</b>
 <div>
     <div class="container last">
