@@ -48,8 +48,16 @@ Am taking this challenge to learn and take notes Everyday. Which helps to revise
 
 <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/016/screenshot.png" title="Day 16" width="100%">
 
+### [Back to top](#100DaysOfCode)
+
 ## Day 17
 
 <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/017/screenshot.png" title="Day 17" width="100%">
+
+### [Back to top](#100DaysOfCode)
+
+## Day 18
+
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/018/screenshot.png" title="Day 18" width="100%">
 
 ### [Back to top](#100DaysOfCode)
