@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 20</title>
+    <style>
+        html, body {
+        width: 100%;
+        margin: 0px 0px  300px 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+        }
+        /*************** Filter ***************/
+        img, .multi {
+            width: 80vw;
+            max-width: 240px;
+            height: 80vw;
+            max-height: 240px;
+            border: 4px solid orange;
+        }
+        .multi {
+            font-size: 3rem;
+            filter: blur(2px) brightness(2);
+        }
+        .blur {
+            filter: blur(2px);
+        }
+        .brightness {
+            filter: brightness(.5);
+            /* 50% brightness */
+        }
+        .contrast {
+            filter:contrast(2)
+        }
+        .drop-shadow {
+            filter: drop-shadow(6px 6px 4px red);
+        }
+        .grayscale {
+            filter: grayscale(1);
+        }
+        .hue-rotate {
+            filter: hue-rotate(90deg);
+        }
+        .invert {
+            filter: invert(1);
+        }
+        .opacity {
+            filter: opacity(.2);
+        }
+        .saturate {
+            filter: saturate(6);
+        }
+        .sepia {
+            filter: sepia(2);
+        }
+
+        /*************** Backdrop Filter ***************/
+        .backdrop {
+            width: 80vw;
+            max-width: 240px;
+            height: 80vw;
+            max-height: 240px;
+            font-size: 3rem;
+            background-color: rgba(128, 255, 0, 0.747);
+            -webkit-backdrop-filter: invert(100%);
+            backdrop-filter: invert(100%);
+        }
+        /*************** Backdrop Filter ***************/
+        .break-after {
+            break-after: always;
+        }
+        .break-before {
+            break-before: always;
+        }
+        .break-inside {
+            break-inside: avoid;
+        }
+        @media (prefers-color-scheme: dark) {
+            html, body {
+                color: #eee;
+                background-color: black;
+            }
+            h1 {
+                color: white;
+                font-weight: 400;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Filter</h1>
+    <p>
+        The filter CSS property applies graphical effects like blur or color shift to an element including it's border
+    </p>
+    <h3>CODE</h3>
+    <p>
+        ----CSS----<br><br>
+        img, .multi {<br>
+            width: 80vw;<br>
+            max-width: 240px;<br>
+            height: 80vw;<br>
+            max-height: 240px;<br>
+            border: 4px solid orange;<br>
+        }<br>
+        .multi {<br>
+            font-size: 3rem;<br>
+            filter: blur(2px) brightness(2);<br>
+        }<br>
+        .blur {<br>
+            filter: blur(2px);<br>
+        }<br>
+        .brightness {<br>
+            filter: brightness(.5);<br>
+            /* 50% brightness */<br>
+        }<br>
+        .contrast {<br>
+            filter:contrast(2)<br>
+        }<br>
+        .drop-shadow {<br>
+            filter: drop-shadow(6px 6px 4px red);<br>
+        }<br>
+        .grayscale {<br>
+            filter: grayscale(1);<br>
+        }<br>
+        .hue-rotate {<br>
+            filter: hue-rotate(90deg);<br>
+        }<br>
+        .invert {<br>
+            filter: invert(1);<br>
+        }<br>
+        .opacity {<br>
+            filter: opacity(.2);<br>
+        }<br>
+        .saturate {<br>
+            filter: saturate(6);<br>
+        }<br>
+        .sepia {<br>
+            filter: sepia(2);<br>
+        }<br><br>
+        ----HTML----<br><br>
+        &lt;figure&gt;<br>
+            &lt;img src="image.jpeg"&gt;<br>
+            &lt;figcaption&gt;ORIGINAL&lt;/figcaption&gt;<br>
+        &lt;/figure&gt;<br>
+        &lt;figure&gt;<br>
+            &lt;img class="blur" src="image.jpeg"&gt;<br>
+            &lt;figcaption&gt;BLUR 2px&lt;/figcaption&gt;<br>
+        &lt;/figure&gt;<br>
+        &lt;figure&gt;<br>
+            &lt;img class="brightness" src="image.jpeg"&gt;<br>
+            &lt;figcaption&gt;brightness 50%&lt;/figcaption&gt;<br>
+        &lt;/figure&gt;<br>
+        &lt;figure&gt;<br>
+            &lt;img class="contrast" src="image.jpeg"&gt;<br>
+            &lt;figcaption&gt;contrast 200%&lt;/figcaption&gt;<br>
+        &lt;/figure&gt;<br>
+        &lt;figure&gt;<br>
+            &lt;img class="drop-shadow" src="image.jpeg"&gt;<br>
+            &lt;figcaption&gt;drop-shadow&lt;/figcaption&gt;<br>
+        &lt;/figure&gt;<br>
+        &lt;figure&gt;<br>
+            &lt;img class="grayscale" src="image.jpeg"&gt;<br>
+            &lt;figcaption&gt;grayscale 100%&lt;/figcaption&gt;<br>
+        &lt;/figure&gt;<br>
+        &lt;figure&gt;<br>
+            &lt;img class="hue-rotate" src="image.jpeg"&gt;<br>
+            &lt;figcaption&gt;hue-rotate 90deg&lt;/figcaption&gt;<br>
+        &lt;/figure&gt;<br>
+        &lt;figure&gt;<br>
+            &lt;img class="invert" src="image.jpeg"&gt;<br>
+            &lt;figcaption&gt;invert 100%&lt;/figcaption&gt;<br>
+        &lt;/figure&gt;<br>
+        &lt;figure&gt;<br>
+            &lt;img class="opacity" src="image.jpeg"&gt;<br>
+            &lt;figcaption&gt;opacity 20%&lt;/figcaption&gt;<br>
+        &lt;/figure&gt;<br>
+        &lt;figure&gt;<br>
+            &lt;img class="saturate" src="image.jpeg"&gt;<br>
+            &lt;figcaption&gt;saturate 600%&lt;/figcaption&gt;<br>
+        &lt;/figure&gt;<br>
+        &lt;figure&gt;<br>
+            &lt;img class="sepia" src="image.jpeg"&gt;<br>
+            &lt;figcaption&gt;sepia 200%&lt;/figcaption&gt;<br>
+        &lt;/figure&gt;<br>
+        &lt;h4&gt;Multi Values and text&lt;/h4&gt;<br>
+        &lt;p&gt;We can use multiple filter function i one. Filter affects all the contents inside the element including text.&lt;/p&gt;<br>
+        &lt;div class="multi"&gt;<br>
+            Multi values<br>
+        &lt;/div&gt;<br>
+    </p>
+    <h3>OUTPUT</h3>
+    <div>
+        <figure>
+            <img src="image.jpeg">
+            <figcaption>ORIGINAL</figcaption>
+        </figure>
+        <figure>
+            <img class="blur" src="image.jpeg">
+            <figcaption>BLUR 2px</figcaption>
+        </figure>
+        <figure>
+            <img class="brightness" src="image.jpeg">
+            <figcaption>brightness 50%</figcaption>
+        </figure>
+        <figure>
+            <img class="contrast" src="image.jpeg">
+            <figcaption>contrast 200%</figcaption>
+        </figure>
+        <figure>
+            <img class="drop-shadow" src="image.jpeg">
+            <figcaption>drop-shadow</figcaption>
+        </figure>
+        <figure>
+            <img class="grayscale" src="image.jpeg">
+            <figcaption>grayscale 100%</figcaption>
+        </figure>
+        <figure>
+            <img class="hue-rotate" src="image.jpeg">
+            <figcaption>hue-rotate 90deg</figcaption>
+        </figure>
+        <figure>
+            <img class="invert" src="image.jpeg">
+            <figcaption>invert 100%</figcaption>
+        </figure>
+        <figure>
+            <img class="opacity" src="image.jpeg">
+            <figcaption>opacity 20%</figcaption>
+        </figure>
+        <figure>
+            <img class="saturate" src="image.jpeg">
+            <figcaption>saturate 600%</figcaption>
+        </figure>
+        <figure>
+            <img class="sepia" src="image.jpeg">
+            <figcaption>sepia 200%</figcaption>
+        </figure>
+        <h4>Multi Values and text</h4>
+        <p>We can use multiple filter function i one. Filter affects all the contents inside the element including text.</p>
+        <div class="multi">
+            Multi values
+        </div>
+    </div>
+    <h1>Backdrop-Filter</h1>
+    <p>
+        Backdrop-Filter only applies effects to the background.
+    </p>
+    <h3>CODE</h3>
+    <p>
+        ----CSS----<br><br>
+        .backdrop {<br>
+            width: 80vw;<br>
+            max-width: 240px;<br>
+            height: 80vw;<br>
+            max-height: 240px;<br>
+            font-size: 3rem;<br>
+            background-color: rgba(128, 255, 0, 0.747);<br>
+            -webkit-backdrop-filter: invert(100%);<br>
+            backdrop-filter: invert(100%);<br>
+        }<br>
+        ----HTML----<br><br>
+        &lt;div class="backdrop"&gt;<br>
+            Back drop<br>
+        &lt;/div&gt;<br><br>
+        <b>Backdrop-Filter is not widwly supported.<a href="https://caniuse.com/css-backdrop-filter">caniuse</a></b>
+    </p>
+    <h3>OUTPUT</h3>
+    <div class="backdrop">
+        Back drop
+    </div>
+    <h1>Break</h1>
+    <p>
+        <b>Break After -</b> changes page break after an element.<br>
+        <b>Break Before -</b> changes page break before an element.<br>
+        <b>Break inside -</b> changes page break inside an element.
+    </p>
+    <h3>CODE</h3>
+    <p>
+
+    </p>
+    <h3>OUTPUT</h3>
+    <div>
+        <span class="break-after">break-after</span>
+        <span class="break-before">break-before</span>
+        <div class="break-inside">Avoid a page/column/region break inside the element</div>
+    </div>
+</body>
+</html>
