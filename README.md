@@ -14,62 +14,11 @@ Am taking this challenge to learn and take notes Everyday. Which helps to revise
 
 ### [Back to top](#100DaysOfCode)
 
-## Day 11
+## Day 11 to day 20
 
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/011/screenshot.png" title="Day 11" width="100%">
-
-### [Back to top](#100DaysOfCode)
-
-## Day 12
-
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/012/screenshot.png" title="Day 12" width="100%">
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/011-to-020/screenshot.png" title="Day 11to20" width="100%">
 
 ### [Back to top](#100DaysOfCode)
 
-## Day 13
-
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/013/screenshot.png" title="Day 13" width="100%">
-
-### [Back to top](#100DaysOfCode)
-
-## Day 14
-
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/014/screenshot.png" title="Day 14" width="100%">
-
-### [Back to top](#100DaysOfCode)
-
-## Day 15
-
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/015/screenshot.png" title="Day 15" width="100%">
-
-### [Back to top](#100DaysOfCode)
-
-## Day 16
-
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/016/screenshot.png" title="Day 16" width="100%">
-
-### [Back to top](#100DaysOfCode)
-
-## Day 17
-
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/017/screenshot.png" title="Day 17" width="100%">
-
-### [Back to top](#100DaysOfCode)
-
-## Day 18
-
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/018/screenshot.png" title="Day 18" width="100%">
-
-### [Back to top](#100DaysOfCode)
-
-## Day 19
-
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/019/screenshot.png" title="Day 19" width="100%">
-
-### [Back to top](#100DaysOfCode)
-
-## Day 20
-
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/020/screenshot.png" title="Day 20" width="100%">
 
 ### [Back to top](#100DaysOfCode)
