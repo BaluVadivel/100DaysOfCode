@@ -10,7 +10,7 @@ Am taking this challenge to learn and take notes Everyday. Which helps to revise
 
 ## Day 1 to day 10
 
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/screenshot.png" title="Day 1to10" width="100%">
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/screenshot.png" title="Day 01to10" width="100%">
 
 ### [Back to top](#100DaysOfCode)
 
