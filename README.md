@@ -19,6 +19,3 @@ Am taking this challenge to learn and take notes Everyday. Which helps to revise
 <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/011-to-020/screenshot.png" title="Day 11to20" width="100%">
 
 ### [Back to top](#100DaysOfCode)
-
-
-### [Back to top](#100DaysOfCode)
