@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 21</title>
+    <style>
+        html, body {
+        width: 100%;
+        margin: 0px 0px 200px 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .d21 pre {
+            overflow-x: auto;
+        }
+        span {
+            margin: 20px 0px 0px 0px;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        .container {
+            width: 100%;
+            background-color: cornflowerblue;
+            display: flex;
+            margin: 0px 0px 20px 0px;
+        }
+        div {
+            background-color: crimson;
+            border: 2px solid black;
+            margin: 2px;
+        }
+        /********* flex direction *********/
+        .flex-dir-row {
+            flex-direction: row;
+        }
+        .flex-dir-row-reverse {
+            flex-direction: row-reverse;
+        }
+        .flex-dir-columm {
+            flex-direction: column;
+        }
+        .flex-dir-columm-reverse {
+            flex-direction: column-reverse;
+        }
+        /********* justify content *********/
+        .justify-flex-start {
+            justify-content: flex-start;
+        }
+        .justify-flex-end {
+            justify-content: flex-end;
+        }
+        .justify-center {
+            justify-content: center;
+        }
+        .justify-space-around {
+            justify-content: space-around;
+        }
+        .justify-space-between {
+            justify-content: space-between;
+        }
+        .justify-space-evenly {
+            justify-content: space-evenly;
+        }
+        /********* Align items *********/
+        .align-items {
+            height: 80px;
+        }
+        .align-items-flex-start {
+            align-items: flex-start;
+        }
+        .align-items-flex-end {
+            align-items: flex-end;
+        }
+        .align-items-center {
+            align-items: center;
+        }
+        .align-items-stretch {
+            align-items: stretch;
+        }
+
+        /********* Align self *********/
+
+        .align-self-flex-start {
+            align-self: flex-start;
+        }
+        .align-self-flex-end {
+            align-self: flex-end;
+        }
+        .align-self-center {
+            align-self: center;
+        }
+        .align-self-stretch {
+            align-self: stretch;
+        }
+
+        /********* positioning flex items *********/
+        .position > .home {
+            margin-right: auto;
+        }
+        /********* flex property *********/
+        .flex-1 > .home {
+            flex: 1;
+        }
+        .flex-2 > div {
+            flex: 1;
+        }
+        .flex-2 > .home {
+            flex: 2;
+        }
+        /********* flex Grow Shrink Basis *********/
+        .flex > .home {
+            /* flex: 1 0 100px */
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 100px;
+        }
+        .flex > .search {
+            /* flex: 0 1 100px */
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 100px;
+        }
+        .flex > .logout {
+            /* flex: 1.5 2 160px */
+            flex-grow: 1.5;
+            flex-shrink: 2;
+            flex-basis: 160px;
+        }
+        /********* order *********/
+        .order .home {
+            order: 3;
+        }
+        .order .search {
+            order: -3;
+        }
+        .order .logout {
+            order: 1;
+        }
+        @media (prefers-color-scheme: dark) {
+            html, body {
+                color: #eee;
+                background-color: black;
+            }
+            h1 {
+                color: white;
+                font-weight: 400;
+            }
+        }
+    </style>
+</head>
+<body class="d21">
+    <h1>Flexbox / display:flex</h1>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+.container {
+    width: 100%;
+    background-color: cornflowerblue;
+    display: flex;
+    margin: 0px 0px 20px 0px;
+}
+div {
+    background-color: crimson;
+    border: 2px solid black;
+    margin: 2px;
+}
+----HTML----
+&lt;span&gt;Display : flex &lt;/span&gt;
+&lt;nav class="container"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+</pre>
+
+    <h3>OUTPUT</h3>
+    <span>Display : flex </span>
+    <nav class="container">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+
+    <h1>Flex-Direction</h1>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+.flex-dir-row {
+    flex-direction: row;
+}
+.flex-dir-row-reverse {
+    flex-direction: row-reverse;
+}
+.flex-dir-columm {
+    flex-direction: column;
+}
+.flex-dir-columm-reverse {
+    flex-direction: column-reverse;
+}
+----HTML----
+&lt;span&gt;flex-direction:row (Default)&lt;/span&gt;
+&lt;nav class="container flex-dir-row"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+&lt;span&gt;flex-direction:row-reverse&lt;/span&gt;
+&lt;nav class="container flex-dir-row-reverse"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+&lt;span&gt;flex-direction:columm&lt;/span&gt;
+&lt;nav class="container flex-dir-columm"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+&lt;span&gt;flex-direction:columm-reverse&lt;/span&gt;
+&lt;nav class="container flex-dir-columm-reverse"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <span>flex-direction:row (Default)</span>
+    <nav class="container flex-dir-row">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+    <span>flex-direction:row-reverse</span>
+    <nav class="container flex-dir-row-reverse">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+    <span>flex-direction:columm</span>
+    <nav class="container flex-dir-columm">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+    <span>flex-direction:columm-reverse</span>
+    <nav class="container flex-dir-columm-reverse">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+
+    <h1>Justify Content</h1>
+    <p>Justify content align the content horizontally(x-axis).</p>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+.justify-flex-start {
+    justify-content: flex-start;
+}
+.justify-flex-end {
+    justify-content: flex-end;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-space-around {
+    justify-content: space-around;
+}
+.justify-space-between {
+    justify-content: space-between;
+}
+.justify-space-evenly {
+    justify-content: space-evenly;
+}
+----HTML----
+&lt;span&gt;Justify-Content:flex-start (Default)&lt;/span&gt;
+&lt;nav class="container justify-flex-start"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+&lt;span&gt;Justify-Content:flex-end&lt;/span&gt;
+&lt;nav class="container justify-flex-end"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+&lt;span&gt;Justify-Content:centre&lt;/span&gt;
+&lt;nav class="container justify-center"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+&lt;span&gt;Justify-Content:space-around&lt;/span&gt;
+&lt;nav class="container justify-space-around"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+&lt;span&gt;Justify-Content:space-between&lt;/span&gt;
+&lt;nav class="container justify-space-between"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+&lt;span&gt;Justify-Content:space-evenly&lt;/span&gt;
+&lt;nav class="container justify-space-evenly"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <span>Justify-Content:flex-start (Default)</span>
+    <nav class="container justify-flex-start">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+    <span>Justify-Content:flex-end</span>
+    <nav class="container justify-flex-end">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+    <span>Justify-Content:centre</span>
+    <nav class="container justify-center">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+    <span>Justify-Content:space-around</span>
+    <nav class="container justify-space-around">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+    <span>Justify-Content:space-between</span>
+    <nav class="container justify-space-between">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+    <span>Justify-Content:space-evenly</span>
+    <nav class="container justify-space-evenly">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+
+    <h1>Align items</h1>
+    <p>Align items align the content vertically(y-axis).</p>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+.align-items {
+    height: 80px;
+}
+.align-items-flex-start {
+    align-items: flex-start;
+}
+.align-items-flex-end {
+    align-items: flex-end;
+}
+.align-items-center {
+    align-items: center;
+}
+.align-items-stretch {
+    align-items: stretch;
+}
+----HTML----
+&lt;span&gt;Align items flex-start (default)&lt;/span&gt;
+&lt;nav class="container align-items align-items-flex-start"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+&lt;span&gt;Align items flex-end&lt;/span&gt;
+&lt;nav class="container align-items align-items-flex-end"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+&lt;span&gt;Align items center&lt;/span&gt;
+&lt;nav class="container align-items align-items-center"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+&lt;span&gt;Align items stretch&lt;/span&gt;
+&lt;nav class="container align-items align-items-stretch"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <span>Align items flex-start (default)</span>
+    <nav class="container align-items align-items-flex-start">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+    <span>Align items flex-end</span>
+    <nav class="container align-items align-items-flex-end">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+    <span>Align items center</span>
+    <nav class="container align-items align-items-center">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+    <span>Align items stretch</span>
+    <nav class="container align-items align-items-stretch">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+
+    <h1>Align self</h1>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+.align-self-flex-start {
+    align-self: flex-start;
+}
+.align-self-flex-end {
+    align-self: flex-end;
+}
+.align-self-center {
+    align-self: center;
+}
+.align-self-stretch {
+    align-self: stretch;
+}
+----HTML----
+&lt;nav class="container align-items"&gt;
+    &lt;div class="align-self-flex-start"&gt;start&lt;/div&gt;
+    &lt;div class="align-self-flex-end"&gt;end&lt;/div&gt;
+    &lt;div class="align-self-center"&gt;center&lt;/div&gt;
+    &lt;div class="align-self-stretch"&gt;stretch&lt;/div&gt;
+&lt;/nav&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <span>Align self only can change the align items values</span>
+    <nav class="container align-items">
+        <div class="align-self-flex-start">start</div>
+        <div class="align-self-flex-end">end</div>
+        <div class="align-self-center">center</div>
+        <div class="align-self-stretch">stretch</div>
+    </nav>
+    
+    <h1>positioning flex items</h1>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+.position > .home {
+    margin-right: auto;
+}
+.justify-flex-end {
+    justify-content: flex-end;
+}
+----HTML----
+&lt;nav class="container justify-flex-end position"&gt;
+    &lt;div class="home"&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <nav class="container justify-flex-end position">
+        <div class="home">Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+
+    <h1>flex property</h1>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+.flex-1 > .home {
+    flex: 1;
+}
+.flex-2 > div {
+    flex: 1;
+}
+.flex-2 > .home {
+    flex: 2;
+}
+----HTML----
+&lt;span&gt;Flex value for only one element&lt;/span&gt;
+&lt;nav class="container flex-1"&gt;
+    &lt;div class="home"&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+&lt;span&gt;Flex value for all element&lt;/span&gt;
+&lt;nav class="container flex-2"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+&lt;span&gt;Flex value for all element but one element has higher flex value&lt;/span&gt;
+&lt;nav class="container flex-2"&gt;
+    &lt;div class="home"&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <span>Flex value for only one element</span>
+    <nav class="container flex-1">
+        <div class="home">Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+    <span>Flex value for all element</span>
+    <nav class="container flex-2">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+    <span>Flex value for all element but one element has higher flex value</span>
+    <nav class="container flex-2">
+        <div class="home">Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+
+    <h1>Flex grow shrink basis</h1>
+    <p>
+        <b>flex</b>is the short hand property for three values
+        <br>SYNTAX<br>
+        <code>flex: [flex-grow] [flex-shrink] [flex-basis] ;</code>
+        <br><br>
+        <b>Flex grow</b> when it's parent size increases it will grow comparing to it's sibling grow value.
+        <br>
+        <b>Flex shrink</b> when it's parent size decreases it will shrink comparing to it's sibling shrink value.
+        <br>
+        <b>Flex basis</b> this sets minimum flex value.
+        <br><br>
+    </p>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+.flex > .home {
+    /* flex: 1 0 100px */
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100px;
+}
+.flex > .search {
+    /* flex: 0 1 100px */
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 100px;
+}
+.flex > .logout {
+    /* flex: 1.5 2 160px */
+    flex-grow: 1.5;
+    flex-shrink: 2;
+    flex-basis: 160px;
+}
+----HTML----
+&lt;nav class="container flex"&gt;
+    &lt;div class="home"&gt;Home&lt;/div&gt;
+    &lt;div class="search"&gt;Search&lt;/div&gt;
+    &lt;div class="logout"&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <nav class="container flex">
+        <div class="home">Home</div>
+        <div class="search">Search</div>
+        <div class="logout">Logout</div>
+    </nav>
+
+    <h1>Order</h1>
+    <p>This is used to change the order of element</p>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+.order .home {
+    order: 3;
+}
+.order .search {
+    order: -3;
+}
+.order .logout {
+    order: 1;
+}
+----HTML----
+&lt;nav class="container order"&gt;
+    &lt;div class="home"&gt;1 Home&lt;/div&gt;
+    &lt;div class="search"&gt;2 Search&lt;/div&gt;
+    &lt;div class="logout"&gt;3 Logout&lt;/div&gt;
+&lt;/nav&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <nav class="container order">
+        <div class="home">1 Home</div>
+        <div class="search">2 Search</div>
+        <div class="logout">3 Logout</div>
+    </nav>
+</body>
+</html>
