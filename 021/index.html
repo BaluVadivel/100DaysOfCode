@@ -17,7 +17,7 @@
         * {
             box-sizing: border-box;
         }
-        .d21 pre {
+        pre {
             overflow-x: auto;
         }
         span {
@@ -36,7 +36,9 @@
             border: 2px solid black;
             margin: 2px;
         }
+        
         /********* flex direction *********/
+        
         .flex-dir-row {
             flex-direction: row;
         }
@@ -49,7 +51,28 @@
         .flex-dir-columm-reverse {
             flex-direction: column-reverse;
         }
+        
+        /********* flex wrap *********/
+        
+        .flex-wrap div {
+            width: 80vw;
+        }
+        .flex-wrap-wrap {
+            flex-wrap: wrap;
+        }
+        .flex-wrap-wrap-reverse {
+            flex-wrap: wrap-reverse;
+        }
+        
+        /********* flex flow *********/
+        
+        .flex-flow-column-wrap {
+            height: 60px;
+            flex-flow: column wrap;
+        }
+        
         /********* justify content *********/
+        
         .justify-flex-start {
             justify-content: flex-start;
         }
@@ -68,7 +91,9 @@
         .justify-space-evenly {
             justify-content: space-evenly;
         }
+        
         /********* Align items *********/
+        
         .align-items {
             height: 80px;
         }
@@ -100,11 +125,28 @@
             align-self: stretch;
         }
 
+        /********* Align Content *********/
+
+        .align-item-content {
+            flex-wrap: wrap;
+            height: 140px;
+            max-width: 600px;
+        }
+        .align-content-center {
+            align-content: center;
+        }
+        .align-item-center {
+            align-items: center;
+        }
+
         /********* positioning flex items *********/
+        
         .position > .home {
             margin-right: auto;
         }
+
         /********* flex property *********/
+        
         .flex-1 > .home {
             flex: 1;
         }
@@ -114,7 +156,9 @@
         .flex-2 > .home {
             flex: 2;
         }
+
         /********* flex Grow Shrink Basis *********/
+
         .flex > .home {
             /* flex: 1 0 100px */
             flex-grow: 1;
@@ -133,7 +177,9 @@
             flex-shrink: 2;
             flex-basis: 160px;
         }
+        
         /********* order *********/
+        
         .order .home {
             order: 3;
         }
@@ -155,7 +201,7 @@
         }
     </style>
 </head>
-<body class="d21">
+<body>
     <h1>Flexbox / display:flex</h1>
     <h3>CODE</h3>
 <pre>
@@ -251,6 +297,91 @@ div {
     </nav>
     <span>flex-direction:columm-reverse</span>
     <nav class="container flex-dir-columm-reverse">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+
+    <h1>Flex Wrap</h1>
+    <p>
+        <b>nowrap (default)</b> - this won't wrap the element even if the elements can't fit in single row or column. It </b>reduce the child elements width</b> to fit within single row or column.
+        <br>
+        <b>wrap</b> - This wrap the elements when it can't fit in single row or column. It <b>won't change child elements width</b> to fit in single row or column.
+        <br>
+        <b>wrap-reverse</b> - This wrap the elements in reverse order when it can't fit in single row or column. It <b>won't change child elements width</b> to fit in single row or column.
+    </p>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+.flex-wrap div {
+    width: 80vw;
+}
+.flex-wrap-wrap {
+    flex-wrap: wrap;
+}
+.flex-wrap-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+----HTML----
+&lt;span&gt;flex-wrap: nowrap (default)&lt;/span&gt;
+&lt;nav class="container flex-wrap flex-wrap-nowrap"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+&lt;span&gt;flex-wrap: wrap&lt;/span&gt;
+&lt;nav class="container flex-wrap flex-wrap-wrap"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+&lt;span&gt;flex-wrap: wrap-reverse&lt;/span&gt;
+&lt;nav class="container flex-wrap flex-wrap-wrap-reverse"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <span>flex-wrap: nowrap (default)</span>
+    <nav class="container flex-wrap flex-wrap-nowrap">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+    <span>flex-wrap: wrap</span>
+    <nav class="container flex-wrap flex-wrap-wrap">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+    <span>flex-wrap: wrap-reverse</span>
+    <nav class="container flex-wrap flex-wrap-wrap-reverse">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+
+    <h1>Flex Flow</h1>
+    <p>This is the shorthand property to use flex-direction and flex-wrap</p>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+.flex-flow-column-wrap {
+    height: 60px;
+    flex-flow: column wrap;
+}
+----HTML----
+&lt;span&gt;flex-flow: column wrap&lt;/span&gt;
+&lt;nav class="container flex-flow-column-wrap"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;Search&lt;/div&gt;
+    &lt;div&gt;Logout&lt;/div&gt;
+&lt;/nav&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <span>flex-flow: column wrap</span>
+    <nav class="container flex-flow-column-wrap">
         <div>Home</div>
         <div>Search</div>
         <div>Logout</div>
@@ -356,7 +487,11 @@ div {
     </nav>
 
     <h1>Align items</h1>
-    <p>Align items align the content vertically(y-axis).</p>
+    <p>
+        Align items wiil align child elements vertically(y-axis).
+        <br>
+        Align items place individual to that position in that particular row / column.
+    </p>
     <h3>CODE</h3>
 <pre>
 ----CSS----
@@ -459,7 +594,64 @@ div {
         <div class="align-self-center">center</div>
         <div class="align-self-stretch">stretch</div>
     </nav>
-    
+    <h1>Align Content</h1>
+    <p>
+        <b>align content</b> which place all the child items to corresponding position based on it's width height.
+    </p>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+.align-item-content {
+    flex-wrap: wrap;
+    height: 140px;
+    max-width: 600px;
+}
+.align-content-center {
+    align-content: center;
+}
+.align-item-center {
+    align-items: center;
+}
+----HTML----
+&lt;span&gt;align-content: center;&lt;/span&gt;
+&lt;nav class="container align-item-content align-content-center"&gt;
+    &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+    &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+    &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+    &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+    &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+    &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+&lt;/nav&gt;
+&lt;span&gt;align-items: center;&lt;/span&gt;
+&lt;nav class="container align-item-content align-item-center"&gt;
+    &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+    &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+    &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+    &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+    &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+    &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+&lt;/nav&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <span>align-content: center;</span>
+    <nav class="container align-item-content align-content-center">
+        <div>start</div><div>end</div><div>center</div><div>stretch</div>
+        <div>start</div><div>end</div><div>center</div><div>stretch</div>
+        <div>start</div><div>end</div><div>center</div><div>stretch</div>
+        <div>start</div><div>end</div><div>center</div><div>stretch</div>
+        <div>start</div><div>end</div><div>center</div><div>stretch</div>
+        <div>start</div><div>end</div><div>center</div><div>stretch</div>
+    </nav>
+    <span>align-items: center;</span>
+    <nav class="container align-item-content align-item-center">
+        <div>start</div><div>end</div><div>center</div><div>stretch</div>
+        <div>start</div><div>end</div><div>center</div><div>stretch</div>
+        <div>start</div><div>end</div><div>center</div><div>stretch</div>
+        <div>start</div><div>end</div><div>center</div><div>stretch</div>
+        <div>start</div><div>end</div><div>center</div><div>stretch</div>
+        <div>start</div><div>end</div><div>center</div><div>stretch</div>
+    </nav>
+
     <h1>positioning flex items</h1>
     <h3>CODE</h3>
 <pre>
