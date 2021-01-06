@@ -1303,20 +1303,6 @@ This fall back message only displayed when the browser dosen't support audio tag
 <section id="day9">
 <h2>Day9</h2>
 
-<h2 id="time-tag">Time element</h2>
-<p>
-&lt;time&gt; elelment is used to represent the specific time period. This dosen't include any style change only for beter SEO.<br> Here html entities used to to display &lt; &gt; symbols. Ref <a href="https://dev.w3.org/html5/html-author/charref">dev.w3.org</a>
-</p>
-<b>CODE:</b>
-<pre>
-My birthday on &lt;time datetime="1999-09-17"&gt;September 7&lt;&sol;time&gt;
-</pre>
-<b>OUTPUT:</b>
-<p class="output">
-My birthday on <time datetime="1999-09-17">September 7</time>
-</p>
-Refer <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time">MDN</a>
-
 <h2>Small element</h2>
 <p>
 &lt;small&gt; elelment is used to represent the specific content in smaller font size than standard size<br>
@@ -1346,93 +1332,226 @@ Terminal displayed <code>No such directory exist</code>
 </p>
 Ref <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code">MDN</a>
 
-<h2>Header element</h2>
-<p>
-&lt;header&gt; elelment is used to display logo, author name and other elements
-</p>
-<b>CODE:</b>
-<pre>
-&lt;header&gt;This is a header&lt;&sol;header&gt;
-</pre>
-<b>OUTPUT:</b>
-<p class="output">
-<header>This is a header</header>
-</p>
-Ref <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header">MDN</a>
-
-<h2 id="main-tag">Main element</h2>
-<p>
-&lt;main&gt; elelment contins the important content of &lt;body&gt; in centeral topic.
-</p>
-<b>CODE:</b>
-<pre>
-&lt;main&gt;This the important content of &lt;body&gt; element&lt;&sol;main&gt;
-</pre>
-<b>OUTPUT:</b>
-<p class="output">
-<main>This the important content of &lt;body&gt; element</main>
-</p>
-Ref <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main">MDN</a>
-
-<h2>Footer element</h2>
-<p>
-&lt;footer&gt; elelment is used to display author, copywrite, links related to document
-</p>
-<b>CODE:</b>
-<pre>
-&lt;footer&gt;copywrite 2020&lt;&sol;footer&gt;
-</pre>
-<b>OUTPUT:</b>
-<p class="output">
-<footer>copywrite 2020</footer>
-</p>
-Ref <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer">MDN</a>
-
-<h2>Article element</h2>
-<p>
-&lt;article&gt; element contains self-contained composition in a document which intented to be reusable e.g blog
-</p>
-<b>CODE:</b>
-<pre>
-&lt;article&gt;this is article&lt;&sol;article&gt;
-</pre>
-<b>OUTPUT:</b>
-<p class="output">
-<article>this is article</article>
-</p>
-Ref <a href="https://dfile:///home/balu/git/gith/100DaysOfCode/001-to-010/index.html?userid=eipcw&password=BIQO#day10eveloper.mozilla.org/en-US/docs/Web/HTML/Element/article">MDN</a>
-
-<h2>Aside element</h2>
-<p>
-&lt;Aside&gt; element contains content indirectly related to main content.
-</p>
-<b>CODE:</b>
-<pre>
-&lt;aside&gt;Non related content&lt;&sol;aside&gt;
-</pre>
-<b>OUTPUT:</b>
-<p class="output">
-<aside>Non related content</aside>
-</p>
-Refer <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">MDN</a>
-
-<h2>Nav element</h2>
-<p>
-&lt;nave&gt; is a section of page that contains mainly navigation links.
-</p>
-<b>CODE:</b>
-<pre>
-&lt;nav&gt;
-    &lt;a href="#time"&gt;time&lt;a&gt;
-    &lt;a href="#main"&gt;main&lt;a&gt;
-&lt;&sol;nav&gt;
-</pre>
-<b>OUTPUT:</b>
-<p class="output">
-<nav> <a href="#time">time</a> <br> <a href="#main">main</a> </nav>
-</p>
-Refer <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">MDN</a>
+<!-------------------------- Semantic Elements --------------------------->
+    <h1>Semantic Elements</h1>
+    
+    <h2>article tag</h2>
+    <p>
+        Article tag represents the content inside are article or blog.<br>
+        This tag dosent provide any visual effect or design changes.
+    </p>
+    <b>CODE</b>
+    <pre>
+    &lt;article&gt;
+        This is an article.
+    &lt;/article&gt;
+    </pre>
+    <b>OUTPUT</b>
+    <p class="output">
+    <article>
+        This is an article.
+    </article>
+    </p>
+    
+    <h2>aside tag</h2>
+    <p>
+        Aside tag contains the content which are indirectly to page main content.
+    </p>
+    <b>CODE</b>
+    <pre>
+    &lt;aside&gt;
+        The Rough-skinned Newt defends itself with a deadly neurotoxin.
+    &lt;/aside&gt;
+    </pre>
+    <b>OUTPUT</b>
+    <div class="output">
+    <p>Salamanders are a group of amphibians with a lizard-like appearance, including short legs and a tail in both larval and adult forms.</p>
+    <aside>
+        The Rough-skinned Newt defends itself with a deadly neurotoxin.
+    </aside>
+    </div>
+    
+    <h2>details &amp; summary</h2>
+    <p>
+        The HTML Disclosure details &amp; summary element (&lt;summary&gt;) element specifies a summary, caption, or legend for a &lt;details&gt; element's disclosure box. Clicking the &lt;summary&gt; element toggles the state of the parent &lt;details&gt; element open and closed.
+    </p>
+    <b>CODE</b>
+    <pre>
+    &lt;details&gt;
+        &lt;summary&gt;Details&lt;/summary&gt;
+        Something small enough to escape casual notice.
+    &lt;/details&gt;
+    </pre>
+    <b>OUTPUT</b>
+    <div class="output">
+    <details>
+        <summary>Details</summary>
+        Something small enough to escape casual notice.
+    </details>
+    </div>
+    
+    <h2>figure &amp; figcaption</h2>
+    <p>
+        The HTML &lt;figcaption&gt; or Figure Caption element represents a caption or legend describing the rest of the contents of its parent &lt;figure&gt; element.
+    </p>
+    <b>CODE</b>
+    <pre>
+    &lt;figure&gt;
+        &lt;img src="https://avatars.githubusercontent.com/baluvadivel"
+             alt=""&gt;
+        &lt;figcaption&gt;BaluVadivel Github profile image&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    </pre>
+    <b>OUTPUT</b>
+    <div class="output">
+    <figure>
+        <img src="https://avatars.githubusercontent.com/baluvadivel"
+             alt="">
+        <figcaption>BaluVadivel Github profile image</figcaption>
+    </figure>
+    </div>
+    
+    <h2>footer</h2>
+    <p>
+        The HTML &lt;footer&gt; element represents a footer for its nearest sectioning content or sectioning root element. A footer typically contains information about the author of the section, copyright data or links to related documents.
+    </p>
+    <b>CODE</b>
+    <pre>
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2018 Gandalf&lt;/p&gt;
+    &lt;/footer&gt;
+    </pre>
+    <b>OUTPUT</b>
+    <div class="output">
+    <footer>
+        <p>&copy; 2018 Gandalf</p>
+    </footer>
+    </div>
+    
+    <h2>header</h2>
+    <p>
+        The HTML &lt;header&gt; element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.
+    </p>
+    <b>CODE</b>
+    <pre>
+    &lt;header&gt;
+        &lt;h1&gt;This h1 heading placed inside header&lt;/h1&gt;
+    &lt;/header&gt;
+    </pre>
+    <b>OUTPUT</b>
+    <div class="output">
+    <header>
+        <h1>This h1 heading placed inside header</h1>
+    </header>
+    </div>
+    
+    <h2>main</h2>
+    <p>
+        The HTML &lt;main&gt; element represents the dominant content of the &lt;body&gt; of a document.
+    </p>
+    <b>CODE</b>
+    <pre>
+    &lt;main&gt;
+        This is the main content
+    &lt;/main&gt;
+    </pre>
+    <b>OUTPUT</b>
+    <div class="output">
+    <main>
+        This is the main content
+    </main>
+    </div>
+    
+    <h2>mark</h2>
+    <p>
+        The HTML Mark Text element (&lt;mark&gt;) represents text which is marked or highlighted for reference or notation purposes, due to the marked passage's relevance or importance in the enclosing context.
+    </p>
+    <b>CODE</b>
+    <pre>
+    &lt;p&gt;
+        This is a &lt;mark&gt;paragraph&lt;/mark&gt;.
+    &lt;/p&gt;
+    </pre>
+    <b>OUTPUT</b>
+    <div class="output">
+    <p>
+        This is a <mark>paragraph</mark>.
+    </p>
+    </div>
+    
+    <h2>nav</h2>
+    <p>
+        The HTML &lt;nav&gt; element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents.
+    </p>
+    <b>CODE</b>
+    <pre>
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#day1"&gt;Day 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#day10"&gt;Day 10&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+    </pre>
+    <b>OUTPUT</b>
+    <div class="output">
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#day1">Day 1</a></li>
+            <li><a href="#day10">Day 10</a></li>
+        </ul>
+    </nav>
+    </div>
+    
+    <h2>section</h2>
+    <p>
+        The HTML &lt;section&gt; element represents a standalone section — which doesn't have a more specific semantic element to represent it — contained within an HTML document. Typically, but not always, sections have a heading.
+    </p>
+    <b>CODE</b>
+    <pre>
+    &lt;h1&gt;How to Fish&lt;/h1&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Introduction&lt;/h2&gt;
+        &lt;p&gt;People have been catching fish for food since before recorded history…&lt;/p&gt;
+    &lt;/section&gt;
+    
+    &lt;section&gt;
+        &lt;h2&gt;Equipment&lt;/h2&gt;
+        &lt;p&gt;The first thing you’ll need is a fishing rod or pole that you find comfortable and is strong enough for the kind of fish you’re expecting to land…&lt;/p&gt;
+    &lt;/section&gt;
+    </pre>
+    
+    <b>OUTPUT</b>
+    <div class="output">
+    <h1>How to Fish</h1>
+    <section>
+        <h2>Introduction</h2>
+        <p>People have been catching fish for food since before recorded history…</p>
+    </section>
+    
+    <section>
+        <h2>Equipment</h2>
+        <p>The first thing you’ll need is a fishing rod or pole that you find comfortable and is strong enough for the kind of fish you’re expecting to land…</p>
+    </section>
+    </div>
+    
+    <h2>time</h2>
+    <p>
+        The HTML &lt;time&gt; element represents a specific period in time. It may include the datetime attribute to translate dates into machine-readable format, allowing for better search engine results or custom features such as reminders.
+    </p>
+    <b>CODE</b>
+    <pre>
+    &lt;p&gt;
+        The concert starts at &lt;time datetime="20:00"&gt;20:00&lt;/time&gt; and you'll be able to enjoy the band for at least &lt;time datetime="PT2H30M"&gt;2h 30m&lt;/time&gt;.
+    &lt;/p&gt;
+    </pre>
+    <b>OUTPUT</b>
+    <div class="output">
+        The concert starts at <time datetime="20:00">20:00</time> and you'll be able to enjoy the band for at least <time datetime="PT2H30M">2h 30m</time>.
+    </div>
 </section>
+
 <h2><a href="#nav">Back to Nav Link</a></h2>
 <hr>
 <!----------------------------- Day10 ------------------------------>
@@ -1452,13 +1571,13 @@ The HTML &lt;button&gt; element represents a clickable button, used to submit fo
 &lt;/form&gt;
 </pre>
 <b>OUTPUT:</b>
-<p class="output">
+<div class="output">
 <form>
 <input type="userid" name="userid" placeholder="userid"><br>
 <input type="password" name="password" placeholder="password"><br>
 <button type="submit">submit</button>
 </form>
-</p>
+</div>
 
 <h2>datalist</h2>
 <p>
@@ -1481,7 +1600,7 @@ The HTML &lt;datalist&gt; element contains a set of &lt;option%gt; elements that
 </pre>
 
 <b>OUTPUT:</b>
-<p class="output">
+<div class="output">
 <form>
 <input type="userid" name="userid" placeholder="userid" required><br>
 <input list="ice-cream-flavors" nam="my-ice-cream-flavors" id="my-ice-cream-flavors" placeholder="ICE cream flavoue" required><br>
@@ -1494,7 +1613,7 @@ The HTML &lt;datalist&gt; element contains a set of &lt;option%gt; elements that
 </datalist>
 <button type="submit">submit</button>
 </form>
-</p>
+</div>
 
 <h2>noscript</h2>
 <p>
@@ -1507,7 +1626,7 @@ The HTML &lt;noscript&gt; element can be used as a fall back message. This secti
 &lt;p&gt;Just text&lt;/p&gt;
 </pre>
 <b>OUTPUT of script enabled :</b>
-<p class="output">
+<div class="output">
 <div>Just text</div>
 <noscript>script is disabled</noscript>
 <div>Just text</div>
@@ -1517,7 +1636,7 @@ The HTML &lt;noscript&gt; element can be used as a fall back message. This secti
 <div>Just text</div>
 <div>script is disabled</div>
 <div>Just text</div>
-</p>
+</div>
 
 <h2>picture</h2>
 <p>
@@ -1532,13 +1651,13 @@ The HTML &lt;picture&gt; element is used with &lt;source&gt; and &lt;img&gt; tag
 &lt;/picture&gt;
 </pre>
 <b>OUTPUT :</b>
-<p class="output">
+<div class="output">
 <picture>
   <source srcset="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day010-SampleImagewebp.webp" type="image/webp">
   <source srcset="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day010-SampleImagejpg.jpg" type="image/jpg">
   <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day010-SampleImagepng.png" width="200px" alt="logo">
 </picture>
-</p>
+</div>
 Refer for more details <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture</a>
 
 <h2>pre</h2>
@@ -1562,7 +1681,7 @@ The HTML &lt;pre&gt; element represents preformatted text which is to be present
 </pre>
 </p>
 <b>OUTPUT :</b>
-<p class="output">
+<div class="output">
 <pre>
     |     |
      |   |
@@ -1572,7 +1691,7 @@ The HTML &lt;pre&gt; element represents preformatted text which is to be present
      |   |
     |     |
 </pre>
-</p>
+</div>
 Refer for more details <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre</a>
 
 <h2>script</h2>
@@ -1593,228 +1712,7 @@ Refer for more details <a href="https://developer.mozilla.org/en-US/docs/Web/HTM
 </section>
 <h2><a href="#nav">Back to Nav Link</a></h2>
 <hr>
-<!-------------------------- Semantic Elements --------------------------->
-<section id="semantic">
-<h1>Semantic Elements</h1>
+<h1><a href="#nav">Back to Home</a></h1>
 
-<h2>article tag</h2>
-<p>
-    Article tag represents the content inside are article or blog.<br>
-    This tag dosent provide any visual effect or design changes.
-</p>
-<b>CODE</b>
-<pre>
-&lt;article&gt;
-    This is an article.
-&lt;/article&gt;
-</pre>
-<b>OUTPUT</b>
-<p class="output">
-<article>
-    This is an article.
-</article>
-</p>
-
-<h2>aside tag</h2>
-<p>
-    Aside tag contains the content which are indirectly to page main content.
-</p>
-<b>CODE</b>
-<pre>
-&lt;aside&gt;
-    The Rough-skinned Newt defends itself with a deadly neurotoxin.
-&lt;/aside&gt;
-</pre>
-<b>OUTPUT</b>
-<p class="output">
-<p>Salamanders are a group of amphibians with a lizard-like appearance, including short legs and a tail in both larval and adult forms.</p>
-<aside>
-    The Rough-skinned Newt defends itself with a deadly neurotoxin.
-</aside>
-</p>
-
-<h2>details &amp; summary</h2>
-<p>
-    The HTML Disclosure details &amp; summary element (&lt;summary&gt;) element specifies a summary, caption, or legend for a &lt;details&gt; element's disclosure box. Clicking the &lt;summary&gt; element toggles the state of the parent &lt;details&gt; element open and closed.
-</p>
-<b>CODE</b>
-<pre>
-&lt;details&gt;
-    &lt;summary&gt;Details&lt;/summary&gt;
-    Something small enough to escape casual notice.
-&lt;/details&gt;
-</pre>
-<b>OUTPUT</b>
-<p class="output">
-<details>
-    <summary>Details</summary>
-    Something small enough to escape casual notice.
-</details>
-</p>
-
-<h2>figure &amp; figcaption</h2>
-<p>
-    The HTML &lt;figcaption&gt; or Figure Caption element represents a caption or legend describing the rest of the contents of its parent &lt;figure&gt; element.
-</p>
-<b>CODE</b>
-<pre>
-&lt;figure&gt;
-    &lt;img src="https://avatars.githubusercontent.com/baluvadivel"
-         alt=""&gt;
-    &lt;figcaption&gt;BaluVadivel Github profile image&lt;/figcaption&gt;
-&lt;/figure&gt;
-</pre>
-<b>OUTPUT</b>
-<p class="output">
-<figure>
-    <img src="https://avatars.githubusercontent.com/baluvadivel"
-         alt="">
-    <figcaption>BaluVadivel Github profile image</figcaption>
-</figure>
-</p>
-
-<h2>footer</h2>
-<p>
-    The HTML &lt;footer&gt; element represents a footer for its nearest sectioning content or sectioning root element. A footer typically contains information about the author of the section, copyright data or links to related documents.
-</p>
-<b>CODE</b>
-<pre>
-&lt;footer&gt;
-    &lt;p&gt;&copy; 2018 Gandalf&lt;/p&gt;
-&lt;/footer&gt;
-</pre>
-<b>OUTPUT</b>
-<p class="output">
-<footer>
-    <p>&copy; 2018 Gandalf</p>
-</footer>
-</p>
-
-<h2>header</h2>
-<p>
-    The HTML &lt;header&gt; element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.
-</p>
-<b>CODE</b>
-<pre>
-&lt;header&gt;
-    &lt;h1&gt;This h1 heading placed inside header&lt;/h1&gt;
-&lt;/header&gt;
-</pre>
-<b>OUTPUT</b>
-<p class="output">
-<header>
-    <h1>This h1 heading placed inside header</h1>
-</header>
-</p>
-
-<h2>main</h2>
-<p>
-    The HTML &lt;main&gt; element represents the dominant content of the &lt;body&gt; of a document.
-</p>
-<b>CODE</b>
-<pre>
-&lt;main&gt;
-    This is the main content
-&lt;/main&gt;
-</pre>
-<b>OUTPUT</b>
-<p class="output">
-<main>
-    This is the main content
-</main>
-</p>
-
-<h2>mark</h2>
-<p>
-    The HTML Mark Text element (&lt;mark&gt;) represents text which is marked or highlighted for reference or notation purposes, due to the marked passage's relevance or importance in the enclosing context.
-</p>
-<b>CODE</b>
-<pre>
-&lt;p&gt;
-    This is a &lt;mark&gt;paragraph&lt;/mark&gt;.
-&lt;/p&gt;
-</pre>
-<b>OUTPUT</b>
-<p class="output">
-<p>
-    This is a <mark>paragraph</mark>.
-</p>
-</p>
-
-<h2>nav</h2>
-<p>
-    The HTML &lt;nav&gt; element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents.
-</p>
-<b>CODE</b>
-<pre>
-&lt;nav&gt;
-    &lt;ul&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#day1"&gt;Day 1&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#day10"&gt;Day 10&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/nav&gt;
-</pre>
-<b>OUTPUT</b>
-<p class="output">
-<nav>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#day1">Day 1</a></li>
-        <li><a href="#day10">Day 10</a></li>
-    </ul>
-</nav>
-</p>
-
-<h2>section</h2>
-<p>
-    The HTML &lt;section&gt; element represents a standalone section — which doesn't have a more specific semantic element to represent it — contained within an HTML document. Typically, but not always, sections have a heading.
-</p>
-<b>CODE</b>
-<pre>
-&lt;h1&gt;How to Fish&lt;/h1&gt;
-&lt;section&gt;
-    &lt;h2&gt;Introduction&lt;/h2&gt;
-    &lt;p&gt;People have been catching fish for food since before recorded history…&lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-    &lt;h2&gt;Equipment&lt;/h2&gt;
-    &lt;p&gt;The first thing you’ll need is a fishing rod or pole that you find comfortable and is strong enough for the kind of fish you’re expecting to land…&lt;/p&gt;
-&lt;/section&gt;
-</pre>
-
-<b>OUTPUT</b>
-<p class="output">
-<h1>How to Fish</h1>
-<section>
-    <h2>Introduction</h2>
-    <p>People have been catching fish for food since before recorded history…</p>
-</section>
-
-<section>
-    <h2>Equipment</h2>
-    <p>The first thing you’ll need is a fishing rod or pole that you find comfortable and is strong enough for the kind of fish you’re expecting to land…</p>
-</section>
-</p>
-
-<h2>time</h2>
-<p>
-    The HTML &lt;time&gt; element represents a specific period in time. It may include the datetime attribute to translate dates into machine-readable format, allowing for better search engine results or custom features such as reminders.
-</p>
-<b>CODE</b>
-<pre>
-&lt;p&gt;
-    The concert starts at &lt;time datetime="20:00"&gt;20:00&lt;/time&gt; and you'll be able to enjoy the band for at least &lt;time datetime="PT2H30M"&gt;2h 30m&lt;/time&gt;.
-&lt;/p&gt;
-</pre>
-<b>OUTPUT</b>
-<p class="output">
-    The concert starts at <time datetime="20:00">20:00</time> and you'll be able to enjoy the band for at least <time datetime="PT2H30M">2h 30m</time>.
-</p>
-
-</section>
-
-<h1><a href="../">Back to Home Page</a></h1>
 </body>
 </html>
