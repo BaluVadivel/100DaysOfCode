@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 24</title>
+    <style>
+        html, body {
+            width: 100%;
+            max-width: 1000px;
+            padding: 0px;
+            margin: 0px auto;
+            min-height: 100%;
+            scroll-behavior: smooth;
+            color: black;
+            background-color: white;
+            font-size: 18px;
+        }
+        p, pre, div {
+            line-height: 26px;
+        }
+        a:visited {
+            color:#0000FF;
+        }
+        @media (prefers-color-scheme: dark) {
+            html, body {
+                color: #eee;
+                background-color: black;
+            }
+            h1 {
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Day 24</h1>
+    
+    <h1>CSS selector</h1>
+
+    <!------------------- Basic Selector ------------------->
+
+    <section>
+
+        <hr>
+        <h1>Basic Selector</h1>
+        <hr>
+
+        <h1>Universal selector</h1>
+        <p>
+            This selects all the elements expect ::after &amp; ::before (Pseudo Element) .
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            * {
+                border-radius: 4px;
+            }
+        </pre>
+
+        <h1>Name or type selector</h1>
+        <p>
+            Select the element using element name. Below code selects every div element inside body element.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            div {
+                border-radius: 4px;
+            }
+        </pre>
+
+        <h1>Class selector</h1>
+        <p>
+            Selecting element using it's classname.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            .output {
+                border-radius: 4px;
+            }
+        </pre>
+
+        <h1>Id selector</h1>
+        <p>
+            Selecting element using it's unique Id name.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            #output {
+                border-radius: 4px;
+            }
+        </pre>
+    </section>
+
+    <!------------------- Combinators ------------------->
+
+    <section>
+
+        <hr>
+        <h1>Combinators</h1>
+        <hr>
+
+        <h1>Descendant Selector</h1>
+        <p>
+            Select elements that are descendants of the first element.
+            <br>
+            Select every elements that are direct child , grand child nad multi level grand child of the first element.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            div a {
+                background-color: yellow;
+            }
+        </pre>
+
+        <h1>Direct Child Selector</h1>
+        <p>
+            Select every elements that are direct child of the first element.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            div > a {
+                border-radius: 4px;
+            }
+        </pre>
+
+        <h1>Previous Sibling Selector</h1>
+        <p>
+            There is no Previous Sibling Selector avaliable in CSS till CSS3.
+        </p>
+
+        <h1>General Sibling or Succeeding Sibling Selector</h1>
+        <p>
+            Select elements that are siblings of the first element and come after the first element.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            div ~ a {
+                border-radius: 4px;
+            }
+        </pre>
+
+        <h1>Adjacent Sibling Selector</h1>
+        <p>
+            Select elements that are siblings of the first element and come directly (Immediately) after the first element.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            div + a {
+                border-radius: 4px;
+            }
+        </pre>
+
+        <h1>OR Selector or List Selector</h1>
+        <p>
+            Select elements that match any selector in the list.
+            <br>
+            We can give same style to multiple elements using or selector.
+            <br>
+            <strong>Seleting multiple elements and giving same style to all.</strong>
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            div, a {
+                border-radius: 4px;
+            }
+        </pre>
+
+        <h1>And Selector</h1>
+        <p>
+            Select elements that match all the selector combinations.
+            <br>
+            Below code selects <b>div element which has box class</b>.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            div.box {
+                border-radius: 4px;
+            }
+        </pre>
+
+    </section>
+
+    <!------------------- Attribute Selector ------------------->
+
+    <section>
+
+        <hr>
+        <h1>Attribute Selector</h1>
+        <hr>
+
+        <h1>Has Attribute Selector</h1>
+        <p>
+            Select elements that have that attribute.
+            <br>
+            Below code selects all the elements which contains href attribute
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            [href] {
+                color: yellow;
+            }
+        </pre>
+        <h3>Selected tags</h3>
+        <div>
+            &lt;a href="#"&gt; &lt;/a&gt;
+            <br>
+            &lt;a href="/contact"&gt;  &lt;/a&gt;
+        </div>
+        <h3>Non Selected tags</h3>
+        <div>
+            &lt;a&gt; no link &lt;/a&gt;
+        </div>
+
+        <h1>Exact Attribute Selector</h1>
+        <p>
+            Select elements that have that attribute with exactly that value.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            [class="box"] {
+                color: red;
+            }
+        </pre>
+        <h3>Selected tags</h3>
+        <div>
+            &lt;div class="box"&gt; &lt;/div&gt;
+            <br>
+            &lt;span class="box"&gt; &lt;/span&gt;
+        </div>
+        <h3>Non Selected tags</h3>
+        <div>
+            &lt;div class="box price"&gt; &lt;/div&gt;
+            <br>
+            &lt;div class="box-price"&gt; &lt;/div&gt;
+        </div>
+
+        <h1>Exact Attribute with whitespace</h1>
+        <p>
+            Represents elements with an attribute name of attr whose value is a whitespace-separated list of words, one of which is exactly value.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            [class~="box"] {
+                color: red;
+            }
+        </pre>
+        <h3>Selected tags</h3>
+        <div>
+            &lt;div class="box"&gt; &lt;/div&gt;
+            <br>
+            &lt;div class="box price"&gt; &lt;/div&gt;
+            <br>
+            &lt;div class="abc box price"&gt; &lt;/div&gt;
+        </div>
+        <h3>Non Selected tags</h3>
+        <div>
+            &lt;div class="box-price"&gt; &lt;/div&gt;
+        </div>
+
+        <h1>Exact Attribute with hyphen</h1>
+        <p>
+            Represents elements with an attribute name of attr whose value can be exactly value or can begin with value immediately followed by a hyphen, - (U+002D). It is often used for language subcode matches.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            [class|="box"] {
+                color: red;
+            }
+        </pre>
+        <h3>Selected tags</h3>
+        <div>
+            &lt;a class="box"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a class="box-price"&gt;LINK&lt;/a&gt;
+        </div>
+        <h3>Non Selected tags</h3>
+        <div>
+            &lt;a class="box price"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a class="price box-b"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a class="price-box-b"&gt;LINK&lt;/a&gt;
+        </div>
+
+        <h1>Begins With Attribute</h1>
+        <p>
+            Select every elements that have that attribute which start with that value.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            [href^="http"] {
+                color: red;
+            }
+        </pre>
+        <h3>Selected tags</h3>
+        <div>
+            &lt;a href="https://balu.dev"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="http://balu.dev"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="http-def"&gt;LINK&lt;/a&gt;
+        </div>
+        <h3>Non Selected tags</h3>
+        <div>
+            &lt;a href="HTTPS://balu.dev"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="HTTP://balu.dev"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="HTTP-def"&gt;LINK&lt;/a&gt;
+        </div>
+
+        <h1>Ends With Attribute</h1>
+        <p>
+            Select elements that have that attribute which end with that value.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            [href$="pdf"] {
+                color: red;
+            }
+        </pre>
+        <h3>Selected tags</h3>
+        <div>
+            &lt;a href="pdf"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href=".pdf"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="abcpdf"&gt;LINK&lt;/a&gt;
+        </div>
+        <h3>Non Selected tags</h3>
+        <div>
+            &lt;a href="PDF"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href=".PDF"&gt;LINK&lt;/a&gt;
+        </div>
+
+        <h1>Substring Attribute</h1>
+        <p>
+            Select elements that have that attribute which contain that.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            [href*="pdf"] {
+                color: red;
+            }
+        </pre>
+        <h3>Selected tags</h3>
+        <div>
+            &lt;a href="start-pdf-end"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="startpdfend"&gt;LINK&lt;/a&gt;
+        </div>
+        <h3>Non Selected tags</h3>
+        <div>
+            &lt;a href="start-PDF-end"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="startPDFend"&gt;LINK&lt;/a&gt;
+        </div>
+
+        <h1>Case insensitive</h1>
+        <p>
+            Syntax:
+            <br>
+            <code>[attr operator="value" i]</code>
+            <br>
+            Adding an i (or I) before the closing bracket causes the value to be compared case-insensitively (for characters within the ASCII range).
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            [href*="pdf"] {
+                color: red;
+            }
+        </pre>
+        <h3>Selected tags</h3>
+        <div>
+            &lt;a href="start-PDF-end"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="startPDFend"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="start-pdf-end"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="startpdfend"&gt;LINK&lt;/a&gt;
+        </div>
+
+    </section>
+
+</body>
+</html>
