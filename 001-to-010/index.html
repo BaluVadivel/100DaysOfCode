@@ -28,7 +28,7 @@
     pre {
         overflow-x: scroll;
     }
-    div.output, p.output {
+    .output {
         overflow-x: scroll;
         box-sizing: border-box;
         border: 2px solid rgba(220, 20, 60, 0.6);
@@ -463,12 +463,12 @@ Figure caption tag is used to give caption to image.
 &lt;/figure&gt;
 </pre>
 <b>Output:</b>
-<p class="output">
+<div class="output">
 <figure>
 <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day004-Ubuntu.png" alt="Image of Ubuntu Desktop window" title="Ubuntu Desktop" height="120px">
 <figcaption>Caption of the above image</figcaption><br>
 </figure>
-</p>
+</div>
 
 <h2>Linking Web Page</h2>
 <p>
@@ -549,14 +549,14 @@ Programming Languages
 &lt;/ul&gt;
 </pre>
 <b>Output:</b>
-<p class="output">
+<div class="output">
 Programming Languages
 <ul>
 <li>Go</li>
 <li>C</li>
 <li>Python</li>
 </ul>
-</p>
+</div>
 
 <h3>Ordered list</h3>
 <p>
@@ -572,14 +572,14 @@ Programming Languages in top 3 rank for less compiling time
 &lt;/ol&gt;
 </pre>
 <b>Output:</b>
-<p class="output">
+<div class="output">
 Programming Languages in top 3 rank for less compiling time
 <ol>
 <li>Go</li>
 <li>C</li>
 <li>Python</li>
 </ol>
-</p>
+</div>
 
 <h3>Definition list</h3>
 <p>
@@ -596,7 +596,7 @@ Expansion of abbrevation<br>
 &lt;/dl&gt;<br>
 </p>
 <b>Output:</b>
-<p class="output">
+<div class="output">
 Expansion of abbrevation<br>
 <dl>
 <dt>HTML</dt>
@@ -604,7 +604,7 @@ Expansion of abbrevation<br>
 <dt>CSS</dt>
 <dd>Casscading Style sheet</dd>
 </dl>
-</p>
+</div>
 </section>
 <h2><a href="#nav">Back to Nav Link</a></h2>
 <hr>
@@ -635,7 +635,7 @@ K.S.R Educational Institutions
 &lt;/ul&gt;
 </pre>
 <b>OUTPUT:</b>
-<p class="output">
+<div class="output">
 K.S.R Educational Institutions
 <ul>
 <li>K.S.R PC
@@ -651,7 +651,7 @@ K.S.R Educational Institutions
 </ol>
 </li>
 </ul>
-</p>
+</div>
 
 <h2>Table</h2>
 <p>
@@ -672,7 +672,7 @@ Border is must if we dosen't give border attribute and it's value to Table only 
 &lt;/table&gt;
 </pre>
 <b>OUTPUT:</b>
-<p class="output">
+<div class="output">
 <table border="2">
 <tr>
 <th></th> <th>9-10</th> <th>10-11</th> <th>11-12</th> <th>12-12:30</th> <th>1-2</th> <th>2-3</th> <th>3-4</th>
@@ -684,7 +684,7 @@ Border is must if we dosen't give border attribute and it's value to Table only 
 <th>Tuesday</th> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
 </tr>
 </table>
-</p>
+</div>
 
 <h2>Table with empty span</h2>
 <b>CODE:</b>
@@ -753,7 +753,7 @@ Border is must if we dosen't give border attribute and it's value to Table only 
 </pre>
 
 <b>OUTPUT:</b>
-<p class="output">
+<div class="output">
 <table border="2">
 <thead>
 <tr>
@@ -778,7 +778,7 @@ Border is must if we dosen't give border attribute and it's value to Table only 
 </tr>
 <tfoot>
 </table>
-</p>
+</div>
 
 <h2>Form</h2>
 <p>
@@ -881,7 +881,7 @@ If any one of the input tag holding more than one value then it's name must be i
 </pre>
 
 <b>OUTPUT:</b>
-<p class="output">
+<div class="output">
 <form>
 <label for="name">Name:
 <input type="text" id="name" name="username" size="20" maxlength="46" placeholder="Enter your Name" required>
@@ -934,7 +934,7 @@ type="password"  When you type the password the actual password won't be display
 <br><br>
 <input type="submit" value="Submit">
 </form>
-</p>
+</div>
 </section>
 <h2><a href="#nav">Back to Nav Link</a></h2>
 <hr>
@@ -975,7 +975,7 @@ type="password"  When you type the password the actual password won't be display
 </pre>
 
 <b>OUTOUT</b>
-<p class="output">
+<div class="output">
 <form>
 <p>Select your Profession</p>
 <select name="profession" id="profession" required>
@@ -989,7 +989,7 @@ type="password"  When you type the password the actual password won't be display
 <br><br>
 <input type="submit" value="SUBMIT">
 </form>
-</p>
+</div>
 </section>
 <h2><a href="#nav">Back to Nav Link</a></h2>
 <hr>
@@ -1105,7 +1105,7 @@ Select your Education&lt;br&gt;&lt;br&gt;
 </pre>
 
 <b>OUTPUT :</b>
-<p class="output">
+<div class="output">
 <form enctype="multipart/form-data">
 <fieldset>
 <legend>Job Details</legend>
@@ -1162,7 +1162,7 @@ Select your Education<br><br>
 </fieldset>
 <input type="submit" value="SUBMIT">
 </form>
-</p>
+</div>
 
 <h2>DIV & SPAN TAGS</h1>
 <p>Div tag is used to group block level element. Span tag is used to group inline level element.</p>
@@ -1175,21 +1175,21 @@ Select your Education<br><br>
 </pre>
 
 <b>OUTPUT :</b>
-<p class="output">
+<div class="output">
 <div>this is div</div>
 <div>this is div</div>
 <span>this is span</span>
 <span>this is span</span>
-</p>
+</div>
 
 <h2>IFRAME</h1>
 <p>
 IFRAME tag is use to embeed one website into another one.
 </p>
 <b>CODE :</b>
-<p class="output">
+<pre>
 &lt;iframe src="https://www.youtube.com/embed/7cVpA4rME8w" width="380" height="210px"&gt;This browser dosen't support iframe&lt;/iframe&gt;
-</p>
+</pre>
 
 <b>OUTPUT :</b>
 <p class="output">
@@ -1341,28 +1341,28 @@ Ref <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code">MDN
         This tag dosent provide any visual effect or design changes.
     </p>
     <b>CODE</b>
-    <pre>
-    &lt;article&gt;
-        This is an article.
-    &lt;/article&gt;
-    </pre>
+<pre>
+&lt;article&gt;
+    This is an article.
+&lt;/article&gt;
+</pre>
     <b>OUTPUT</b>
-    <p class="output">
+    <div class="output">
     <article>
         This is an article.
     </article>
-    </p>
+    </div>
     
     <h2>aside tag</h2>
     <p>
         Aside tag contains the content which are indirectly to page main content.
     </p>
     <b>CODE</b>
-    <pre>
-    &lt;aside&gt;
-        The Rough-skinned Newt defends itself with a deadly neurotoxin.
-    &lt;/aside&gt;
-    </pre>
+<pre>
+&lt;aside&gt;
+    The Rough-skinned Newt defends itself with a deadly neurotoxin.
+&lt;/aside&gt;
+</pre>
     <b>OUTPUT</b>
     <div class="output">
     <p>Salamanders are a group of amphibians with a lizard-like appearance, including short legs and a tail in both larval and adult forms.</p>
@@ -1376,13 +1376,14 @@ Ref <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code">MDN
         The HTML Disclosure details &amp; summary element (&lt;summary&gt;) element specifies a summary, caption, or legend for a &lt;details&gt; element's disclosure box. Clicking the &lt;summary&gt; element toggles the state of the parent &lt;details&gt; element open and closed.
     </p>
     <b>CODE</b>
-    <pre>
-    &lt;details&gt;
-        &lt;summary&gt;Details&lt;/summary&gt;
-        Something small enough to escape casual notice.
-    &lt;/details&gt;
-    </pre>
+<pre>
+&lt;details&gt;
+    &lt;summary&gt;Details&lt;/summary&gt;
+    Something small enough to escape casual notice.
+&lt;/details&gt;
+</pre>
     <b>OUTPUT</b>
+    <div>Click the below arrow</div>
     <div class="output">
     <details>
         <summary>Details</summary>
@@ -1395,13 +1396,13 @@ Ref <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code">MDN
         The HTML &lt;figcaption&gt; or Figure Caption element represents a caption or legend describing the rest of the contents of its parent &lt;figure&gt; element.
     </p>
     <b>CODE</b>
-    <pre>
-    &lt;figure&gt;
-        &lt;img src="https://avatars.githubusercontent.com/baluvadivel"
-             alt=""&gt;
-        &lt;figcaption&gt;BaluVadivel Github profile image&lt;/figcaption&gt;
-    &lt;/figure&gt;
-    </pre>
+<pre>
+&lt;figure&gt;
+    &lt;img src="https://avatars.githubusercontent.com/baluvadivel"
+         alt=""&gt;
+    &lt;figcaption&gt;BaluVadivel Github profile image&lt;/figcaption&gt;
+&lt;/figure&gt;
+</pre>
     <b>OUTPUT</b>
     <div class="output">
     <figure>
@@ -1416,11 +1417,11 @@ Ref <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code">MDN
         The HTML &lt;footer&gt; element represents a footer for its nearest sectioning content or sectioning root element. A footer typically contains information about the author of the section, copyright data or links to related documents.
     </p>
     <b>CODE</b>
-    <pre>
-    &lt;footer&gt;
-        &lt;p&gt;&copy; 2018 Gandalf&lt;/p&gt;
-    &lt;/footer&gt;
-    </pre>
+<pre>
+&lt;footer&gt;
+    &lt;p&gt;&copy; 2018 Gandalf&lt;/p&gt;
+&lt;/footer&gt;
+</pre>
     <b>OUTPUT</b>
     <div class="output">
     <footer>
@@ -1433,11 +1434,11 @@ Ref <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code">MDN
         The HTML &lt;header&gt; element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.
     </p>
     <b>CODE</b>
-    <pre>
-    &lt;header&gt;
-        &lt;h1&gt;This h1 heading placed inside header&lt;/h1&gt;
-    &lt;/header&gt;
-    </pre>
+<pre>
+&lt;header&gt;
+    &lt;h1&gt;This h1 heading placed inside header&lt;/h1&gt;
+&lt;/header&gt;
+</pre>
     <b>OUTPUT</b>
     <div class="output">
     <header>
@@ -1450,11 +1451,11 @@ Ref <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code">MDN
         The HTML &lt;main&gt; element represents the dominant content of the &lt;body&gt; of a document.
     </p>
     <b>CODE</b>
-    <pre>
-    &lt;main&gt;
-        This is the main content
-    &lt;/main&gt;
-    </pre>
+<pre>
+&lt;main&gt;
+    This is the main content
+&lt;/main&gt;
+</pre>
     <b>OUTPUT</b>
     <div class="output">
     <main>
@@ -1467,11 +1468,11 @@ Ref <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code">MDN
         The HTML Mark Text element (&lt;mark&gt;) represents text which is marked or highlighted for reference or notation purposes, due to the marked passage's relevance or importance in the enclosing context.
     </p>
     <b>CODE</b>
-    <pre>
-    &lt;p&gt;
-        This is a &lt;mark&gt;paragraph&lt;/mark&gt;.
-    &lt;/p&gt;
-    </pre>
+<pre>
+&lt;p&gt;
+    This is a &lt;mark&gt;paragraph&lt;/mark&gt;.
+&lt;/p&gt;
+</pre>
     <b>OUTPUT</b>
     <div class="output">
     <p>
@@ -1484,15 +1485,15 @@ Ref <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code">MDN
         The HTML &lt;nav&gt; element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents.
     </p>
     <b>CODE</b>
-    <pre>
-    &lt;nav&gt;
-        &lt;ul&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#day1"&gt;Day 1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#day10"&gt;Day 10&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/nav&gt;
-    </pre>
+<pre>
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#day1"&gt;Day 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#day10"&gt;Day 10&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+</pre>
     <b>OUTPUT</b>
     <div class="output">
     <nav>
@@ -1509,18 +1510,18 @@ Ref <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code">MDN
         The HTML &lt;section&gt; element represents a standalone section — which doesn't have a more specific semantic element to represent it — contained within an HTML document. Typically, but not always, sections have a heading.
     </p>
     <b>CODE</b>
-    <pre>
-    &lt;h1&gt;How to Fish&lt;/h1&gt;
-    &lt;section&gt;
-        &lt;h2&gt;Introduction&lt;/h2&gt;
-        &lt;p&gt;People have been catching fish for food since before recorded history…&lt;/p&gt;
-    &lt;/section&gt;
-    
-    &lt;section&gt;
-        &lt;h2&gt;Equipment&lt;/h2&gt;
-        &lt;p&gt;The first thing you’ll need is a fishing rod or pole that you find comfortable and is strong enough for the kind of fish you’re expecting to land…&lt;/p&gt;
-    &lt;/section&gt;
-    </pre>
+<pre>
+&lt;h1&gt;How to Fish&lt;/h1&gt;
+&lt;section&gt;
+    &lt;h2&gt;Introduction&lt;/h2&gt;
+    &lt;p&gt;People have been catching fish for food since before recorded history…&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+    &lt;h2&gt;Equipment&lt;/h2&gt;
+    &lt;p&gt;The first thing you’ll need is a fishing rod or pole that you find comfortable and is strong enough for the kind of fish you’re expecting to land…&lt;/p&gt;
+&lt;/section&gt;
+</pre>
     
     <b>OUTPUT</b>
     <div class="output">
@@ -1542,9 +1543,9 @@ Ref <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code">MDN
     </p>
     <b>CODE</b>
     <pre>
-    &lt;p&gt;
-        The concert starts at &lt;time datetime="20:00"&gt;20:00&lt;/time&gt; and you'll be able to enjoy the band for at least &lt;time datetime="PT2H30M"&gt;2h 30m&lt;/time&gt;.
-    &lt;/p&gt;
+&lt;p&gt;
+    The concert starts at &lt;time datetime="20:00"&gt;20:00&lt;/time&gt; and you'll be able to enjoy the band for at least &lt;time datetime="PT2H30M"&gt;2h 30m&lt;/time&gt;.
+&lt;/p&gt;
     </pre>
     <b>OUTPUT</b>
     <div class="output">
@@ -1630,9 +1631,9 @@ The HTML &lt;noscript&gt; element can be used as a fall back message. This secti
 <div>Just text</div>
 <noscript>script is disabled</noscript>
 <div>Just text</div>
-</p>
+</div>
 <b>OUTPUT of script disabled :</b>
-<p class="output">
+<div class="output">
 <div>Just text</div>
 <div>script is disabled</div>
 <div>Just text</div>
