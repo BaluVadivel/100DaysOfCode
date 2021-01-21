@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Day 10 to 20 at 100Daysofcode</title>
-<meta name="description" content="Balu Vadivel's day 10 to day 20 learing at 100DaysOfCode">
+<title>Day 11 to 20 at 100Daysofcode</title>
+<meta name="description" content="Balu Vadivel's day 11 to day 20 learing at 100DaysOfCode">
 <meta name="keywords" content="Balu at 100Daysofcode , Balu Vadivel at 100Daysofcode">
 <meta name="author" content="Balu Vadivel">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,9 @@
 <style>
     html, body {
         width: 100%;
-        margin: 0px 0px 200px 0px;
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
         min-height: 100%;
         scroll-behavior: smooth;
         color: black;
@@ -20,21 +22,33 @@
         font-size: 18px;
     }
 
+    pre {
+        overflow-x: scroll;
+    }
+    .output {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: scroll;
+        box-sizing: border-box;
+        border: 2px solid rgba(220, 20, 60, 0.6);
+        margin: 12px 0px;
+    }
+
     /*************** Day11 ***************/
 
-    .d1-red {
+    .d1 .red {
         color:red;
     }
-    .d1-blue {
+    .d1 .blue {
         color:blue;
     }
-    #d1-green {
+    .d1 #green {
         color:green;
     }
-    h5 {
+    .d1 h5 {
         color:orange;
     }
-    .type {
+    .d1 .type {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-size: 3rem;
         font-weight: bold;
@@ -42,53 +56,56 @@
 
     /*************** Day12 ***************/
 
-    main::first-letter {
+    .d2 .pseudo::first-letter {
         font-size: 2rem;
     }
-    main::first-line {
+    .d2 .pseudo::first-line {
         color: orangered;
     }
-    .d2-sample-class {
+    .d2 .sample-class {
         color:red;
     }
-    a {
+    .d2 .a {
         color:blue;
     }
-    a:hover {
+    .d2 .a:hover {
         color:red;
     }
-    a:active {
+    .d2 .a:active {
         color:lightgreen;
     }
-    a:visited {
+    .d2 .a:visited {
         color: indigo;
     }
-    a:focus {
+    .d2 .a:focus {
         color: gold;
     }
 
     /*************** Day13 ***************/
 
-    .d3-wrap {
-    width: 70vw;
-    min-width: 600px;
-    max-width: 1000px;
+    .d3 .wrap {
+    width: 100vw;
+    max-width: 600px;
     height: 50vh;
     min-height: 100px;
     max-height: 1000px;
+    padding: 0px;
     margin: 0px;
     background-color: #ddd ;
     }
-    .d3-heading {
+    .d3 .heading {
     background-color: yellow;
     padding: 0px;
+    margin: 0px;
     font-size: 2rem;
     font-weight: bold;
     }
-    .d3-paragraph {
+    .d3 .paragraph {
+    padding: 0px;
+    margin: 0px;
     text-indent: 30px;
     }
-    .d3-parent {
+    .d3 .parent {
     width: 300px;
     height: 300px;
     /* margin auto place the container center */
@@ -96,71 +113,74 @@
     border: 4px solid black;
     padding: 10px;
     }
-    .d3-child1 {
+    .d3 .child1 {
     width: 100px;
     height: 100px;
-    border: 4px solid black;
+    border: 4px solid gray;
     background-color: orange;
     margin: 10px 0px;
     }
-    .d3-child2 {
+    .d3 .child2 {
     width: 100px;
     height: 100px;
-    border: 4px solid black;
+    border: 4px solid gray;
     /* box-sizing: border-box; this place the border inside the container so the width won't increase due to border */
     box-sizing: border-box;
     background-color: red;
     margin: 10px 0px;
     }
-    .d3-square {
+    .d3 .square {
     width: 90vw;
     height: 80px;
     font-size: 1.4rem;
     }
-    .d3-overflow-x-hidden {
+    .d3 .overflow-x-hidden {
     overflow-x:hidden;
     }
     .d3-overflow-x-scroll {
     overflow-x:scroll;
     }
-    .d3-overflow-y-hidden {
+    .d3 .overflow-y-hidden {
     overflow-y:hidden;
-    overflow-x:hidden;
+    overflow-x: hidden;
     }
-    .d3-overflow-y-scroll {
+    .d3 .overflow-y-scroll {
     overflow-y:scroll;
+    }
+    .d3 .overflow-hidden {
+        overflow: hidden;
     }
 
     /*************** Day14 ***************/
 
-    .d4-ul  {
+    .d4 .ul  {
     width: 100%;
     margin:0px;
     padding:0px;
     height: 80px;
     background-color: orange;
     }
-    .d4-ul li {
+    .d4 .ul li {
     display:inline-block;
     height: 100%;
     background-color: #333;
     line-height: 80px;
     font-size: 1.4rem;
     margin: 0 20px;
-    padding: 0 22px;
+    padding: 0 22px
     }
-    .d4-ul a {
+    .d4 .ul a {
     text-decoration:none;
     color: red;
     }
-    .d4-ul li:hover {
+    .d4 .ul li:hover {
     background-color:#ddd;
     }
-    .d4-div {
+    .d4 .d4-div {
     display:inline-block;
     width: 80px;
     height: 80px;
-    border: 3px solid black;
+    border: 3px solid gray;
     margin: 20px;
     }
     #d4-bottom-right {
@@ -199,10 +219,10 @@
 
     /*************** Day15 ***************/
 
-    .d5-table {
+    .d5 .table {
     border-collapse: collapse;
     }
-    .d5-table th , .d5-table td {
+    .d5 .table th , .d5 .table td {
     border: 6px solid black;
     /**
     border collapse default value is seprate which has two seprate borders
@@ -479,60 +499,15 @@
     /* ################## CUBE ################## */
     .d9 .cube-parent {
         width: 200px;
-        height: 200px;
-        margin: 0px auto;
+        height: 360px;
+        margin: 0px auto 140px auto;
         position: relative;
         perspective: 400px;
     }
-    .d9 .fly {
-        position: absolute;
-    }
-    .d9 .f {
-        left: -160px;
-        top: 90px;
-    }
-    .d9 .fl {
-        left: -130px;
-        top: 90px;
-    }
-    .d9 .ba {
-        right: -80px;
-        bottom: 90px;
-    }
-    .d9 .bal {
-        right: -140px;
-        bottom: 86px;
-    }
-    .d9 .t {
-        top: -60px;
-        left: 60px;
-    }
-    .d9 .tl {
-        top: -60px;
-        left: 90px;
-    }
-    .d9 .r {
-        right: -80px;
-    }
-    .d9 .rl {
-        right: -150px;
-    }
-    .d9 .b {
-        bottom: -80px;
-    }
-    .d9 .bl {
-        bottom: -82px;
-        left: 30px;
-    }
-    .d9 .l {
-        left: -160px;
-    }
-    .d9 .ll {
-        left: -130px;
-    }
     .d9 .cube-container {
-        width: 100%;
-        height: 100%;
+        width: 200px;
+        height: 200px;
+        margin: 40px auto;
         position: relative;
         transform-style: preserve-3d;
         transition: transform 1s ease-in-out ;
@@ -644,25 +619,18 @@
         filter: sepia(2);
     }
     /*************** Backdrop Filter ***************/
+    .d0 .background-img {
+        background: url(image.jpeg) no-repeat;
+        width: 100vw;
+        max-width: 300px;
+        height: 300px;
+    }
     .d0 .backdrop {
-        width: 80vw;
-        max-width: 240px;
-        height: 80vw;
-        max-height: 240px;
+        width: 200px;
+        height: 200px;
         font-size: 3rem;
-        background-color: rgba(128, 255, 0, 0.747);
-        -webkit-backdrop-filter: invert(100%);
-        backdrop-filter: invert(100%);
-    }
-    /*************** Backdrop Filter ***************/
-    .d0 .break-after {
-        break-after: always;
-    }
-    .d0 .break-before {
-        break-before: always;
-    }
-    .d0 .break-inside {
-        break-inside: avoid;
+        background: rgba(128, 128, 128, 0.5);
+        backdrop-filter: blur(10px);
     }
 
     @media (prefers-color-scheme: dark) {
@@ -673,16 +641,16 @@
         h1 {
             color: white;
         }
-        .d3-paragraph, .d3-heading {
+        .d3 .paragraph, .d3 .heading {
             color: black;
         }
-        .d4-div {
+        .d4 .div {
         border: 4px solid white;
         }
-        .d5-table th , .d5-table td {
+        .d5 .table th , .d5 .table td {
             border-color: brown;
         }
-        .d5-table {
+        .d5 .table {
             color: rgb(0, 0, 165);
         }
     }
@@ -700,1078 +668,1102 @@
     <hr>
     
     <!----------------------------- Day11 ------------------------------>
-    
-    <h2 id="day11">Day11</h2><hr>
+    <section class="d1">
+        <h2 id="day11">Day11</h2><hr>
 
-    <h2>Cascading Style Sheet(CSS)</h2>
-    <p>
-    CSS is used to format the layout of the webpage.
-    <br>
-    Css is used to chane the font family, size, color etc. Not only fonts it controls most of the thing in the html page.
-    </p>
-    <p>CSS can be used with html in three ways</p>
-    <h2>Inline</h2>
-    <p>
-    Inline css is used to give unique style the to the single html element.<br>This used html elements style attribue to give style to the that element.
-    </p>
-    <b>CODE :</b>
-    <p>
-    &lt;h4 style="color:red"&gt;Heading&lt;/h4&gt;
-    </p>
-    
-    <h2>Internal</h2>
-    <p>
-    Internal css is used to give style the to the single html page.<br> Internal css is defined inside &lt;style&gt; element which is placed inside the &lt;head&gt; element.
-    </p>
-    <b>CODE :</b>
-    <p>
-    <pre>
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang="en"&gt;
-    &lt;head&gt;
-    &lt;style&gt;
-    h4 {
-    color:red;
+        <h2>Cascading Style Sheet(CSS)</h2>
+        <p>
+        CSS is used to format the layout of the webpage.
+        <br>
+        Css is used to chane the font family, size, color etc. Not only fonts it controls most of the thing in the html page.
+        </p>
+        <p>CSS can be used with html in three ways</p>
+        <h2>Inline</h2>
+        <p>
+        Inline css is used to give unique style the to the single html element.<br>This used html elements style attribue to give style to the that element.
+        </p>
+        <b>CODE :</b>
+<pre>
+&lt;h4 style="color:red"&gt;Heading&lt;/h4&gt;
+</pre>
+
+        <h2>Internal</h2>
+        <p>
+        Internal css is used to give style the to the single html page.<br> Internal css is defined inside &lt;style&gt; element which is placed inside the &lt;head&gt; element.
+        </p>
+        <b>CODE :</b>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;style&gt;
+h4 {
+color:red;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h4&gt;Heading&lt;/h4&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+        <h2>External</h2>
+        <p>
+        External css is used to give style the to the many html page.<br> External css means linking the css stylesheet file to html page using &lt;link&gt; inside the &lt;head&gt; . Style must end with .css extension and it should not contain any html.
+        </p>
+        <b>CODE :</b>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;link href="style.css" rel="stylesheet" type="text/css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h4&gt;Heading&lt;/h4&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+        <b>That style.css file contain :</b>
+<pre>
+h4 {
+color:red;
+}
+</pre>
+
+        <h1>Basic Selector in css</h1>
+        <p>
+        Selector is used to select the element, id and class for giving style. 
+        </p>
+        <h2>element selector</h2>
+<pre>
+body {}
+</pre>
+        <p>
+        Above code selects the body element.
+        </p>
+        <b>direct child and grandchild </b>
+<pre>
+body h4 {}
+</pre>
+        <p>This selects the all the h4 elements inside the body element.</p>
+        <b>direct child only</b>
+<pre>
+body > h4 {}
+</pre>
+        <p>This selects olny the direct child of the body tag.</p>
+
+        <h2>Class and id selector</h2>
+        <p>Class selector is used to </p>
+        <b>CODE :</b>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.red {
+color:red;
+}
+.blue {
+color:blue;
+}
+.green {
+color:green;
+}
+h5 {
+color:orange;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h5                              &gt; no class & no id &lt;/h5&gt;
+&lt;h5 class="red"                  &gt; single class     &lt;/h5&gt;
+&lt;h5 class="red blue"             &gt; multiple class   &lt;/h5&gt;
+&lt;h5 class="red blue" id="green"  &gt; class with id    &lt;/h5&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <p class="output">
+        <h5> no class & no id </h5>
+        <h5 class="red"> single class </h5>
+        <h5 class="red blue"> multiple class </h5>
+        <h5 class="red blue" id="green"> class with id </h5>
+        </p>
+        <p>
+        <b>Id selector</b> has number one priority it over rides all style given by class and element name<br>
+        <b>Class selector</b> has number two priority it over rides all style other than given by id.<br>
+        <b>Multiple classes</b> element's last class style overrides the previous class.<br>
+        <b>Element name selector</b> styles sre taken only whwn that element has no class and id attribute.<br>
+        </p>
+
+        <h1>Color in css</h1>
+        <p>
+        Two color controls in css<br>
+        <dl>
+        <dt><b>Background color</b></dt>
+        <dd>This sets the background color to elements<br>background-color:black; This sets the background to black</dd>
+        <dt><b>Foreground color</b></dt>
+        <dd>This sets the foreground color to elements<br>color:red; this sets the content color to red</dd>
+        <dd></dd>
+        </dl>
+        </p>
+        <b>CODE :</b>
+        <p>
+<pre>
+body {
+      color:white;
+      background-color:black;
+}
+</pre>
+        </p>
+        <b>OUTPUT :</b>
+        <p class="output">Html pages background-color will be white and text color will be black.</p>
+
+        <h1>Transparency & opacity</h1>
+        <p>
+        <b>Transparency</b> value can be only given in color value. It only used to change the transparency to the content of color given.<br> <b>Opacity</b> is used to change the transparency of every element and content of an element.
+        </p>
+        <b>CODE :</b>
+<pre>
+&lt;p style="color:rgba(255, 255, 255, 0.2)"&gt;Transparency 0.2&lt;/p&gt;
+&lt;p style="color:rgba(255, 255, 255, 0.5)"&gt;Transparency 0.5&lt;/p&gt;
+&lt;p style="color:rgba(255, 255, 255, 0.9)"&gt;Transparency 0.9&lt;/p&gt;
+&lt;div&gt;Below image opacity:0.1&lt;div&gt;
+&lt;img src="../001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.1"&gt;
+&lt;div&gt;Below image opacity:0.5&lt;div&gt;
+&lt;img src="../001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.5"&gt;
+&lt;div&gt;Below image opacity:0.9&lt;div&gt;
+&lt;img src="../001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.9"&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <p class="output">
+        <p style="color:rgba(255, 255, 255, 0.2)">Transparency 0.2</p>
+        <p style="color:rgba(255, 255, 255, 0.5)">Transparency 0.5</p>
+        <p style="color:rgba(255, 255, 255, 0.9)">Transparency 0.9</p>
+        <div>Below image opacity:0.1<div>
+        <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.1">
+        <div>Below image opacity:0.5<div>
+        <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.5">
+        <div>Below image opacity:0.9<div>
+        <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.9">
+        </p>
+
+        <h1>Basic Typography</h1>
+        <p>
+              <b>Font family</b> is used to use the specific font family from the avaliable font family.<br>
+              <b>Font weight</b> is used to use the specific font- weight shuch as bold based on the font support<br>
+              <b>Font size</b> is used to use the specifice font famil from the avaliable font famil.<br>
+              px -&gt; giving the font size in pixel<br>
+              percentage -&gt; This multiplies the size from its parent. when you give 200% it is 2 times the size of parent.<br>
+              em -&gt; This multiplies the size from its parent. when you give 2em it is 2 times the size of parent.<br>
+              rem -&gt; This multiplies the size from root element. when you give 2rem it is 2 times the size of root element.<br>
+              <b>rem is mostly used</b>
+        </p>
+        <b>CODE :</b>
+<pre>
+-----CSS-------
+    .type {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
     }
-    &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-    &lt;h4&gt;Heading&lt;/h4&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-    </pre>
-    </p>
-    
-    <h2>External</h2>
-    <p>
-    External css is used to give style the to the many html page.<br> External css means linking the css stylesheet file to html page using &lt;link&gt; inside the &lt;head&gt; . Style must end with .css extension and it should not contain any html.
-    </p>
-    <b>CODE :</b>
-    <p>
-    <pre>
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang="en"&gt;
-    &lt;head&gt;
-    &lt;link href="style.css" rel="stylesheet" type="text/css"&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-    &lt;h4&gt;Heading&lt;/h4&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-    </pre>
-    </p>
-    <b>That style.css file contain :</b>
-    <p>
-    <pre>
-    h4 {
-    color:red;
-    }
-    </pre>
-    </p>
-    
-    <h1>Basic Selector in css</h1>
-    <p>
-    Selector is used to select the element, id and class for giving style. 
-    </p>
-    <h2>element selector</h2>
-    <pre>
-    body {}
-    </pre>
-    <p>
-    Above code selects the body element.
-    </p>
-    <b>direct child and grandchild </b>
-    <pre>
-    body h4 {}
-    </pre>
-    <p>This selects the all the h4 elements inside the body element.</p>
-    <b>direct child only</b>
-    <pre>
-    body > h4 {}
-    </pre>
-    <p>This selects olny the direct child of the body tag.</p>
-    
-    <h2>Class and id selector</h2>
-    <p>Class selector is used to </p>
-    <b>CODE :</b>
-    <pre>
-    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-    &lt;head&gt;
-    &lt;style&gt;
-    .d1-red {
-    color:red;
-    }
-    .d1-blue {
-    color:blue;
-    }
-    #d1-green {
-    color:green;
-    }
-    h5 {
-    color:orange;
-    }
-    &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-    &lt;h5                              &gt; no class & no id &lt;/h5&gt;
-    &lt;h5 class="d1-red"                  &gt; single class     &lt;/h5&gt;
-    &lt;h5 class="d1-red d1-blue"             &gt; multiple class   &lt;/h5&gt;
-    &lt;h5 class="d1-red d1-blue" id="d1-green"  &gt; class with id    &lt;/h5&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-    </pre>
-    <b>OUTPUT :</b>
-    <p>
-    <h5                            > no class & no id  </h5>
-    <h5 class="d1-red"                > single class      </h5>
-    <h5 class="d1-red d1-blue"           > multiple class    </h5>
-    <h5 class="d1-red d1-blue" id="d1-green"> class with id     </h5>
-    </p>
-    <p>
-    <b>Id selector</b> has number one priority it over rides all style given by class and element name<br>
-    <b>Class selector</b> has number two priority it over rides all style other than given by id.<br>
-    <b>Multiple classes</b> element's last class style overrides the previous class.<br>
-    <b>Element name selector</b> styles sre taken only whwn that element has no class and id attribute.<br>
-    </p>
-    
-    <h1>Color in css</h1>
-    <p>
-    Two color controls in css<br>
-    <dl>
-    <dt><b>Background color</b></dt>
-    <dd>This sets the background color to elements<br>background-color:black; This sets the background to black</dd>
-    <dt><b>Foreground color</b></dt>
-    <dd>This sets the foreground color to elements<br>color:red; this sets the content color to red</dd>
-    <dd></dd>
-    </dl>
-    </p>
-    <b>CODE :</b>
-    <p>
-    <pre>
-    body {
-          color:white;
-          background-color:black;
-    }
-    </pre>
-    </p>
-    <b>CODE :</b>
-    <p>This color preference is applied to this page.</p>
-    
-    <h1>Transparency & opacity</h1>
-    <p>
-    <b>Transparency</b> value can be only given in color value. It only used to change the transparency to the content of color given.<br> <b>Opacity</b> is used to change the transparency of every element and content of an element.
-    </p>
-    <b>CODE :</b>
-    <p>
-    &lt;p style="color:rgba(255, 255, 255, 0.2)"&gt;Transparency 0.2&lt;/p&gt;<br>
-    &lt;p style="color:rgba(255, 255, 255, 0.5)"&gt;Transparency 0.5&lt;/p&gt;<br>
-    &lt;p style="color:rgba(255, 255, 255, 0.9)"&gt;Transparency 0.9&lt;/p&gt;<br>
-    &lt;div&gt;Below image opacity:0.1&lt;div&gt;<br>
-    &lt;img src="../001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.1"&gt;<br>
-    &lt;div&gt;Below image opacity:0.5&lt;div&gt;<br>
-    &lt;img src="../001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.5"&gt;<br>
-    &lt;div&gt;Below image opacity:0.9&lt;div&gt;<br>
-    &lt;img src="../001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.9"&gt;<br>
-    </p>
-    <b>OUTPUT :</b>
-    <p>
-    <p style="color:rgba(255, 255, 255, 0.2)">Transparency 0.2</p>
-    <p style="color:rgba(255, 255, 255, 0.5)">Transparency 0.5</p>
-    <p style="color:rgba(255, 255, 255, 0.9)">Transparency 0.9</p>
-    <div>Below image opacity:0.1<div>
-    <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.1">
-    <div>Below image opacity:0.5<div>
-    <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.5">
-    <div>Below image opacity:0.9<div>
-    <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.9">
-    </p>
-    
-    <h1>Basic Typography</h1>
-    <p>
-          <b>Font family</b> is used to use the specific font family from the avaliable font family.<br>
-          <b>Font weight</b> is used to use the specific font- weight shuch as bold based on the font support<br>
-          <b>Font size</b> is used to use the specifice font famil from the avaliable font famil.<br>
-          px -&gt; giving the font size in pixel<br>
-          percentage -&gt; This multiplies the size from its parent. when you give 200% it is 2 times the size of parent.<br>
-          em -&gt; This multiplies the size from its parent. when you give 2em it is 2 times the size of parent.<br>
-          rem -&gt; This multiplies the size from root element. when you give 2rem it is 2 times the size of root element.<br>
-          <b>rem is mostly used</b>
-    </p>
-    <b>CODE :</b>
-    <p>In CSS<br><br>
-    
-          .type<br> { <br>
-          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;<br>
-          font-size: 3rem;<br>
-          font-weight: bold;<br>
-          }
-    </p>
-    <p>In HTML<br><br>
-          &lt;div class="type"&gt;Testing&lt;/div&gt;
-    </p>
-    <b>OUTPUT :</b>
-    <p>
-          <div class="type">Testing</div>
-    </p>
-    <h1>Text transform</h1>
-    <p>
-          <dl>
-                <dt><b>capitalize</b></dt>
-                <dd>capitalize is used to capitalize the each words first letter in captial.</dd>
-                <dt><b>uppercase</b></dt>
-                <dd>uppercase is used to change the every letters into uppercsae</dd>
-                <dt><b>lowercase</b></dt>
-                <dd>lowercase is used to change the every letters into lowercsae</dd>
-          </dl>
-    </p>
-    <b>CODE :</b>
-    <p>
-          &lt;div style="text-transform:capitalize"&gt;capitalize is a word&lt;/div&gt;
-          &lt;div style="text-transform:uppercase"&gt;uppercase is a word&lt;/div&gt;
-          &lt;div style="text-transform:lowercase"&gt;LOWERcase is a WORD&lt;/div&gt;
-    </p>
-    <b>OUTPUT</b>
-    <p>
-          <div style="text-transform:capitalize">capitalize is a word</div>
-          <div style="text-transform:uppercase">uppercase is a word</div>
-          <div style="text-transform:lowercase">LOWERcase is a WORD</div>
-    </p>
+
+-----HTML------
+    &lt;div class="type"&gt;Testing&lt;/div&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <p class="output">
+              <div class="type">Testing</div>
+        </p>
+        <h1>Text transform</h1>
+        <p>
+              <dl>
+                    <dt><b>capitalize</b></dt>
+                    <dd>capitalize is used to capitalize the each words first letter in captial.</dd>
+                    <dt><b>uppercase</b></dt>
+                    <dd>uppercase is used to change the every letters into uppercsae</dd>
+                    <dt><b>lowercase</b></dt>
+                    <dd>lowercase is used to change the every letters into lowercsae</dd>
+              </dl>
+        </p>
+        <b>CODE :</b>
+<pre>
+      &lt;div style="text-transform:capitalize"&gt;capitalize is a word&lt;/div&gt;
+      &lt;div style="text-transform:uppercase"&gt;uppercase is a word&lt;/div&gt;
+      &lt;div style="text-transform:lowercase"&gt;LOWERcase is a WORD&lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <p  class="output">
+            <div style="text-transform:capitalize">capitalize is a word</div>
+            <div style="text-transform:uppercase">uppercase is a word</div>
+            <div style="text-transform:lowercase">LOWERcase is a WORD</div>
+        </p>
+    </section>
     <h2><a href="#nav">Back to Nav Link</a></h2><hr>
 
     <!----------------------------- Day12 ------------------------------>
-    
-    <h2 id="day12">Day12</h2>
+    <section class="d2">
+        <h2 id="day12">Day12</h2>
 
-    <h1>Text decoration</h1>
-    <p>
-    <dl>
-    <dt><b>Underline</b></dt>
-    <dd>Gives underline to the corresponding content. This mostly indicates important word.<br>
-    <b>CODE :</b><br>
-    &lt;h4 style="text-decoration:underline"&gt;important&lt;/h4&gt;<br>
-    <b>OUTPUT :</b><br>
-    <h4 style="text-decoration:underline">important</h4>
-    </dd>
-    <dt><b>Overline</b></dt>
-    <dd>Gives overline to the corresponding content.<br>
-    <b>CODE :</b><br>
-    &lt;h4 style="text-decoration:overline"&gt;BE&lt;/h4&gt;<br>
-    <b>OUTPUT :</b><br>
-    <h4 style="text-decoration:overline">BE</h4>
-    </dd>
-    <dt><b>line through</b></dt>
-    <dd>Gives line through to the corresponding content.<br>
-    <b>CODE :</b><br>
-    &lt;h4 style="text-decoration:line-through"&gt;line through&lt;/h4&gt;<br>
-    <b>OUTPUT :</b><br>
-    <h4 style="text-decoration:line-through">line through</h4>
-    </dd>
-    <dt><b>None</b></dt>
-    <dd>remove the text decoration of the corresponding content.<br>
-    <b>CODE :</b><br>
-    &lt;h4&gt;Removing underline of a &lt;a href="htps://www.google.com" style="text-decoration:none"&gt;link&lt;/a&gt;&lt;/h4&gt;<br>
-    <b>OUTPUT :</b><br>
-    <h4>Removing underline of a <a href="htps://www.google.com" style="text-decoration:none">link</a></h4>
-    </dd>
-    <dt><b>blink</b></dt>
-    <dd>This gives the blink effect. Even if the browser has compatibility we can't see any visual effect. This is a deprecated style.</dd>
-    </dl>
-    </p>
+        <h1>Text decoration</h1>
+        <b>Underline</b>
+        <p>Gives underline to the corresponding content. This mostly indicates important word.</p>
+        <b>CODE :</b>
+<pre>
+&lt;h4 style="text-decoration:underline"&gt;important&lt;/h4&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <h4 style="text-decoration:underline">important</h4>
+        </div>
+        <b>Overline</b>
+        <p>Gives overline to the corresponding content.</p>
+        <b>CODE :</b>
+<pre>
+&lt;h4 style="text-decoration:overline"&gt;BE&lt;/h4&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <h4 style="text-decoration:overline">BE</h4>
+        </div>
+        <b>line through</b>
+        <p>Gives line through to the corresponding content.</p>
+        <b>CODE :</b>
+<pre>
+&lt;h4 style="text-decoration:line-through"&gt;line through&lt;/h4&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <h4 style="text-decoration:line-through">line through</h4>
+        </div>
+        <b>None</b>
+        <p>remove the text decoration of the corresponding content.</p>
+        <b>CODE :</b>
+<pre>
+&lt;h4&gt;Removing underline of a &lt;a href="htps://www.google.com" style="text-decoration:none"&gt;link&lt;/a&gt;&lt;/h4&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <h4>Removing underline of a <a href="htps://www.google.com" style="text-decoration:none">link</a></h4>
+        </div>
+        <b>blink</b>
+        <p>This gives the blink effect. Even if the browser has compatibility we can't see any visual effect. This is a deprecated style.</p>
+        </p>
 
-    <h1>Line height -&gt; leading</h1>
-    Applying leading to a paragraph of text adds space in between each line which is known as line height.<br>
-    <em>default line height</em>
-    <br>
-    <b>CODE :</b><br>
-    &lt;p style="line-height: 1"&gt;First line&lt;br&gt;Second line&lt;/p&gt;<br>
-    <b>OUTPUT :</b>
-    <p style="line-height: 1">First line<br>Second line</p>
-    <em>line height 2 is 2 times the size of font size</em><br>
-    <b>CODE :</b><br>
-    &lt;p style="line-height: 2"&gt;First line&lt;br&gt;Second line&lt;/p&gt;<br>
-    <b>OUTPUT :</b>
-    <p style="line-height: 2">First line<br>Second line</p>
-
-    <h1>Text alignment</h1>
-    <p>Text alignment is used to align the text</p>
-    <b>CODE :</b>
-    <p>
-    &lt;ul&gt;<br>
-    &lt;li style="text-align:left"&gt;default text align is left&lt;/li&gt;<br>
-    &lt;li style="text-align:right"&gt;text align right&lt;/li&gt;<br>
-    &lt;li style="text-align:center"&gt;text align center&lt;/li&gt;<br>
-    &lt;li style="text-align:justify"&gt;text align justify&lt;/li&gt;<br>
-    &lt;/ul&gt;<br>
-    &lt;div style="text-align:justify"&gt;<br>
-    We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify. We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.<br>
-    &lt;/div&gt;<br>
-    &lt;b&gt;&lt;br&gt;above paragraph without text align justify&lt;br&gt;&lt;br&gt;&lt;/b&gt;<br>
-    &lt;div&gt;<br>
-    We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify. We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.<br>
-    &lt;/div&gt;<br>
-    </p>
-    <b>OUTPUT :</b>
-    <p>
-    <ul>
-    <li style="text-align:left">default text align is left</li>
-    <li style="text-align:right">text align right</li>
-    <li style="text-align:center">text align center</li>
-    <li style="text-align:justify">text align justify</li>
-    </ul>
-    <div style="text-align:justify">
-    We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify. We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.
-    </div>
-    <b><br>above paragraph without text align justify<br><br></b>
-    <div>
-    We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify. We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.
-    </div>
-    </p>
-
-    <h1>Text vertical alignment</h1>
-    <p>Vertical alignment is used to align the text in vertical manner within the line</p>
-    <b>CODE :</b>
-    <p>
-    &lt;p&gt;text-top &lt;span  style="font-size:26px;vertical-align: text-top;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;<br>
-    &lt;p&gt;top      &lt;span  style="font-size:26px;vertical-align: top     ;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;<br>
-    &lt;p&gt;middle   &lt;span  style="font-size:26px;vertical-align: middle  ;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;<br>
-    &lt;p&gt;bottom   &lt;span  style="font-size:26px;vertical-align: bottom  ;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;<br>
-    &lt;p&gt;baseline &lt;span  style="font-size:26px;vertical-align: baseline;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;<br>
-    &lt;p&gt;sub      &lt;span  style="font-size:26px;vertical-align: sub     ;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;<br>
-    &lt;p&gt;super    &lt;span  style="font-size:26px;vertical-align: super   ;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;
-    </p>
-    <b>OUTPUT :</b>
-    <p>text-top <span  style="font-size:1.6rem; vertical-align:text-top;">ARE</span> you?</p>
-    <p>top      <span  style="font-size:1.6rem; vertical-align:top     ;">ARE</span> you?</p>
-    <p>middle   <span  style="font-size:1.6rem; vertical-align:middle  ;">ARE</span> you?</p>
-    <p>bottom   <span  style="font-size:1.6rem; vertical-align:bottom  ;">ARE</span> you?</p>
-    <p>baseline <span  style="font-size:1.6rem; vertical-align:baseline;">ARE</span> you?</p>
-    <p>sub      <span  style="font-size:1.6rem; vertical-align:sub     ;">ARE</span> you?</p>
-    <p>super    <span  style="font-size:1.6rem; vertical-align:super   ;">ARE</span> you?</p>
-
-    <h1>Spacing</h1>
-    <p>
-    <b>letter spacing</b> gives space between each letters.<b>word spacing</b> gives space between each words.
-    </p>
-    <b>CODE :</b>
-    <p>
-    &lt;span style="letter-spacing:4px; word-spacing:12px;"&gt;letter spacing and word spacing&lt;/span&gt;
-    </p>
-    <b>OUTPUT :</b>
-    <p>
-    <span style="letter-spacing:4px; word-spacing:12px;">letter spacing and word spacing</span>
-    </p>
-
-    <h1>Text indent</h1>
-    <p>
-    Text indent is used to indent the first line.
-    </p>
-    <b>CODE :</b>
-    <p>
-    &lt;p style="text-indent: 50px""&gt;Text indent gives a blank spaces on the left side of the first line.&lt;p&gt;
-    </p>
-    <b>OUTPUT :</b>
-    <p>
-    <p style="text-indent: 50px">Text indent gives a blank spaces on the left side of the first line.</p>
-    </p>
-
-    <h1>Basic pseudo elements</h1>
-    <p>
-        ::first-line selects the first line of the element's content.
+        <h1>Line height -&gt; leading</h1>
+        <p>Applying leading to a paragraph of text adds space in between each line which is known as line height.</p>
+        <em>default line height</em>
         <br>
-        ::first-letter selects the first letter of the element's content.
-    </p>
-    <b>CODE :</b>
-    <p>
-        -------css-------<br><br>
-        main::first-letter {<br>
-            font-size: 2rem;<br>
-        }<br>
-        main::first-line {<br>
-            color: orangered;<br>
-        }<br>
-        ------html-------<br><br>
-        &lt;main&gt;<br>
-        first-line selects the first line of the element's content.<br>
-        &lt;br&gt;<br>
-        first-letter selects the first letter of the element's content.<br>
-        &lt;/main&gt;
-    </p>
-    <b>OUTPUT :</b>
-    <p>
-        <main>
-            first-line selects the first line of the element's content.
+        <b>CODE :</b>
+<pre>
+&lt;p style="line-height: 1"&gt;First line&lt;br&gt;Second line&lt;/p&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <p class="output" style="line-height: 1">First line<br>Second line</p>
+        <em>line height 2 is 2 times the size of font size</em><br>
+        <b>CODE :</b>
+<pre>
+&lt;p style="line-height: 2"&gt;First line&lt;br&gt;Second line&lt;/p&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <p class="output" style="line-height: 2">First line<br>Second line</p>
+
+        <h1>Text alignment</h1>
+        <p>Text alignment is used to align the text</p>
+        <b>CODE :</b>
+        <pre>
+        &lt;ul&gt;
+        &lt;li style="text-align:left"&gt;default text align is left&lt;/li&gt;
+        &lt;li style="text-align:right"&gt;text align right&lt;/li&gt;
+        &lt;li style="text-align:center"&gt;text align center&lt;/li&gt;
+        &lt;li style="text-align:justify"&gt;text align justify&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div style="text-align:justify"&gt;
+        We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify. We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.
+        &lt;/div&gt;
+        &lt;b&gt;&lt;br&gt;above paragraph without text align justify&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+        &lt;div&gt;
+        We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify. We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.
+        &lt;/div&gt;
+        </pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <ul>
+        <li style="text-align:left">default text align is left</li>
+        <li style="text-align:right">text align right</li>
+        <li style="text-align:center">text align center</li>
+        <li style="text-align:justify">text align justify</li>
+        </ul>
+        <div style="text-align:justify">
+        We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify. We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.
+        </div>
+        <b><br>above paragraph without text align justify<br><br></b>
+        <div>
+        We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify. We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.
+        </div>
+        </div>
+
+        <h1>Text vertical alignment</h1>
+        <p>Vertical alignment is used to align the text in vertical manner within the line</p>
+        <b>CODE :</b>
+        <pre>
+        &lt;p&gt;text-top &lt;span  style="font-size:26px;vertical-align: text-top;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;
+        &lt;p&gt;top      &lt;span  style="font-size:26px;vertical-align: top     ;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;
+        &lt;p&gt;middle   &lt;span  style="font-size:26px;vertical-align: middle  ;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;
+        &lt;p&gt;bottom   &lt;span  style="font-size:26px;vertical-align: bottom  ;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;
+        &lt;p&gt;baseline &lt;span  style="font-size:26px;vertical-align: baseline;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;
+        &lt;p&gt;sub      &lt;span  style="font-size:26px;vertical-align: sub     ;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;
+        &lt;p&gt;super    &lt;span  style="font-size:26px;vertical-align: super   ;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;
+        </pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <p>text-top <span  style="font-size:1.6rem; vertical-align:text-top;">ARE</span> you?</p>
+        <p>top      <span  style="font-size:1.6rem; vertical-align:top     ;">ARE</span> you?</p>
+        <p>middle   <span  style="font-size:1.6rem; vertical-align:middle  ;">ARE</span> you?</p>
+        <p>bottom   <span  style="font-size:1.6rem; vertical-align:bottom  ;">ARE</span> you?</p>
+        <p>baseline <span  style="font-size:1.6rem; vertical-align:baseline;">ARE</span> you?</p>
+        <p>sub      <span  style="font-size:1.6rem; vertical-align:sub     ;">ARE</span> you?</p>
+        <p>super    <span  style="font-size:1.6rem; vertical-align:super   ;">ARE</span> you?</p>
+        </div>
+
+        <h1>Spacing</h1>
+        <p>
+        <b>letter spacing</b> gives space between each letters.<b>word spacing</b> gives space between each words.
+        </p>
+        <b>CODE :</b>
+        <pre>
+        &lt;span style="letter-spacing:4px; word-spacing:12px;"&gt;letter spacing and word spacing&lt;/span&gt;
+        </pre>
+        <b>OUTPUT :</b>
+        <p class="output">
+        <span style="letter-spacing:4px; word-spacing:12px;">letter spacing and word spacing</span>
+        </p>
+
+        <h1>Text indent</h1>
+        <p>
+        Text indent is used to indent the first line.
+        </p>
+        <b>CODE :</b>
+        <pre>
+        &lt;p style="text-indent: 50px""&gt;Text indent gives a blank spaces on the left side of the first line.&lt;p&gt;
+        </pre>
+        <b>OUTPUT :</b>
+        <p class="output">
+        <p style="text-indent: 50px">Text indent gives a blank spaces on the left side of the first line.</p>
+        </p>
+
+        <h1>Basic pseudo elements</h1>
+        <p>
+            ::first-line selects the first line of the element's content.
             <br>
+            ::first-letter selects the first letter of the element's content.
+        </p>
+        <b>CODE :</b>
+        <pre>
+            -------CSS-------
+
+            .pseudo::first-letter {
+                font-size: 2rem;
+            }
+            .pseudo::first-line {
+                color: orangered;
+            }
+            ------HTML-------
+
+            &lt;div class="pseudo"&gt;
+            first-line selects the first line of the element's content.
+            &lt;br&gt;
             first-letter selects the first letter of the element's content.
-        </main>
-    </p>
+            &lt;/div&gt;
+        </pre>
+        <b>OUTPUT :</b>
+        <p class="output">
+            <div class="pseudo">
+                first-line selects the first line of the element's content.
+                <br>
+                first-letter selects the first letter of the element's content.
+            </div>
+        </p>
 
-    <h1>Class selector</h1>
-    <p>Class selector is used to give same style to different section of webpage.</p>
-    <b>OUTPUT :</b>
-    <p>
-        -------css-------<br>
-        .d2-sample-class {<br>
-            color:red;<br>
-        }<br>
-        ------html------<br>
-        &lt;p&gt;paragraph &lt;a class="sample-class"&gt;anchor&lt;/a&gt;&lt;/p&gt; <br>
-        &lt;div class="sample-class"&gt;Div&lt;/div&gt; <br>
-    </p>
-    <b>CODE :</b>
-    <p>
-        <p>paragraph <a class="d2-sample-class">anchor</a></p>
-        <div class="d2-sample-class">Div</div>
-    </p>
+        <h1>Class selector</h1>
+        <p>Class selector is used to give same style to different section of webpage.</p>
+        <b>OUTPUT :</b>
+        <pre>
+            -------CSS-------
+            .sample-class {
+                color:red;
+            }
 
-    <h1>Anchor tag pseudo element</h1>
-    <p>
-        Anchor tag five pseudo element. here a is equal to a:link . because anchor tag a is already a link.
-    </p>
-    <b>CODE :</b>
-    <p>
-        -------css-------<br>
-        a {<br>
-            color:blue;<br>
-        }<br>
-        a:hover {<br>
-            color:red;<br>
-        }<br>
-        a:active {<br>
-            color:lightgreen;<br>
-        }<br>
-        a:visited {<br>
-            color: indigo;<br>
-        }<br>
-        a:focus {<br>
-            color: gold;<br>
-        }<br>
+            ------HTML------
+            &lt;p&gt;paragraph &lt;a class="sample-class"&gt;anchor&lt;/a&gt;&lt;/p&gt;
+            &lt;div class="sample-class"&gt;Div&lt;/div&gt;
+        </pre>
+        <b>CODE :</b>
+        <div class="output">
+            <p>paragraph <a class="sample-class">anchor</a></p>
+            <div class="sample-class">Div</div>
+        </div>
 
-        ------html-------<br>
+        <h1>Anchor tag pseudo element</h1>
+        <p>
+            Anchor tag five pseudo element. here a is equal to a:link . because anchor tag a is already a link.
+        </p>
+        <b>CODE :</b>
+        <pre>
+            -------CSS-------
+            a {
+                color:blue;
+            }
+            a:hover {
+                color:red;
+            }
+            a:active {
+                color:lightgreen;
+            }
+            a:visited {
+                color: indigo;
+            }
+            a:focus {
+                color: gold;
+            }
+            ------HTML-------
+            &lt;h3 id="link"&gt;This is a &lt;a href="#link"&gt;Link&lt;/a&gt;&lt;/h3&gt;
+        </pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+            <h3 id="link">This is a <a href="#link">Link</a></h3>
+        </div>
 
-        &lt;h3 id="link"&gt;This is a &lt;a href="#link"&gt;Link&lt;/a&gt;&lt;/h3&gt; <br>
-    </p>
-    <b>OUTPUT :</b>
-    <p>
-        <h3 id="link">This is a <a href="#link">Link</a></h3>
-    </p>
+        <h1>Text shadow</h1>
+        <p>
+            Text shadow is used to give shadow to the text.
+        </p>
+        <b>CODE :</b>
+        <pre>
+            &lt;h2 style="text-shadow:  2px  0    0    red ;" &gt;Text shadow left     &lt;/h2&gt;
+            &lt;h2 style="text-shadow: -2px  0    0    red ;" &gt;Text shadow right    &lt;/h2&gt;
+            &lt;h2 style="text-shadow:  0    2px  0    red ;" &gt;Text shadow top      &lt;/h2&gt;
+            &lt;h2 style="text-shadow:  0   -2px  0    red ;" &gt;Text shadow bottom   &lt;/h2&gt;
+            &lt;h2 style="text-shadow:  0   -2px  2px  red ;" &gt;Text shadow with blur&lt;/h2&gt;
+        </pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+            <h2 style="text-shadow:  2px  0    0    red ;" >Text shadow left     </h2>
+            <h2 style="text-shadow: -2px  0    0    red ;" >Text shadow right    </h2>
+            <h2 style="text-shadow:  0    2px  0    red ;" >Text shadow top      </h2>
+            <h2 style="text-shadow:  0   -2px  0    red ;" >Text shadow bottom   </h2>
+            <h2 style="text-shadow:  0   -2px  2px  red ;" >Text shadow with blur</h2>
+        </div>
 
-    <h1>Text shadow</h1>
-    <p>
-        Text shadow is used to give shadow to the text.
-    </p>
-    <b>CODE :</b>
-    <p>
-        &lt;h2 style="text-shadow:  2px  0    0    red ;" &gt;Text shadow left     &lt;/h2&gt;<br>
-        &lt;h2 style="text-shadow: -2px  0    0    red ;" &gt;Text shadow right    &lt;/h2&gt;<br>
-        &lt;h2 style="text-shadow:  0    2px  0    red ;" &gt;Text shadow top      &lt;/h2&gt;<br>
-        &lt;h2 style="text-shadow:  0   -2px  0    red ;" &gt;Text shadow bottom   &lt;/h2&gt;<br>
-        &lt;h2 style="text-shadow:  0   -2px  2px  red ;" &gt;Text shadow with blur&lt;/h2&gt;
-    </p>
-    <b>OUTPUT :</b>
-    <p>
-        <h2 style="text-shadow:  2px  0    0    red ;" >Text shadow left     </h2>
-        <h2 style="text-shadow: -2px  0    0    red ;" >Text shadow right    </h2>
-        <h2 style="text-shadow:  0    2px  0    red ;" >Text shadow top      </h2>
-        <h2 style="text-shadow:  0   -2px  0    red ;" >Text shadow bottom   </h2>
-        <h2 style="text-shadow:  0   -2px  2px  red ;" >Text shadow with blur</h2>
-    </p>
-    <h1>Width, height, scroll behaviour and dark theme</h1>
-    <p>
-        html is the root element. body is content displaying element. width 100% takes the body element as browser width. brower defaultly give some margin so that it enable horizontal scrollbar. Setting <b>margin</b> 0px will remove the margin and horizontal scroll bar. Giving height other than auto may restrict the content than the given height. <b>min-height</b> will set the minimum height for body elemenet. <b>max-height</b> will set the maximum heigth for the body element.<br> <b>Scroll behaviour smooth</b> will give smooth scoll winthin the page using named anchor tag navigation.<br>
-        <b>@media</b> rule is used to apply different rules based on different media types/devices. Here i used to @media to set the theme of webpage.<br>
-        learned css only dark mode from <a href="https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#os-level">css-tricks.com</a>
-    </p>
-    <b>CODE :</b>
-    <p>
-        -------css-------<br>
+        <h1>Width, height, scroll behaviour and dark theme</h1>
+        <p>
+            html is the root element. body is content displaying element. width 100% takes the body element as browser width. brower defaultly give some margin so that it enable horizontal scrollbar. Setting <b>margin</b> 0px will remove the margin and horizontal scroll bar. Giving height other than auto may restrict the content than the given height. <b>min-height</b> will set the minimum height for body elemenet. <b>max-height</b> will set the maximum heigth for the body element.<br> <b>Scroll behaviour smooth</b> will give smooth scoll winthin the page using named anchor tag navigation.<br>
+            <b>@media</b> rule is used to apply different rules/styles based on different media types/devices. Here i used to @media to set the theme of webpage.<br>
+            learned css only dark mode from <a href="https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#os-level">css-tricks.com</a>
+        </p>
+        <b>CODE :</b>
+        <pre>
+            -------CSS-------
+            html, body {
+                width: 100%;
+                margin: 0px;
+                min-height: 100%;
+                scroll-behavior: smooth;
+                color: black;
+                background-color:white;
+            }
+            @media (prefers-color-scheme: dark) {
+                html, body {
+                    color: #ccc;
+                    background-color: black;
+                }
+                h1 {
+                    color: white;
+                }
+            }
+        </pre>
+    </section>
 
-        html, body {<br>
-            width: 100%;<br>
-            margin: 0px;<br>
-            min-height: 100%;<br>
-            scroll-behavior: smooth;<br>
-            color: black;<br>
-            background-color:white;<br>
-        }<br>
-        @media (prefers-color-scheme: dark) {<br>
-            html, body {<br>
-                color: #ccc;<br>
-                background-color: black;<br>
-            }<br>
-            h1 {<br>
-                color: white;<br>
-            }<br>
-        }<br>
-    </p>
     <h2><a href="#nav">Back to Nav Link</a></h2><hr>
 
     <!----------------------------- Day13 ------------------------------>
     
-    <h2 id="day13">Day13</h2>
+    <section class="d3">
+        <h2 id="day13">Day13</h2>
 
-    <h1>min width max width vw vh</h1>
-    <dl>
-    <dt><b>min-width</b></dt>
-    <dd> this sets the minimum with for the container.</dd>
-    <dt><b>max-width</b></dt>
-    <dd> this sets the maximum with for the container.</dd>
-    <dt><b>vw - Viewport Width</b></dt>
-    <dd>100vw gives the 100% with of the browser viewport</dd>
-    <dt><b>vh - Viewport Height</b></dt>
-    <dd>100vh gives the 100% height of the browser viewport</dd>
-    </dl>
-    <b>OUTPUT :</b>
-    <p>
-    -----CSS-----<br>
-    .d3-wrap {<br>
-    width: 70vw;<br>
-    min-width: 600px;<br>
-    max-width: 1000px;<br>
-    height: 50vh;<br>
-    min-height: 100px;<br>
-    max-height: 1000px;<br>
-    margin: 0px;<br>
-    background-color: #ddd ;<br>
-    }<br>
-    .d3-heading {<br>
-    background-color: yellow;<br>
-    padding: 0px;<br>
-    font-size: 2rem;<br>
-    font-weight: bold;<br>
-    }<br>
-    .d3-paragraph {<br>
-    text-indent: 30px;<br>
-    }<br>
-    ----HTML-----<br>
-    &lt;div class="d3-wrap"&gt;<br>
-    &lt;div class="d3-heading"&gt;<br>
-    This is the heading<br>
-    &lt;/div&gt;<br>
-    &lt;div class="d3-paragraph"&gt;<br>
-    This is a multiline paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a multiline    paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a  multiline paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a multiline paragraph.<br>
-    &lt;/div&gt;<br>
-    <p>
-    <b>OUTPUT :</b>
-    <div class="d3-wrap">
-    <div class="d3-heading">
-    This is the heading
-    </div>
-    <div class="d3-paragraph">
-    This is a multiline paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a multiline    paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a  multiline paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a multiline paragraph.
-    </div>
-    </div>
-    <h1>Padding border box-sizing margin</h1>
-    <dl>
-    <dt><b>Padding</b></dt>
-    <dd>Padding is used to give the space between content an border.</dd>
-    <dt><b>border</b></dt>
-    <dd>border is used to give borde at the edge of the container. border will increase the width and height of the container.  <b>box-sizing: border-box;</b> will solve this issue</dd>
-    <dt><b>Margin</b></dt>
-    <dd>Margin is used to giv margin between containers</dd>
-    </dl>
+        <h1>min width max width vw vh</h1>
+        <dl>
+        <dt><b>min-width</b></dt>
+        <dd> this sets the minimum with for the container.</dd>
+        <dt><b>max-width</b></dt>
+        <dd> this sets the maximum with for the container.</dd>
+        <dt><b>vw - Viewport Width</b></dt>
+        <dd>100vw gives the 100% with of the browser viewport</dd>
+        <dt><b>vh - Viewport Height</b></dt>
+        <dd>100vh gives the 100% height of the browser viewport</dd>
+        </dl>
+        <b>CODE :</b>
+<pre>
+-----CSS-----
+.wrap {
+width: 70vw;
+min-width: 600px;
+max-width: 1000px;
+height: 50vh;
+min-height: 100px;
+max-height: 1000px;
+margin: 0px;
+background-color: #ddd ;
+}
+.heading {
+background-color: yellow;
+padding: 0px;
+font-size: 2rem;
+font-weight: bold;
+}
+.paragraph {
+text-indent: 30px;
+}
+----HTML-----
+&lt;div class="wrap"&gt;
+&lt;div class="heading"&gt;
+This is the heading
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+This is a multiline paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a multiline    paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a  multiline paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a multiline paragraph.
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <div class="wrap">
+        <div class="heading">
+        This is the heading
+        </div>
+        <div class="paragraph">
+        This is a multiline paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a multiline    paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a  multiline paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a multiline paragraph.
+        </div>
+        </div>
 
-    <b>CODE :</b>
-    <p>
-    -----CSS-------<br>
-    .d3-parent {<br>
-    width: 300px;<br>
-    height: 300px;<br>
-    /* margin auto place the container center */<br>
-    margin: 0px auto;<br>
-    border: 4px solid black;<br>
-    padding: 10px;<br>
-    }<br>
-    .d3-child1 {<br>
-    width: 100px;<br>
-    height: 100px;<br>
-    border: 4px solid black;<br>
-    background-color: orange;<br>
-    margin: 10px 0px;<br>
-    }<br>
-    .d3-child2 {<br>
-    width: 100px;<br>
-    height: 100px;<br>
-    border: 4px solid ;<br>
-    /* box-sizing: border-box; this place the border inside the container so the width won't increase due to border */<br>
-    box-sizing: border-box;<br>
-    background-color: red;<br>
-    margin: 10px 0px;<br>
-    }<br>
-    -----HTML------<br>
-    &lt;div class="d3-parent"&gt;parent<br>
-    &lt;div class="d3-child1"&gt;child1<br>
-    &lt;/div&gt;<br>
-    &lt;div class="d3-child2"&gt;child2<br>
-    &lt;/div&gt;<br>
-    &lt;/div&gt;<br>
-    </p>
-    <b>OUTPUT :</b>
-    <div class="d3-parent">parent
-    <div class="d3-child1">child1
-    </div>
-    <div class="d3-child2">child2
-    </div>
-    </div>
+        <h1>Padding border box-sizing margin</h1>
+        <dl>
+        <dt><b>Padding</b></dt>
+        <dd>Padding is used to give the space between content an border.</dd>
+        <dt><b>border</b></dt>
+        <dd>border is used to give borde at the edge of the container. border will increase the width and height of the container.  <b>box-sizing: border-box;</b> will solve this issue</dd>
+        <dt><b>Margin</b></dt>
+        <dd>Margin is used to giv margin between containers</dd>
+        </dl>
+        </div>
+        <b>CODE :</b>
+<pre>
+-----CSS-------
 
-    <h1>Overflow</h1>
-    <p>This is used to control the overflowing content of container.</p>
+.parent {
+width: 300px;
+height: 300px;
+/* margin auto place the container center */
+margin: 0px auto;
+border: 4px solid black;
+padding: 10px;
+}
+.child1 {
+width: 100px;
+height: 100px;
+border: 4px solid black;
+background-color: orange;
+margin: 10px 0px;
+}
+.child2 {
+width: 100px;
+height: 100px;
+border: 4px solid ;
+/* box-sizing: border-box; this place the border inside the container so the width won't increase due to border */
+box-sizing: border-box;
+background-color: red;
+margin: 10px 0px;
+}
 
-    <b>OUTPUT :</b>
-    <p>
-    ----CSS----<br>
-    <br>
-    .d3-square {<br>
-    width: 90vw;<br>
-    height: 80px;<br>
-    font-size: 1.4rem;<br>
-    }<br>
-    .d3-overflow-x-hidden {<br>
-    overflow-x:hidden;<br>
-    }<br>
-    .d3-overflow-x-scroll {<br>
-    overflow-x:scroll;<br>
-    }<br>
-    .d3-overflow-y-hidden {<br>
-    overflow-y:hidden;<br>
-    overflow-x:hidden;<br>
-    }<br>
-    .d3-overflow-y-scroll {<br>
-    overflow-y:scroll;<br>
-    }<br>
-    <br>
-    ----HTML----<br>
-    <br>
-    &lt;pre class="d3-square d3-overflow-x-hidden"&gt;<br>
-    overflow-x:hidden This hides the horizontally overflowing cotent.<br>
-    &lt;/pre&gt;<br>
-    &lt;pre class="d3-square d3-overflow-x-scroll"&gt;<br>
-    overflow-x:scroll This let's you to scroll the horizontally overflowing cotent. check this out for overflowing content on   horizontal scroll bar.<br>
-    &lt;/pre&gt;<br>
-    &lt;pre class="d3-square d3-overflow-y-hidden"&gt;<br>
-    overflow-y:hidden hides vertical overflowing<br>
-    &lt;/pre&gt;<br>
-    &lt;pre class="d3-square d3-overflow-y-scroll"&gt;<br>
-    overflow-y:scroll<br>
-    let's you<br>
-    scroll vertical<br>
-    overflow<br>
-    &lt;/pre&gt;<br>
-    </p>
+-----HTML------
 
-    <b>OUTPUT :</b>
-    <p>
-    <pre class="d3-square d3-overflow-x-hidden">
-    overflow-x:hidden This hides the horizontally overflowing cotent.
-    </pre>
-    <pre class="d3-square d3-overflow-x-scroll">
-    overflow-x:scroll This let's you to scroll the horizontally overflowing cotent. check this out for overflowing content on   horizontal scroll bar.
-    </pre>
-    <pre class="d3-square d3-overflow-y-hidden">
-    overflow-y:hidden hides vertical overflowing
-    </pre>
-    <pre class="d3-square d3-overflow-y-scroll">
-    overflow-y:scroll 
-    let's you
-    scroll vertical
-    overflow
-    </pre>
-    </p>
+&lt;div class="parent"&gt;parent
+&lt;div class="child1"&gt;child1
+&lt;/div&gt;
+&lt;div class="child2"&gt;child2
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <div class="parent">parent
+        <div class="child1">child1
+        </div>
+        <div class="child2">child2
+        </div>
+        </div>
+        </div>
+
+        <h1>Overflow</h1>
+        <p>This is used to control the overflowing content of container.</p>
+        <b>CODE :</b>
+<pre>
+----CSS----
+.square {
+width: 90vw;
+height: 80px;
+font-size: 1.4rem;
+}
+.overflow-x-hidden {
+overflow-x:hidden;
+}
+.overflow-x-scroll {
+overflow-x:scroll;
+}
+.overflow-y-hidden {
+overflow-y:hidden;
+overflow-x:hidden;
+}
+.overflow-y-scroll {
+overflow-y:scroll;
+}
+----HTML----
+&lt;pre class="square overflow-x-hidden"&gt;
+overflow-x:hidden This hides the horizontally overflowing cotent.
+&lt;/pre&gt;
+&lt;pre class="square overflow-x-scroll"&gt;
+overflow-x:scroll This let's you to scroll the horizontally overflowing cotent. check this out for overflowing content on   horizontal scroll bar.
+&lt;/pre&gt;
+&lt;pre class="square overflow-y-hidden"&gt;
+overflow-y:hidden hides vertical overflowing
+&lt;/pre&gt;
+&lt;pre class="square overflow-y-scroll"&gt;
+overflow-y:scroll
+let's you
+scroll vertical
+overflow
+&lt;/pre&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output overflow-hidden">
+<pre class="square overflow-x-hidden">
+overflow-x:hidden This hides the horizontally overflowing cotent.
+</pre>
+<pre class="square overflow-x-scroll">
+overflow-x:scroll This let's you to scroll the horizontally overflowing cotent. check this out for overflowing content on   horizontal scroll bar.
+</pre>
+<pre class="square overflow-y-hidden">
+overflow-y:hidden hides
+vertical
+overflow content
+</pre>
+<pre class="square overflow-y-scroll">
+overflow-y:scroll 
+let's you
+scroll vertical
+overflow
+</pre>
+        </div>
+    </section>
     <h2><a href="#nav">Back to Nav Link</a></h2><hr>
 
     <!----------------------------- Day14 ------------------------------>
-    
-    <h2 id="day14">Day14</h2>
+    <section class="d4">
+        <h2 id="day14">Day14</h2>
 
-    <h1>Display inline,block and inline-block</h1>
-    <dl>
-    <dt><b>inline</b></dt>
-    <dd> inline element heights are automatically taken as same as line height. We can't change     it's height.</dd>
-    <dt><b>block</b></dt>
-    <dd>block level elements always appear in new line</dd>
-    <dt><b>inline-block</b></dt>
-    <dd>inline-block element acts as an inline element also we change set the size.</dd>
-    </dl>
-    <b>CODE :</b>
-    <p>
-    ---CSS---<br>
-    .d4-ul {<br>
-    width: 100%;<br>
-    margin:0px;<br>
-    padding:0px;<br>
-    height: 80px;<br>
-    background-color: orange;<br>
-    }<br>
-    .d4-ul li {<br>
-    display:inline-block;<br>
-    height: 100%;<br>
-    background-color: black;<br>
-    line-height: 80px;<br>
-    font-size: 1.4rem;<br>
-    margin: 0 20px;<br>
-    padding: 0 22px;<br>
-    }<br>
-    .de-ul a {<br>
-    text-decoration:none;<br>
-    color: red;<br>
-    }<br>
-    .d4-ul li:hover {<br>
-    background-color:#ddd;<br>
-    }<br>
-    ---HTML---<br>
-    &lt;ul class="d4-ul"&gt;<br>
-    &lt;li&gt;&lt;a href="#" &gt;HOME&lt;/a&gt;&lt;/li&gt;<br>
-    &lt;li&gt;&lt;a href="#" &gt;ABOUT&lt;/a&gt;&lt;/li&gt;<br>
-    &lt;li&gt;&lt;a href="#" &gt;SKILL&lt;/a&gt;&lt;/li&gt;<br>
-    &lt;li&gt;&lt;a href="#" &gt;CONTACT&lt;/a&gt;&lt;/li&gt;<br>
-    &lt;/ul&gt;<br>
-    </p>
-    <b>OUTPUT :</b>
-    <p>
-    <ul class="d4-ul">
-    <li><a href="#">HOME</a></li>
-    <li><a href="#">ABOUT</a></li>
-    <li><a href="#">SKILL</a></li>
-    <li><a href="#">CONTACT</a></li>
-    </ul>
-    </p>
+        <h1>Display inline,block and inline-block</h1>
+        <dl>
+        <dt><b>inline</b></dt>
+        <dd> inline element heights are automatically taken as same as line height. We can't change     it's height.</dd>
+        <dt><b>block</b></dt>
+        <dd>block level elements always appear in new line</dd>
+        <dt><b>inline-block</b></dt>
+        <dd>inline-block element acts as an inline element also we change set the size.</dd>
+        </dl>
+        <b>CODE :</b>
+<pre>
+---CSS---
 
-    <h1>Box shadow</h1>
+.d4-ul {
+width: 100%;
+margin:0px;
+padding:0px;
+height: 80px;
+background-color: orange;
+}
+.d4-ul li {
+display:inline-block;
+height: 100%;
+background-color: black;
+line-height: 80px;
+font-size: 1.4rem;
+margin: 0 20px;
+padding: 0 22px
+}
+.d4-ul a {
+text-decoration:none;
+color: red;
+}
+.d4-ul li:hover {
+background-color:#ddd;
+}
 
-    <b>CODE :</b>
-    <p>
-    ---CSS---<br>
-    .d4-div {<br>
-    display:inline-block;<br>
-    width: 80px;<br>
-    height: 80px;<br>
-    border: 3px solid black;<br>
-    margin: 20px;<br>
-    }<br>
-    #d4-bottom-right {<br>
-    box-shadow: 6px 6px red;<br>
-    }<br>
-    #d4-top-left {<br>
-    box-shadow: -6px -6px red;<br>
-    }<br>
-    #d4-top-left-blur {<br>
-    box-shadow: -6px -6px 6px red;<br>
-    }<br>
-    #d4-top-left-blur-spread {<br>
-    box-shadow: -6px -6px 6px 6px red;<br>
-    }<br>
-    #d4-outer-blur {<br>
-    box-shadow: 0 0 4px red;<br>
-    /*Blur always gives a minor spread. If we need more spread we can add 4th value as spread */    <br>
-    }<br>
-    #d4-inner-blur {<br>
-    box-shadow: inset 0 0 4px red;<br>
-    /*Blur always gives a minor spread. If we need more spread we can add 4th value as spread */    <br>
-    }<br>
-    ---HTML---<br>
-    &lt;div class="d4-div" id="d4-bottom-right"&gt;bottom-right&lt;/div&gt;<br>
-    &lt;div class="d4-div" id="d4-top-left"&gt;top-left&lt;/div&gt;<br>
-    &lt;div class="d4-div" id="d4-top-left-blur"&gt;top-left-blur&lt;/div&gt;<br>
-    &lt;div class="d4-div" id="d4-top-left-blur-spread"&gt;top-left-blur-spread&lt;/div&gt;<br>
-    &lt;div class="d4-div" id="d4-outer-blur"&gt;outer-blur / spread&lt;/div&gt;<br>
-    &lt;div class="d4-div" id="d4-inner-blur"&gt;inner-blur / spread&lt;/div&gt;<br>
-    </p>
+---HTML---
 
-    <b>OUTPUT :</b>
-    <p>
-    <div class="d4-div" id="d4-bottom-right">bottom-right</div>
-    <div class="d4-div" id="d4-top-left">top-left</div>
-    <div class="d4-div" id="d4-top-left-blur">top-left-blur</div>
-    <div class="d4-div" id="d4-top-left-blur-spread">top-left-blur-spread</div>
-    <div class="d4-div" id="d4-outer-blur">outer-blur / spread</div>
-    <div class="d4-div" id="d4-inner-blur">inner-blur / spread</div>
-    </p>
+&lt;ul class="d4-ul"&gt;
+&lt;li&gt;&lt;a href="#" &gt;HOME&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#" &gt;ABOUT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#" &gt;SKILL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#" &gt;CONTACT&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <ul class="ul">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">SKILL</a></li>
+        <li><a href="#">CONTACT</a></li>
+        </ul>
+        </div>
 
-    <h1>Border-radius</h1>
-    <b>CODE :</b>
-    <p>
-    ---CSS---<br>
-    #d4-single-value {<br>
-    border-radius: 20px;<br>
-    }<br>
-    #d4-circle {<br>
-    border-radius: 50%;<br>
-    text-align: center;<br>
-    }<br>
-    #d4-double-value {<br>
-    border-radius:0 20px;<br>
-    }<br>
-    #d4-multi-value {<br>
-    border-radius:0 10px 20px 40px ;<br>
-    }<br>
-    ---HTML---<br>
-    &lt; class="d4-div"div id="d4-single-value"&gt;single value&lt;/div&gt;<br>
-    &lt; class="d4-div"div id="d4-circle"&gt;single value circle&lt;/div&gt;<br>
-    &lt; class="d4-div"div id="d4-double-value"&gt;double value&lt;/div&gt;<br>
-    &lt; class="d4-div"div id="d4-multi-value"&gt;multi value&lt;/div&gt;<br>
-    </p>
-    <b>OUTPUT :</b>
-    <p>
-    <div class="d4-div" id="d4-single-value">single value</div>
-    <div class="d4-div" id="d4-circle" >single value circle</div>
-    <div class="d4-div" id="d4-double-value">double value</div>
-    <div class="d4-div" id="d4-multi-value">multi value</div>
-    </p>
+        <h1>Box shadow</h1>
 
-    <h1>background-image</h1>
-    <h3>CODE :</h3>
-    <p>
-    ---CSS---<br>
-    body {<br>
-    background: url(background.jpeg) no-repeat center center fixed;<br>
-    /* Size cover cover the whole background with the image */
-    background-size: cover;
-    }<br>
-    </p>
-    <h3>OUTPUT :</h3>
-    <b>With Cover</b>
-    <br>
-    <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/011-020/ backgroundWithCover.png" style="width:80vw;border:5vw solid grey;margin:0px;padding:0px;">
-    <br>
-    <b>Without Cover</b>
-    <br>
-    <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/011-020/ backgroundWithoutCover.png" style="width:80vw;border:5vw solid grey;margin:0px;padding:0px;">
-    <br>
+        <b>CODE :</b>
+<pre>
+---CSS---
+.d4-div {
+display:inline-block;
+width: 80px;
+height: 80px;
+border: 3px solid black;
+margin: 20px;
+}
+#d4-bottom-right {
+box-shadow: 6px 6px red;
+}
+#d4-top-left {
+box-shadow: -6px -6px red;
+}
+#d4-top-left-blur {
+box-shadow: -6px -6px 6px red;
+}
+#d4-top-left-blur-spread {
+box-shadow: -6px -6px 6px 6px red;
+}
+#d4-outer-blur {
+box-shadow: 0 0 4px red;
+/*Blur always gives a minor spread. If we need more spread we can add 4th value as spread */
+}
+#d4-inner-blur {
+box-shadow: inset 0 0 4px red;
+/*Blur always gives a minor spread. If we need more spread we can add 4th value as spread */
+}
+---HTML---
+&lt;div class="d4-div" id="d4-bottom-right"&gt;bottom-right&lt;/div&gt;
+&lt;div class="d4-div" id="d4-top-left"&gt;top-left&lt;/div&gt;
+&lt;div class="d4-div" id="d4-top-left-blur"&gt;top-left-blur&lt;/div&gt;
+&lt;div class="d4-div" id="d4-top-left-blur-spread"&gt;top-left-blur-spread&lt;/div&gt;
+&lt;div class="d4-div" id="d4-outer-blur"&gt;outer-blur / spread&lt;/div&gt;
+&lt;div class="d4-div" id="d4-inner-blur"&gt;inner-blur / spread&lt;/div&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <div class="d4-div" id="d4-bottom-right">bottom-right</div>
+        <div class="d4-div" id="d4-top-left">top-left</div>
+        <div class="d4-div" id="d4-top-left-blur">top-left-blur</div>
+        <div class="d4-div" id="d4-top-left-blur-spread">top-left-blur-spread</div>
+        <div class="d4-div" id="d4-outer-blur">outer-blur / spread</div>
+        <div class="d4-div" id="d4-inner-blur">inner-blur / spread</div>
+        </div>
+
+        <h1>Border-radius</h1>
+        <b>CODE :</b>
+<pre>
+---CSS---
+#d4-single-value {
+border-radius: 20px;
+}
+#d4-circle {
+border-radius: 50%;
+text-align: center;
+}
+#d4-double-value {
+border-radius:0 20px;
+}
+#d4-multi-value {
+border-radius:0 10px 20px 40px ;
+}
+---HTML---
+&lt; class="d4-div"div id="d4-single-value"&gt;single value&lt;/div&gt;
+&lt; class="d4-div"div id="d4-circle"&gt;single value circle&lt;/div&gt;
+&lt; class="d4-div"div id="d4-double-value"&gt;double value&lt;/div&gt;
+&lt; class="d4-div"div id="d4-multi-value"&gt;multi value&lt;/div&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <div class="d4-div" id="d4-single-value">single value</div>
+        <div class="d4-div" id="d4-circle" >single value circle</div>
+        <div class="d4-div" id="d4-double-value">double value</div>
+        <div class="d4-div" id="d4-multi-value">multi value</div>
+        </div>
+
+        <h1>background-image</h1>
+        <h3>CODE :</h3>
+<pre>
+---CSS---
+body {
+background: url(background.jpeg) no-repeat center center fixed;
+/* Size cover cover the whole background with the image */
+background-size: cover;
+}
+</pre>
+        <h3>OUTPUT :</h3>
+        <b>With Cover</b>
+        <br>
+        <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/011-020/ backgroundWithCover.png" style="width:80vw;border:5vw solid grey;margin:0px;padding:0px;">
+        <br>
+        <b>Without Cover</b>
+        <br>
+        <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/011-020/ backgroundWithoutCover.png" style="width:80vw;border:5vw solid grey;margin:0px;padding:0px;">
+    </section>
     <h2><a href="#nav">Back to Nav Link</a></h2><hr>
 
     <!----------------------------- Day15 ------------------------------>
-    
-    <h2 id="day15">Day15</h2>
+    <section class="d5">
+        <h2 id="day15">Day15</h2>
 
-    <h1>List Style</h1>
-    <h3>CODE :</h3>
-    <p>
-        &lt;b&gt;NO style&lt;/b&gt;<br>
-        &lt;ul style="list-style-type:none"&gt;<br>
-        &lt;li&gt;html&lt;/li&gt;<br>
-        &lt;li&gt;css&lt;/li&gt;<br>
-        &lt;/ul&gt;<br>
-        &lt;b&gt;DISC style&lt;/b&gt;<br>
-        &lt;ul style="list-style-type:disc"&gt;<br>
-        &lt;li&gt;html&lt;/li&gt;<br>
-        &lt;li&gt;css&lt;/li&gt;<br>
-        &lt;/ul&gt;<br>
-        &lt;b&gt;Circle style&lt;/b&gt;<br>
-        &lt;ul style="list-style-type:circle"&gt;<br>
-        &lt;li&gt;html&lt;/li&gt;<br>
-        &lt;li&gt;css&lt;/li&gt;<br>
-        &lt;/ul&gt;<br>
-        &lt;b&gt;Square style&lt;/b&gt;<br>
-        &lt;ul style="list-style-type:square"&gt;<br>
-        &lt;li&gt;html&lt;/li&gt;<br>
-        &lt;li&gt;css&lt;/li&gt;<br>
-        &lt;/ul&gt;<br>
-        &lt;b&gt;Decimal style&lt;/b&gt;<br>
-        &lt;ol&gt;<br>
-        &lt;!-- default style in ordered list--&gt;<br>
-        &lt;li&gt;html&lt;/li&gt;<br>
-        &lt;li&gt;css&lt;/li&gt;<br>
-        &lt;/ol&gt;<br>
-        &lt;/p&gt;<br>
-        &lt;b&gt;Decimal style&lt;/b&gt;<br>
-        &lt;ol  style="list-style-type:decimal-leading-zero"&gt; <br>
-        &lt;li&gt;html&lt;/li&gt;<br>
-        &lt;li&gt;css&lt;/li&gt;<br>
-        &lt;/ol&gt;<br>
-        &lt;b&gt;Lower Alpha style&lt;/b&gt;<br>
-        &lt;ol style="list-style-type:lower-alpha"&gt;<br>
-        &lt;li&gt;html&lt;/li&gt;<br>
-        &lt;li&gt;css&lt;/li&gt;<br>
-        &lt;/ol&gt;<br>
-        &lt;b&gt;Upper Alpha style&lt;/b&gt;<br>
-        &lt;ol style="list-style-type:upper-alpha"&gt;<br>
-        &lt;li&gt;html&lt;/li&gt;<br>
-        &lt;li&gt;css&lt;/li&gt;<br>
-        &lt;/ol&gt;<br>
-        &lt;b&gt;Lower Roman style&lt;/b&gt;<br>
-        &lt;ol style="list-style-type:lower-roman"&gt;<br>
-        &lt;li&gt;html&lt;/li&gt;<br>
-        &lt;li&gt;css&lt;/li&gt;<br>
-        &lt;/ol&gt;<br>
-        &lt;b&gt;Upper Roman style&lt;/b&gt;<br>
-        &lt;ol style="list-style-type:upper-roman"&gt;<br>
-        &lt;li&gt;html&lt;/li&gt;<br>
-        &lt;li&gt;css&lt;/li&gt;<br>
-        &lt;/ol&gt;
-    </p>
-    <h3>OUTPUT :</h3>
-    <p>
-    <b>NO style</b>
-    <ul style="list-style-type:none">
-    <li>html</li>
-    <li>css</li>
-    </ul>
-    <b>DISC style</b>
-    <ul style="list-style-type:disc">
-    <li>html</li>
-    <li>css</li>
-    </ul>
-    <b>Circle style</b>
-    <ul style="list-style-type:circle">
-    <li>html</li>
-    <li>css</li>
-    </ul>
-    <b>Square style</b>
-    <ul style="list-style-type:square">
-    <li>html</li>
-    <li>css</li>
-    </ul>
-    <b>Decimal style</b>
-    <ol>
-    <!-- default style in ordered list-->
-    <li>html</li>
-    <li>css</li>
-    </ol>
-    </p>
-    <b>Decimal style</b>
-    <ol style="list-style-type:decimal-leading-zero">
-    <li>html</li>
-    <li>css</li>
-    </ol>
-    <b>Lower Alpha style</b>
-    <ol style="list-style-type:lower-alpha">
-    <li>html</li>
-    <li>css</li>
-    </ol>
-    <b>Upper Alpha style</b>
-    <ol style="list-style-type:upper-alpha">
-    <li>html</li>
-    <li>css</li>
-    </ol>
-    <b>Lower Roman style</b>
-    <ol style="list-style-type:lower-roman">
-    <li>html</li>
-    <li>css</li>
-    </ol>
-    <b>Upper Roman style</b>
-    <ol style="list-style-type:upper-roman">
-    <li>html</li>
-    <li>css</li>
-    </ol>
-    </p>
-    
-    <h1>List style position</h1>
-    <h3>CODE</h3>
-    <p>
-        &lt;b&gt;inside&lt;/b&gt;<br>
-        &lt;ul style="list-style-position:inside"&gt;<br>
-        &lt;li&gt;<br>
-        HTML is  not a programming language it is a markup  language. HTML is  not a programming language it     is a markup language. HTML is  not a programming    language it is a markup language. HTML is  not a   programming language it is a markup language. HTML    is  not a programming language it is a markup  language. HTML is  not a programming language it     is a markup language. HTML is  not a programming    language it is a markup language.<br>
-        &lt;/li&gt;<br>
-        &lt;li&gt;<br>
-        CSS is used to give style to the html page. CSS is  used to give style to the html page. CSS is used     to give style to the html page. CSS is used to  give style to the html page. CSS is used to give     style to the html page. CSS is used to give style   to the html page. CSS is used to give style to the    html page. CSS is used to give style to the html   page. CSS is used to give style to the html page. <br>
-        &lt;/li&gt;<br>
-        &lt;/ul&gt;<br>
-        &lt;b&gt;outside default&lt;/b&gt;<br>
-        &lt;ul style="list-style-position:outside"&gt;<br>
-        &lt;li&gt;<br>
-        HTML is  not a programming language it is a markup  language. HTML is  not a programming language it     is a markup language. HTML is  not a programming    language it is a markup language. HTML is  not a   programming language it is a markup language. HTML    is  not a programming language it is a markup  language. HTML is  not a programming language it     is a markup language. HTML is  not a programming    language it is a markup language.<br>
-        &lt;/li&gt;<br>
-        &lt;li&gt;<br>
-        CSS is used to give style to the html page. CSS is  used to give style to the html page. CSS is used     to give style to the html page. CSS is used to  give style to the html page. CSS is used to give     style to the html page. CSS is used to give style   to the html page. CSS is used to give style to the    html page. CSS is used to give style to the html   page. CSS is used to give style to the html page. <br>
-        &lt;/li&gt;<br>
-        &lt;/ul&gt;<br>
-    </p>
-    <h3>OUTPUT</h3>
-    <b>inside</b>
-    <ul style="list-style-position:inside">
-    <li>
-    HTML is  not a programming language it is a markup  language. HTML is  not a programming language it is a    markup language. HTML is  not a programming language   it is a markup language. HTML is  not a programming   language it is a markup language. HTML is  not a  programming language it is a markup language. HTML is    not a programming language it is a markup language.   HTML is  not a programming language it is a markup    language.
-    </li>
-    <li>
-    CSS is used to give style to the html page. CSS is  used to give style to the html page. CSS is used to  give style to the html page. CSS is used to give style   to the html page. CSS is used to give style to the    html page. CSS is used to give style to the html page.     CSS is used to give style to the html page. CSS is  used to give style to the html page. CSS is used to  give style to the html page.
-    </li>
-    </ul>
-    <b>outside default</b>
-    <ul style="list-style-position:outside">
-    <li>
-    HTML is  not a programming language it is a markup  language. HTML is  not a programming language it is a    markup language. HTML is  not a programming language   it is a markup language. HTML is  not a programming   language it is a markup language. HTML is  not a  programming language it is a markup language. HTML is    not a programming language it is a markup language.   HTML is  not a programming language it is a markup    language.
-    </li>
-    <li>
-    CSS is used to give style to the html page. CSS is  used to give style to the html page. CSS is used to  give style to the html page. CSS is used to give style   to the html page. CSS is used to give style to the    html page. CSS is used to give style to the html page.     CSS is used to give style to the html page. CSS is  used to give style to the html page. CSS is used to  give style to the html page.
-    </li>
-    </ul>
-    
-    <h1>Styling Table</h1>
-    
-    <h3>CODE</h3>
-    <p>
-        ----CSS----<br><br>
-        .d5-table {<br>
-            border-collapse: collapse;<br>
-        }<br>
-        .d5-table th , .d5-table td {<br>
-            border: 6px solid black;<br>
-            /**<br>
-            border collapse default value is seprate which  has two seprate borders<br>
-            border-collapse: collapse; will set only    single line border<br>
-            **/<br>
-        }<br><br>
-        ----HTML----<br><br>
-    &lt;table class="d5-table" style="width:80%;margin:0    auto;"&gt;<br>
-    &lt;colgroup&gt;<br>
-    &lt;col span="1" style="background-color:lightgreen;"&  gt;<br>
-    &lt;col&gt;<br>
-    &lt;col&gt;<br>
-    &lt;col span="6" style="background-color:orange;"&gt;   <br>
-    &lt;/colgroup&gt;<br>
-    &lt;tr&gt;<br>
-    &lt;th rowspan="2" style="background-color:lightblue;"& gt;DAY&lt;/th&gt; &lt;th colspan="8"     style="background-color:gray;"&gt;TIME&lt;/th&gt;<br>
-    &lt;/tr&gt;<br>
-    &lt;tr&gt;<br>
-        &lt;!--<br>
-            larger than the required rowspan or colspan     remove the border<br>
-        --&gt;<br>
-    &lt;th&gt;09-10&lt;/th&gt; &lt;th&gt;10-11&lt;/th&gt; & lt;th&gt;11-12&lt;/th&gt; &lt;th&gt;12-12:30&lt;/th& gt; &lt;th rowspan="3"&gt;LUNCH&lt;/th&gt; &lt;th&gt;    01:30-02&lt;/th&gt; &lt;th&gt;02-03&lt;/th&gt; &lt;th&  gt;03-04:30&lt;/th&gt;<br>
-    &lt;/tr&gt;<br>
-    &lt;tr&gt;<br>
-    &lt;th&gt;Monday&lt;/th&gt; &lt;td&gt;&lt;/td&gt; &lt;  td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/   td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;    td&gt;&lt;/td&gt;<br>
-    &lt;/tr&gt;<br>
-    &lt;tr&gt;<br>
-    &lt;th&gt;Tuesday&lt;/th&gt; &lt;td&gt;&lt;/td&gt; &lt; td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/  td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;   td&gt;&lt;/td&gt;<br>
-    &lt;/tr&gt;<br>
-    &lt;/table&gt;<br>
-    <p>
-    
-    <h3>OUTPUT</h3>
-    <p>
-    <table class="d5-table" style="width:80%;margin:0  auto;">
-    <colgroup>
-    <col span="1" style="background-color:lightgreen;">
-    <col>
-    <col>
-    <col span="6" style="background-color:orange;">
-    </colgroup>
-    <tr>
-    <th rowspan="2" style="background-color:lightblue;  ">DAY</th> <th colspan="8"    style="background-color:gray;">TIME</th>
-    </tr>
-    <tr>
-        <!--
-            larger than the required rowspan or colspan     remove the border
-        -->
-    <th>09-10</th> <th>10-11</th> <th>11-12</th>    <th>12-12:30</th> <th rowspan="3">LUNCH</th>   <th>01:30-02</th> <th>02-03</th> <th>03-04:30</th>
-    </tr>
-    <tr>
-    <th>Monday</th> <td></td> <td></td> <td></td> <td></    td> <td></td> <td></td> <td></td>
-    </tr>
-    <tr>
-    <th>Tuesday</th> <td></td> <td></td> <td></td> <td></   td> <td></td> <td></td> <td></td>
-    </tr>
-    </table>
-    <p>
+        <h1>List Style</h1>
+        <h3>CODE :</h3>
+<pre>
+&lt;b&gt;NO style&lt;/b&gt;
+&lt;ul style="list-style-type:none"&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ul&gt;
+&lt;b&gt;DISC style&lt;/b&gt;
+&lt;ul style="list-style-type:disc"&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ul&gt;
+&lt;b&gt;Circle style&lt;/b&gt;
+&lt;ul style="list-style-type:circle"&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ul&gt;
+&lt;b&gt;Square style&lt;/b&gt;
+&lt;ul style="list-style-type:square"&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ul&gt;
+&lt;b&gt;Decimal style&lt;/b&gt;
+&lt;ol&gt;
+&lt;!-- default style in ordered list--&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+&lt;b&gt;Decimal style&lt;/b&gt;
+&lt;ol  style="list-style-type:decimal-leading-zero"&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ol&gt;
+&lt;b&gt;Lower Alpha style&lt;/b&gt;
+&lt;ol style="list-style-type:lower-alpha"&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ol&gt;
+&lt;b&gt;Upper Alpha style&lt;/b&gt;
+&lt;ol style="list-style-type:upper-alpha"&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ol&gt;
+&lt;b&gt;Lower Roman style&lt;/b&gt;
+&lt;ol style="list-style-type:lower-roman"&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ol&gt;
+&lt;b&gt;Upper Roman style&lt;/b&gt;
+&lt;ol style="list-style-type:upper-roman"&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+        <h3>OUTPUT :</h3>
+        <div class="output">
+        <b>NO style</b>
+        <ul style="list-style-type:none">
+        <li>html</li>
+        <li>css</li>
+        </ul>
+        <b>DISC style</b>
+        <ul style="list-style-type:disc">
+        <li>html</li>
+        <li>css</li>
+        </ul>
+        <b>Circle style</b>
+        <ul style="list-style-type:circle">
+        <li>html</li>
+        <li>css</li>
+        </ul>
+        <b>Square style</b>
+        <ul style="list-style-type:square">
+        <li>html</li>
+        <li>css</li>
+        </ul>
+        <b>Decimal style</b>
+        <ol>
+        <!-- default style in ordered list-->
+        <li>html</li>
+        <li>css</li>
+        </ol>
+        </p>
+        <b>Decimal style</b>
+        <ol style="list-style-type:decimal-leading-zero">
+        <li>html</li>
+        <li>css</li>
+        </ol>
+        <b>Lower Alpha style</b>
+        <ol style="list-style-type:lower-alpha">
+        <li>html</li>
+        <li>css</li>
+        </ol>
+        <b>Upper Alpha style</b>
+        <ol style="list-style-type:upper-alpha">
+        <li>html</li>
+        <li>css</li>
+        </ol>
+        <b>Lower Roman style</b>
+        <ol style="list-style-type:lower-roman">
+        <li>html</li>
+        <li>css</li>
+        </ol>
+        <b>Upper Roman style</b>
+        <ol style="list-style-type:upper-roman">
+        <li>html</li>
+        <li>css</li>
+        </ol>
+        </div>
+
+        <h1>List style position</h1>
+        <h3>CODE</h3>
+<pre>
+&lt;b&gt;inside&lt;/b&gt;
+&lt;ul style="list-style-position:inside"&gt;
+&lt;li&gt;
+HTML is  not a programming language it is a markup  language. HTML is  not a programming language it     is a markup language. HTML is  not a programming    language it is a markup language. HTML is  not a   programming language it is a markup language. HTML    is  not a programming language it is a markup  language. HTML is  not a programming language it     is a markup language. HTML is  not a programming    language it is a markup language.
+&lt;/li&gt;
+&lt;li&gt;
+CSS is used to give style to the html page. CSS is  used to give style to the html page. CSS is used     to give style to the html page. CSS is used to  give style to the html page. CSS is used to give     style to the html page. CSS is used to give style   to the html page. CSS is used to give style to the    html page. CSS is used to give style to the html   page. CSS is used to give style to the html page. 
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;b&gt;outside default&lt;/b&gt;
+&lt;ul style="list-style-position:outside"&gt;
+&lt;li&gt;
+HTML is  not a programming language it is a markup  language. HTML is  not a programming language it     is a markup language. HTML is  not a programming    language it is a markup language. HTML is  not a   programming language it is a markup language. HTML    is  not a programming language it is a markup  language. HTML is  not a programming language it     is a markup language. HTML is  not a programming    language it is a markup language.
+&lt;/li&gt;
+&lt;li&gt;
+CSS is used to give style to the html page. CSS is  used to give style to the html page. CSS is used     to give style to the html page. CSS is used to  give style to the html page. CSS is used to give     style to the html page. CSS is used to give style   to the html page. CSS is used to give style to the    html page. CSS is used to give style to the html   page. CSS is used to give style to the html page. 
+&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+        <h3>OUTPUT</h3>
+        <div class="output">
+        <b>inside</b>
+        <ul style="list-style-position:inside">
+        <li>
+        HTML is  not a programming language it is a markup  language. HTML is  not a programming language it is a    markup language. HTML is  not a programming language   it is a markup language. HTML is  not a programming   language it is a markup language. HTML is  not a  programming language it is a markup language. HTML is    not a programming language it is a markup language.   HTML is  not a programming language it is a markup    language.
+        </li>
+        <li>
+        CSS is used to give style to the html page. CSS is  used to give style to the html page. CSS is used to  give style to the html page. CSS is used to give style   to the html page. CSS is used to give style to the    html page. CSS is used to give style to the html page.     CSS is used to give style to the html page. CSS is  used to give style to the html page. CSS is used to  give style to the html page.
+        </li>
+        </ul>
+        <b>outside default</b>
+        <ul style="list-style-position:outside">
+        <li>
+        HTML is  not a programming language it is a markup  language. HTML is  not a programming language it is a    markup language. HTML is  not a programming language   it is a markup language. HTML is  not a programming   language it is a markup language. HTML is  not a  programming language it is a markup language. HTML is    not a programming language it is a markup language.   HTML is  not a programming language it is a markup    language.
+        </li>
+        <li>
+        CSS is used to give style to the html page. CSS is  used to give style to the html page. CSS is used to  give style to the html page. CSS is used to give style   to the html page. CSS is used to give style to the    html page. CSS is used to give style to the html page.     CSS is used to give style to the html page. CSS is  used to give style to the html page. CSS is used to  give style to the html page.
+        </li>
+        </ul>
+        </div>
+
+        <h1>Styling Table</h1>
+
+        <h3>CODE</h3>
+<pre>
+----CSS----
+.table {
+    border-collapse: collapse;
+}
+.table th , .table td {
+    border: 6px solid black;
+    /**
+    border collapse default value is seprate which  has two seprate borders
+    border-collapse: collapse; will set only    single line border
+    **/
+}
+----HTML----
+&lt;table class="table" style="width:80%;margin:0    auto;"&gt;
+&lt;colgroup&gt;
+&lt;col span="1" style="background-color:lightgreen;"&  gt;
+&lt;col&gt;
+&lt;col&gt;
+&lt;col span="6" style="background-color:orange;"&gt;
+&lt;/colgroup&gt;
+&lt;tr&gt;
+&lt;th rowspan="2" style="background-color:lightblue;"& gt;DAY&lt;/th&gt; &lt;th colspan="8"     style="background-color:gray;"&gt;TIME&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;!--
+        larger than the required rowspan or colspan     remove the border
+    --&gt;
+&lt;th&gt;09-10&lt;/th&gt; &lt;th&gt;10-11&lt;/th&gt; & lt;th&gt;11-12&lt;/th&gt; &lt;th&gt;12-12:30&lt;/th& gt; &lt;th rowspan="3"&gt;LUNCH&lt;/th&gt; &lt;th&gt;    01:30-02&lt;/th&gt; &lt;th&gt;02-03&lt;/th&gt; &lt;th&  gt;03-04:30&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;Monday&lt;/th&gt; &lt;td&gt;&lt;/td&gt; &lt;  td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/   td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;    td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;Tuesday&lt;/th&gt; &lt;td&gt;&lt;/td&gt; &lt; td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/  td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;   td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+        <h3>OUTPUT</h3>
+        <div class="output">
+        <table class="table" style="width:80%;margin:0  auto;">
+        <colgroup>
+        <col span="1" style="background-color:lightgreen;">
+        <col>
+        <col>
+        <col span="6" style="background-color:orange;">
+        </colgroup>
+        <tr>
+        <th rowspan="2" style="background-color:lightblue;  ">DAY</th> <th colspan="8"    style="background-color:gray;">TIME</th>
+        </tr>
+        <tr>
+            <!--
+                larger than the required rowspan or colspan     remove the border
+            -->
+        <th>09-10</th> <th>10-11</th> <th>11-12</th>    <th>12-12:30</th> <th rowspan="3">LUNCH</th>   <th>01:30-02</th> <th>02-03</th> <th>03-04:30</th>
+        </tr>
+        <tr>
+        <th>Monday</th> <td></td> <td></td> <td></td> <td></    td> <td></td> <td></td> <td></td>
+        </tr>
+        <tr>
+        <th>Tuesday</th> <td></td> <td></td> <td></td> <td></   td> <td></td> <td></td> <td></td>
+        </tr>
+        </table>
+        <div>
+    </section>
     <h2><a href="#nav">Back to Nav Link</a></h2><hr>
 
     <!----------------------------- Day16 ------------------------------>
     
     <h2 id="day16">Day16</h2>
 
-    <div class="d6">
-        <h1>Position</h1>
+    <section class="d6">
+    <h1>Position</h1>
     <h3>Static</h3>
     <p>This is the default position of every elements. These elements can placed to only it's default position.</p>
     
@@ -1888,14 +1880,14 @@
     <p>Scroll to the bottom to see the working of sticky position.</p>
     <div style="height: 150vh;"></div>
     <p>Successfully tested working of sticky position</p>
-    </div>
+    </section>
     <h2><a href="#nav">Back to Nav Link</a></h2><hr>
 
     <!----------------------------- Day17 ------------------------------>
     
     <h2 id="day17">Day17</h2>
 
-    <div class="d7">
+    <section class="d7">
         <h1>Transform</h1>
         <p>Transform explanation</p>
         <!-------------------- SCALE -------------------->
@@ -2270,14 +2262,14 @@
                 <div class="child translate2"></div>
             </div>
         </div>
-    </div>
+    </section>
     <h2><a href="#nav">Back to Nav Link</a></h2><hr>
 
     <!----------------------------- Day18 ------------------------------>
     
     <h2 id="day18">Day18</h2>
 
-    <div class="d8">
+    <section class="d8">
         <h1>Transition</h1>
         <b>CODE</b>
         <p>
@@ -2353,14 +2345,14 @@
                 <div class="child-ani"></div>
             </div>
         </div>
-    </div>
+    </section>
     <h2><a href="#nav">Back to Nav Link</a></h2><hr>
 
     <!----------------------------- Day19 ------------------------------>
     
     <h2 id="day19">Day19</h2>
 
-    <div class="d9">
+    <section class="d9">
         <h1>Card Flip</h1>
         <b>CODE</b>
         <p>
@@ -2428,156 +2420,105 @@
         <!--------------------- CUBE --------------------->
         <h1>Cube</h1>
         <b>CODE</b>
-        <p>
-            ----CSS----<br><br>
-            .cube-parent {<br>
-                width: 200px;<br>
-                height: 200px;<br>
-                margin: 0px auto;<br>
-                position: relative;<br>
-                perspective: 400px;<br>
-            }<br>
-            .fly {<br>
-                position: absolute;<br>
-            }<br>
-            .f {<br>
-                left: -160px;<br>
-                top: 90px;<br>
-            }<br>
-            .fl {<br>
-                left: -130px;<br>
-                top: 90px;<br>
-            }<br>
-            .ba {<br>
-                right: -80px;<br>
-                bottom: 90px;<br>
-            }<br>
-            .bal {<br>
-                right: -140px;<br>
-                bottom: 86px;<br>
-            }<br>
-            .t {<br>
-                top: -60px;<br>
-                left: 60px;<br>
-            }<br>
-            .tl {<br>
-                top: -60px;<br>
-                left: 90px;<br>
-            }<br>
-            .r {<br>
-                right: -80px;<br>
-            }<br>
-            .rl {<br>
-                right: -150px;<br>
-            }<br>
-            .b {<br>
-                bottom: -80px;<br>
-            }<br>
-            .bl {<br>
-                bottom: -82px;<br>
-                left: 30px;<br>
-            }<br>
-            .l {<br>
-                left: -160px;<br>
-            }<br>
-            .ll {<br>
-                left: -130px;<br>
-            }<br>
-            .cube-container {<br>
-                width: 100%;<br>
-                height: 100%;<br>
-                position: relative;<br>
-                transform-style: preserve-3d;<br>
-                transition: transform 1s ease-in-out ;<br>
-                -webkit-transition: transform 1s ease-in-out ;<br>
-                -moz-transition: transform 1s ease-in-out ;<br>
-            }<br>
-            .cube-child {<br>
-                width: 100%;<br>
-                height: 100%;<br>
-                position: absolute;<br>
-                text-align: center;<br>
-                line-height: 160px;<br>
-                font-size: 2.2rem;<br>
-                opacity: .75;<br>
-            }<br>
-            .cube-top {<br>
-                background-color: rgba(130, 189, 107);<br>
-                transform: rotateX(90deg) translateZ(100px);<br>
-            }<br>
-            .cube-right {<br>
-                background-color: rgba(139, 0, 139);<br>
-                transform: rotateY(90deg) translateZ(100px);<br>
-            }<br>
-            .cube-bottom {<br>
-                background-color: rgba(189, 183, 107);<br>
-                transform: rotateX(-90deg) translateZ(100px);<br>
-            }<br>
-            .cube-left {<br>
-                background-color: rgba(0, 139, 69);<br>
-                transform: rotateY(-90deg) translateZ(100px);<br>
-            }<br>
-            .cube-front {<br>
-                background-color: rgb(0, 130, 139);<br>
-                transform: translateZ(100px);<br>
-            }<br>
-            .cube-back {<br>
-                background-color: rgb(0, 130, 139);<br>
-                transform: rotateX(-180deg) translateZ(100px);<br>
-            }<br>
-            <br>
-            input[id=f]:checked ~ .cube-container {<br>
-                transform: rotateX(-0deg);<br>
-            }<br>
-            input[id=ba]:checked ~ .cube-container {<br>
-                transform: rotateX(-180deg);<br>
-            }<br>
-            input[id=t]:checked ~ .cube-container {<br>
-                transform: rotateX(-90deg);<br>
-            }<br>
-            input[id=r]:checked ~ .cube-container {<br>
-                transform: rotateX(90deg);<br>
-                transform: rotateY(-90deg);<br>
-            }<br>
-            input[id=b]:checked ~ .cube-container {<br>
-                transform: rotateX(90deg);<br>
-            }<br>
-            input[id=l]:checked ~ .cube-container {<br>
-                transform: rotateX(-90deg);<br>
-                transform: rotateY(90deg);<br>
-            }<br><br>
-            ----HTML----<br><br>
-            &lt;div class="cube-parent"&gt;<br>
-            &lt;input type="radio" id="f" value="f" name="cube" class="fly f" checked&gt;<br>
-            &lt;label class="fly fl" for="f"&gt;FRONT&lt;/label&gt;<br>
-            &lt;input type="radio" id="ba" value="ba" name="cube" class="fly ba"&gt;<br>
-            &lt;label class="fly bal" for="ba"&gt;BACK&lt;/label&gt;<br>
-            &lt;input type="radio" id="t" value="t" name="cube" class="fly t"&gt;<br>
-            &lt;label class="fly tl" for="t"&gt;TOP&lt;/label&gt;<br>
-            &lt;input type="radio" id="r" value="r" name="cube" class="fly r"&gt;<br>
-            &lt;label class="fly rl" for="r"&gt;RIGHT&lt;/label&gt;<br>
-            &lt;input type="radio" id="b" value="b" name="cube" class="fly b"&gt;<br>
-            &lt;label class="fly bl" for="b"&gt;BOTTOM&lt;/label&gt;<br>
-            &lt;input type="radio" id="l" value="l" name="cube" class="fly l"&gt;<br>
-            &lt;label class="fly ll" for="l"&gt;LEFT&lt;/label&gt;<br>
-            &lt;div class="cube-container"&gt;<br>
-                &lt;div class="cube-child cube-top"&gt;TOP&lt;/div&gt;<br>
-                &lt;div class="cube-child cube-right"&gt;RIGHT&lt;/div&gt;<br>
-                &lt;div class="cube-child cube-bottom"&gt;BOTTOM&lt;/div&gt;<br>
-                &lt;div class="cube-child cube-left"&gt;LEFT&lt;/div&gt;<br>
-                &lt;div class="cube-child cube-front"&gt;FRONT&lt;/div&gt;<br>
-                &lt;div class="cube-child cube-back"&gt;BACK&lt;/div&gt;<br>
-            &lt;/div&gt;<br>
-        &lt;/div&gt;<br>
-        </p>
+<pre>
+-----CSS-------
+.d9 .cube-parent {
+    width: 200px;
+    height: 360px;
+    margin: 0px auto 140px auto;
+    position: relative;
+    perspective: 400px;
+}
+.d9 .cube-container {
+    width: 200px;
+    height: 200px;
+    margin: 40px auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out ;
+    -webkit-transition: transform 1s ease-in-out ;
+    -moz-transition: transform 1s ease-in-out ;
+}
+.d9 .cube-child {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    line-height: 160px;
+    font-size: 2.2rem;
+    opacity: .75;
+}
+.d9 .cube-top {
+    background-color: rgba(130, 189, 107);
+    transform: rotateX(90deg) translateZ(100px);
+}
+.d9 .cube-right {
+    background-color: rgba(139, 0, 139);
+    transform: rotateY(90deg) translateZ(100px);
+}
+.d9 .cube-bottom {
+    background-color: rgba(189, 183, 107);
+    transform: rotateX(-90deg) translateZ(100px);
+}
+.d9 .cube-left {
+    background-color: rgba(0, 139, 69);
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.d9 .cube-front {
+    background-color: rgb(0, 130, 139);
+    transform: translateZ(100px);
+}
+.d9 .cube-back {
+    background-color: rgb(0, 130, 139);
+    transform: rotateX(-180deg) translateZ(100px);
+}
+.d9 input[id=f]:checked ~ .cube-container {
+    transform: rotateX(-0deg);
+}
+.d9 input[id=ba]:checked ~ .cube-container {
+    transform: rotateX(-180deg);
+}
+.d9 input[id=t]:checked ~ .cube-container {
+    transform: rotateX(-90deg);
+}
+.d9 input[id=r]:checked ~ .cube-container {
+    transform: rotateX(90deg);
+    transform: rotateY(-90deg);
+}
+.d9 input[id=b]:checked ~ .cube-container {
+    transform: rotateX(90deg);
+}
+.d9 input[id=l]:checked ~ .cube-container {
+    transform: rotateX(-90deg);
+    transform: rotateY(90deg);
+}
+----HTML-----
+&lt;div class="cube-parent"&gt;
+    &lt;input type="radio" id="f" value="f" name="cube" class="fly f" checked&gt;&lt;label class="fly fl" for="f"&gt;FRONT&lt;/label&gt;&lt;br&gt;
+    &lt;input type="radio" id="ba" value="ba" name="cube" class="fly ba"&gt;&lt;label class="fly bal" for="ba"&gt;BACK&lt;/label&gt;&lt;br&gt;
+    &lt;input type="radio" id="t" value="t" name="cube" class="fly t"&gt;&lt;label class="fly tl" for="t"&gt;TOP&lt;/label&gt;&lt;br&gt;
+    &lt;input type="radio" id="r" value="r" name="cube" class="fly r"&gt;&lt;label class="fly rl" for="r"&gt;RIGHT&lt;/label&gt;&lt;br&gt;
+    &lt;input type="radio" id="b" value="b" name="cube" class="fly b"&gt;&lt;label class="fly bl" for="b"&gt;BOTTOM&lt;/label&gt;&lt;br&gt;
+    &lt;input type="radio" id="l" value="l" name="cube" class="fly l"&gt;&lt;label class="fly ll" for="l"&gt;LEFT&lt;/label&gt;&lt;br&gt;
+    &lt;div class="cube-container"&gt;
+        &lt;div class="cube-child cube-top"&gt;TOP&lt;/div&gt;
+        &lt;div class="cube-child cube-right"&gt;RIGHT&lt;/div&gt;
+        &lt;div class="cube-child cube-bottom"&gt;BOTTOM&lt;/div&gt;
+        &lt;div class="cube-child cube-left"&gt;LEFT&lt;/div&gt;
+        &lt;div class="cube-child cube-front"&gt;FRONT&lt;/div&gt;
+        &lt;div class="cube-child cube-back"&gt;BACK&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;            
+</pre>
         <b>OUTPUT</b>
+        <div class="output">
         <div class="cube-parent">
-            <input type="radio" id="f" value="f" name="cube" class="fly f" checked><label class="fly fl" for="f">FRONT</label>
-            <input type="radio" id="ba" value="ba" name="cube" class="fly ba"><label class="fly bal" for="ba">BACK</label>
-            <input type="radio" id="t" value="t" name="cube" class="fly t"><label class="fly tl" for="t">TOP</label>
-            <input type="radio" id="r" value="r" name="cube" class="fly r"><label class="fly rl" for="r">RIGHT</label>
-            <input type="radio" id="b" value="b" name="cube" class="fly b"><label class="fly bl" for="b">BOTTOM</label>
-            <input type="radio" id="l" value="l" name="cube" class="fly l"><label class="fly ll" for="l">LEFT</label>
+            <input type="radio" id="f" value="f" name="cube" class="fly f" checked><label class="fly fl" for="f">FRONT</label><br>
+            <input type="radio" id="ba" value="ba" name="cube" class="fly ba"><label class="fly bal" for="ba">BACK</label><br>
+            <input type="radio" id="t" value="t" name="cube" class="fly t"><label class="fly tl" for="t">TOP</label><br>
+            <input type="radio" id="r" value="r" name="cube" class="fly r"><label class="fly rl" for="r">RIGHT</label><br>
+            <input type="radio" id="b" value="b" name="cube" class="fly b"><label class="fly bl" for="b">BOTTOM</label><br>
+            <input type="radio" id="l" value="l" name="cube" class="fly l"><label class="fly ll" for="l">LEFT</label><br>
             <div class="cube-container">
                 <div class="cube-child cube-top">TOP</div>
                 <div class="cube-child cube-right">RIGHT</div>
@@ -2587,14 +2528,15 @@
                 <div class="cube-child cube-back">BACK</div>
             </div>
         </div>
-    </div>
+        </div>
+    </section>
     <h2><a href="#nav">Back to Nav Link</a></h2><hr>
 
     <!----------------------------- Day20 ------------------------------>
     
     <h2 id="day20">Day20</h2>
 
-    <div class="d0">
+    <section class="d0">
         <h1>Filter</h1>
         <p>
             The filter CSS property applies graphical effects like blur or color shift to an element including it's border
@@ -2749,48 +2691,41 @@
         </div>
         <h1>Backdrop-Filter</h1>
         <p>
-            Backdrop-Filter only applies effects to the background.
-        </p>
-        <h3>CODE</h3>
-        <p>
-            ----CSS----<br><br>
-            .backdrop {<br>
-                width: 80vw;<br>
-                max-width: 240px;<br>
-                height: 80vw;<br>
-                max-height: 240px;<br>
-                font-size: 3rem;<br>
-                background-color: rgba(128, 255, 0, 0.747);<br>
-                -webkit-backdrop-filter: invert(100%);<br>
-                backdrop-filter: invert(100%);<br>
-            }<br>
-            ----HTML----<br><br>
-            &lt;div class="backdrop"&gt;<br>
-                Back drop<br>
-            &lt;/div&gt;<br><br>
+            Backdrop-Filter only applies effects to the background.<br>
             <b>Backdrop-Filter is not widwly supported.<a href="https://caniuse.com/css-backdrop-filter">caniuse</a></b>
         </p>
-        <h3>OUTPUT</h3>
-        <div class="backdrop">
-            Back drop
-        </div>
-        <h1>Break</h1>
-        <p>
-            <b>Break After -</b> changes page break after an element.<br>
-            <b>Break Before -</b> changes page break before an element.<br>
-            <b>Break inside -</b> changes page break inside an element.
-        </p>
         <h3>CODE</h3>
-        <p>
-
-        </p>
+<pre>
+-----CSS-------
+.background-img {
+    background: url(image.jpeg) no-repeat;
+    width: 100vw;
+    max-width: 300px;
+    height: 300px;
+}
+.backdrop {
+    width: 200px;
+    height: 200px;
+    font-size: 3rem;
+    background: rgba(128, 128, 128, 0.5);
+    backdrop-filter: blur(10px);
+}
+-----HTML------
+&lt;div class="background-img"&gt;
+    &lt;div class="backdrop"&gt;
+    Back drop
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
         <h3>OUTPUT</h3>
-        <div>
-            <span class="break-after">break-after</span>
-            <span class="break-before">break-before</span>
-            <div class="break-inside">Avoid a page/column/region break inside the element</div>
+        <div class="output">
+            <div class="background-img">
+                <div class="backdrop">
+                    Back drop
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 <h2><a href="#nav">Back to Nav Link</a></h2>
 <hr>
 <h1><a href="../">Back to Home Page</a></h1>
