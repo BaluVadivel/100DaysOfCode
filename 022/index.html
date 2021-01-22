@@ -7,17 +7,29 @@
     <style>
         html, body {
         width: 100%;
-        margin: 0px 0px 200px 0px;
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
         min-height: 100%;
         scroll-behavior: smooth;
+        color: black;
         background-color: white;
         font-size: 18px;
         }
-        * {
-            box-sizing: border-box;
+        a:visited {
+        color:#0000FF;
         }
         pre {
-            overflow-x: auto;
+            overflow-x: scroll;
+        }
+        .output {
+            overflow-x: scroll;
+            box-sizing: border-box;
+            border: 2px solid rgba(220, 20, 60, 0.6);
+            margin: 12px 0px;
+        }
+        * {
+            box-sizing: border-box;
         }
         .container {
             width: 100%;
@@ -112,22 +124,26 @@
 &lt;/div&gt;
 </pre>
     <h4>OUTPUT without grid</h4>
-    <div class="container">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
+    <div class="output">
+        <div class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
     </div>
-    <h4>OUTPUT with grid</h4>
-    <div class="grid container">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
+    <h4>OUTPUT without grid</h4>
+    <div class="output">
+        <div class="grid container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
     </div>
 
     <h1>Container Properties</h1>
@@ -167,13 +183,15 @@
 &lt;/div&gt;
 </pre>
     <h3>OUTPUT</h3>
-    <div class="grid container grid-template-columns">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
+    <div class="output">
+        <div class="grid container grid-template-columns">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
     </div>
     <h2>auto fill in minmax</h2>
     <p>
@@ -198,10 +216,12 @@
 &lt;/div&gt;
 </Pre>
     <h3>OUTPUT</h3>
-    <div class="grid container grid-template-columns-autofill">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+    <div class="output">
+        <div class="grid container grid-template-columns-autofill">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
     </div>
     <h2>auto fit in minmax</h2>
     <p>
@@ -224,10 +244,12 @@
 &lt;/div&gt;
 </pre>
     <h3>OUTPUT</h3>
-    <div class="grid container grid-template-columns-autofit">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+    <div class="output">
+        <div class="grid container grid-template-columns-autofit">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
     </div>
 
     <h2>grid-template-rows</h2>
@@ -258,13 +280,15 @@
 &lt;/div&gt;
 </pre>
     <h3>OUTPUT</h3>
-    <div class="grid container grid-template-rows">
-        <div class="one">1</div>
-        <div class="two">2</div>
-        <div class="three">3</div>
-        <div class="four">4</div>
-        <div class="five">5</div>
-        <div class="six">6</div>
+    <div class="output">
+        <div class="grid container grid-template-rows">
+            <div class="one">1</div>
+            <div class="two">2</div>
+            <div class="three">3</div>
+            <div class="four">4</div>
+            <div class="five">5</div>
+            <div class="six">6</div>
+        </div>
     </div>
     <h2>grid-template rows &amp; columns</h2>
     <p>
@@ -297,13 +321,15 @@
 &lt;/div&gt;
 </pre>
     <h3>OUTPUT</h3>
-    <div class="grid container grid-template-rows grid-template-columns">
-        <div class="one">1</div>
-        <div class="two">2</div>
-        <div class="three">3</div>
-        <div class="four">4</div>
-        <div class="five">5</div>
-        <div class="six">6</div>
+    <div class="output">
+        <div class="grid container grid-template-rows grid-template-columns">
+            <div class="one">1</div>
+            <div class="two">2</div>
+            <div class="three">3</div>
+            <div class="four">4</div>
+            <div class="five">5</div>
+            <div class="six">6</div>
+        </div>
     </div>
 </body>
 </html>

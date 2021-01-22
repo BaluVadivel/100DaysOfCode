@@ -6,19 +6,30 @@
     <title>Day 23</title>
     <style>
         html, body {
-            width: 100%;
-            margin: 0px 0px 200px 0px;
-            min-height: 100%;
-            scroll-behavior: smooth;
-            color: black;
-            background-color: white;
-            font-size: 18px;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+        }
+        a:visited {
+        color:#0000FF;
+        }
+        pre {
+            overflow-x: scroll;
+        }
+        .output {
+            overflow-x: scroll;
+            box-sizing: border-box;
+            border: 2px solid rgba(220, 20, 60, 0.6);
+            margin: 12px 0px;
         }
         * {
             box-sizing: border-box;
-        }
-        pre {
-            overflow-x: auto;
         }
         
         /************* Grid auto *************/
@@ -316,17 +327,19 @@
         <strong>This the default manner</strong>
         
     </p>
-    <div class="grid auto-rows container grid-template-rows grid-template-columns">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
+    <div class="output">
+        <div class="grid auto-rows container grid-template-rows grid-template-columns">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
     </div>
     <h3>OUTPUT Auto Columns</h3>
     <p>
@@ -334,17 +347,19 @@
         <br>
         Number of Row won't increase only Number of Column will be increased when number of items are higher.
     </p>
-    <div class="grid auto-columns container grid-template-rows grid-template-columns">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
+    <div class="output">
+        <div class="grid auto-columns container grid-template-rows grid-template-columns">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
     </div>
 
     <!--------------- Grid Gap --------------->
@@ -412,43 +427,49 @@
 &lt;/div&gt;
 </pre>
     <h3>OUTPUT row gap</h3>
-    <div class="grid row-gap container gap">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
+    <div class="output">
+        <div class="grid row-gap container gap">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
     </div>
     <h3>OUTPUT column gap</h3>
-    <div class="grid column-gap container gap">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
+    <div class="output">
+        <div class="grid column-gap container gap">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
     </div>
     <h3>OUTPUT grid gap</h3>
-    <div class="grid grid-gap container gap">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
+    <div class="output">
+        <div class="grid grid-gap container gap">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
     </div>
 
     <!--------------- Items --------------->
@@ -518,19 +539,23 @@
 
     <h3>OUTPUT align-center</h3>
     <p>y-axis </p>
-    <div class="grid container items items-align">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+    <div class="output">
+        <div class="grid container items items-align">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
     </div>
     <h3>OUTPUT justify-center</h3>
     <p>x-axis </p>
-    <div class="grid container items items-justify">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+    <div class="output">
+        <div class="grid container items items-justify">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
     </div>
     <h3>OUTPUT place-center</h3>
     <p>
@@ -539,11 +564,13 @@
         <b>or</b>
         <br> single value for both eg: <code>place-items: center;</code>
     </p>
-    <div class="grid container items items-place">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+    <div class="output">
+        <div class="grid container items items-place">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
     </div>
     <h3>OUTPUT without align & justify</h3>
     <p>
@@ -553,13 +580,14 @@
         <br>
         So it stretch the items to occupy it's entire space withou any (visual) gap.
     </p>
-    <div class="grid container items">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+    <div class="output">
+        <div class="grid container items">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
     </div>
-
     <!--------------- Content --------------->
 
     <h1>CONTENT Align Justify Place</h1>
@@ -629,27 +657,33 @@
         <br>
         <code>place-items:start;</code>
     </p>
-    <div class="grid container content">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+    <div class="output">
+        <div class="grid container content">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
     </div>
     <h3>OUTPUT align-center</h3>
     <p>y-axis </p>
-    <div class="grid container content content-align">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+    <div class="output">
+        <div class="grid container content content-align">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
     </div>
     <h3>OUTPUT justify-center</h3>
     <p>x-axis </p>
-    <div class="grid container content content-justify">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+    <div class="output">
+        <div class="grid container content content-justify">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
     </div>
     <h3>OUTPUT place-center</h3>
     <p>
@@ -658,13 +692,14 @@
         <b>or</b>
         <br> single value for both eg: <code>place-content: center;</code>
     </p>
-    <div class="grid container content content-place">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+    <div class="output">
+        <div class="grid container content content-place">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
     </div>
-
     <!------------- template areas -------------->
 
     <h1>Grid container property with grid item property</h1>
@@ -708,13 +743,14 @@
 &lt;/div&gt;
 </pre>
     <h3>OUTPUT</h3>
-    <div class="grid container template-areas">
-        <div class="head">header</div>
-        <div class="main">main</div>
-        <div class="side">side</div>
-        <div class="foot">footer</div>
+    <div class="output">
+        <div class="grid container template-areas">
+            <div class="head">header</div>
+            <div class="main">main</div>
+            <div class="side">side</div>
+            <div class="foot">footer</div>
+        </div>
     </div>
-
     <!------------- template -------------->
 
     <h1>Grid template with grid area</h1>
@@ -763,13 +799,15 @@
 &lt;/div&gt;
 </pre>
     <h3>OUTPUT</h3>
-    <div class="grid container template">
-        <div class="head">header</div>
-        <div class="main">main</div>
-        <div class="side">side</div>
-        <div class="foot">footer</div>
+    <div class="output">
+        <div class="grid container template">
+            <div class="head">header</div>
+            <div class="main">main</div>
+            <div class="side">side</div>
+            <div class="foot">footer</div>
+        </div>
     </div>
-    
+
     <!------------- Grid -------------->
 
     <h1>Grid</h1>
@@ -823,33 +861,38 @@
 &lt;/div&gt;
 </pre>
     <h3>OUTPUT grid for template rows &amp; columns.</h3>
-    <div class="grid container grid-template-row-col">
-        <div>header</div>
-        <div>main</div>
-        <div>side</div>
-        <div>footer</div>
-        <div>header</div>
-        <div>main</div>
+    <div class="output">
+        <div class="grid container grid-template-row-col">
+            <div>header</div>
+            <div>main</div>
+            <div>side</div>
+            <div>footer</div>
+            <div>header</div>
+            <div>main</div>
+        </div>
     </div>
     <h3>OUTPUT grid for auto flow rows &amp; template columns.</h3>
-    <div class="grid container grid-auto-flow-row">
-        <div>header</div>
-        <div>main</div>
-        <div>side</div>
-        <div>footer</div>
-        <div>header</div>
-        <div>main</div>
+    <div class="output">
+        <div class="grid container grid-auto-flow-row">
+            <div>header</div>
+            <div>main</div>
+            <div>side</div>
+            <div>footer</div>
+            <div>header</div>
+            <div>main</div>
+        </div>
     </div>
     <h3>OUTPUT grid for auto flow columns &amp; template rows.</h3>
-    <div class="grid container grid-auto-flow-column">
-        <div>header</div>
-        <div>main</div>
-        <div>side</div>
-        <div>footer</div>
-        <div>header</div>
-        <div>main</div>
+    <div class="output">
+        <div class="grid container grid-auto-flow-column">
+            <div>header</div>
+            <div>main</div>
+            <div>side</div>
+            <div>footer</div>
+            <div>header</div>
+            <div>main</div>
+        </div>
     </div>
-
     <!------------- Grid row & column line naming -------------->
 
     <h1>Grid row &amp; column line naming</h1>
@@ -938,11 +981,13 @@ grid-template-columns : [col-start] 1fr  [col-2] 1fr  [col-3] 1fr  [col-end] ;
 &lt;/div&gt;
 </pre>
     <h3>OUTOUT</h3>
-    <div class="grid container grid-lines">
-        <div class="h">header</div>
-        <div class="m">main</div>
-        <div class="s">side</div>
-        <div class="f">footer</div>
+    <div class="output">
+        <div class="grid container grid-lines">
+            <div class="h">header</div>
+            <div class="m">main</div>
+            <div class="s">side</div>
+            <div class="f">footer</div>
+        </div>
     </div>
 </body>
 </html>
