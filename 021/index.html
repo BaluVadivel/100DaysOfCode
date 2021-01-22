@@ -7,18 +7,29 @@
     <style>
         html, body {
         width: 100%;
-        margin: 0px 0px 200px 0px;
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
         min-height: 100%;
         scroll-behavior: smooth;
         color: black;
         background-color: white;
         font-size: 18px;
         }
-        * {
-            box-sizing: border-box;
+        a:visited {
+        color:#0000FF;
         }
         pre {
-            overflow-x: auto;
+            overflow-x: scroll;
+        }
+        .output {
+            overflow-x: scroll;
+            box-sizing: border-box;
+            border: 2px solid rgba(220, 20, 60, 0.6);
+            margin: 12px 0px;
+        }
+        * {
+            box-sizing: border-box;
         }
         span {
             margin: 20px 0px 0px 0px;
@@ -277,30 +288,32 @@ div {
 &lt;/nav&gt;
 </pre>
     <h3>OUTPUT</h3>
-    <span>flex-direction:row (Default)</span>
-    <nav class="container flex-dir-row">
-        <div>Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
-    <span>flex-direction:row-reverse</span>
-    <nav class="container flex-dir-row-reverse">
-        <div>Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
-    <span>flex-direction:columm</span>
-    <nav class="container flex-dir-columm">
-        <div>Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
-    <span>flex-direction:columm-reverse</span>
-    <nav class="container flex-dir-columm-reverse">
-        <div>Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
+    <div class="output">
+        <span>flex-direction:row (Default)</span>
+        <nav class="container flex-dir-row">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+        <span>flex-direction:row-reverse</span>
+        <nav class="container flex-dir-row-reverse">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+        <span>flex-direction:columm</span>
+        <nav class="container flex-dir-columm">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+        <span>flex-direction:columm-reverse</span>
+        <nav class="container flex-dir-columm-reverse">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+    </div>
 
     <h1>Flex Wrap</h1>
     <p>
@@ -343,24 +356,26 @@ div {
 &lt;/nav&gt;
 </pre>
     <h3>OUTPUT</h3>
-    <span>flex-wrap: nowrap (default)</span>
-    <nav class="container flex-wrap flex-wrap-nowrap">
-        <div>Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
-    <span>flex-wrap: wrap</span>
-    <nav class="container flex-wrap flex-wrap-wrap">
-        <div>Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
-    <span>flex-wrap: wrap-reverse</span>
-    <nav class="container flex-wrap flex-wrap-wrap-reverse">
-        <div>Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
+    <div class="output">
+        <span>flex-wrap: nowrap (default)</span>
+        <nav class="container flex-wrap flex-wrap-nowrap">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+        <span>flex-wrap: wrap</span>
+        <nav class="container flex-wrap flex-wrap-wrap">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+        <span>flex-wrap: wrap-reverse</span>
+        <nav class="container flex-wrap flex-wrap-wrap-reverse">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+    </div>
 
     <h1>Flex Flow</h1>
     <p>This is the shorthand property to use flex-direction and flex-wrap</p>
@@ -380,12 +395,14 @@ div {
 &lt;/nav&gt;
 </pre>
     <h3>OUTPUT</h3>
-    <span>flex-flow: column wrap</span>
-    <nav class="container flex-flow-column-wrap">
-        <div>Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
+    <div class="output">
+        <span>flex-flow: column wrap</span>
+        <nav class="container flex-flow-column-wrap">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+    </div>
 
     <h1>Justify Content</h1>
     <p>Justify content align the content horizontally(x-axis).</p>
@@ -449,42 +466,44 @@ div {
 &lt;/nav&gt;
 </pre>
     <h3>OUTPUT</h3>
-    <span>Justify-Content:flex-start (Default)</span>
-    <nav class="container justify-flex-start">
-        <div>Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
-    <span>Justify-Content:flex-end</span>
-    <nav class="container justify-flex-end">
-        <div>Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
-    <span>Justify-Content:centre</span>
-    <nav class="container justify-center">
-        <div>Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
-    <span>Justify-Content:space-around</span>
-    <nav class="container justify-space-around">
-        <div>Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
-    <span>Justify-Content:space-between</span>
-    <nav class="container justify-space-between">
-        <div>Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
-    <span>Justify-Content:space-evenly</span>
-    <nav class="container justify-space-evenly">
-        <div>Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
+    <div class="output">
+        <span>Justify-Content:flex-start (Default)</span>
+        <nav class="container justify-flex-start">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+        <span>Justify-Content:flex-end</span>
+        <nav class="container justify-flex-end">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+        <span>Justify-Content:centre</span>
+        <nav class="container justify-center">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+        <span>Justify-Content:space-around</span>
+        <nav class="container justify-space-around">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+        <span>Justify-Content:space-between</span>
+        <nav class="container justify-space-between">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+        <span>Justify-Content:space-evenly</span>
+        <nav class="container justify-space-evenly">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+    </div>
 
     <h1>Align items</h1>
     <p>
@@ -537,30 +556,32 @@ div {
 &lt;/nav&gt;
 </pre>
     <h3>OUTPUT</h3>
-    <span>Align items flex-start (default)</span>
-    <nav class="container align-items align-items-flex-start">
-        <div>Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
-    <span>Align items flex-end</span>
-    <nav class="container align-items align-items-flex-end">
-        <div>Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
-    <span>Align items center</span>
-    <nav class="container align-items align-items-center">
-        <div>Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
-    <span>Align items stretch</span>
-    <nav class="container align-items align-items-stretch">
-        <div>Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
+    <div class="output">
+        <span>Align items flex-start (default)</span>
+        <nav class="container align-items align-items-flex-start">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+        <span>Align items flex-end</span>
+        <nav class="container align-items align-items-flex-end">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+        <span>Align items center</span>
+        <nav class="container align-items align-items-center">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+        <span>Align items stretch</span>
+        <nav class="container align-items align-items-stretch">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+    </div>
 
     <h1>Align self</h1>
     <h3>CODE</h3>
@@ -587,13 +608,16 @@ div {
 &lt;/nav&gt;
 </pre>
     <h3>OUTPUT</h3>
-    <span>Align self only can change the align items values</span>
-    <nav class="container align-items">
-        <div class="align-self-flex-start">start</div>
-        <div class="align-self-flex-end">end</div>
-        <div class="align-self-center">center</div>
-        <div class="align-self-stretch">stretch</div>
-    </nav>
+    <div class="output">
+        <span>Align self only can change the align items values</span>
+        <nav class="container align-items">
+            <div class="align-self-flex-start">start</div>
+            <div class="align-self-flex-end">end</div>
+            <div class="align-self-center">center</div>
+            <div class="align-self-stretch">stretch</div>
+        </nav>
+    </div>
+
     <h1>Align Content</h1>
     <p>
         <b>align content</b> which place all the child items to corresponding position based on it's width height.
@@ -633,24 +657,26 @@ div {
 &lt;/nav&gt;
 </pre>
     <h3>OUTPUT</h3>
-    <span>align-content: center;</span>
-    <nav class="container align-item-content align-content-center">
-        <div>start</div><div>end</div><div>center</div><div>stretch</div>
-        <div>start</div><div>end</div><div>center</div><div>stretch</div>
-        <div>start</div><div>end</div><div>center</div><div>stretch</div>
-        <div>start</div><div>end</div><div>center</div><div>stretch</div>
-        <div>start</div><div>end</div><div>center</div><div>stretch</div>
-        <div>start</div><div>end</div><div>center</div><div>stretch</div>
-    </nav>
-    <span>align-items: center;</span>
-    <nav class="container align-item-content align-item-center">
-        <div>start</div><div>end</div><div>center</div><div>stretch</div>
-        <div>start</div><div>end</div><div>center</div><div>stretch</div>
-        <div>start</div><div>end</div><div>center</div><div>stretch</div>
-        <div>start</div><div>end</div><div>center</div><div>stretch</div>
-        <div>start</div><div>end</div><div>center</div><div>stretch</div>
-        <div>start</div><div>end</div><div>center</div><div>stretch</div>
-    </nav>
+    <div class="output">
+        <span>align-content: center;</span>
+        <nav class="container align-item-content align-content-center">
+            <div>start</div><div>end</div><div>center</div><div>stretch</div>
+            <div>start</div><div>end</div><div>center</div><div>stretch</div>
+            <div>start</div><div>end</div><div>center</div><div>stretch</div>
+            <div>start</div><div>end</div><div>center</div><div>stretch</div>
+            <div>start</div><div>end</div><div>center</div><div>stretch</div>
+            <div>start</div><div>end</div><div>center</div><div>stretch</div>
+        </nav>
+        <span>align-items: center;</span>
+        <nav class="container align-item-content align-item-center">
+            <div>start</div><div>end</div><div>center</div><div>stretch</div>
+            <div>start</div><div>end</div><div>center</div><div>stretch</div>
+            <div>start</div><div>end</div><div>center</div><div>stretch</div>
+            <div>start</div><div>end</div><div>center</div><div>stretch</div>
+            <div>start</div><div>end</div><div>center</div><div>stretch</div>
+            <div>start</div><div>end</div><div>center</div><div>stretch</div>
+        </nav>
+    </div>
 
     <h1>positioning flex items</h1>
     <h3>CODE</h3>
@@ -670,11 +696,13 @@ div {
 &lt;/nav&gt;
 </pre>
     <h3>OUTPUT</h3>
-    <nav class="container justify-flex-end position">
-        <div class="home">Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
+    <div class="output">
+        <nav class="container justify-flex-end position">
+            <div class="home">Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+    </div>
 
     <h1>flex property</h1>
     <h3>CODE</h3>
@@ -710,24 +738,26 @@ div {
 &lt;/nav&gt;
 </pre>
     <h3>OUTPUT</h3>
-    <span>Flex value for only one element</span>
-    <nav class="container flex-1">
-        <div class="home">Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
-    <span>Flex value for all element</span>
-    <nav class="container flex-2">
-        <div>Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
-    <span>Flex value for all element but one element has higher flex value</span>
-    <nav class="container flex-2">
-        <div class="home">Home</div>
-        <div>Search</div>
-        <div>Logout</div>
-    </nav>
+    <div class="output">
+        <span>Flex value for only one element</span>
+        <nav class="container flex-1">
+            <div class="home">Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+        <span>Flex value for all element</span>
+        <nav class="container flex-2">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+        <span>Flex value for all element but one element has higher flex value</span>
+        <nav class="container flex-2">
+            <div class="home">Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+    </div>
 
     <h1>Flex grow shrink basis</h1>
     <p>
@@ -772,11 +802,13 @@ div {
 
 </pre>
     <h3>OUTPUT</h3>
-    <nav class="container flex">
-        <div class="home">Home</div>
-        <div class="search">Search</div>
-        <div class="logout">Logout</div>
-    </nav>
+    <div class="output">
+        <nav class="container flex">
+            <div class="home">Home</div>
+            <div class="search">Search</div>
+            <div class="logout">Logout</div>
+        </nav>
+    </div>
 
     <h1>Order</h1>
     <p>This is used to change the order of element</p>
@@ -800,10 +832,12 @@ div {
 &lt;/nav&gt;
 </pre>
     <h3>OUTPUT</h3>
-    <nav class="container order">
-        <div class="home">1 Home</div>
-        <div class="search">2 Search</div>
-        <div class="logout">3 Logout</div>
-    </nav>
+    <div class="output">
+        <nav class="container order">
+            <div class="home">1 Home</div>
+            <div class="search">2 Search</div>
+            <div class="logout">3 Logout</div>
+        </nav>
+    </div>
 </body>
 </html>
