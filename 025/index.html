@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 25</title>
+    <style>
+        html, body {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+        }
+        a:visited {
+        color:#0000FF;
+        }
+        pre {
+            overflow-x: auto;
+        }
+        .output {
+            overflow-x: auto;
+            box-sizing: border-box;
+            border: 2px solid rgba(220, 20, 60, 0.6);
+            margin: 12px 0px;
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+        .d5 a[after]::after {
+            content:"=>";
+        }
+        .d5 span[before]::before {
+            content:"©";
+        }
+        .d5 p.fletter::first-letter {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .d5 p.fline::first-line {
+            color: red;
+        }
+        .d5 p.selection::selection {
+            color: yellow;
+            background-color: darkblue;
+        }
+        @media (prefers-color-scheme: dark) {
+            html, body {
+                color: #eee;
+                background-color: black;
+            }
+            h1 {
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body class="d5">
+    <h1>Day 25</h1><hr>
+
+    <h1>Pseudo Element</h1>
+    <p>
+        pseudo-element is a keyword added to a selector that lets you style a specific part of the selected element.
+    </p>
+    <p>
+        As a rule, double colons (::) should be used instead of a single colon (:). This distinguishes pseudo-classes from pseudo-elements.
+    </p>
+
+    <h2>::after</h2>
+    <p>
+        ::after creates a pseudo-element that is the last child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default.
+    </p>
+    <h3>CODE</h3>
+<pre>
+------CSS------
+
+a::after {
+    content:"&equals;&gt;";
+}
+
+------HTML------
+
+&lt;a href="https://balu.dev"&gt;balu.dev&lt;/a&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <a href="https://balu.dev" after>balu.dev</a>
+    </div>
+
+    <h2>::before</h2>
+    <p>
+        ::before creates a pseudo-element that is the first child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default.
+    </p>
+    <h3>CODE</h3>
+<pre>
+------CSS------
+
+span::before {
+    content:"&copy;";
+}
+
+------HTML------
+
+&lt;span&gt;2020&lt;/span&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <span before>2020</span>
+    </div>
+
+    <h2>::first-letter</h2>
+    <p>
+        ::first-letter CSS pseudo-element applies styles to the first letter of the first line of a block-level element, but only when not preceded by other content (such as images or inline tables).
+    </p>
+    <h3>CODE</h3>
+<pre>
+------CSS------
+
+p::first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+------HTML------
+
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <p class="fletter">This is a paragraph</p>
+    </div>
+
+    <h2>::first-line</h2>
+    <p>
+        ::first-line CSS pseudo-element applies styles to the first line of a block-level element. Note that the length of the first line depends on many factors, including the width of the element, the width of the document, and the font size of the text.
+    </p>
+    <h3>CODE</h3>
+<pre>
+------CSS------
+
+p::first-line {
+    color: red;
+}
+
+------HTML------
+
+&lt;p&gt;
+This is a multiline paragraph. Note that the length of the first line depends on many factors, including the width of the element, the width of the document, and the font size of the text.
+&lt;/p&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <p class="fline">
+            This is a multiline paragraph. Note that the length of the first line depends on many factors, including the width of the element, the width of the document, and the font size of the text.
+        </p>
+    </div>
+
+    <h2>::selection</h2>
+    <p>
+        The ::selection CSS pseudo-element applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text).
+    </p>
+    <h3>CODE</h3>
+<pre>
+------CSS------
+
+p::selection {
+    color: yellow;
+    background-color: darkblue;
+}
+
+------HTML------
+
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <p class="selection">
+            This is a paragraph
+        </p>
+    </div>
+    <h1><a href="../">Back to Home</a></h1>
+</body>
+</html>
