@@ -49,3 +49,9 @@ Am taking this challenge to learn and take notes Everyday. Which helps to revise
 <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/025/screenshot.png" title="Day 25" width="100%">
 
 ### [Back to top](#100DaysOfCode)
+
+## Day 26
+
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/026/screenshot.png" title="Day 26" width="100%">
+
+### [Back to top](#100DaysOfCode)
