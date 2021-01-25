@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 26</title>
+    <style>
+        html, body {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+        }
+        pre {
+            overflow-x: auto;
+        }
+        .output {
+            overflow-x: auto;
+            box-sizing: border-box;
+            border: 2px solid rgba(220, 20, 60, 0.6);
+            margin: 12px 0px;
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+/********** Location pseudo-classes **********/
+        
+        .d6 a[link]:link {
+            color: green;
+        }
+        .d6 a[visited]:visited {
+            color: orange;
+        }
+        .d6 a[any-link]:any-link {
+            color: red;
+        }
+
+/******** User action pseudo-classes ********/
+
+        .d6 a[hover]:hover {
+            color: green;
+        }
+        .d6 a[active]:active {
+            color: darkcyan;
+        }
+        .d6 a[focus]:focus {
+            color: gold;
+        }
+        .d6 p[focus-within]:focus-within {
+            outline: 4px solid red;
+        }
+
+/********* input pseudo-classes *********/
+        
+        .d6 input {
+            margin: 6px 10px;
+        }
+        .d6 input.enabled:enabled {
+            border: 2px solid blue;
+        }
+        .d6 input.disabled:disabled {
+            border: 2px solid red;
+        }
+        .d6 input.read-only:read-only {
+            border: 2px solid gray;
+        }
+        .d6 input.read-write:read-write {
+            border: 2px solid red;
+        }
+        .d6 input.placeholder-shown:placeholder-shown {
+            border: 2px solid red;
+            color: red;
+        }
+        .d6 input[name="default"]:default + label {
+            color: red;
+        }
+        .d6 input[name="checked"]:checked + label {
+            color: red;
+        }
+        .d6 input.valid-invalid:valid {
+            border: 3px solid green;
+        }
+        .d6 input.valid-invalid:invalid {
+            border: 3px solid red;
+        }
+        .d6 input.out-of-range:out-of-range {
+            border: 3px solid red;
+        }
+        .d6 input.required:required {
+            border: 3px solid red;
+        }
+        .d6 input.optional:optional {
+            border: 3px solid green;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            html, body {
+                color: #eee;
+                background-color: black;
+            }
+            h1 {
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body class="d6">
+    <h1>Day 26</h1><hr>
+
+    <h1>Pseudo Classes</h1>
+    <p>
+        A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s). For example, :hover can be used to change a button's color when the user's pointer hovers over it.
+    </p>
+
+    <hr>
+    <h1>Location pseudo-classes</h1>
+    <p>
+        These pseudo-classes relate to links, and to targeted elements within the current document.
+    </p>
+
+    <h2>:link</h2>
+    <p>
+        The :link CSS pseudo-class represents an element that has <b>not yet been visited</b>. It matches every unvisited &lt;a&gt;, &lt;area&gt;, or &lt;link&gt; element that has an href attribute.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+a:link {
+    color: green;
+}
+
+-----HTML-----
+
+&lt;a href="https://balu.dev"&gt;balu.dev&lt;/a&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <a href="https://balu.dev" link>balu.dev</a>
+    </div>
+
+    <h2>:visited</h2>
+    <p>
+        The :visited CSS pseudo-class represents links that the user has already visited. For privacy reasons, the styles that can be modified using this selector are very limited.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+a:visited {
+    color: orange;
+}
+
+-----HTML-----
+
+&lt;a href="https://balu.dev"&gt;balu.dev&lt;/a&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <a href="https://balu.dev" visited>balu.dev</a>
+    </div>
+
+    <h2>:any-link</h2>
+    <p>
+        The :any-link CSS pseudo-class selector represents an element that acts as the source anchor of a hyperlink, independent of whether it has been visited. In other words, it matches every &lt;a&gt;, &lt;area&gt;, or &lt;link&gt; element that has an href attribute. Thus, it matches all elements that match :link or :visited.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+a:any-link {
+    color: red;
+}
+
+-----HTML-----
+
+&lt;a href="https://balu.dev"&gt;balu.dev&lt;/a&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <a href="https://balu.dev" any-link>balu.dev</a>
+    </div>
+    
+    <h1>User action pseudo-classes</h1>
+
+    <h2>:hover</h2>
+    <p>
+        The :hover CSS pseudo-class matches when the user interacts with an element with a pointing device, but does not necessarily activate it. It is generally triggered when the user hovers over an element with the cursor (mouse pointer).
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+a:hover {
+    color: green;
+}
+
+-----HTML-----
+
+&lt;a href="https://balu.dev"&gt;balu.dev&lt;/a&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <a href="https://balu.dev" hover>balu.dev</a>
+    </div>
+
+    <h2>:active</h2>
+    <p>
+        The :active CSS pseudo-class represents an element (such as a button) that is being activated by the user. When using a mouse, "activation" typically starts when the user presses down the primary mouse button.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+a:active {
+    color: darkcyan;
+}
+
+-----HTML-----
+
+&lt;a href="https://balu.dev"&gt;balu.dev&lt;/a&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <a href="https://balu.dev" active>balu.dev</a>
+    </div>
+
+    <h2>:focus</h2>
+    <p>
+        The :focus CSS pseudo-class represents an element (such as a form input) that has received focus. It is generally triggered when the user clicks or taps on an element or selects it with the keyboard's Tab key.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+a:focus {
+    color: gold;
+}
+
+-----HTML-----
+
+&lt;a href="https://balu.dev"&gt;balu.dev&lt;/a&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <a href="https://balu.dev" focus>balu.dev</a>
+    </div>
+
+    <h2>:focus-within</h2>
+    <p>
+        The :focus-within CSS pseudo-class represents an element that has received focus or contains an element that has received focus. In other words, it represents an element that is itself matched by the :focus pseudo-class or has a descendant that is matched by :focus. (This includes descendants in shadow trees.)
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+p:focus-within {
+    outline: 4px solid red;
+}
+
+-----HTML-----
+
+&lt;p&gt;
+    This is a paragraph.&lt;br&gt;
+    This is a &lt;a href="https://balu.dev"&gt;Link&lt;/a&gt;&lt;br&gt;
+    This is a paragraph.
+&lt;/p&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <p focus-within>
+            This is a paragraph.<br>
+            This is a <a href="https://balu.dev">Link</a><br>
+            This is a paragraph.
+        </p>
+    </div>
+
+    <h1>input pseudo-classes</h1>
+
+    <h2>:enabled &amp; :disabled</h2>
+    <p>
+        The <b>:enabled</b> CSS pseudo-class represents any enabled element. An element is enabled if it can be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has a disabled state, in which it can't be activated or accept focus.
+    </p>
+    <p>
+        The <b>:disabled</b> CSS pseudo-class represents any disabled element. An element is disabled if it can't be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has an enabled state, in which it can be activated or accept focus.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+.d6 input:enabled {
+    border: 2px solid blue;
+}
+.d6 input:disabled {
+    border: 2px solid red;
+}
+
+-----HTML-----
+
+&lt;input type="text" placeholder="Name"&gt; &lt;br&gt;
+&lt;input type="email" placeholder="Email" disabled&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <input type="text" placeholder="Name" class="enabled"> <br>
+        <input type="email" placeholder="Email" class="disabled" disabled>
+    </div>
+
+    <h2>:read-only &amp; :read-write</h2>
+    <p>
+        The <b>:read-only</b> CSS pseudo-class represents an element (such as input or textarea) that is not editable by the user.
+    </p>
+    <p>
+        The <b>:read-write</b> CSS pseudo-class represents an element (such as input or textarea) that is editable by the user.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+.d6 input.read-only:read-only {
+    border: 2px solid gray;
+}
+.d6 input.read-write:read-write {
+    border: 2px solid red;
+}
+
+-----HTML-----
+
+&lt;input type="text" value="read-only" readonly&gt; &lt;br&gt;
+&lt;input type="text" value="read-write"&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <input type="text" class="read-only" value="read-only" readonly> <br>
+        <input type="text" class="read-write" value="read-write">
+    </div>
+
+    <h2>:placeholder-shown</h2>
+    <p>
+        The <b>:placeholder-shown</b> CSS pseudo-class represents any &lt;input&gt; or &lt;textarea&gt; element that is currently displaying placeholder text.
+    </p>
+    <p>
+        <b>These styles are only applied to element only when it's placeholder text is visible.
+            <br>
+            These styles will be removed once user typing information into that element or it holds some value.
+        </b>
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+input:placeholder-shown {
+    border: 2px solid red;
+    color: red;
+}
+
+-----HTML-----
+
+&lt;input type="text" placeholder="Name"&gt;
+&lt;input type="text" placeholder="Name" value="info"&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <input type="text" placeholder="Name" class="placeholder-shown">
+        <input type="text" placeholder="Name" class="placeholder-shown" value="info">
+    </div>
+
+    <h2>:default &amp; :checked</h2>
+    <p>
+        The :default CSS pseudo-class selects form elements that are the default in a group of related elements.
+    </p>
+    <p>
+        The :checked CSS pseudo-class selector represents any radio (&lt;input type="radio"&gt;), checkbox (&lt;input type="checkbox"&gt;), or option (&lt;option&gt; in a &lt;select&gt;) element that is checked or toggled to an on state.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+.d6 input[name="default"]:default + label {
+    color: red;
+}
+.d6 input[name="checked"]:checked + label {
+    color: red;
+}
+
+-----HTML-----
+
+&lt;div&gt;DEFAULT&lt;/div&gt;
+&lt;input type="radio" name="default" id="male" checked&gt;
+&lt;label for="male"&gt;Male&lt;/label&gt;
+&lt;input type="radio" name="default" id="female"&gt;
+&lt;label for="female"&gt;Female&lt;/label&gt;
+&lt;div&gt;CHECKED&lt;/div&gt;
+&lt;input type="radio" name="checked" id="c-male" checked&gt;
+&lt;label for="c-male"&gt;Male&lt;/label&gt;
+&lt;input type="radio" name="checked" id="c-female"&gt;
+&lt;label for="c-female"&gt;Female&lt;/label&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <p>
+        Click the radio button other than the defaultly selected radio button to see the difference between the default and checked.
+    </p>
+    <div class="output">
+        <div>DEFAULT</div>
+        <input type="radio" name="default" id="male" checked>
+        <label for="male">Male</label>
+        <input type="radio" name="default" id="female">
+        <label for="female">Female</label>
+        <div>CHECKED</div>
+        <input type="radio" name="checked" id="c-male" checked>
+        <label for="c-male">Male</label>
+        <input type="radio" name="checked" id="c-female">
+        <label for="c-female">Female</label>
+    </div>
+
+    <h2>:valid &comma; :invalid &comma; :out-of-range</h2>
+    <p>
+        The <b>:valid</b> CSS pseudo-class represents any &lt;input&gt; or other &lt;form&gt; element whose contents validate successfully. This allows to easily make valid fields adopt an appearance that helps the user confirm that their data is formatted properly.
+    </p>
+    <p>
+        The <b>:invalid</b> CSS pseudo-class represents any &lt;input&gt; or other &lt;form&gt; element whose contents fail to validate.
+    </p>
+    <p>
+        The <b>:out-of-range</b> CSS pseudo-class represents an &lt;input&gt; element whose current value is outside the range limits specified by the min and max attributes.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+input:valid {
+    border: 3px solid green;
+}
+input:invalid {
+    border: 3px solid red;
+}
+input:out-of-range {
+    border: 3px solid red;
+}
+
+-----HTML-----
+
+&lt;input type="email" placeholder="Email" value="email"&gt; &lt;br&gt;
+&lt;input type="email" placeholder="Email" value="user@domain.com"&gt; &lt;br&gt;
+&lt;input type="number" min="10" max="30" value="34"&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <input type="email" placeholder="Email" class="valid-invalid" value="email"> <br>
+        <input type="email" placeholder="Email" class="valid-invalid" value="user@domain.com"> <br>
+        <input type="number" min="10" max="30"  class="out-of-range" value="34">
+    </div>
+
+    <h2>:required &comma; :optional</h2>
+    <p>
+        The <b>:required</b> CSS pseudo-class represents any &lt;input&gt;, &lt;select&gt;, or &lt;textarea&gt; element that has the required attribute set on it.
+    </p>
+    <p>
+        The <b>:optional</b> CSS pseudo-class represents any &lt;input&gt;, &lt;select&gt;, or &lt;textarea&gt; element that does not have the required attribute set on it.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+input:required {
+    border: 3px solid red;
+}
+input:optional {
+    border: 3px solid green;
+}
+
+-----HTML-----
+
+&lt;input type="text" placeholder="Name" required&gt; &lt;br&gt;
+&lt;input type="text" placeholder="Name"&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <input type="text" placeholder="Name" class="required" required> <br>
+        <input type="text" placeholder="Name" class="optional">
+    </div>
+
+
+
+    <h1><a href="../">Back to Home</a></h1>
+</body>
+</html>
