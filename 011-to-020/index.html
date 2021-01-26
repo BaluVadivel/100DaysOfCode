@@ -86,11 +86,11 @@
     .d3 .wrap {
     width: 100vw;
     max-width: 600px;
-    height: 50vh;
+    height: auto;
     min-height: 100px;
     max-height: 1000px;
     padding: 0px;
-    margin: 0px;
+    margin: 0px auto;
     background-color: #ddd ;
     }
     .d3 .heading {
@@ -153,21 +153,28 @@
 
     /*************** Day14 ***************/
 
-    .d4 .ul  {
-    width: 100%;
+    .d4 .ul {
+    width: auto;
+    min-width: 100%;
+    display: flex;
     margin:0px;
     padding:0px;
     height: 80px;
     background-color: orange;
     }
     .d4 .ul li {
-    display:inline-block;
+    list-style: none;
     height: 100%;
     background-color: #333;
     line-height: 80px;
     font-size: 1.4rem;
-    margin: 0 20px;
-    padding: 0 22px
+    margin: 0 auto;
+    padding: 0 4px;
+    }
+    @media (max-width: 500px){
+        .d4 .ul li {
+            font-size: 1rem;
+        }
     }
     .d4 .ul a {
     text-decoration:none;
@@ -1382,20 +1389,22 @@ overflow
 ---CSS---
 
 .d4-ul {
-width: 100%;
+width: auto;
+min-width: 100%;
+display: flex;
 margin:0px;
 padding:0px;
 height: 80px;
 background-color: orange;
 }
 .d4-ul li {
-display:inline-block;
+list-style: none;
 height: 100%;
-background-color: black;
+background-color: #333;
 line-height: 80px;
 font-size: 1.4rem;
-margin: 0 20px;
-padding: 0 22px
+margin: 0 auto;
+padding: 0 4px;
 }
 .d4-ul a {
 text-decoration:none;
@@ -1411,7 +1420,6 @@ background-color:#ddd;
 &lt;li&gt;&lt;a href="#" &gt;HOME&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#" &gt;ABOUT&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#" &gt;SKILL&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#" &gt;CONTACT&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
         <b>OUTPUT :</b>
@@ -1420,7 +1428,6 @@ background-color:#ddd;
         <li><a href="#">HOME</a></li>
         <li><a href="#">ABOUT</a></li>
         <li><a href="#">SKILL</a></li>
-        <li><a href="#">CONTACT</a></li>
         </ul>
         </div>
 
