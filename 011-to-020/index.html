@@ -305,9 +305,9 @@
         background-color: orange;
         border: 4px solid gray;
     }
-    .d6 .sti {
+    .d6 .sticky {
         width: 100px;
-        height:40px;
+        height: 40px;
         position: sticky;
         top: 0px;
         left: calc( 50vw - 50px );
@@ -345,6 +345,12 @@
         transition-duration: .8s;
         transform: scalex(1.4);
     }
+    .d7 .sy {
+        height: 220px;
+    }
+    .d7 .sy > div {
+        margin-top: 32px;
+    }
     .d7 .scaley:hover {
         transform: scaley(1.4);
     }
@@ -352,10 +358,16 @@
         transform: scale(1.4);
     }
     .d7 .scale2:hover {
-        transform: scale(1.4,2);
+        transform: scale(2,1.4);
     }
     .d7 .skewx:hover {
         transform: skewX(45deg);
+    }
+    .d7 .sky {
+        height: 304px;
+    }
+    .d7 .sky > div {
+        margin-top: 74px;
     }
     .d7 .skewy:hover {
         transform: skewY(45deg);
@@ -380,6 +392,9 @@
     }
     .d7 .translatex:hover {
         transform: translateX(40px);
+    }
+    .d7 .ty {
+        height: 200px;
     }
     .d7 .translatey:hover {
         transform: translateY(40px);
@@ -420,8 +435,14 @@
         background-color: rgba(210, 105, 30, 0.644);
         border: 4px solid gray;
         /* Hover out transition duration */
-        transition: transform .4s ease-in-out 1s;
+        transition: transform .4s ease-in-out .2s;
         transform-origin: right;
+    }
+    .d8 .trans {
+        height: 220px;
+    }
+    .d8 .trans > div {
+        margin-top: 32px;
     }
     .d8 .transform:hover {
         transform: rotateY(180deg) translateX(100%) scale(1.4) skew(30deg);
@@ -459,6 +480,12 @@
         width: 100%;
         padding: 0px;
         margin: 0px;
+    }
+    .d9 .fl {
+        height: 200px;
+    }
+    .d9 .fl > div {
+        margin-top: 30px;
     }
     .d9 .flip-parent {
         width: 240px;
@@ -849,11 +876,11 @@ body {
         <p style="color:rgba(255, 255, 255, 0.2)">Transparency 0.2</p>
         <p style="color:rgba(255, 255, 255, 0.5)">Transparency 0.5</p>
         <p style="color:rgba(255, 255, 255, 0.9)">Transparency 0.9</p>
-        <div>Below image opacity:0.1<div>
+        <div>Below image opacity:0.1</div>
         <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.1">
-        <div>Below image opacity:0.5<div>
+        <div>Below image opacity:0.5</div>
         <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.5">
-        <div>Below image opacity:0.9<div>
+        <div>Below image opacity:0.9</div>
         <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.9">
         </div>
 
@@ -1842,7 +1869,7 @@ CSS is used to give style to the html page. CSS is  used to give style to the ht
         </div>
         <div class="ab-container">
             <div class="parent par-relative">relative
-            <div class="child absolute rel">parent : relative <br> child : absolute</div>
+                <div class="child absolute rel">parent : relative <br> child : absolute</div>
             </div>
         </div>
     </div>
@@ -1876,7 +1903,7 @@ CSS is used to give style to the html page. CSS is  used to give style to the ht
 <pre>
 ----CSS----
 
-.sti {
+.sticky {
     width: 100px;
     height:40px;
     position: sticky;
@@ -1888,11 +1915,11 @@ CSS is used to give style to the html page. CSS is  used to give style to the ht
 
 ----HTML----
 
-&lt;div class="sti"&gt;Sticky&lt;/div&gt;
+&lt;div class="sticky"&gt;Sticky&lt;/div&gt;
 </pre>
     <b>OUTPUT</b>
     <div class="output">
-        <div class="sti">Sticky</div>
+        <div class="sticky">Sticky</div>
         <p>Scroll to the bottom to see the working of sticky position.</p>
         <div style="height: 150vh;"></div>
         <p>Successfully tested working of sticky position</p>
@@ -1952,7 +1979,7 @@ CSS is used to give style to the html page. CSS is  used to give style to the ht
 &lt;/div&gt;
 </pre>
         <b>OUTPUT</b>
-        <div class="output">
+        <div class="output sy">
             <div class="container">
                 <div class="child scaley"></div>
             </div>
@@ -1977,7 +2004,7 @@ CSS is used to give style to the html page. CSS is  used to give style to the ht
 &lt;/div&gt;
 </pre>
         <b>OUTPUT</b>
-        <div class="output">
+        <div class="output sy">
             <div class="container">
                 <div class="child scale1"></div>
             </div>
@@ -1989,7 +2016,7 @@ CSS is used to give style to the html page. CSS is  used to give style to the ht
 ----CSS----
 
 .scale2:hover {
-    transform: scale(1.4,1.8);
+    transform: scale(2,1.4);
 }
 
 ----HTML----
@@ -2001,7 +2028,7 @@ CSS is used to give style to the html page. CSS is  used to give style to the ht
 &lt;/div&gt;
 </pre>
         <b>OUTPUT</b>
-        <div class="output">
+        <div class="output sy">
             <div class="container">
                 <div class="child scale2"></div>
             </div>
@@ -2043,7 +2070,7 @@ CSS is used to give style to the html page. CSS is  used to give style to the ht
 &lt;/div&gt;
 </pre>
         <b>OUTPUT</b>
-        <div class="output">
+        <div class="output sky">
             <div class="container">
                 <div class="child skewy"></div>
             </div>
@@ -2065,7 +2092,7 @@ CSS is used to give style to the html page. CSS is  used to give style to the ht
 &lt;/div&gt;
 </pre>
         <b>OUTPUT</b>
-        <div>
+        <div class="output">
             <div class="container">
                 <div class="child skew1"></div>
             </div>
@@ -2086,7 +2113,7 @@ CSS is used to give style to the html page. CSS is  used to give style to the ht
 &lt;/div&gt;
 </pre>
         <b>OUTPUT</b>
-        <div class="output">
+        <div class="output sky">
             <div class="container">
                 <div class="child skew2"></div>
             </div>
@@ -2105,7 +2132,7 @@ CSS is used to give style to the html page. CSS is  used to give style to the ht
 %lt;/div&gt;
 </pre>
         <b>OUTPUT</b>
-        <div class="output">
+        <div class="output sy">
             <div class="container">
                 <div class="child rotatex"></div>
             </div>
@@ -2124,7 +2151,7 @@ CSS is used to give style to the html page. CSS is  used to give style to the ht
 &lt;/div&gt;<br>
 </pre>
         <b>OUTPUT</b>
-        <div class="output">
+        <div class="output sy">
             <div class="container">
                 <div class="child rotatey"></div>
             </div>
@@ -2143,7 +2170,7 @@ CSS is used to give style to the html page. CSS is  used to give style to the ht
 %lt;/div&gt;
 </pre>
         <b>OUTPUT</b>
-        <div class="output">
+        <div class="output sy">
             <div class="container">
                 <div class="child rotatez"></div>
             </div>
@@ -2163,7 +2190,7 @@ CSS is used to give style to the html page. CSS is  used to give style to the ht
 %lt;/div&gt;
 </pre>
         <b>OUTPUT</b>
-        <div class="output">
+        <div class="output sy">
             <div class="container">
                 <div class="child rotate1"></div>
             </div>
@@ -2205,7 +2232,7 @@ CSS is used to give style to the html page. CSS is  used to give style to the ht
 &lt;/div&gt;
 </pre>
         <b>OUTPUT</b>
-        <div class="output">
+        <div class="output ty">
             <div class="container">
                 <div class="child translatey"></div>
             </div>
@@ -2230,7 +2257,7 @@ perspective:100px;
 &lt;/div&gt;
 </pre>
         <b>OUTPUT</b>
-        <div class="output">
+        <div class="output sky">
             <div class="container">
                 <div class="child translatez"></div>
             </div>
@@ -2297,7 +2324,7 @@ perspective:100px;
     background-color: rgba(210, 105, 30, 0.644);
     border: 4px solid gray;
     /* Hover out transition duration */
-    transition: transform .4s ease-in-out 1s;
+    transition: transform .4s ease-in-out .2s;
     transform-origin: right;
 }
 .transform:hover {
@@ -2311,7 +2338,7 @@ perspective:100px;
 &lt;/div&gt;
 </pre>
         <b>OUTPUT</b>
-        <div class="output">
+        <div class="output trans">
             <div class="container">
                 <div class="child transform"></div>
             </div>
@@ -2421,13 +2448,13 @@ label {
 &lt;div class="flip-parent"&gt;
     &lt;label&gt;hover or click to flip&lt;/label&gt;
     &lt;div class="flip-container"&gt;
-        &lr;div class="flip-child flip-front"&gt;FRONT&lt;/div&gt;
+        &lt;div class="flip-child flip-front"&gt;FRONT&lt;/div&gt;
         &lt;div class="flip-child flip-back"&gt;BACK&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </pre>
         <b>OUTPUT</b>
-        <div class="output">
+        <div class="output fl">
             <div class="flip-parent">
                 <label>hover or click to flip</label>
                 <div class="flip-container">
