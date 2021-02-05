@@ -1,0 +1,6367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Day 11 to 27 at 100Daysofcode</title>
+<meta name="description" content="Balu Vadivel's day 11 to day 27 learing at 100DaysOfCode">
+<meta name="keywords" content="Balu at 100Daysofcode , Balu Vadivel at 100Daysofcode">
+<meta name="author" content="Balu Vadivel">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta rel="canonical" href="https://balu.dev">
+<meta rel="canonical" href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+<style>
+    html, body {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+    }
+
+    pre {
+        overflow-x: auto;
+    }
+    .output {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        box-sizing: border-box;
+        border: 2px solid rgba(220, 20, 60, 0.6);
+        margin: 12px 0px;
+    }
+    a {
+        color: blue;
+    }
+
+    /*************** Day11 ***************/
+
+    .d1 .red {
+        color:red;
+    }
+    .d1 .blue {
+        color:blue;
+    }
+    .d1 #green {
+        color:green;
+    }
+    .d1 h5 {
+        color:orange;
+    }
+    .d1 .type {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    /*************** Day12 ***************/
+
+    .d2 .pseudo::first-letter {
+        font-size: 2rem;
+    }
+    .d2 .pseudo::first-line {
+        color: orangered;
+    }
+    .d2 .sample-class {
+        color:red;
+    }
+    .d2 .a {
+        color:blue;
+    }
+    .d2 .a:hover {
+        color:red;
+    }
+    .d2 .a:active {
+        color:lightgreen;
+    }
+    .d2 .a:visited {
+        color: indigo;
+    }
+    .d2 .a:focus {
+        color: gold;
+    }
+
+    /*************** Day13 ***************/
+
+    .d3 .wrap {
+    width: 100vw;
+    max-width: 600px;
+    height: auto;
+    min-height: 100px;
+    max-height: 1000px;
+    padding: 0px;
+    margin: 0px auto;
+    background-color: #ddd ;
+    }
+    .d3 .heading {
+    background-color: yellow;
+    padding: 0px;
+    margin: 0px;
+    font-size: 2rem;
+    font-weight: bold;
+    }
+    .d3 .paragraph {
+    padding: 0px;
+    margin: 0px;
+    text-indent: 30px;
+    }
+    .d3 .parent {
+    width: 300px;
+    height: 300px;
+    /* margin auto place the container center */
+    margin: 0px auto;
+    border: 4px solid black;
+    padding: 10px;
+    }
+    .d3 .child1 {
+    width: 100px;
+    height: 100px;
+    border: 4px solid gray;
+    background-color: orange;
+    margin: 10px 0px;
+    }
+    .d3 .child2 {
+    width: 100px;
+    height: 100px;
+    border: 4px solid gray;
+    /* box-sizing: border-box; this place the border inside the container so the width won't increase due to border */
+    box-sizing: border-box;
+    background-color: red;
+    margin: 10px 0px;
+    }
+    .d3 .square {
+    width: 90vw;
+    height: 80px;
+    font-size: 1.4rem;
+    }
+    .d3 .overflow-x-hidden {
+    overflow-x:hidden;
+    }
+    .d3-overflow-x-scroll {
+    overflow-x:scroll;
+    }
+    .d3 .overflow-y-hidden {
+    overflow-y:hidden;
+    overflow-x: hidden;
+    }
+    .d3 .overflow-y-scroll {
+    overflow-y:scroll;
+    }
+    .d3 .overflow-hidden {
+        overflow: hidden;
+    }
+
+    /*************** Day14 ***************/
+
+    .d4 .ul {
+    width: auto;
+    min-width: 100%;
+    display: flex;
+    margin:0px;
+    padding:0px;
+    height: 80px;
+    background-color: orange;
+    }
+    .d4 .ul li {
+    list-style: none;
+    height: 100%;
+    background-color: #333;
+    line-height: 80px;
+    font-size: 1.4rem;
+    margin: 0 auto;
+    padding: 0 4px;
+    }
+    @media (max-width: 500px){
+        .d4 .ul li {
+            font-size: 1rem;
+        }
+    }
+    .d4 .ul a {
+    text-decoration:none;
+    color: red;
+    }
+    .d4 .ul li:hover {
+    background-color:#ddd;
+    }
+    .d4 .d4-div {
+    display:inline-block;
+    width: 80px;
+    height: 80px;
+    border: 3px solid gray;
+    margin: 20px;
+    }
+    #d4-bottom-right {
+    box-shadow: 6px 6px red;
+    }
+    #d4-top-left {
+    box-shadow: -6px -6px red;
+    }
+    #d4-top-left-blur {
+    box-shadow: -6px -6px 6px red;
+    }
+    #d4-top-left-blur-spread {
+    box-shadow: -6px -6px 6px 6px red;
+    }
+    #d4-outer-blur {
+    box-shadow: 0 0 4px red;
+    /*Blur always gives a minor spread. If we need more spread we can add 4th value as spread */
+    }
+    #d4-inner-blur {
+    box-shadow: inset 0 0 4px red;
+    /*Blur always gives a minor spread. If we need more spread we can add 4th value as spread */
+    }
+    #d4-single-value {
+    border-radius: 20px;
+    }
+    #d4-circle {
+    border-radius: 50%;
+    text-align: center;
+    }
+    #d4-double-value {
+    border-radius:0 20px;
+    }
+    #d4-multi-value {
+    border-radius:0 10px 20px 40px ;
+    }
+
+    /*************** Day15 ***************/
+
+    .d5 .table {
+    border-collapse: collapse;
+    }
+    .d5 .table th , .d5 .table td {
+    border: 6px solid black;
+    /**
+    border collapse default value is seprate which has two seprate borders
+    border-collapse: collapse; will set only single line border
+    **/
+    }
+
+    /*************** Day16 ***************/
+
+    .d6 {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+    .d6 * {
+        box-sizing: border-box;
+    }
+    .d6 .container {
+        width: 100%;
+        height: 240px;
+        background-color: aqua;
+        display: block;
+        }
+    .d6 .container > div {
+        width: 100px;
+        height: 100px;
+        background-color: rgba(214, 145, 54, 0.644);
+        border: 4px solid gray;
+    }
+    .d6 .relative {
+        position: relative;
+        background-color: rgba(212, 57, 1, 0.637);
+        top: -60px;
+        right: -20px;
+    }
+    .d6 .ab-container {
+        width: 100%;
+        height: 240px;
+        margin: 10px 0px;
+        background-color: aqua;
+        display: flex;
+        border: 10px solid green;
+    }
+    .d6 .ab-container > div {
+        width: 100px;
+        height: 140px;
+        background-color: rgba(214, 145, 54, 0.644);
+        border: 4px solid gray;
+    }
+    .d6 .child {
+        width: 80px;
+        height: 80px;
+        background-color: rgba(87, 0, 168, 0.473);
+    }
+    .d6 .par-relative {
+        position: relative;
+    }
+    .d6 .absolute {
+        font-size: .8rem;
+        position: absolute;
+        top: 0px;
+        right: 140px;
+    }
+    .d6 .rel {
+        left: 140px;
+    }
+    .d6 .fix {
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        top: 0px;
+        right:0px;
+        background-color: orange;
+        border: 4px solid gray;
+    }
+    .d6 .sticky {
+        width: 100px;
+        height: 40px;
+        position: sticky;
+        top: 0px;
+        left: calc( 50vw - 50px );
+        background-color: red;
+        border: 4px solid gray;
+    }
+
+    /*************** Day17 ***************/
+
+    .d7 {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+    .d7 * {
+        box-sizing: border-box;
+    }
+    .d7 .container {
+        width: 150px;
+        height: 150px;
+        margin: 0px auto;
+        background-color: brown;
+        perspective: 400px;
+    }
+    .d7 .child {
+        width: 100%;
+        height: 100%;
+        background-color: chocolate;
+        border: 4px solid green;
+        /* Hover out transition duration */
+        transition: ease-in-out .4s transform;
+    }
+    .d7 .scalex:hover {
+        /* Hover in transition duration */
+        transition-duration: .8s;
+        transform: scalex(1.4);
+    }
+    .d7 .sy {
+        height: 220px;
+    }
+    .d7 .sy > div {
+        margin-top: 32px;
+    }
+    .d7 .scaley:hover {
+        transform: scaley(1.4);
+    }
+    .d7 .scale1:hover {
+        transform: scale(1.4);
+    }
+    .d7 .scale2:hover {
+        transform: scale(2,1.4);
+    }
+    .d7 .skewx:hover {
+        transform: skewX(45deg);
+    }
+    .d7 .sky {
+        height: 304px;
+    }
+    .d7 .sky > div {
+        margin-top: 74px;
+    }
+    .d7 .skewy:hover {
+        transform: skewY(45deg);
+    }
+    .d7 .skew1:hover {
+        transform: skew(45deg);
+    }
+    .d7 .skew2:hover {
+        transform: skew(30deg, 30deg);
+    }
+    .d7 .rotatex:hover {
+        transform: rotateX(45deg);
+    }
+    .d7 .rotatey:hover {
+        transform: rotateY(45deg);
+    }
+    .d7 .rotatez:hover {
+        transform: rotateZ(30deg);
+    }
+    .d7 .rotate1:hover {
+        transform: rotate(45deg);
+    }
+    .d7 .translatex:hover {
+        transform: translateX(40px);
+    }
+    .d7 .ty {
+        height: 200px;
+    }
+    .d7 .translatey:hover {
+        transform: translateY(40px);
+    }
+    .d7 .translatez:hover {
+        transform: translateZ(40px);
+    }
+    .d7 .translate1:hover {
+        transform: translate(40px);
+    }
+    .d7 .translate2:hover {
+        transform: translate(40px, 40px);
+    }
+    .d7 .last {
+        margin-bottom: 100px;
+    }
+
+    /*************** Day18 ***************/
+
+    .d8 {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+    .d8 * {
+        box-sizing: border-box;
+    }
+    .d8 .container {
+        width: 150px;
+        height: 150px;
+        margin: 0px auto;
+        background-color: brown;
+        perspective: 400px;
+    }
+    .d8 .child {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(210, 105, 30, 0.644);
+        border: 4px solid gray;
+        /* Hover out transition duration */
+        transition: transform .4s ease-in-out .2s;
+        transform-origin: right;
+    }
+    .d8 .trans {
+        height: 220px;
+    }
+    .d8 .trans > div {
+        margin-top: 32px;
+    }
+    .d8 .transform:hover {
+        transform: rotateY(180deg) translateX(100%) scale(1.4) skew(30deg);
+    }
+    .d8 .container-ani {
+        width: 300px;
+        height: 300px;
+        margin: 0px auto;
+        background-color: rgb(165, 153, 42);
+        perspective: 400px;
+    }
+    .d8 .child-ani {
+        width: 80px;
+        height: 80px;
+        background-color: rgba(210, 30, 30, 0.644);
+        border: 4px solid gray;
+        animation: name duration timing-function delay iteration-count direction fill-mode;
+        animation: cross 2s ease-in-out 1s infinite alternate both ;
+    }
+    .d8 .child-ani:hover {
+        animation-play-state: paused;
+    }
+    @keyframes cross {
+        from {
+            transform: translateX(0px) translateY(0px);
+        }
+        to {
+            transform: translateX(220px) translateY(220px);
+        }
+    }
+
+    /*************** Day19 ***************/
+
+    .d9 {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+    .d9 .fl {
+        height: 200px;
+    }
+    .d9 .fl > div {
+        margin-top: 30px;
+    }
+    .d9 .flip-parent {
+        width: 240px;
+        height: 160px;
+        margin: 0px auto;
+        perspective: 400px;
+        position: relative;
+    }
+    .d9 .flip-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 1s ease-in-out ;
+        -webkit-transition: transform 1s ease-in-out ;
+        -moz-transition: transform 1s ease-in-out ;
+        backface-visibility: hidden;
+    }
+    .d9 .flip-parent > label {
+        position: absolute;
+        top: -24px;
+        text-align: center;
+        width: 100%;
+    }
+    .d9 .flip-child {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 20px;
+        text-align: center;
+        line-height: 160px;
+        backface-visibility: hidden;
+        font-size: 2.4rem;
+    }
+    .d9 .flip-front {
+        background-color: rgba(220, 20, 60, 0.699);
+    }
+    .d9 .flip-back {
+        background-color: rgba(184, 135, 11, 0.664);
+        transform: rotateX(180deg);
+    }
+    .d9 .flip-parent:hover > .flip-container {
+        transform: rotateX(180deg);
+    }
+    
+    /* ################## CUBE ################## */
+    
+    .d9 .cube-parent {
+        width: 200px;
+        height: 360px;
+        margin: 0px auto 140px auto;
+        position: relative;
+        perspective: 400px;
+    }
+    .d9 .cube-container {
+        width: 200px;
+        height: 200px;
+        margin: 40px auto;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 1s ease-in-out ;
+        -webkit-transition: transform 1s ease-in-out ;
+        -moz-transition: transform 1s ease-in-out ;
+    }
+    .d9 .cube-child {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        text-align: center;
+        line-height: 160px;
+        font-size: 2.2rem;
+        opacity: .75;
+    }
+    .d9 .cube-top {
+        background-color: rgba(130, 189, 107);
+        transform: rotateX(90deg) translateZ(100px);
+    }
+    .d9 .cube-right {
+        background-color: rgba(139, 0, 139);
+        transform: rotateY(90deg) translateZ(100px);
+    }
+    .d9 .cube-bottom {
+        background-color: rgba(189, 183, 107);
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+    .d9 .cube-left {
+        background-color: rgba(0, 139, 69);
+        transform: rotateY(-90deg) translateZ(100px);
+    }
+    .d9 .cube-front {
+        background-color: rgb(0, 130, 139);
+        transform: translateZ(100px);
+    }
+    .d9 .cube-back {
+        background-color: rgb(0, 130, 139);
+        transform: rotateX(-180deg) translateZ(100px);
+    }
+    .d9 input[id=f]:checked ~ .cube-container {
+        transform: rotateX(-0deg);
+    }
+    .d9 input[id=ba]:checked ~ .cube-container {
+        transform: rotateX(-180deg);
+    }
+    .d9 input[id=t]:checked ~ .cube-container {
+        transform: rotateX(-90deg);
+    }
+    .d9 input[id=r]:checked ~ .cube-container {
+        transform: rotateX(90deg);
+        transform: rotateY(-90deg);
+    }
+    .d9 input[id=b]:checked ~ .cube-container {
+        transform: rotateX(90deg);
+    }
+    .d9 input[id=l]:checked ~ .cube-container {
+        transform: rotateX(-90deg);
+        transform: rotateY(90deg);
+    }
+
+    /*************** Day20 ***************/
+
+    .d0 {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    /*************** Filter ***************/
+    
+    .d0 img, .d0  .multi {
+        width: 80vw;
+        max-width: 240px;
+        height: 80vw;
+        max-height: 240px;
+        border: 4px solid orange;
+    }
+    .d0 .multi {
+        font-size: 3rem;
+        filter: blur(2px) brightness(2);
+    }
+    .d0 .blur {
+        filter: blur(2px);
+    }
+    .d0 .brightness {
+        filter: brightness(.5);
+        /* 50% brightness */
+    }
+    .d0 .contrast {
+        filter:contrast(2)
+    }
+    .d0 .drop-shadow {
+        filter: drop-shadow(6px 6px 4px red);
+    }
+    .d0 .grayscale {
+        filter: grayscale(1);
+    }
+    .d0 .hue-rotate {
+        filter: hue-rotate(90deg);
+    }
+    .d0 .invert {
+        filter: invert(1);
+    }
+    .d0 .opacity {
+        filter: opacity(.2);
+    }
+    .d0 .saturate {
+        filter: saturate(6);
+    }
+    .d0 .sepia {
+        filter: sepia(2);
+    }
+    
+    /*************** Backdrop Filter ***************/
+    
+    .d0 .background-img {
+        background: url(image.jpeg) no-repeat;
+        width: 100vw;
+        max-width: 300px;
+        height: 300px;
+    }
+    .d0 .backdrop {
+        width: 200px;
+        height: 200px;
+        font-size: 3rem;
+        background: rgba(128, 128, 128, 0.5);
+        backdrop-filter: blur(10px);
+    }
+
+    /*************** Day21 ***************/
+
+    .d21 span {
+        margin: 20px 0px 0px 0px;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    .d21 .container {
+        width: 100%;
+        background-color: cornflowerblue;
+        display: flex;
+        margin: 0px 0px 20px 0px;
+    }
+    .d21 div {
+        background-color: crimson;
+        border: 2px solid black;
+        margin: 2px;
+    }
+    
+    /********* flex direction *********/
+    
+    .d21 .flex-dir-row {
+        flex-direction: row;
+    }
+    .d21 .flex-dir-row-reverse {
+        flex-direction: row-reverse;
+    }
+    .d21 .flex-dir-columm {
+        flex-direction: column;
+    }
+    .d21 .flex-dir-columm-reverse {
+        flex-direction: column-reverse;
+    }
+    
+    /********* flex wrap *********/
+    
+    .d21 .flex-wrap div {
+        width: 80vw;
+    }
+    .d21 .flex-wrap-wrap {
+        flex-wrap: wrap;
+    }
+    .d21 .flex-wrap-wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+    
+    /********* flex flow *********/
+    
+    .d21 .flex-flow-column-wrap {
+        height: 60px;
+        flex-flow: column wrap;
+    }
+    
+    /********* justify content *********/
+    
+    .d21 .justify-flex-start {
+        justify-content: flex-start;
+    }
+    .d21 .justify-flex-end {
+        justify-content: flex-end;
+    }
+    .d21 .justify-center {
+        justify-content: center;
+    }
+    .d21 .justify-space-around {
+        justify-content: space-around;
+    }
+    .d21 .justify-space-between {
+        justify-content: space-between;
+    }
+    .d21 .justify-space-evenly {
+        justify-content: space-evenly;
+    }
+    
+    /********* Align items *********/
+    
+    .d21 .align-items {
+        height: 80px;
+    }
+    .d21 .align-items-flex-start {
+        align-items: flex-start;
+    }
+    .d21 .align-items-flex-end {
+        align-items: flex-end;
+    }
+    .d21 .align-items-center {
+        align-items: center;
+    }
+    .d21 .align-items-stretch {
+        align-items: stretch;
+    }
+    
+    /********* Align self *********/
+    
+    .d21 .align-self-flex-start {
+        align-self: flex-start;
+    }
+    .d21 .align-self-flex-end {
+        align-self: flex-end;
+    }
+    .d21 .align-self-center {
+        align-self: center;
+    }
+    .d21 .align-self-stretch {
+        align-self: stretch;
+    }
+    
+    /********* Align Content *********/
+    
+    .d21 .align-item-content {
+        flex-wrap: wrap;
+        height: 140px;
+        max-width: 600px;
+    }
+    .d21 .align-content-center {
+        align-content: center;
+    }
+    .d21 .align-item-center {
+        align-items: center;
+    }
+    
+    /********* positioning flex items *********/
+    
+    .d21 .position > .home {
+        margin-right: auto;
+    }
+
+    /********* flex property *********/
+    
+    .d21 .flex-1 > .home {
+        flex: 1;
+    }
+    .d21 .flex-2 > div {
+        flex: 1;
+    }
+    .d21 .flex-2 > .home {
+        flex: 2;
+    }
+
+    /********* flex Grow Shrink Basis *********/
+
+    .d21 .flex > .home {
+        /* flex: 1 0 100px */
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 100px;
+    }
+    .d21 .flex > .search {
+        /* flex: 0 1 100px */
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 100px;
+    }
+    .d21 .flex > .logout {
+        /* flex: 1.5 2 160px */
+        flex-grow: 1.5;
+        flex-shrink: 2;
+        flex-basis: 160px;
+    }
+    
+    /********* order *********/
+    
+    .d21 .order .home {
+        order: 3;
+    }
+    .d21 .order .search {
+        order: -3;
+    }
+    .d21 .order .logout {
+        order: 1;
+    }
+
+    /*************** Day22 ***************/
+
+    .d22 .container {
+        width: 100%;
+        height: 200px;
+        margin: 0px auto;
+        padding: 0px;
+        background-color: orange;
+        border: 2px solid blue;
+        border-radius: 6px;
+    }
+    .d22 .grid {
+        display: grid;
+    }
+    .d22 .container > div {
+        background-color: orangered;
+        border: 2px solid black;
+        border-radius: 6px;
+    }
+    .d22 .grid-template-columns {
+        grid-template-columns: 100px 70px 40px auto;
+        /*
+        grid-template-columns: repeat(4, 1fr); = grid-template-columns: 1fr 1fr 1fr 1fr;
+        We can also set pixel percentage values
+        */
+    }
+    .d22 .grid-template-columns-autofill {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    .d22 .grid-template-columns-autofit {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    .d22 .grid-template-rows {
+        grid-template-rows: 1.5fr 1fr;
+    }
+
+    /*************** Day23 ***************/
+
+    .d23 .container {
+        width: 100%;
+        margin: 0px auto;
+        padding: 0px;
+        background-color: orange;
+        border: 2px solid blue;
+        border-radius: 6px;
+    }
+    .d23 .grid {
+        display: grid;
+        height: 240px;
+    }
+    .d23 .auto-rows {
+        grid-auto-flow: row;/* Default value */
+        grid-auto-rows: 50px;
+    }
+    .d23 .auto-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 100px;
+    }
+    .d23 .container div {
+        background-color: orangered;
+        border: 2px solid black;
+        border-radius: 6px;
+    }
+    .d23 .grid-template-columns {
+        grid-template-columns: 34px 34px;
+    }
+    .d23 .grid-template-rows {
+        grid-template-rows: 34px 34px;
+    }
+    
+    /************* Grid gap *************/
+    
+    .d23 .gap {
+        grid-template-columns: 34px 34px;
+        grid-template-rows: 34px 34px;
+    }
+    .d23 .row-gap {
+        grid-row-gap: 15px;
+    }
+    .d23 .column-gap {
+        grid-column-gap: 30px;
+    }
+    .d23 .grid-gap {
+        grid-gap: 20px;
+        /*grid-gap: 20px 20px;*/
+    }
+    
+    /********** items **********/
+    
+    .d23 .items {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .d23 .items-align {
+        align-items: center;
+    }
+    .d23 .items-justify {
+        justify-items: center;
+    }
+    .d23 .items-place {
+        place-items: center;
+    }
+    
+    /********** content **********/
+    
+    .d23 .content {
+        grid-template-rows: 50px 50px;
+        grid-template-columns: 50px 50px;
+    }
+    .d23 .content-align {
+        align-content: center;
+    }
+    .d23 .content-justify {
+        justify-content: center;
+    }
+    .d23 .content-place {
+        place-content: center;
+    }
+    
+    /********** template areas **********/
+    
+    .d23 .template-areas {
+        grid-template-rows: 30px auto 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "h h h"
+        "m m s"
+        "f f f" ;
+    }
+    .d23 .head {
+        grid-area: h;
+    }
+    .d23 .main {
+        grid-area: m;
+    }
+    .d23 .side {
+        grid-area: s;
+    }
+    .d23 .foot {
+        grid-area: f;
+    }
+    
+    /**************** template ****************/
+    
+    .d23 .template {
+        /*
+        grid-template-rows: 30px auto 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "h h h"
+        "m m s"
+        "f f f" ;
+        OR
+        
+        grid-template-areas: 
+        "h h h"
+        "m m s"
+        "f f f" ;
+        grid-template:30px auto 30px / 1fr 1fr 1fr;
+        OR
+        below code
+        */
+        grid-template: 
+        "h h h" 30px
+        "m m s" auto
+        "f f f" 30px
+        / 1fr 1fr 1fr;
+    }
+    
+    /**************** GRID ****************/
+    
+    .d23 .grid-template-row-col {
+        /*
+        grid-template-rows: 30px auto 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+        */
+        grid: 30px auto 30px / 1fr 1fr 1fr ;
+    }
+    .d23 .grid-auto-flow-row {
+        grid: auto-flow 50px / 100px 100px 100px;
+        grid-template-rows: 30px auto 30px;
+    }
+    .d23 .grid-auto-flow-column {
+        grid:  30px auto 30px / auto-flow 100px ;
+        grid-template-columns: 100px 100px 100px;
+    }
+    /**** Grid row & column line naming ****/
+    
+    /*
+        no styles for this section.
+        This section has no output only explanation
+    */
+    
+    /**** Grid column, row, area ****/
+    .d23 .grid-lines {
+        grid-template: [row-start] 30px [row-2] auto [row-3] 30px [row-end] / [col-start] 1fr  [col-2] 1fr  [col-3] 1fr  [col-end] ;
+    }
+    .d23 .h {
+        /*
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        
+        OR 
+        
+        grid-column-start: col-start;
+        grid-column-end: col-end;
+        grid-row-start: row-start;
+        grid-row-end: row-2;
+        
+        OR
+        
+        grid-column-start: col-start;
+        grid-column-end: span 3;
+        above span value take three column line after col-start.
+        
+        OR
+        
+        grid-column: col-start / col-end;
+        grid-row: row-start / row-2;
+
+        OR
+
+        More simple below grid-area
+        it's syntax
+        grid-area: [row-start] / [column-start] / [row-end] / [column-end] ;
+        */
+        grid-area: 1 / 1 / 3 / 3 ;
+    }
+    .d23 .m {
+        grid-area: 2 / 1 / 3 / 3 ;
+    }
+    .d23 .s {
+        grid-area: 2 / 3 / 3 / 4 ;
+    }
+
+
+    /*************** Day24 ***************/
+
+
+    /******** No styles in css selector ********/
+
+
+
+    /*************** Day25 ***************/
+
+    .d25 a[after]::after {
+        content:"=>";
+    }
+    .d25 span[before]::before {
+        content:"©";
+    }
+    .d25 p.fletter::first-letter {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .d25 p.fline::first-line {
+        color: red;
+    }
+    .d25 p.selection::selection {
+        color: yellow;
+        background-color: darkblue;
+    }
+
+
+    /*************** Day26 ***************/
+
+
+
+/********** Location pseudo-classes **********/
+        
+    .d26 a[link]:link {
+        color: green;
+    }
+    .d26 a[visited]:visited {
+        color: orange;
+    }
+    .d26 a[any-link]:any-link {
+        color: red;
+    }
+
+/******** User action pseudo-classes ********/
+
+    .d26 a[hover]:hover {
+        color: green;
+    }
+    .d26 a[active]:active {
+        color: darkcyan;
+    }
+    .d26 a[focus]:focus {
+        color: gold;
+    }
+    .d26 p[focus-within]:focus-within {
+        outline: 4px solid red;
+    }
+
+/********* input pseudo-classes *********/
+        
+    .d26 input {
+        margin: 6px 10px;
+    }
+    .d26 input.enabled:enabled {
+        border: 2px solid blue;
+    }
+    .d26 input.disabled:disabled {
+        border: 2px solid red;
+    }
+    .d26 input.read-only:read-only {
+        border: 2px solid gray;
+    }
+    .d26 input.read-write:read-write {
+        border: 2px solid red;
+    }
+    .d26 input.placeholder-shown:placeholder-shown {
+        border: 2px solid red;
+        color: red;
+    }
+    .d26 input[name="default"]:default + label {
+        color: red;
+    }
+    .d26 input[name="checked"]:checked + label {
+        color: red;
+    }
+    .d26 input.valid-invalid:valid {
+        border: 3px solid green;
+    }
+    .d26 input.valid-invalid:invalid {
+        border: 3px solid red;
+    }
+    .d26 input.out-of-range:out-of-range {
+        border: 3px solid red;
+    }
+    .d26 input.required:required {
+        border: 3px solid red;
+    }
+    .d26 input.optional:optional {
+        border: 3px solid green;
+    }
+
+
+    /*************** Day27 ***************/
+
+
+
+/********* Tree-structural pseudo-classes *********/
+
+    .d27 div.odd span:nth-child(2n-1) {
+        background-color: green;
+    }
+    .d27 div.even span:nth-child(2n) {
+        background-color: red;
+    }
+    .d27 div.third span:nth-child(3n) {
+        background-color: blue;
+    }
+
+    .d27 div.odd-last span:nth-last-child(2n-1) {
+        background-color: green;
+    }
+    .d27 div.even-last span:nth-last-child(2n) {
+        background-color: red;
+    }
+    .d27 div.third-last span:nth-last-child(3n) {
+        background-color: blue;
+    }
+
+    .d27 div.first-last-only span:first-child {
+        background-color: green;
+    }
+    .d27 div.first-last-only span:last-child {
+        background-color: red;
+    }
+    .d27 div.first-last-only span:only-child {
+        background-color: blue;
+    }
+
+    .d27 div.odd-type span:nth-of-type(2n-1) {
+        background-color: green;
+    }
+    .d27 div.even-type span:nth-of-type(2n) {
+        background-color: red;
+    }
+    .d27 div.third-type span:nth-of-type(3n) {
+        background-color: blue;
+    }
+
+    .d27 div.odd-type-last span:nth-last-of-type(2n-1) {
+        background-color: green;
+    }
+    .d27 div.even-type-last span:nth-last-of-type(2n) {
+        background-color: red;
+    }
+    .d27 div.third-type-last span:nth-last-of-type(3n) {
+        background-color: blue;
+    }
+
+    .d27 div.first-last-only-type span:first-of-type {
+        background-color: green;
+    }
+    .d27 div.first-last-only-type span:last-of-type {
+        background-color: red;
+    }
+    .d27 div.first-last-only-type span:only-of-type {
+        background-color: blue;
+    }
+
+/********* user-select *********/
+
+    .d27 div.user-select span {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    }
+
+/********* Cursor *********/
+
+    .d27 div.cursor div {
+        cursor: pointer;
+    }
+
+/********* Float *********/
+
+    .d27 div.float-container p {
+        width: 200px;
+        height: auto;
+        margin: 4px;
+        border: 2px solid blue;
+    }
+    .d27 div.float-container p img {
+        width: 60px;
+    }
+    .d27 div.float-container p.float img {
+        float: left;
+    }
+
+/********* writing-mode *********/
+
+    .d27 div.writing-mode p {
+        writing-mode: vertical-rl;
+    }
+
+
+
+    @media (prefers-color-scheme: dark) {
+        html, body {
+            color: #eee;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+        }
+        .d3 .paragraph, .d3 .heading {
+            color: black;
+        }
+        .d4 .div {
+        border: 4px solid white;
+        }
+        .d5 .table th , .d5 .table td {
+            border-color: brown;
+        }
+        .d5 .table {
+            color: rgb(0, 0, 165);
+        }
+    }
+</style>
+</head>
+<body>
+    <h1>Day 11 to Day 27 learning - CSS3<h1>
+
+    <!----------------------------- Nav Link ------------------------------>
+    <h2 id="nav">Nav Link</h2>
+    
+    <p>
+    <a href="#day11">Day11</a> - <a href="#day12">Day12</a> - <a href="#day13">Day13</a> - <a href="#day14">Day14</a> - <a href="#day15">Day15</a> - <a href="#day16">Day16</a> - <a href="#day17">Day17</a> - <a href="#day18">Day18</a> - <a href="#day19">Day19</a> - <a href="#day20">Day20</a> - <a href="#day21">Day21</a> - <a href="#day22">Day22</a> - <a href="#day23">Day23</a> - <a href="#day24">Day24</a> - <a href="#day25">Day25</a> - <a href="#day26">Day26</a> - <a href="#day27">Day27</a>
+    </p>
+    <hr>
+    
+    <!----------------------------- Day11 ------------------------------>
+    <section class="d1">
+        <h2 id="day11">Day11</h2><hr>
+
+        <h2>Cascading Style Sheet(CSS)</h2>
+        <p>
+        CSS is used to format the layout of the webpage.
+        <br>
+        Css is used to chane the font family, size, color etc. Not only fonts it controls most of the thing in the html page.
+        </p>
+        <p>CSS can be used with html in three ways</p>
+        <h2>Inline</h2>
+        <p>
+        Inline css is used to give unique style the to the single html element.<br>This used html elements style attribue to give style to the that element.
+        </p>
+        <b>CODE :</b>
+<pre>
+&lt;h4 style="color:red"&gt;Heading&lt;/h4&gt;
+</pre>
+
+        <h2>Internal</h2>
+        <p>
+        Internal css is used to give style the to the single html page.<br> Internal css is defined inside &lt;style&gt; element which is placed inside the &lt;head&gt; element.
+        </p>
+        <b>CODE :</b>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;style&gt;
+h4 {
+color:red;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h4&gt;Heading&lt;/h4&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+        <h2>External</h2>
+        <p>
+        External css is used to give style the to the many html page.<br> External css means linking the css stylesheet file to html page using &lt;link&gt; inside the &lt;head&gt; . Style must end with .css extension and it should not contain any html.
+        </p>
+        <b>CODE :</b>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;link href="style.css" rel="stylesheet" type="text/css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h4&gt;Heading&lt;/h4&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+        <b>That style.css file contain :</b>
+<pre>
+h4 {
+color:red;
+}
+</pre>
+
+        <h1>Basic Selector in css</h1>
+        <p>
+        Selector is used to select the element, id and class for giving style. 
+        </p>
+        <h2>element selector</h2>
+<pre>
+body {}
+</pre>
+        <p>
+        Above code selects the body element.
+        </p>
+        <b>direct child and grandchild </b>
+<pre>
+body h4 {}
+</pre>
+        <p>This selects the all the h4 elements inside the body element.</p>
+        <b>direct child only</b>
+<pre>
+body > h4 {}
+</pre>
+        <p>This selects olny the direct child of the body tag.</p>
+
+        <h2>Class and id selector</h2>
+        <p>Class selector is used to </p>
+        <b>CODE :</b>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.red {
+color:red;
+}
+.blue {
+color:blue;
+}
+.green {
+color:green;
+}
+h5 {
+color:orange;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h5                            &gt; no class & no id &lt;/h5&gt;
+&lt;h5 class="red"                &gt; single class     &lt;/h5&gt;
+&lt;h5 class="red blue"           &gt; multiple class   &lt;/h5&gt;
+&lt;h5 class="red blue" id="green"&gt; class with id    &lt;/h5&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <h5> no class & no id </h5>
+        <h5 class="red"> single class </h5>
+        <h5 class="red blue"> multiple class </h5>
+        <h5 class="red blue" id="green"> class with id </h5>
+        </div>
+        <p>
+        <b>Id selector</b> has number one priority it over rides all style given by class and element name<br>
+        <b>Class selector</b> has number two priority it over rides all style other than given by id.<br>
+        <b>Multiple classes</b> element's last class style overrides the previous class.<br>
+        <b>Element name selector</b> styles sre taken only whwn that element has no class and id attribute.<br>
+        </p>
+
+        <h1>Color in css</h1>
+        <p>
+        Two color controls in css<br>
+        <dl>
+        <dt><b>Background color</b></dt>
+        <dd>This sets the background color to elements<br>background-color:black; This sets the background to black</dd>
+        <dt><b>Foreground color</b></dt>
+        <dd>This sets the foreground color to elements<br>color:red; this sets the content color to red</dd>
+        <dd></dd>
+        </dl>
+        </p>
+        <b>CODE :</b>
+        <p>
+<pre>
+body {
+      color:white;
+      background-color:black;
+}
+</pre>
+        </p>
+        <b>OUTPUT :</b>
+        <p class="output">Html pages background-color will be white and text color will be black.</p>
+
+        <h1>Transparency & opacity</h1>
+        <p>
+        <b>Transparency</b> value can be only given in color value. It only used to change the transparency to the content of color given.<br> <b>Opacity</b> is used to change the transparency of every element and content of an element.
+        </p>
+        <b>CODE :</b>
+<pre>
+&lt;p style="color:rgba(255, 255, 255, 0.2)"&gt;Transparency 0.2&lt;/p&gt;
+&lt;p style="color:rgba(255, 255, 255, 0.5)"&gt;Transparency 0.5&lt;/p&gt;
+&lt;p style="color:rgba(255, 255, 255, 0.9)"&gt;Transparency 0.9&lt;/p&gt;
+&lt;div&gt;Below image opacity:0.1&lt;div&gt;
+&lt;img src="../001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.1"&gt;
+&lt;div&gt;Below image opacity:0.5&lt;div&gt;
+&lt;img src="../001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.5"&gt;
+&lt;div&gt;Below image opacity:0.9&lt;div&gt;
+&lt;img src="../001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.9"&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <p style="color:rgba(255, 255, 255, 0.2)">Transparency 0.2</p>
+        <p style="color:rgba(255, 255, 255, 0.5)">Transparency 0.5</p>
+        <p style="color:rgba(255, 255, 255, 0.9)">Transparency 0.9</p>
+        <div>Below image opacity:0.1</div>
+        <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.1">
+        <div>Below image opacity:0.5</div>
+        <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.5">
+        <div>Below image opacity:0.9</div>
+        <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/001-to-010/Day010-SampleImagejpg.jpg" width="200" style="opacity:0.9">
+        </div>
+
+        <h1>Basic Typography</h1>
+        <p>
+              <b>Font family</b> is used to use the specific font family from the avaliable font family.<br>
+              <b>Font weight</b> is used to use the specific font- weight shuch as bold based on the font support<br>
+              <b>Font size</b> is used to use the specifice font famil from the avaliable font famil.<br>
+              px -&gt; giving the font size in pixel<br>
+              percentage -&gt; This multiplies the size from its parent. when you give 200% it is 2 times the size of parent.<br>
+              em -&gt; This multiplies the size from its parent. when you give 2em it is 2 times the size of parent.<br>
+              rem -&gt; This multiplies the size from root element. when you give 2rem it is 2 times the size of root element.<br>
+              <b>rem is mostly used</b>
+        </p>
+        <b>CODE :</b>
+<pre>
+-----CSS-------
+    .type {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    }
+
+-----HTML------
+    &lt;div class="type"&gt;Testing&lt;/div&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+              <div class="type">Testing</div>
+        </div>
+        <h1>Text transform</h1>
+        <p>
+              <dl>
+                    <dt><b>capitalize</b></dt>
+                    <dd>capitalize is used to capitalize the each words first letter in captial.</dd>
+                    <dt><b>uppercase</b></dt>
+                    <dd>uppercase is used to change the every letters into uppercsae</dd>
+                    <dt><b>lowercase</b></dt>
+                    <dd>lowercase is used to change the every letters into lowercsae</dd>
+              </dl>
+        </p>
+        <b>CODE :</b>
+<pre>
+      &lt;div style="text-transform:capitalize"&gt;capitalize is a word&lt;/div&gt;
+      &lt;div style="text-transform:uppercase"&gt;uppercase is a word&lt;/div&gt;
+      &lt;div style="text-transform:lowercase"&gt;LOWERcase is a WORD&lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output">
+            <div style="text-transform:capitalize">capitalize is a word</div>
+            <div style="text-transform:uppercase">uppercase is a word</div>
+            <div style="text-transform:lowercase">LOWERcase is a WORD</div>
+        </div>
+    </section>
+    <h2><a href="#nav">Back to Nav Link</a></h2><hr>
+
+    <!----------------------------- Day12 ------------------------------>
+    <section class="d2">
+        <h2 id="day12">Day12</h2>
+
+        <h1>Text decoration</h1>
+        <b>Underline</b>
+        <p>Gives underline to the corresponding content. This mostly indicates important word.</p>
+        <b>CODE :</b>
+<pre>
+&lt;h4 style="text-decoration:underline"&gt;important&lt;/h4&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <h4 style="text-decoration:underline">important</h4>
+        </div>
+        <b>Overline</b>
+        <p>Gives overline to the corresponding content.</p>
+        <b>CODE :</b>
+<pre>
+&lt;h4 style="text-decoration:overline"&gt;BE&lt;/h4&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <h4 style="text-decoration:overline">BE</h4>
+        </div>
+        <b>line through</b>
+        <p>Gives line through to the corresponding content.</p>
+        <b>CODE :</b>
+<pre>
+&lt;h4 style="text-decoration:line-through"&gt;line through&lt;/h4&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <h4 style="text-decoration:line-through">line through</h4>
+        </div>
+        <b>None</b>
+        <p>remove the text decoration of the corresponding content.</p>
+        <b>CODE :</b>
+<pre>
+&lt;h4&gt;Removing underline of a &lt;a href="htps://www.google.com" style="text-decoration:none"&gt;link&lt;/a&gt;&lt;/h4&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <h4>Removing underline of a <a href="htps://www.google.com" style="text-decoration:none">link</a></h4>
+        </div>
+        <b>blink</b>
+        <p>This gives the blink effect. Even if the browser has compatibility we can't see any visual effect. This is a deprecated style.</p>
+        </p>
+
+        <h1>Line height -&gt; leading</h1>
+        <p>Applying leading to a paragraph of text adds space in between each line which is known as line height.</p>
+        <em>default line height</em>
+        <br>
+        <b>CODE :</b>
+<pre>
+&lt;p style="line-height: 1"&gt;First line&lt;br&gt;Second line&lt;/p&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <p class="output" style="line-height: 1">First line<br>Second line</p>
+        <em>line height 2 is 2 times the size of font size</em><br>
+        <b>CODE :</b>
+<pre>
+&lt;p style="line-height: 2"&gt;First line&lt;br&gt;Second line&lt;/p&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <p class="output" style="line-height: 2">First line<br>Second line</p>
+
+        <h1>Text alignment</h1>
+        <p>Text alignment is used to align the text</p>
+        <b>CODE :</b>
+<pre>
+&lt;ul&gt;
+&lt;li style="text-align:left"&gt;default text align is left&lt;/li&gt;
+&lt;li style="text-align:right"&gt;text align right&lt;/li&gt;
+&lt;li style="text-align:center"&gt;text align center&lt;/li&gt;
+&lt;li style="text-align:justify"&gt;text align justify&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style="text-align:justify"&gt;
+We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify. We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.
+&lt;/div&gt;
+&lt;b&gt;&lt;br&gt;above paragraph without text align justify&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+&lt;div&gt;
+We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify. We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <ul>
+        <li style="text-align:left">default text align is left</li>
+        <li style="text-align:right">text align right</li>
+        <li style="text-align:center">text align center</li>
+        <li style="text-align:justify">text align justify</li>
+        </ul>
+        <div style="text-align:justify">
+        We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify. We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.
+        </div>
+        <b><br>above paragraph without text align justify<br><br></b>
+        <div>
+        We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify. We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.We need multi line content to see the text align justify.
+        </div>
+        </div>
+
+        <h1>Text vertical alignment</h1>
+        <p>Vertical alignment is used to align the text in vertical manner within the line</p>
+        <b>CODE :</b>
+<pre>
+&lt;p&gt;text-top &lt;span  style="font-size:26px;vertical-align: text-top;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;
+&lt;p&gt;top      &lt;span  style="font-size:26px;vertical-align: top     ;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;
+&lt;p&gt;middle   &lt;span  style="font-size:26px;vertical-align: middle  ;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;
+&lt;p&gt;bottom   &lt;span  style="font-size:26px;vertical-align: bottom  ;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;
+&lt;p&gt;baseline &lt;span  style="font-size:26px;vertical-align: baseline;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;
+&lt;p&gt;sub      &lt;span  style="font-size:26px;vertical-align: sub     ;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;
+&lt;p&gt;super    &lt;span  style="font-size:26px;vertical-align: super   ;"&gt;ARE&lt;/span&gt; you?&lt;/p&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <p>text-top <span  style="font-size:1.6rem; vertical-align:text-top;">ARE</span> you?</p>
+        <p>top      <span  style="font-size:1.6rem; vertical-align:top     ;">ARE</span> you?</p>
+        <p>middle   <span  style="font-size:1.6rem; vertical-align:middle  ;">ARE</span> you?</p>
+        <p>bottom   <span  style="font-size:1.6rem; vertical-align:bottom  ;">ARE</span> you?</p>
+        <p>baseline <span  style="font-size:1.6rem; vertical-align:baseline;">ARE</span> you?</p>
+        <p>sub      <span  style="font-size:1.6rem; vertical-align:sub     ;">ARE</span> you?</p>
+        <p>super    <span  style="font-size:1.6rem; vertical-align:super   ;">ARE</span> you?</p>
+        </div>
+
+        <h1>Spacing</h1>
+        <p>
+        <b>letter spacing</b> gives space between each letters.<b>word spacing</b> gives space between each words.
+        </p>
+        <b>CODE :</b>
+<pre>
+&lt;span style="letter-spacing:4px; word-spacing:12px;"&gt;letter spacing and word spacing&lt;/span&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <p class="output">
+        <span style="letter-spacing:4px; word-spacing:12px;">letter spacing and word spacing</span>
+        </p>
+
+        <h1>Text indent</h1>
+        <p>
+        Text indent is used to indent the first line.
+        </p>
+        <b>CODE :</b>
+<pre>
+&lt;p style="text-indent: 50px""&gt;Text indent gives a blank spaces on the left side of the first line.&lt;p&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <p style="text-indent: 50px">Text indent gives a blank spaces on the left side of the first line.</p>
+        </div>
+
+        <h1>Basic pseudo elements</h1>
+        <p>
+            ::first-line selects the first line of the element's content.
+            <br>
+            ::first-letter selects the first letter of the element's content.
+        </p>
+        <b>CODE :</b>
+<pre>
+-------CSS-------
+.pseudo::first-letter {
+    font-size: 2rem;
+}
+.pseudo::first-line {
+    color: orangered;
+}
+------HTML-------
+&lt;div class="pseudo"&gt;
+first-line selects the first line of the element's content.
+&lt;br&gt;
+first-letter selects the first letter of the element's content.
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <p class="output">
+            <div class="pseudo">
+                first-line selects the first line of the element's content.
+                <br>
+                first-letter selects the first letter of the element's content.
+            </div>
+        </p>
+
+        <h1>Class selector</h1>
+        <p>Class selector is used to give same style to different section of webpage.</p>
+        <b>OUTPUT :</b>
+<pre>
+-------CSS-------
+.sample-class {
+    color:red;
+}
+------HTML------
+&lt;p&gt;paragraph &lt;a class="sample-class"&gt;anchor&lt;/a&gt;&lt;/p&gt;
+&lt;div class="sample-class"&gt;Div&lt;/div&gt;
+</pre>
+        <b>CODE :</b>
+        <div class="output">
+            <p>paragraph <a class="sample-class">anchor</a></p>
+            <div class="sample-class">Div</div>
+        </div>
+
+        <h1>Anchor tag pseudo element</h1>
+        <p>
+            Anchor tag five pseudo element. here a is equal to a:link . because anchor tag a is already a link.
+        </p>
+        <b>CODE :</b>
+<pre>
+-------CSS-------
+a {
+    color:blue;
+}
+a:hover {
+    color:red;
+}
+a:active {
+    color:lightgreen;
+}
+a:visited {
+    color: indigo;
+}
+a:focus {
+    color: gold;
+}
+------HTML-------
+&lt;h3 id="link"&gt;This is a &lt;a href="#link"&gt;Link&lt;/a&gt;&lt;/h3&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+            <h3 id="link">This is a <a href="#link">Link</a></h3>
+        </div>
+
+        <h1>Text shadow</h1>
+        <p>
+            Text shadow is used to give shadow to the text.
+        </p>
+        <b>CODE :</b>
+<pre>
+&lt;h2 style="text-shadow:  2px  0    0    red ;" &gt;Text shadow left     &lt;/h2&gt;
+&lt;h2 style="text-shadow: -2px  0    0    red ;" &gt;Text shadow right    &lt;/h2&gt;
+&lt;h2 style="text-shadow:  0    2px  0    red ;" &gt;Text shadow top      &lt;/h2&gt;
+&lt;h2 style="text-shadow:  0   -2px  0    red ;" &gt;Text shadow bottom   &lt;/h2&gt;
+&lt;h2 style="text-shadow:  0   -2px  2px  red ;" &gt;Text shadow with blur&lt;/h2&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+            <h2 style="text-shadow:  2px  0    0    red ;" >Text shadow left     </h2>
+            <h2 style="text-shadow: -2px  0    0    red ;" >Text shadow right    </h2>
+            <h2 style="text-shadow:  0    2px  0    red ;" >Text shadow top      </h2>
+            <h2 style="text-shadow:  0   -2px  0    red ;" >Text shadow bottom   </h2>
+            <h2 style="text-shadow:  0   -2px  2px  red ;" >Text shadow with blur</h2>
+        </div>
+
+        <h1>Width, height, scroll behaviour and dark theme</h1>
+        <p>
+            html is the root element. body is content displaying element. width 100% takes the body element as browser width. brower defaultly give some margin so that it enable horizontal scrollbar. Setting <b>margin</b> 0px will remove the margin and horizontal scroll bar. Giving height other than auto may restrict the content than the given height. <b>min-height</b> will set the minimum height for body elemenet. <b>max-height</b> will set the maximum heigth for the body element.<br> <b>Scroll behaviour smooth</b> will give smooth scoll winthin the page using named anchor tag navigation.<br>
+            <b>@media</b> rule is used to apply different rules/styles based on different media types/devices. Here i used to @media to set the theme of webpage.<br>
+            learned css only dark mode from <a href="https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#os-level">css-tricks.com</a>
+        </p>
+        <b>CODE :</b>
+<pre>
+-------CSS-------
+html, body {
+    width: 100%;
+    margin: 0px;
+    min-height: 100%;
+    scroll-behavior: smooth;
+    color: black;
+    background-color:white;
+}
+@media (prefers-color-scheme: dark) {
+    html, body {
+        color: #ccc;
+        background-color: black;
+    }
+    h1 {
+        color: white;
+    }
+}
+</pre>
+    </section>
+
+    <h2><a href="#nav">Back to Nav Link</a></h2><hr>
+
+    <!----------------------------- Day13 ------------------------------>
+    
+    <section class="d3">
+        <h2 id="day13">Day13</h2>
+
+        <h1>min width max width vw vh</h1>
+        <dl>
+        <dt><b>min-width</b></dt>
+        <dd> this sets the minimum with for the container.</dd>
+        <dt><b>max-width</b></dt>
+        <dd> this sets the maximum with for the container.</dd>
+        <dt><b>vw - Viewport Width</b></dt>
+        <dd>100vw gives the 100% with of the browser viewport</dd>
+        <dt><b>vh - Viewport Height</b></dt>
+        <dd>100vh gives the 100% height of the browser viewport</dd>
+        </dl>
+        <b>CODE :</b>
+<pre>
+-----CSS-----
+.wrap {
+width: 70vw;
+min-width: 600px;
+max-width: 1000px;
+height: 50vh;
+min-height: 100px;
+max-height: 1000px;
+margin: 0px;
+background-color: #ddd ;
+}
+.heading {
+background-color: yellow;
+padding: 0px;
+font-size: 2rem;
+font-weight: bold;
+}
+.paragraph {
+text-indent: 30px;
+}
+----HTML-----
+&lt;div class="wrap"&gt;
+&lt;div class="heading"&gt;
+This is the heading
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+This is a multiline paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a multiline    paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a  multiline paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a multiline paragraph.
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+            <div class="wrap">
+                <div class="heading">
+                This is the heading
+                </div>
+                <div class="paragraph">
+                This is a multiline paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a multiline    paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a  multiline paragraph. This is a multiline paragraph. This is a multiline paragraph. This is a multiline paragraph.
+                </div>
+            </div>
+        </div>
+
+        <h1>Padding border box-sizing margin</h1>
+        <dl>
+        <dt><b>Padding</b></dt>
+        <dd>Padding is used to give the space between content an border.</dd>
+        <dt><b>border</b></dt>
+        <dd>border is used to give borde at the edge of the container. border will increase the width and height of the container.  <b>box-sizing: border-box;</b> will solve this issue</dd>
+        <dt><b>Margin</b></dt>
+        <dd>Margin is used to giv margin between containers</dd>
+        </dl>
+        <b>CODE :</b>
+<pre>
+-----CSS-------
+
+.parent {
+width: 300px;
+height: 300px;
+/* margin auto place the container center */
+margin: 0px auto;
+border: 4px solid black;
+padding: 10px;
+}
+.child1 {
+width: 100px;
+height: 100px;
+border: 4px solid black;
+background-color: orange;
+margin: 10px 0px;
+}
+.child2 {
+width: 100px;
+height: 100px;
+border: 4px solid ;
+/* box-sizing: border-box; this place the border inside the container so the width won't increase due to border */
+box-sizing: border-box;
+background-color: red;
+margin: 10px 0px;
+}
+
+-----HTML------
+
+&lt;div class="parent"&gt;parent
+&lt;div class="child1"&gt;child1
+&lt;/div&gt;
+&lt;div class="child2"&gt;child2
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <div class="parent">parent
+        <div class="child1">child1
+        </div>
+        <div class="child2">child2
+        </div>
+        </div>
+        </div>
+
+        <h1>Overflow</h1>
+        <p>This is used to control the overflowing content of container.</p>
+        <b>CODE :</b>
+<pre>
+----CSS----
+.square {
+width: 90vw;
+height: 80px;
+font-size: 1.4rem;
+}
+.overflow-x-hidden {
+overflow-x:hidden;
+}
+.overflow-x-scroll {
+overflow-x:scroll;
+}
+.overflow-y-hidden {
+overflow-y:hidden;
+overflow-x:hidden;
+}
+.overflow-y-scroll {
+overflow-y:scroll;
+}
+----HTML----
+&lt;pre class="square overflow-x-hidden"&gt;
+overflow-x:hidden This hides the horizontally overflowing cotent.
+&lt;/pre&gt;
+&lt;pre class="square overflow-x-scroll"&gt;
+overflow-x:scroll This let's you to scroll the horizontally overflowing cotent. check this out for overflowing content on   horizontal scroll bar.
+&lt;/pre&gt;
+&lt;pre class="square overflow-y-hidden"&gt;
+overflow-y:hidden hides vertical overflowing
+&lt;/pre&gt;
+&lt;pre class="square overflow-y-scroll"&gt;
+overflow-y:scroll
+let's you
+scroll vertical
+overflow
+&lt;/pre&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output overflow-hidden">
+<pre class="square overflow-x-hidden">
+overflow-x:hidden This hides the horizontally overflowing cotent.
+</pre>
+<pre class="square overflow-x-scroll">
+overflow-x:scroll This let's you to scroll the horizontally overflowing cotent. check this out for overflowing content on   horizontal scroll bar.
+</pre>
+<pre class="square overflow-y-hidden">
+overflow-y:hidden hides
+vertical
+overflow content
+</pre>
+<pre class="square overflow-y-scroll">
+overflow-y:scroll 
+let's you
+scroll vertical
+overflow
+</pre>
+        </div>
+    </section>
+    <h2><a href="#nav">Back to Nav Link</a></h2><hr>
+
+    <!----------------------------- Day14 ------------------------------>
+    <section class="d4">
+        <h2 id="day14">Day14</h2>
+
+        <h1>Display inline,block and inline-block</h1>
+        <dl>
+        <dt><b>inline</b></dt>
+        <dd> inline element heights are automatically taken as same as line height. We can't change     it's height.</dd>
+        <dt><b>block</b></dt>
+        <dd>block level elements always appear in new line</dd>
+        <dt><b>inline-block</b></dt>
+        <dd>inline-block element acts as an inline element also we change set the size.</dd>
+        </dl>
+        <b>CODE :</b>
+<pre>
+-----CSS------
+
+.d4-ul {
+width: auto;
+min-width: 100%;
+display: flex;
+margin:0px;
+padding:0px;
+height: 80px;
+background-color: orange;
+}
+.d4-ul li {
+list-style: none;
+height: 100%;
+background-color: #333;
+line-height: 80px;
+font-size: 1.4rem;
+margin: 0 auto;
+padding: 0 4px;
+}
+.d4-ul a {
+text-decoration:none;
+color: red;
+}
+.d4-ul li:hover {
+background-color:#ddd;
+}
+
+---HTML---
+
+&lt;ul class="d4-ul"&gt;
+&lt;li&gt;&lt;a href="#" &gt;HOME&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#" &gt;ABOUT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#" &gt;SKILL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <ul class="ul">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">SKILL</a></li>
+        </ul>
+        </div>
+
+        <h1>Box shadow</h1>
+
+        <b>CODE :</b>
+<pre>
+---CSS---
+.d4-div {
+display:inline-block;
+width: 80px;
+height: 80px;
+border: 3px solid black;
+margin: 20px;
+}
+#d4-bottom-right {
+box-shadow: 6px 6px red;
+}
+#d4-top-left {
+box-shadow: -6px -6px red;
+}
+#d4-top-left-blur {
+box-shadow: -6px -6px 6px red;
+}
+#d4-top-left-blur-spread {
+box-shadow: -6px -6px 6px 6px red;
+}
+#d4-outer-blur {
+box-shadow: 0 0 4px red;
+/*Blur always gives a minor spread. If we need more spread we can add 4th value as spread */
+}
+#d4-inner-blur {
+box-shadow: inset 0 0 4px red;
+/*Blur always gives a minor spread. If we need more spread we can add 4th value as spread */
+}
+---HTML---
+&lt;div class="d4-div" id="d4-bottom-right"&gt;bottom-right&lt;/div&gt;
+&lt;div class="d4-div" id="d4-top-left"&gt;top-left&lt;/div&gt;
+&lt;div class="d4-div" id="d4-top-left-blur"&gt;top-left-blur&lt;/div&gt;
+&lt;div class="d4-div" id="d4-top-left-blur-spread"&gt;top-left-blur-spread&lt;/div&gt;
+&lt;div class="d4-div" id="d4-outer-blur"&gt;outer-blur / spread&lt;/div&gt;
+&lt;div class="d4-div" id="d4-inner-blur"&gt;inner-blur / spread&lt;/div&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <div class="d4-div" id="d4-bottom-right">bottom-right</div>
+        <div class="d4-div" id="d4-top-left">top-left</div>
+        <div class="d4-div" id="d4-top-left-blur">top-left-blur</div>
+        <div class="d4-div" id="d4-top-left-blur-spread">top-left-blur-spread</div>
+        <div class="d4-div" id="d4-outer-blur">outer-blur / spread</div>
+        <div class="d4-div" id="d4-inner-blur">inner-blur / spread</div>
+        </div>
+
+        <h1>Border-radius</h1>
+        <b>CODE :</b>
+<pre>
+---CSS---
+#d4-single-value {
+border-radius: 20px;
+}
+#d4-circle {
+border-radius: 50%;
+text-align: center;
+}
+#d4-double-value {
+border-radius:0 20px;
+}
+#d4-multi-value {
+border-radius:0 10px 20px 40px ;
+}
+---HTML---
+&lt; class="d4-div"div id="d4-single-value"&gt;single value&lt;/div&gt;
+&lt; class="d4-div"div id="d4-circle"&gt;single value circle&lt;/div&gt;
+&lt; class="d4-div"div id="d4-double-value"&gt;double value&lt;/div&gt;
+&lt; class="d4-div"div id="d4-multi-value"&gt;multi value&lt;/div&gt;
+</pre>
+        <b>OUTPUT :</b>
+        <div class="output">
+        <div class="d4-div" id="d4-single-value">single value</div>
+        <div class="d4-div" id="d4-circle" >single value circle</div>
+        <div class="d4-div" id="d4-double-value">double value</div>
+        <div class="d4-div" id="d4-multi-value">multi value</div>
+        </div>
+
+        <h1>background-image</h1>
+        <h3>CODE :</h3>
+<pre>
+---CSS---
+body {
+background: url(background.jpeg) no-repeat center center fixed;
+/* Size cover cover the whole background with the image */
+background-size: cover;
+}
+</pre>
+        <h3>OUTPUT :</h3>
+        <b>With Cover</b>
+        <br>
+        <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/011-020/backgroundWithCover.png" style="width:80vw;border:5vw solid grey;margin:0px;padding:0px;">
+        <br>
+        <b>Without Cover</b>
+        <br>
+        <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/011-020/backgroundWithoutCover.png" style="width:80vw;border:5vw solid grey;margin:0px;padding:0px;">
+    </section>
+    <h2><a href="#nav">Back to Nav Link</a></h2><hr>
+
+    <!----------------------------- Day15 ------------------------------>
+    <section class="d5">
+        <h2 id="day15">Day15</h2>
+
+        <h1>List Style</h1>
+        <h3>CODE :</h3>
+<pre>
+&lt;b&gt;NO style&lt;/b&gt;
+&lt;ul style="list-style-type:none"&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ul&gt;
+&lt;b&gt;DISC style&lt;/b&gt;
+&lt;ul style="list-style-type:disc"&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ul&gt;
+&lt;b&gt;Circle style&lt;/b&gt;
+&lt;ul style="list-style-type:circle"&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ul&gt;
+&lt;b&gt;Square style&lt;/b&gt;
+&lt;ul style="list-style-type:square"&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ul&gt;
+&lt;b&gt;Decimal style&lt;/b&gt;
+&lt;ol&gt;
+&lt;!-- default style in ordered list--&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+&lt;b&gt;Decimal style&lt;/b&gt;
+&lt;ol  style="list-style-type:decimal-leading-zero"&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ol&gt;
+&lt;b&gt;Lower Alpha style&lt;/b&gt;
+&lt;ol style="list-style-type:lower-alpha"&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ol&gt;
+&lt;b&gt;Upper Alpha style&lt;/b&gt;
+&lt;ol style="list-style-type:upper-alpha"&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ol&gt;
+&lt;b&gt;Lower Roman style&lt;/b&gt;
+&lt;ol style="list-style-type:lower-roman"&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ol&gt;
+&lt;b&gt;Upper Roman style&lt;/b&gt;
+&lt;ol style="list-style-type:upper-roman"&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+        <h3>OUTPUT :</h3>
+        <div class="output">
+        <b>NO style</b>
+        <ul style="list-style-type:none">
+        <li>html</li>
+        <li>css</li>
+        </ul>
+        <b>DISC style</b>
+        <ul style="list-style-type:disc">
+        <li>html</li>
+        <li>css</li>
+        </ul>
+        <b>Circle style</b>
+        <ul style="list-style-type:circle">
+        <li>html</li>
+        <li>css</li>
+        </ul>
+        <b>Square style</b>
+        <ul style="list-style-type:square">
+        <li>html</li>
+        <li>css</li>
+        </ul>
+        <b>Decimal style</b>
+        <ol>
+        <!-- default style in ordered list-->
+        <li>html</li>
+        <li>css</li>
+        </ol>
+        </p>
+        <b>Decimal style</b>
+        <ol style="list-style-type:decimal-leading-zero">
+        <li>html</li>
+        <li>css</li>
+        </ol>
+        <b>Lower Alpha style</b>
+        <ol style="list-style-type:lower-alpha">
+        <li>html</li>
+        <li>css</li>
+        </ol>
+        <b>Upper Alpha style</b>
+        <ol style="list-style-type:upper-alpha">
+        <li>html</li>
+        <li>css</li>
+        </ol>
+        <b>Lower Roman style</b>
+        <ol style="list-style-type:lower-roman">
+        <li>html</li>
+        <li>css</li>
+        </ol>
+        <b>Upper Roman style</b>
+        <ol style="list-style-type:upper-roman">
+        <li>html</li>
+        <li>css</li>
+        </ol>
+        </div>
+
+        <h1>List style position</h1>
+        <h3>CODE</h3>
+<pre>
+&lt;b&gt;inside&lt;/b&gt;
+&lt;ul style="list-style-position:inside"&gt;
+&lt;li&gt;
+HTML is  not a programming language it is a markup  language. HTML is  not a programming language it     is a markup language. HTML is  not a programming    language it is a markup language. HTML is  not a   programming language it is a markup language. HTML    is  not a programming language it is a markup  language. HTML is  not a programming language it     is a markup language. HTML is  not a programming    language it is a markup language.
+&lt;/li&gt;
+&lt;li&gt;
+CSS is used to give style to the html page. CSS is  used to give style to the html page. CSS is used     to give style to the html page. CSS is used to  give style to the html page. CSS is used to give     style to the html page. CSS is used to give style   to the html page. CSS is used to give style to the    html page. CSS is used to give style to the html   page. CSS is used to give style to the html page. 
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;b&gt;outside default&lt;/b&gt;
+&lt;ul style="list-style-position:outside"&gt;
+&lt;li&gt;
+HTML is  not a programming language it is a markup  language. HTML is  not a programming language it     is a markup language. HTML is  not a programming    language it is a markup language. HTML is  not a   programming language it is a markup language. HTML    is  not a programming language it is a markup  language. HTML is  not a programming language it     is a markup language. HTML is  not a programming    language it is a markup language.
+&lt;/li&gt;
+&lt;li&gt;
+CSS is used to give style to the html page. CSS is  used to give style to the html page. CSS is used     to give style to the html page. CSS is used to  give style to the html page. CSS is used to give     style to the html page. CSS is used to give style   to the html page. CSS is used to give style to the    html page. CSS is used to give style to the html   page. CSS is used to give style to the html page. 
+&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+        <h3>OUTPUT</h3>
+        <div class="output">
+        <b>inside</b>
+        <ul style="list-style-position:inside">
+        <li>
+        HTML is  not a programming language it is a markup  language. HTML is  not a programming language it is a    markup language. HTML is  not a programming language   it is a markup language. HTML is  not a programming   language it is a markup language. HTML is  not a  programming language it is a markup language. HTML is    not a programming language it is a markup language.   HTML is  not a programming language it is a markup    language.
+        </li>
+        <li>
+        CSS is used to give style to the html page. CSS is  used to give style to the html page. CSS is used to  give style to the html page. CSS is used to give style   to the html page. CSS is used to give style to the    html page. CSS is used to give style to the html page.     CSS is used to give style to the html page. CSS is  used to give style to the html page. CSS is used to  give style to the html page.
+        </li>
+        </ul>
+        <b>outside default</b>
+        <ul style="list-style-position:outside">
+        <li>
+        HTML is  not a programming language it is a markup  language. HTML is  not a programming language it is a    markup language. HTML is  not a programming language   it is a markup language. HTML is  not a programming   language it is a markup language. HTML is  not a  programming language it is a markup language. HTML is    not a programming language it is a markup language.   HTML is  not a programming language it is a markup    language.
+        </li>
+        <li>
+        CSS is used to give style to the html page. CSS is  used to give style to the html page. CSS is used to  give style to the html page. CSS is used to give style   to the html page. CSS is used to give style to the    html page. CSS is used to give style to the html page.     CSS is used to give style to the html page. CSS is  used to give style to the html page. CSS is used to  give style to the html page.
+        </li>
+        </ul>
+        </div>
+
+        <h1>Styling Table</h1>
+
+        <h3>CODE</h3>
+<pre>
+----CSS----
+.table {
+    border-collapse: collapse;
+}
+.table th , .table td {
+    border: 6px solid black;
+    /**
+    border collapse default value is seprate which  has two seprate borders
+    border-collapse: collapse; will set only    single line border
+    **/
+}
+----HTML----
+&lt;table class="table" style="width:80%;margin:0    auto;"&gt;
+&lt;colgroup&gt;
+&lt;col span="1" style="background-color:lightgreen;"&  gt;
+&lt;col&gt;
+&lt;col&gt;
+&lt;col span="6" style="background-color:orange;"&gt;
+&lt;/colgroup&gt;
+&lt;tr&gt;
+&lt;th rowspan="2" style="background-color:lightblue;"& gt;DAY&lt;/th&gt; &lt;th colspan="8"     style="background-color:gray;"&gt;TIME&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;!--
+        larger than the required rowspan or colspan     remove the border
+    --&gt;
+&lt;th&gt;09-10&lt;/th&gt; &lt;th&gt;10-11&lt;/th&gt; & lt;th&gt;11-12&lt;/th&gt; &lt;th&gt;12-12:30&lt;/th& gt; &lt;th rowspan="3"&gt;LUNCH&lt;/th&gt; &lt;th&gt;    01:30-02&lt;/th&gt; &lt;th&gt;02-03&lt;/th&gt; &lt;th&  gt;03-04:30&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;Monday&lt;/th&gt; &lt;td&gt;&lt;/td&gt; &lt;  td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/   td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;    td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;Tuesday&lt;/th&gt; &lt;td&gt;&lt;/td&gt; &lt; td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/  td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;   td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+        <h3>OUTPUT</h3>
+        <div class="output">
+        <table class="table" style="width:80%;margin:0  auto;">
+        <colgroup>
+        <col span="1" style="background-color:lightgreen;">
+        <col>
+        <col>
+        <col span="6" style="background-color:orange;">
+        </colgroup>
+        <tr>
+        <th rowspan="2" style="background-color:lightblue;  ">DAY</th> <th colspan="8"    style="background-color:gray;">TIME</th>
+        </tr>
+        <tr>
+            <!--
+                larger than the required rowspan or colspan     remove the border
+            -->
+        <th>09-10</th> <th>10-11</th> <th>11-12</th>    <th>12-12:30</th> <th rowspan="3">LUNCH</th>   <th>01:30-02</th> <th>02-03</th> <th>03-04:30</th>
+        </tr>
+        <tr>
+        <th>Monday</th> <td></td> <td></td> <td></td> <td></    td> <td></td> <td></td> <td></td>
+        </tr>
+        <tr>
+        <th>Tuesday</th> <td></td> <td></td> <td></td> <td></   td> <td></td> <td></td> <td></td>
+        </tr>
+        </table>
+        <div>
+    </section>
+    <h2><a href="#nav">Back to Nav Link</a></h2><hr>
+
+    <!----------------------------- Day16 ------------------------------>
+    
+    <h2 id="day16">Day16</h2>
+
+    <section class="d6">
+    <h1>Position</h1>
+    <h3>Static</h3>
+    <p>This is the default position of every elements. These elements can placed to only it's default position.</p>
+    
+    <h3>Relative</h3>
+    <p>Position of this element ca be changed relatives to it's default position.</p>
+    <b>OUTPUT</b>
+    <div class="output">
+        <div class="container">
+            <div>static</div>
+            <div class="relative">relative</div>
+        </div>
+    </div>
+
+    <h3>Absolute</h3>
+    <p>This is position is ralative to body elements position. This element is relative to it's parent element if the parent element position is other than static(default) positon.</p>
+    <b>CODE</b>
+<pre>
+----CSS----
+
+.ab-container {
+    width: 100%;
+    height: 240px;
+    margin: 10px 0px;
+    background-color: aqua;
+    display: flex;
+    border: 10px solid green;
+}
+.ab-container > div {
+    width: 100px;
+    height: 140px;
+    background-color: rgba(214, 145, 54, 0.644);
+    border: 4px solid gray;
+}
+.child {
+    width: 80px;
+    height: 60px;
+    background-color: rgba(137, 43, 226, 0.473);
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    font-size: .8rem;
+    position: absolute;
+    top: 0px;
+    right: 140px;
+}
+.rel {
+    left: 140px;
+}
+
+----HTML----
+
+&lt;div class="container"&gt;
+    &lt;div class="parent"&gt;static
+        &lt;div class="child absolute"&gt;parent : static &lt;br&gt; child : absolute&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="container"&gt;
+    &lt;div class="parent par-relative"&gt;relative
+    &lt;div class="child absolute rel"&gt;parent : relative &lt;br&gt; child : absolute&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    
+    <b>OUTPUT</b>
+    <div class="output">
+        <div class="ab-container">
+            <div class="parent">static
+                <div class="child absolute">parent : static <br> child : absolute</div>
+            </div>
+        </div>
+        <div class="ab-container">
+            <div class="parent par-relative">relative
+                <div class="child absolute rel">parent : relative <br> child : absolute</div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Fixed</h3>
+    <p>This fixed position is ralative to viewport so fixed position element is always appear on viewport it won't hide even on the page scroll.</p>
+    <b>CODE</b>
+<pre>
+----CSS----
+.fix {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 0px;
+    right:0px;
+    background-color: orange;
+    border: 4px solid gray;
+}
+----HTML----
+&lt;div class="fix"&gt;position fixed top right&lt;/div&gt;
+</pre>
+    <b>OUTPUT</b>
+    <div class="output">
+        <p>output will appear on browser's top right corner.</p>
+        <div class="fix">position fixed top right</div>
+    </div>
+
+    <h3>Sticky</h3>
+    <p>This position is acts as a relative psition when it is visible in the view port. During the scroll it won's hide like relative at the edge of the viewport it act as fixed position.</p>
+    <b>CODE</b>
+<pre>
+----CSS----
+
+.sticky {
+    width: 100px;
+    height:40px;
+    position: sticky;
+    top: 0px;
+    left: calc( 50vw - 50px );
+    background-color: red;
+    border: 4px solid gray;
+}
+
+----HTML----
+
+&lt;div class="sticky"&gt;Sticky&lt;/div&gt;
+</pre>
+    <b>OUTPUT</b>
+    <div class="output">
+        <div class="sticky">Sticky</div>
+        <p>Scroll to the bottom to see the working of sticky position.</p>
+        <div style="height: 150vh;"></div>
+        <p>Successfully tested working of sticky position</p>
+    </div>
+
+    </section>
+    <h2><a href="#nav">Back to Nav Link</a></h2><hr>
+
+    <!----------------------------- Day17 ------------------------------>
+    
+    <h2 id="day17">Day17</h2>
+
+    <section class="d7">
+        <h1>Transform</h1>
+        <p>Transform explanation</p>
+        <!-------------------- SCALE -------------------->
+        <h2>scalex</h2>
+        <b>CODE</b>
+<pre>
+----CSS----
+
+.scalex:hover {
+    transition-duration: .8s;
+    transform: scalex(1.4);
+}
+
+----HTML----
+
+&lt;div&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="child scalex"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output">
+            <div class="container">
+                <div class="child scalex"></div>
+            </div>
+        </div>
+
+        <h2>scaley</h2>
+        <b>CODE</b>
+<pre>
+----CSS----
+
+.scaley:hover {
+    transform: scaley(1.4);
+}
+
+----HTML----
+
+&lt;div&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="child scaley"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output sy">
+            <div class="container">
+                <div class="child scaley"></div>
+            </div>
+        </div>
+
+        <h2>scale single value</h2>
+        <p>This single value is taken for both x and y axis.</p>
+        <b>CODE</b>
+<pre>
+----CSS----
+
+.scale1:hover {
+    transform: scale(1.4);
+}
+
+----HTML----
+
+&lt;div&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="child scale1"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output sy">
+            <div class="container">
+                <div class="child scale1"></div>
+            </div>
+        </div>
+
+        <h2>scale double value</h2>
+        <b>CODE</b>
+<pre>
+----CSS----
+
+.scale2:hover {
+    transform: scale(2,1.4);
+}
+
+----HTML----
+
+&lt;div&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="child scale2"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output sy">
+            <div class="container">
+                <div class="child scale2"></div>
+            </div>
+        </div>
+        <!-------------------- SKEW -------------------->
+        <h2>skewx</h2>
+        <b>CODE</b>
+<pre>
+----CSS----
+.skewx:hover {
+    transform: skewX(45deg);
+}
+----HTML----
+&lt;div&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="child skewx"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output">
+            <div class="container">
+                <div class="child skewx"></div>
+            </div>
+        </div>
+
+        <h2>skewy</h2>
+        <b>CODE</b>
+<pre>
+----CSS----
+.skewy:hover {
+    transform: skewY(45deg);
+}
+----HTML----
+&lt;div&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="child skewy"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output sky">
+            <div class="container">
+                <div class="child skewy"></div>
+            </div>
+        </div>
+
+        <h2>skew single value</h2>
+        <p>This single value is taken for x axis.</p>
+        <b>CODE</b>
+<pre>
+----CSS----
+.skew1:hover {
+    transform: skew(45deg);
+}
+----HTML----
+&lt;div&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="child skew1"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output">
+            <div class="container">
+                <div class="child skew1"></div>
+            </div>
+        </div>
+
+        <h2>skew double value</h2>
+        <b>CODE</b>
+<pre>
+----CSS----
+.skew2:hover {
+    transform: skew(30deg,30deg);
+}
+----HTML----
+&lt;div&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="child skew2"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output sky">
+            <div class="container">
+                <div class="child skew2"></div>
+            </div>
+        </div>
+        <!-------------------- ROTATE -------------------->
+        <h2>rotatex</h2>
+        <b>CODE</b>
+<pre>
+----CSS----
+.rotatex:hover {
+    transform: rotateX(45deg);
+}
+----HTML----
+&lt;div class="container"&gt;
+    &lt;div class="child rotatex"&gt;&lt;/div&gt;
+%lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output sy">
+            <div class="container">
+                <div class="child rotatex"></div>
+            </div>
+        </div>
+
+        <h2>rotatey</h2>
+        <b>CODE</b>
+<pre>
+----CSS----
+.rotatey:hover {
+    transform: rotateY(45deg);
+}
+----HTML----
+&lt;div class="container"&gt;
+    &lt;div class="child rotatey"&gt;&lt;/div&gt;
+&lt;/div&gt;<br>
+</pre>
+        <b>OUTPUT</b>
+        <div class="output sy">
+            <div class="container">
+                <div class="child rotatey"></div>
+            </div>
+        </div>
+
+        <h2>rotatez</h2>
+        <b>CODE</b>
+<pre>
+----CSS----
+.rotatez:hover {
+    transform: rotateZ(45deg);
+}
+----HTML----
+&lt;div class="container"&gt;
+    &lt;div class="child rotatez"&gt;&lt;/div&gt;
+%lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output sy">
+            <div class="container">
+                <div class="child rotatez"></div>
+            </div>
+        </div>
+
+        <h2>rotate single value</h2>
+        <p>This single value is taken for z axis.</p>
+        <b>CODE</b>
+<pre>
+----CSS----
+.rotate1:hover {
+    transform: rotate(45deg);
+}
+----HTML----
+&lt;div class="container"&gt;
+    &lt;div class="child rotate1"&gt;&lt;/div&gt;
+%lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output sy">
+            <div class="container">
+                <div class="child rotate1"></div>
+            </div>
+        </div>
+        <!-------------------- TRANSLATE -------------------->
+        <h2>translatex</h2>
+        <b>CODE</b>
+<pre>
+----CSS----
+.translatex:hover {
+    transform: translateX(40px);
+}
+----HTML----
+&lt;div&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="child translatex"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output">
+            <div class="container">
+                <div class="child translatex"></div>
+            </div>
+        </div>
+
+        <h2>translatey</h2>
+        <b>CODE</b>
+<pre>
+----CSS----
+.translatey:hover {
+    transform: translateY(40px);
+}
+----HTML----
+&lt;div&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="child translatey"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output ty">
+            <div class="container">
+                <div class="child translatey"></div>
+            </div>
+        </div>
+
+        <h2>translatez</h2>
+        <p>This needs perspective in its parent</p>
+        <b>CODE</b>
+<pre>
+----CSS----
+.container {
+perspective:100px;
+}
+.translatez:hover {
+    transform: translateZ(40px);
+}
+----HTML----
+&lt;div&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="child translateZ"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output sky">
+            <div class="container">
+                <div class="child translatez"></div>
+            </div>
+        </div>
+
+        <h2>translate single value</h2>
+        <p>This single value is taken for x axis.</p>
+        <b>CODE</b>
+<pre>
+----CSS----
+.translate1:hover {
+    transform: translate(40px);
+}
+----HTML----
+&lt;div&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="child translate1"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output">
+            <div class="container">
+                <div class="child translate1"></div>
+            </div>
+        </div>
+
+        <h2>translate double value</h2>
+        <p>This double value is taken for x and y axis.</p>
+        <b>CODE</b>
+<pre>
+----CSS----
+.translate2:hover {
+    transform: translate(40px,40px);
+}
+----HTML----
+&lt;div&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="child translate2"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output">
+            <div class="container last">
+                <div class="child translate2"></div>
+            </div>
+        </div>
+    </section>
+    <h2><a href="#nav">Back to Nav Link</a></h2><hr>
+
+    <!----------------------------- Day18 ------------------------------>
+    
+    <h2 id="day18">Day18</h2>
+
+    <section class="d8">
+        <h1>Transition</h1>
+        <b>CODE</b>
+<pre>
+----CSS----
+.child {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(210, 105, 30, 0.644);
+    border: 4px solid gray;
+    /* Hover out transition duration */
+    transition: transform .4s ease-in-out .2s;
+    transform-origin: right;
+}
+.transform:hover {
+    transform: rotateY(180deg) translateX(100%) scale(1.4) skew(30deg);
+}
+----HTML----
+&lt;div&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="child transform"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output trans">
+            <div class="container">
+                <div class="child transform"></div>
+            </div>
+        </div>
+        <h1>Animation</h1>
+        <b>CODE</b>
+<pre>
+----CSS----
+.container-ani {
+    width: 300px;
+    height: 300px;
+    margin: 0px auto;
+    background-color: rgb(165, 153, 42);
+    perspective: 400px;
+}
+.child-ani {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(210, 30, 30, 0.644);
+    border: 4px solid gray;
+    /*
+    Syntax of animation
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    */
+    animation: cross 2s ease-in-out 1s infinite alternate both ;
+}
+.child-ani:hover {
+    animation-play-state: paused;
+}
+@keyframes cross {
+    from {
+        transform: translateX(0px) translateY(0px);
+    }
+    to {
+        transform: translateX(220px) translateY(220px);
+    }
+}
+----HTML----
+&lt;div&gt;
+    &lt;div class="container-ani"&gt;
+        &lt;div class="child-ani"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output">
+            <div class="container-ani">
+                <div class="child-ani"></div>
+            </div>
+        </div>
+    </section>
+    <h2><a href="#nav">Back to Nav Link</a></h2><hr>
+
+    <!----------------------------- Day19 ------------------------------>
+    
+    <h2 id="day19">Day19</h2>
+
+    <section class="d9">
+        <h1>Card Flip</h1>
+        <b>CODE</b>
+<pre>
+----CSS----
+.flip-parent {
+    width: 240px;
+    height: 160px;
+    margin: 0px auto;
+    perspective: 400px;
+    position: relative;
+}
+.flip-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out ;
+    -webkit-transition: transform 1s ease-in-out ;
+    -moz-transition: transform 1s ease-in-out ;
+    backface-visibility: hidden;
+}
+label {
+    position: absolute;
+    top: -24px;
+    text-align: center;
+    width: 100%;
+}
+.flip-child {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 160px;
+    backface-visibility: hidden;
+    font-size: 2.4rem;
+}
+.flip-front {
+    background-color: rgba(220, 20, 60, 0.699);
+}
+.flip-back {
+    background-color: rgba(184, 135, 11, 0.664);
+    transform: rotateX(180deg);
+}
+.flip-parent:hover > .flip-container {
+    transform: rotateX(180deg);
+}
+----HTML----
+&lt;div class="flip-parent"&gt;
+    &lt;label&gt;hover or click to flip&lt;/label&gt;
+    &lt;div class="flip-container"&gt;
+        &lt;div class="flip-child flip-front"&gt;FRONT&lt;/div&gt;
+        &lt;div class="flip-child flip-back"&gt;BACK&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <b>OUTPUT</b>
+        <div class="output fl">
+            <div class="flip-parent">
+                <label>hover or click to flip</label>
+                <div class="flip-container">
+                    <div class="flip-child flip-front">FRONT</div>
+                    <div class="flip-child flip-back">BACK</div>
+                </div>
+            </div>
+        </div>
+
+        <!--------------------- CUBE --------------------->
+        <h1>Cube</h1>
+        <b>CODE</b>
+<pre>
+-----CSS-------
+.d9 .cube-parent {
+    width: 200px;
+    height: 360px;
+    margin: 0px auto 140px auto;
+    position: relative;
+    perspective: 400px;
+}
+.d9 .cube-container {
+    width: 200px;
+    height: 200px;
+    margin: 40px auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out ;
+    -webkit-transition: transform 1s ease-in-out ;
+    -moz-transition: transform 1s ease-in-out ;
+}
+.d9 .cube-child {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    line-height: 160px;
+    font-size: 2.2rem;
+    opacity: .75;
+}
+.d9 .cube-top {
+    background-color: rgba(130, 189, 107);
+    transform: rotateX(90deg) translateZ(100px);
+}
+.d9 .cube-right {
+    background-color: rgba(139, 0, 139);
+    transform: rotateY(90deg) translateZ(100px);
+}
+.d9 .cube-bottom {
+    background-color: rgba(189, 183, 107);
+    transform: rotateX(-90deg) translateZ(100px);
+}
+.d9 .cube-left {
+    background-color: rgba(0, 139, 69);
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.d9 .cube-front {
+    background-color: rgb(0, 130, 139);
+    transform: translateZ(100px);
+}
+.d9 .cube-back {
+    background-color: rgb(0, 130, 139);
+    transform: rotateX(-180deg) translateZ(100px);
+}
+.d9 input[id=f]:checked ~ .cube-container {
+    transform: rotateX(-0deg);
+}
+.d9 input[id=ba]:checked ~ .cube-container {
+    transform: rotateX(-180deg);
+}
+.d9 input[id=t]:checked ~ .cube-container {
+    transform: rotateX(-90deg);
+}
+.d9 input[id=r]:checked ~ .cube-container {
+    transform: rotateX(90deg);
+    transform: rotateY(-90deg);
+}
+.d9 input[id=b]:checked ~ .cube-container {
+    transform: rotateX(90deg);
+}
+.d9 input[id=l]:checked ~ .cube-container {
+    transform: rotateX(-90deg);
+    transform: rotateY(90deg);
+}
+----HTML-----
+&lt;div class="cube-parent"&gt;
+    &lt;input type="radio" id="f" value="f" name="cube" class="fly f" checked&gt;&lt;label class="fly fl" for="f"&gt;FRONT&lt;/label&gt;&lt;br&gt;
+    &lt;input type="radio" id="ba" value="ba" name="cube" class="fly ba"&gt;&lt;label class="fly bal" for="ba"&gt;BACK&lt;/label&gt;&lt;br&gt;
+    &lt;input type="radio" id="t" value="t" name="cube" class="fly t"&gt;&lt;label class="fly tl" for="t"&gt;TOP&lt;/label&gt;&lt;br&gt;
+    &lt;input type="radio" id="r" value="r" name="cube" class="fly r"&gt;&lt;label class="fly rl" for="r"&gt;RIGHT&lt;/label&gt;&lt;br&gt;
+    &lt;input type="radio" id="b" value="b" name="cube" class="fly b"&gt;&lt;label class="fly bl" for="b"&gt;BOTTOM&lt;/label&gt;&lt;br&gt;
+    &lt;input type="radio" id="l" value="l" name="cube" class="fly l"&gt;&lt;label class="fly ll" for="l"&gt;LEFT&lt;/label&gt;&lt;br&gt;
+    &lt;div class="cube-container"&gt;
+        &lt;div class="cube-child cube-top"&gt;TOP&lt;/div&gt;
+        &lt;div class="cube-child cube-right"&gt;RIGHT&lt;/div&gt;
+        &lt;div class="cube-child cube-bottom"&gt;BOTTOM&lt;/div&gt;
+        &lt;div class="cube-child cube-left"&gt;LEFT&lt;/div&gt;
+        &lt;div class="cube-child cube-front"&gt;FRONT&lt;/div&gt;
+        &lt;div class="cube-child cube-back"&gt;BACK&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;            
+</pre>
+        <b>OUTPUT</b>
+        <div class="output">
+        <div class="cube-parent">
+            <input type="radio" id="f" value="f" name="cube" class="fly f" checked><label class="fly fl" for="f">FRONT</label><br>
+            <input type="radio" id="ba" value="ba" name="cube" class="fly ba"><label class="fly bal" for="ba">BACK</label><br>
+            <input type="radio" id="t" value="t" name="cube" class="fly t"><label class="fly tl" for="t">TOP</label><br>
+            <input type="radio" id="r" value="r" name="cube" class="fly r"><label class="fly rl" for="r">RIGHT</label><br>
+            <input type="radio" id="b" value="b" name="cube" class="fly b"><label class="fly bl" for="b">BOTTOM</label><br>
+            <input type="radio" id="l" value="l" name="cube" class="fly l"><label class="fly ll" for="l">LEFT</label><br>
+            <div class="cube-container">
+                <div class="cube-child cube-top">TOP</div>
+                <div class="cube-child cube-right">RIGHT</div>
+                <div class="cube-child cube-bottom">BOTTOM</div>
+                <div class="cube-child cube-left">LEFT</div>
+                <div class="cube-child cube-front">FRONT</div>
+                <div class="cube-child cube-back">BACK</div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <h2><a href="#nav">Back to Nav Link</a></h2><hr>
+
+    <!----------------------------- Day20 ------------------------------>
+    
+    <h2 id="day20">Day20</h2>
+
+    <section class="d0">
+        <h1>Filter</h1>
+        <p>
+            The filter CSS property applies graphical effects like blur or color shift to an element including it's border
+        </p>
+        <h3>CODE</h3>
+<pre>
+----CSS----
+img, .multi {
+    width: 80vw;
+    max-width: 240px;
+    height: 80vw;
+    max-height: 240px;
+    border: 4px solid orange;
+}
+.multi {
+    font-size: 3rem;
+    filter: blur(2px) brightness(2);
+}
+.blur {
+    filter: blur(2px);
+}
+.brightness {
+    filter: brightness(.5);
+    /* 50% brightness */
+}
+.contrast {
+    filter:contrast(2)
+}
+.drop-shadow {
+    filter: drop-shadow(6px 6px 4px red);
+}
+.grayscale {
+    filter: grayscale(1);
+}
+.hue-rotate {
+    filter: hue-rotate(90deg);
+}
+.invert {
+    filter: invert(1);
+}
+.opacity {
+    filter: opacity(.2);
+}
+.saturate {
+    filter: saturate(6);
+}
+.sepia {
+    filter: sepia(2);
+}
+----HTML----
+&lt;figure&gt;
+    &lt;img src="image.jpeg"&gt;
+    &lt;figcaption&gt;ORIGINAL&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+    &lt;img class="blur" src="image.jpeg"&gt;
+    &lt;figcaption&gt;BLUR 2px&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+    &lt;img class="brightness" src="image.jpeg"&gt;
+    &lt;figcaption&gt;brightness 50%&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+    &lt;img class="contrast" src="image.jpeg"&gt;
+    &lt;figcaption&gt;contrast 200%&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+    &lt;img class="drop-shadow" src="image.jpeg"&gt;
+    &lt;figcaption&gt;drop-shadow&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+    &lt;img class="grayscale" src="image.jpeg"&gt;
+    &lt;figcaption&gt;grayscale 100%&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+    &lt;img class="hue-rotate" src="image.jpeg"&gt;
+    &lt;figcaption&gt;hue-rotate 90deg&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+    &lt;img class="invert" src="image.jpeg"&gt;
+    &lt;figcaption&gt;invert 100%&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+    &lt;img class="opacity" src="image.jpeg"&gt;
+    &lt;figcaption&gt;opacity 20%&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+    &lt;img class="saturate" src="image.jpeg"&gt;
+    &lt;figcaption&gt;saturate 600%&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+    &lt;img class="sepia" src="image.jpeg"&gt;
+    &lt;figcaption&gt;sepia 200%&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h4&gt;Multi Values and text&lt;/h4&gt;
+&lt;p&gt;We can use multiple filter function i one. Filter affects all the contents inside the element including text.&lt;/p&gt;
+&lt;div class="multi"&gt;
+    Multi values
+&lt;/div&gt;
+</pre>
+        <h3>OUTPUT</h3>
+        <div class="output">
+            <figure>
+                <img src="image.jpeg">
+                <figcaption>ORIGINAL</figcaption>
+            </figure>
+            <figure>
+                <img class="blur" src="image.jpeg">
+                <figcaption>BLUR 2px</figcaption>
+            </figure>
+            <figure>
+                <img class="brightness" src="image.jpeg">
+                <figcaption>brightness 50%</figcaption>
+            </figure>
+            <figure>
+                <img class="contrast" src="image.jpeg">
+                <figcaption>contrast 200%</figcaption>
+            </figure>
+            <figure>
+                <img class="drop-shadow" src="image.jpeg">
+                <figcaption>drop-shadow</figcaption>
+            </figure>
+            <figure>
+                <img class="grayscale" src="image.jpeg">
+                <figcaption>grayscale 100%</figcaption>
+            </figure>
+            <figure>
+                <img class="hue-rotate" src="image.jpeg">
+                <figcaption>hue-rotate 90deg</figcaption>
+            </figure>
+            <figure>
+                <img class="invert" src="image.jpeg">
+                <figcaption>invert 100%</figcaption>
+            </figure>
+            <figure>
+                <img class="opacity" src="image.jpeg">
+                <figcaption>opacity 20%</figcaption>
+            </figure>
+            <figure>
+                <img class="saturate" src="image.jpeg">
+                <figcaption>saturate 600%</figcaption>
+            </figure>
+            <figure>
+                <img class="sepia" src="image.jpeg">
+                <figcaption>sepia 200%</figcaption>
+            </figure>
+            <h4>Multi Values and text</h4>
+            <p>We can use multiple filter function i one. Filter affects all the contents inside the element including text.</p>
+            <div class="multi">
+                Multi values
+            </div>
+        </div>
+
+        <h1>Backdrop-Filter</h1>
+        <p>
+            Backdrop-Filter only applies effects to the background.<br>
+            <b>Backdrop-Filter is not widwly supported.<a href="https://caniuse.com/css-backdrop-filter">caniuse</a></b>
+        </p>
+        <h3>CODE</h3>
+<pre>
+-----CSS-------
+.background-img {
+    background: url(image.jpeg) no-repeat;
+    width: 100vw;
+    max-width: 300px;
+    height: 300px;
+}
+.backdrop {
+    width: 200px;
+    height: 200px;
+    font-size: 3rem;
+    background: rgba(128, 128, 128, 0.5);
+    backdrop-filter: blur(10px);
+}
+-----HTML------
+&lt;div class="background-img"&gt;
+    &lt;div class="backdrop"&gt;
+    Back drop
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <h3>OUTPUT</h3>
+        <div class="output">
+            <div class="background-img">
+                <div class="backdrop">
+                    Back drop
+                </div>
+            </div>
+        </div>
+    </section>
+    <h2><a href="#nav">Back to Nav Link</a></h2>
+    <hr>
+
+    <!----------------------------- Day21 ------------------------------>
+
+    <section class="d21">
+        <h1 id="day21">Day 21</h1>
+        <hr>
+        
+        <h1>Flexbox / display:flex</h1>
+        <h3>CODE</h3>
+    <pre>
+    ----CSS----
+    .container {
+        width: 100%;
+        background-color: cornflowerblue;
+        display: flex;
+        margin: 0px 0px 20px 0px;
+    }
+    div {
+        background-color: crimson;
+        border: 2px solid black;
+        margin: 2px;
+    }
+    ----HTML----
+    &lt;span&gt;Display : flex &lt;/span&gt;
+    &lt;nav class="container"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    </pre>
+    
+        <h3>OUTPUT</h3>
+        <span>Display : flex </span>
+        <nav class="container">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Logout</div>
+        </nav>
+    
+        <h1>Flex-Direction</h1>
+        <h3>CODE</h3>
+    <pre>
+    ----CSS----
+    .flex-dir-row {
+        flex-direction: row;
+    }
+    .flex-dir-row-reverse {
+        flex-direction: row-reverse;
+    }
+    .flex-dir-columm {
+        flex-direction: column;
+    }
+    .flex-dir-columm-reverse {
+        flex-direction: column-reverse;
+    }
+    ----HTML----
+    &lt;span&gt;flex-direction:row (Default)&lt;/span&gt;
+    &lt;nav class="container flex-dir-row"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;span&gt;flex-direction:row-reverse&lt;/span&gt;
+    &lt;nav class="container flex-dir-row-reverse"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;span&gt;flex-direction:columm&lt;/span&gt;
+    &lt;nav class="container flex-dir-columm"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;span&gt;flex-direction:columm-reverse&lt;/span&gt;
+    &lt;nav class="container flex-dir-columm-reverse"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    </pre>
+        <h3>OUTPUT</h3>
+        <div class="output">
+            <span>flex-direction:row (Default)</span>
+            <nav class="container flex-dir-row">
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+            <span>flex-direction:row-reverse</span>
+            <nav class="container flex-dir-row-reverse">
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+            <span>flex-direction:columm</span>
+            <nav class="container flex-dir-columm">
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+            <span>flex-direction:columm-reverse</span>
+            <nav class="container flex-dir-columm-reverse">
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+        </div>
+    
+        <h1>Flex Wrap</h1>
+        <p>
+            <b>nowrap (default)</b> - this won't wrap the element even if the elements can't fit in single row or column. It </b>reduce the child elements width</b> to fit within single row or column.
+            <br>
+            <b>wrap</b> - This wrap the elements when it can't fit in single row or column. It <b>won't change child elements width</b> to fit in single row or column.
+            <br>
+            <b>wrap-reverse</b> - This wrap the elements in reverse order when it can't fit in single row or column. It <b>won't change child elements width</b> to fit in single row or column.
+        </p>
+        <h3>CODE</h3>
+    <pre>
+    ----CSS----
+    .flex-wrap div {
+        width: 80vw;
+    }
+    .flex-wrap-wrap {
+        flex-wrap: wrap;
+    }
+    .flex-wrap-wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+    ----HTML----
+    &lt;span&gt;flex-wrap: nowrap (default)&lt;/span&gt;
+    &lt;nav class="container flex-wrap flex-wrap-nowrap"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;span&gt;flex-wrap: wrap&lt;/span&gt;
+    &lt;nav class="container flex-wrap flex-wrap-wrap"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;span&gt;flex-wrap: wrap-reverse&lt;/span&gt;
+    &lt;nav class="container flex-wrap flex-wrap-wrap-reverse"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    </pre>
+        <h3>OUTPUT</h3>
+        <div class="output">
+            <span>flex-wrap: nowrap (default)</span>
+            <nav class="container flex-wrap flex-wrap-nowrap">
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+            <span>flex-wrap: wrap</span>
+            <nav class="container flex-wrap flex-wrap-wrap">
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+            <span>flex-wrap: wrap-reverse</span>
+            <nav class="container flex-wrap flex-wrap-wrap-reverse">
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+        </div>
+    
+        <h1>Flex Flow</h1>
+        <p>This is the shorthand property to use flex-direction and flex-wrap</p>
+        <h3>CODE</h3>
+    <pre>
+    ----CSS----
+    .flex-flow-column-wrap {
+        height: 60px;
+        flex-flow: column wrap;
+    }
+    ----HTML----
+    &lt;span&gt;flex-flow: column wrap&lt;/span&gt;
+    &lt;nav class="container flex-flow-column-wrap"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    </pre>
+        <h3>OUTPUT</h3>
+        <div class="output">
+            <span>flex-flow: column wrap</span>
+            <nav class="container flex-flow-column-wrap">
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+        </div>
+    
+        <h1>Justify Content</h1>
+        <p>Justify content align the content horizontally(x-axis).</p>
+        <h3>CODE</h3>
+    <pre>
+    ----CSS----
+    .justify-flex-start {
+        justify-content: flex-start;
+    }
+    .justify-flex-end {
+        justify-content: flex-end;
+    }
+    .justify-center {
+        justify-content: center;
+    }
+    .justify-space-around {
+        justify-content: space-around;
+    }
+    .justify-space-between {
+        justify-content: space-between;
+    }
+    .justify-space-evenly {
+        justify-content: space-evenly;
+    }
+    ----HTML----
+    &lt;span&gt;Justify-Content:flex-start (Default)&lt;/span&gt;
+    &lt;nav class="container justify-flex-start"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;span&gt;Justify-Content:flex-end&lt;/span&gt;
+    &lt;nav class="container justify-flex-end"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;span&gt;Justify-Content:centre&lt;/span&gt;
+    &lt;nav class="container justify-center"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;span&gt;Justify-Content:space-around&lt;/span&gt;
+    &lt;nav class="container justify-space-around"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;span&gt;Justify-Content:space-between&lt;/span&gt;
+    &lt;nav class="container justify-space-between"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;span&gt;Justify-Content:space-evenly&lt;/span&gt;
+    &lt;nav class="container justify-space-evenly"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    </pre>
+        <h3>OUTPUT</h3>
+        <div class="output">
+            <span>Justify-Content:flex-start (Default)</span>
+            <nav class="container justify-flex-start">
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+            <span>Justify-Content:flex-end</span>
+            <nav class="container justify-flex-end">
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+            <span>Justify-Content:centre</span>
+            <nav class="container justify-center">
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+            <span>Justify-Content:space-around</span>
+            <nav class="container justify-space-around">
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+            <span>Justify-Content:space-between</span>
+            <nav class="container justify-space-between">
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+            <span>Justify-Content:space-evenly</span>
+            <nav class="container justify-space-evenly">
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+        </div>
+    
+        <h1>Align items</h1>
+        <p>
+            Align items wiil align child elements vertically(y-axis).
+            <br>
+            Align items place individual to that position in that particular row / column.
+        </p>
+        <h3>CODE</h3>
+    <pre>
+    ----CSS----
+    .align-items {
+        height: 80px;
+    }
+    .align-items-flex-start {
+        align-items: flex-start;
+    }
+    .align-items-flex-end {
+        align-items: flex-end;
+    }
+    .align-items-center {
+        align-items: center;
+    }
+    .align-items-stretch {
+        align-items: stretch;
+    }
+    ----HTML----
+    &lt;span&gt;Align items flex-start (default)&lt;/span&gt;
+    &lt;nav class="container align-items align-items-flex-start"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;span&gt;Align items flex-end&lt;/span&gt;
+    &lt;nav class="container align-items align-items-flex-end"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;span&gt;Align items center&lt;/span&gt;
+    &lt;nav class="container align-items align-items-center"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;span&gt;Align items stretch&lt;/span&gt;
+    &lt;nav class="container align-items align-items-stretch"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    </pre>
+        <h3>OUTPUT</h3>
+        <div class="output">
+            <span>Align items flex-start (default)</span>
+            <nav class="container align-items align-items-flex-start">
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+            <span>Align items flex-end</span>
+            <nav class="container align-items align-items-flex-end">
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+            <span>Align items center</span>
+            <nav class="container align-items align-items-center">
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+            <span>Align items stretch</span>
+            <nav class="container align-items align-items-stretch">
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+        </div>
+    
+        <h1>Align self</h1>
+        <h3>CODE</h3>
+    <pre>
+    ----CSS----
+    .align-self-flex-start {
+        align-self: flex-start;
+    }
+    .align-self-flex-end {
+        align-self: flex-end;
+    }
+    .align-self-center {
+        align-self: center;
+    }
+    .align-self-stretch {
+        align-self: stretch;
+    }
+    ----HTML----
+    &lt;nav class="container align-items"&gt;
+        &lt;div class="align-self-flex-start"&gt;start&lt;/div&gt;
+        &lt;div class="align-self-flex-end"&gt;end&lt;/div&gt;
+        &lt;div class="align-self-center"&gt;center&lt;/div&gt;
+        &lt;div class="align-self-stretch"&gt;stretch&lt;/div&gt;
+    &lt;/nav&gt;
+    </pre>
+        <h3>OUTPUT</h3>
+        <div class="output">
+            <span>Align self only can change the align items values</span>
+            <nav class="container align-items">
+                <div class="align-self-flex-start">start</div>
+                <div class="align-self-flex-end">end</div>
+                <div class="align-self-center">center</div>
+                <div class="align-self-stretch">stretch</div>
+            </nav>
+        </div>
+    
+        <h1>Align Content</h1>
+        <p>
+            <b>align content</b> which place all the child items to corresponding position based on it's width height.
+        </p>
+        <h3>CODE</h3>
+    <pre>
+    ----CSS----
+    .align-item-content {
+        flex-wrap: wrap;
+        height: 140px;
+        max-width: 600px;
+    }
+    .align-content-center {
+        align-content: center;
+    }
+    .align-item-center {
+        align-items: center;
+    }
+    ----HTML----
+    &lt;span&gt;align-content: center;&lt;/span&gt;
+    &lt;nav class="container align-item-content align-content-center"&gt;
+        &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+        &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+        &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+        &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+        &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+        &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;span&gt;align-items: center;&lt;/span&gt;
+    &lt;nav class="container align-item-content align-item-center"&gt;
+        &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+        &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+        &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+        &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+        &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+        &lt;div&gt;start&lt;/div&gt; &lt;div&gt;end&lt;/div&gt; &lt;div&gt;center&lt;/div&gt; &lt;div&gt;stretch&lt;/div&gt;
+    &lt;/nav&gt;
+    </pre>
+        <h3>OUTPUT</h3>
+        <div class="output">
+            <span>align-content: center;</span>
+            <nav class="container align-item-content align-content-center">
+                <div>start</div><div>end</div><div>center</div><div>stretch</div>
+                <div>start</div><div>end</div><div>center</div><div>stretch</div>
+                <div>start</div><div>end</div><div>center</div><div>stretch</div>
+                <div>start</div><div>end</div><div>center</div><div>stretch</div>
+                <div>start</div><div>end</div><div>center</div><div>stretch</div>
+                <div>start</div><div>end</div><div>center</div><div>stretch</div>
+            </nav>
+            <span>align-items: center;</span>
+            <nav class="container align-item-content align-item-center">
+                <div>start</div><div>end</div><div>center</div><div>stretch</div>
+                <div>start</div><div>end</div><div>center</div><div>stretch</div>
+                <div>start</div><div>end</div><div>center</div><div>stretch</div>
+                <div>start</div><div>end</div><div>center</div><div>stretch</div>
+                <div>start</div><div>end</div><div>center</div><div>stretch</div>
+                <div>start</div><div>end</div><div>center</div><div>stretch</div>
+            </nav>
+        </div>
+    
+        <h1>positioning flex items</h1>
+        <h3>CODE</h3>
+    <pre>
+    ----CSS----
+    .position > .home {
+        margin-right: auto;
+    }
+    .justify-flex-end {
+        justify-content: flex-end;
+    }
+    ----HTML----
+    &lt;nav class="container justify-flex-end position"&gt;
+        &lt;div class="home"&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    </pre>
+        <h3>OUTPUT</h3>
+        <div class="output">
+            <nav class="container justify-flex-end position">
+                <div class="home">Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+        </div>
+    
+        <h1>flex property</h1>
+        <h3>CODE</h3>
+    <pre>
+    ----CSS----
+    .flex-1 > .home {
+        flex: 1;
+    }
+    .flex-2 > div {
+        flex: 1;
+    }
+    .flex-2 > .home {
+        flex: 2;
+    }
+    ----HTML----
+    &lt;span&gt;Flex value for only one element&lt;/span&gt;
+    &lt;nav class="container flex-1"&gt;
+        &lt;div class="home"&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;span&gt;Flex value for all element&lt;/span&gt;
+    &lt;nav class="container flex-2"&gt;
+        &lt;div&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;span&gt;Flex value for all element but one element has higher flex value&lt;/span&gt;
+    &lt;nav class="container flex-2"&gt;
+        &lt;div class="home"&gt;Home&lt;/div&gt;
+        &lt;div&gt;Search&lt;/div&gt;
+        &lt;div&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    </pre>
+        <h3>OUTPUT</h3>
+        <div class="output">
+            <span>Flex value for only one element</span>
+            <nav class="container flex-1">
+                <div class="home">Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+            <span>Flex value for all element</span>
+            <nav class="container flex-2">
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+            <span>Flex value for all element but one element has higher flex value</span>
+            <nav class="container flex-2">
+                <div class="home">Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </nav>
+        </div>
+    
+        <h1>Flex grow shrink basis</h1>
+        <p>
+            <b>flex</b>is the short hand property for three values
+            <br>SYNTAX<br>
+            <code>flex: [flex-grow] [flex-shrink] [flex-basis] ;</code>
+            <br><br>
+            <b>Flex grow</b> when it's parent size increases it will grow comparing to it's sibling grow value.
+            <br>
+            <b>Flex shrink</b> when it's parent size decreases it will shrink comparing to it's sibling shrink value.
+            <br>
+            <b>Flex basis</b> this sets minimum flex value.
+            <br><br>
+        </p>
+        <h3>CODE</h3>
+    <pre>
+    ----CSS----
+    .flex > .home {
+        /* flex: 1 0 100px */
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 100px;
+    }
+    .flex > .search {
+        /* flex: 0 1 100px */
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 100px;
+    }
+    .flex > .logout {
+        /* flex: 1.5 2 160px */
+        flex-grow: 1.5;
+        flex-shrink: 2;
+        flex-basis: 160px;
+    }
+    ----HTML----
+    &lt;nav class="container flex"&gt;
+        &lt;div class="home"&gt;Home&lt;/div&gt;
+        &lt;div class="search"&gt;Search&lt;/div&gt;
+        &lt;div class="logout"&gt;Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    
+    </pre>
+        <h3>OUTPUT</h3>
+        <div class="output">
+            <nav class="container flex">
+                <div class="home">Home</div>
+                <div class="search">Search</div>
+                <div class="logout">Logout</div>
+            </nav>
+        </div>
+    
+        <h1>Order</h1>
+        <p>This is used to change the order of element</p>
+        <h3>CODE</h3>
+    <pre>
+    ----CSS----
+    .order .home {
+        order: 3;
+    }
+    .order .search {
+        order: -3;
+    }
+    .order .logout {
+        order: 1;
+    }
+    ----HTML----
+    &lt;nav class="container order"&gt;
+        &lt;div class="home"&gt;1 Home&lt;/div&gt;
+        &lt;div class="search"&gt;2 Search&lt;/div&gt;
+        &lt;div class="logout"&gt;3 Logout&lt;/div&gt;
+    &lt;/nav&gt;
+    </pre>
+        <h3>OUTPUT</h3>
+        <div class="output">
+            <nav class="container order">
+                <div class="home">1 Home</div>
+                <div class="search">2 Search</div>
+                <div class="logout">3 Logout</div>
+            </nav>
+        </div>
+    </section>
+    <h2><a href="#nav">Back to Nav Link</a></h2>
+    <hr>
+
+    <!----------------------------- Day22 ------------------------------>
+
+
+<section class="d22">
+    <h1 id="day22">Day 22</h1>
+    <hr>
+
+    <h1>GRID LAYOUT</h1>
+    <h1>display:Grid;</h1>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+
+.container {
+    width: 100%;
+    height: 200px;
+    margin: 0px auto;
+    padding: 0px;
+    background-color: orange;
+    border: 2px solid blue;
+    border-radius: 6px;
+}
+.grid {
+    display: grid;
+}
+.container > div {
+    background-color: orangered;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+----HTML----
+
+&lt;h4&gt;OUTPUT without grid&lt;/h4&gt;
+&lt;div class="container"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+    &lt;div&gt;5&lt;/div&gt;
+    &lt;div&gt;6&lt;/div&gt;
+&lt;/div&gt;
+&lt;h4&gt;OUTPUT with grid&lt;/h4&gt;
+&lt;div class="grid container"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+    &lt;div&gt;5&lt;/div&gt;
+    &lt;div&gt;6&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    <h4>OUTPUT without grid</h4>
+    <div class="output">
+        <div class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+    </div>
+    <h4>OUTPUT with grid</h4>
+    <div class="output">
+        <div class="grid container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+    </div>
+
+    <h1>Container Properties</h1>
+    <h2>grid-template-columns</h2>
+    <p>
+        grid-template-columns is used to give each column width.
+        <br>
+        The <b>number of column</b> is taken from number of width values given.
+        <br><br>
+        <b>auto</b> value will take entire remaining width.
+        <br>
+        <b>fr</b> (fraction) value will divide entire remaining width and give it to each column.
+        <br><br>
+        <code>grid-template-columns: 1fr 2fr;</code> this will give one fraction for first column , two fraction for second column from the entire remaining width.
+    </p>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+
+.grid-template-columns {
+    grid-template-columns: 100px 70px 40px auto;
+    /*
+    grid-template-columns: repeat(4, 1fr); = grid-template-columns: 1fr 1fr 1fr 1fr;
+    We can also set pixel percentage values
+    */
+}
+
+----HTML----
+
+&lt;div class="grid container grid-template-columns"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+    &lt;div&gt;5&lt;/div&gt;
+    &lt;div&gt;6&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <div class="grid container grid-template-columns">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+    </div>
+    <h2>auto fill in minmax</h2>
+    <p>
+        This always give remaining space in the specified width.
+        <br>
+        <b>Fills our container with extra column.</b>
+    </p>
+    <h3>CODE</h3>
+<Pre>
+----CSS----
+
+.grid-template-columns-autofill {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+----HTML----
+
+&lt;div class="grid container grid-template-columns-autofill"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;
+</Pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <div class="grid container grid-template-columns-autofill">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </div>
+    <h2>auto fit in minmax</h2>
+    <p>
+        <b>Fits our item in extra space.</b>
+    </p>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+
+.grid-template-columns-autofit {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+----HTML----
+
+&lt;div class="grid container grid-template-columns-autofit"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <div class="grid container grid-template-columns-autofit">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </div>
+
+    <h2>grid-template-rows</h2>
+    <p>
+        grid-template-rows is used to give each row height.
+        <br>
+        The <b>number of row</b> is taken from number of row values given.
+        <br>
+        If the no of items exceds the no of rows 
+    </p>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+
+.grid-template-rows {
+    grid-template-rows: 1.5fr 1fr;
+}
+
+----HTML----
+
+&lt;div class="grid container grid-template-rows"&gt;
+    &lt;div class="one"&gt;1&lt;/div&gt;
+    &lt;div class="two"&gt;2&lt;/div&gt;
+    &lt;div class="three"&gt;3&lt;/div&gt;
+    &lt;div class="four"&gt;4&lt;/div&gt;
+    &lt;div class="five"&gt;5&lt;/div&gt;
+    &lt;div class="six"&gt;6&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <div class="grid container grid-template-rows">
+            <div class="one">1</div>
+            <div class="two">2</div>
+            <div class="three">3</div>
+            <div class="four">4</div>
+            <div class="five">5</div>
+            <div class="six">6</div>
+        </div>
+    </div>
+    <h2>grid-template rows &amp; columns</h2>
+    <p>
+        grid-template-rows is used to give each row height.
+        <br>
+        The <b>number of row</b> is taken from number of row values given.
+        <br>
+        If the no of items exceds the no of rows 
+    </p>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+
+.grid-template-columns {
+    grid-template-columns: 100px 70px 40px auto;
+}
+.grid-template-rows {
+    grid-template-rows: 1.5fr 1fr;
+}
+
+----HTML----
+
+&lt;div class="grid container grid-template-rows grid-template-columns"&gt;
+    &lt;div class="one"&gt;1&lt;/div&gt;
+    &lt;div class="two"&gt;2&lt;/div&gt;
+    &lt;div class="three"&gt;3&lt;/div&gt;
+    &lt;div class="four"&gt;4&lt;/div&gt;
+    &lt;div class="five"&gt;5&lt;/div&gt;
+    &lt;div class="six"&gt;6&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <div class="grid container grid-template-rows grid-template-columns">
+            <div class="one">1</div>
+            <div class="two">2</div>
+            <div class="three">3</div>
+            <div class="four">4</div>
+            <div class="five">5</div>
+            <div class="six">6</div>
+        </div>
+    </div>
+
+</section>
+<h2><a href="#nav">Back to Nav Link</a></h2>
+<hr>
+
+<!----------------------------- Day23 ------------------------------>
+
+
+    <section class="d23">
+        <h1 id="day23">Day 23 Learning</h1>
+        <hr>
+
+    <!--------------- Grid Auto --------------->
+
+    <h1>Grid auto columns &amp; rows</h1>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+.container {
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px;
+    background-color: orange;
+    border: 2px solid blue;
+    border-radius: 6px;
+}
+.grid {
+    display: grid;
+    height: 240px;
+}
+.auto-rows {
+    grid-auto-flow: row;/* Default value */
+    grid-auto-rows: 50px;
+}
+.auto-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 100px;
+}
+.container div {
+    background-color: orangered;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+.grid-template-columns {
+    grid-template-columns: 34px 34px;
+}
+.grid-template-rows {
+    grid-template-rows: 34px 34px;
+}
+
+----HTML----
+
+&lt;div class="grid auto-rows container grid-template-rows grid-template-columns"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+    &lt;div&gt;5&lt;/div&gt;
+    &lt;div&gt;6&lt;/div&gt;
+    &lt;div&gt;7&lt;/div&gt;
+    &lt;div&gt;8&lt;/div&gt;
+    &lt;div&gt;9&lt;/div&gt;
+    &lt;div&gt;10&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="grid auto-columns container grid-template-rows grid-template-columns"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+    &lt;div&gt;5&lt;/div&gt;
+    &lt;div&gt;6&lt;/div&gt;
+    &lt;div&gt;7&lt;/div&gt;
+    &lt;div&gt;8&lt;/div&gt;
+    &lt;div&gt;9&lt;/div&gt;
+    &lt;div&gt;10&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h3>OUTPUT Auto Rows</h3>
+    <p>
+        Fills the items in first row then fills the second row.
+        <br>
+        Number of Column won't increase only Number of Row will be increased when number of items are higher.
+        <br>
+        <strong>This the default manner</strong>
+        
+    </p>
+    <div class="output">
+        <div class="grid auto-rows container grid-template-rows grid-template-columns">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
+    </div>
+    <h3>OUTPUT Auto Columns</h3>
+    <p>
+        Fills the items in first column then fills the second column.
+        <br>
+        Number of Row won't increase only Number of Column will be increased when number of items are higher.
+    </p>
+    <div class="output">
+        <div class="grid auto-columns container grid-template-rows grid-template-columns">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
+    </div>
+
+    <!--------------- Grid Gap --------------->
+
+    <h1>Gap in Grid</h1>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+
+.gap {
+    grid-template-columns: 34px 34px;
+    grid-template-rows: 34px 34px;
+}
+.row-gap {
+    grid-row-gap: 15px;
+}
+.column-gap {
+    grid-column-gap: 30px;
+}
+.grid-gap {
+    grid-gap: 20px;
+    /*grid-gap: 20px 20px;*/
+}
+
+----HTML----
+
+&lt;h3&gt;OUTPUT row gap&lt;/h3&gt;
+&lt;div class="grid row-gap container gap"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+    &lt;div&gt;5&lt;/div&gt;
+    &lt;div&gt;6&lt;/div&gt;
+    &lt;div&gt;7&lt;/div&gt;
+    &lt;div&gt;8&lt;/div&gt;
+    &lt;div&gt;9&lt;/div&gt;
+    &lt;div&gt;10&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;OUTPUT column gap&lt;/h3&gt;
+&lt;div class="grid column-gap container gap"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+    &lt;div&gt;5&lt;/div&gt;
+    &lt;div&gt;6&lt;/div&gt;
+    &lt;div&gt;7&lt;/div&gt;
+    &lt;div&gt;8&lt;/div&gt;
+    &lt;div&gt;9&lt;/div&gt;
+    &lt;div&gt;10&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;OUTPUT grid gap&lt;/h3&gt;
+&lt;div class="grid grid-gap container gap"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+    &lt;div&gt;5&lt;/div&gt;
+    &lt;div&gt;6&lt;/div&gt;
+    &lt;div&gt;7&lt;/div&gt;
+    &lt;div&gt;8&lt;/div&gt;
+    &lt;div&gt;9&lt;/div&gt;
+    &lt;div&gt;10&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    <h3>OUTPUT row gap</h3>
+    <div class="output">
+        <div class="grid row-gap container gap">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
+    </div>
+    <h3>OUTPUT column gap</h3>
+    <div class="output">
+        <div class="grid column-gap container gap">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
+    </div>
+    <h3>OUTPUT grid gap</h3>
+    <div class="output">
+        <div class="grid grid-gap container gap">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
+    </div>
+
+    <!--------------- Items --------------->
+
+    <h1>ITEMS Align Justify Place</h1>
+    <p>
+        These three properties has multiple values here  all the output used only center value.<br>
+        place items is the shortthand property to use both align and justify.
+        <br>Syntax : <code>place-items: [align-value] [justify-value]</code>
+        <br><br>
+        The values are
+        <ul>
+            <li>start(flex-start)</li>
+            <li>end(flex-end)</li>
+            <li>center</li>
+            <li>stretch(default)</li>
+            <li>baseline</li>
+        </ul>
+    </p>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+.items {
+    grid-template-columns: repeat(2,1fr);
+}
+.items-align {
+    align-items: center;
+}
+.items-justify {
+    justify-items: center;
+}
+.items-place {
+    place-items: center;
+}
+
+----HTML----
+
+&lt;h3&gt;OUTPUT align-center&lt;/h3&gt;
+&lt;div class="grid container items items-align"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;OUTPUT justify-center&lt;/h3&gt;
+&lt;div class="grid container items items-justify"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;OUTPUT place-center&lt;/h3&gt;
+&lt;div class="grid container items items-place"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;OUTPUT without align & justify&lt;/h3&gt;
+&lt;div class="grid container items"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+    <h3>OUTPUT align-center</h3>
+    <p>y-axis </p>
+    <div class="output">
+        <div class="grid container items items-align">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </div>
+    <h3>OUTPUT justify-center</h3>
+    <p>x-axis </p>
+    <div class="output">
+        <div class="grid container items items-justify">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </div>
+    <h3>OUTPUT place-center</h3>
+    <p>
+        Syntax : <code>place-items: [align-value] [justify-value];</code>
+        <br>
+        <b>or</b>
+        <br> single value for both eg: <code>place-items: center;</code>
+    </p>
+    <div class="output">
+        <div class="grid container items items-place">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </div>
+    <h3>OUTPUT without align & justify</h3>
+    <p>
+        This has no align and justify values. But its default value is stretch.
+        <br>
+        <code>place-items:stretch;</code>
+        <br>
+        So it stretch the items to occupy it's entire space withou any (visual) gap.
+    </p>
+    <div class="output">
+        <div class="grid container items">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </div>
+    <!--------------- Content --------------->
+
+    <h1>CONTENT Align Justify Place</h1>
+    <p>
+        These three properties has multiple values here  all the output used only center value.<br>
+        place content is the shortthand property to use both align and justify.
+        <br>Syntax : <code>place-content: [align-value] [justify-value]</code>
+        <br><br>
+        The values are
+        <ul>
+            <li>start(flex-start)(default)</li>
+            <li>end(flex-end)</li>
+            <li>center</li>
+            <li>stretch</li>
+            <li>left</li>
+            <li>right</li>
+            <li>baseline</li>
+            <li>space-around</li>
+            <li>space-between</li>
+            <li>space-evenly</li>
+        </ul>
+    </p>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+.content {
+    grid-template-rows: 50px 50px;
+    grid-template-columns: 50px 50px;
+}
+.content-align {
+    align-content: center;
+}
+.content-justify {
+    justify-content: center;
+}
+.content-place {
+    place-content: center;
+}
+
+----HTML----
+
+&lt;h3&gt;OUTPUT align-center&lt;/h3&gt;
+&lt;div class="grid container content content-align"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;OUTPUT justify-center&lt;/h3&gt;
+&lt;div class="grid container content content-justify"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;OUTPUT place-center&lt;/h3&gt;
+&lt;div class="grid container content content-place"&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+    &lt;div&gt;3&lt;/div&gt;
+    &lt;div&gt;4&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    <h3>OUTPUT without align & justify</h3>
+    <p>
+        This has no align and justify values. But its default value is start.
+        <br>
+        <code>place-items:start;</code>
+    </p>
+    <div class="output">
+        <div class="grid container content">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </div>
+    <h3>OUTPUT align-center</h3>
+    <p>y-axis </p>
+    <div class="output">
+        <div class="grid container content content-align">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </div>
+    <h3>OUTPUT justify-center</h3>
+    <p>x-axis </p>
+    <div class="output">
+        <div class="grid container content content-justify">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </div>
+    <h3>OUTPUT place-center</h3>
+    <p>
+        Syntax : <code>place-content: [align-value] [justify-value];</code>
+        <br>
+        <b>or</b>
+        <br> single value for both eg: <code>place-content: center;</code>
+    </p>
+    <div class="output">
+        <div class="grid container content content-place">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </div>
+    <!------------- template areas -------------->
+
+    <h1>Grid container property with grid item property</h1>
+    <hr>
+    <h1>Grid template areas with grid area</h1>
+    <p>
+
+    </p>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+
+.template-areas {
+    grid-template-rows: 30px auto 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "h h h"
+    "m m s"
+    "f f f" ;
+}
+.head {
+    grid-area: h;
+}
+.main {
+    grid-area: m;
+}
+.side {
+    grid-area: s;
+}
+.foot {
+    grid-area: f;
+}
+
+----HTML----
+
+&lt;div class="grid container template-areas"&gt;
+    &lt;div class="head"&gt;header&lt;/div&gt;
+    &lt;div class="main"&gt;main&lt;/div&gt;
+    &lt;div class="side"&gt;side&lt;/div&gt;
+    &lt;div class="foot"&gt;footer&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <div class="grid container template-areas">
+            <div class="head">header</div>
+            <div class="main">main</div>
+            <div class="side">side</div>
+            <div class="foot">footer</div>
+        </div>
+    </div>
+    <!------------- template -------------->
+
+    <h1>Grid template with grid area</h1>
+    <p>
+        Grid template is s shorthand property for grid template columns, rows, areas.
+    </p>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+
+.template {
+    /*
+    grid-template-rows: 30px auto 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "h h h"
+    "m m s"
+    "f f f" ;
+
+    OR
+    
+    grid-template-areas: 
+    "h h h"
+    "m m s"
+    "f f f" ;
+    grid-template:30px auto 30px / 1fr 1fr 1fr;
+
+    OR
+
+    below code
+    */
+    grid-template: 
+    "h h h" 30px
+    "m m s" auto
+    "f f f" 30px
+    / 1fr 1fr 1fr;
+}
+
+----HTML----
+
+&lt;div class="grid container template"&gt;
+    &lt;div class="head"&gt;header&lt;/div&gt;
+    &lt;div class="main"&gt;main&lt;/div&gt;
+    &lt;div class="side"&gt;side&lt;/div&gt;
+    &lt;div class="foot"&gt;footer&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <div class="grid container template">
+            <div class="head">header</div>
+            <div class="main">main</div>
+            <div class="side">side</div>
+            <div class="foot">footer</div>
+        </div>
+    </div>
+
+    <!------------- Grid -------------->
+
+    <h1>Grid</h1>
+    <p>
+        Grid is s shorthand property for template rows, columns or auto flow rows columns.
+    </p>
+    <h3>CODE</h3>
+<pre>
+----CSS----
+.grid-template-row-col {
+    /*
+    grid-template-rows: 30px auto 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    */
+    grid: 30px auto 30px / 1fr 1fr 1fr ;
+}
+.grid-auto-flow-row {
+    grid: auto-flow 50px / 100px 100px 100px;
+    grid-template-rows: 30px auto 30px;
+}
+.grid-auto-flow-column {
+    grid:  30px auto 30px / auto-flow 100px ;
+    grid-template-columns: 100px 100px 100px;
+}
+
+----HTML----
+
+&lt;div class="grid container grid-template-row-col"&gt;
+    &lt;div&gt;header&lt;/div&gt;
+    &lt;div&gt;main&lt;/div&gt;
+    &lt;div&gt;side&lt;/div&gt;
+    &lt;div&gt;footer&lt;/div&gt;
+    &lt;div&gt;header&lt;/div&gt;
+    &lt;div&gt;main&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="grid container grid-auto-flow-row"&gt;
+    &lt;div&gt;header&lt;/div&gt;
+    &lt;div&gt;main&lt;/div&gt;
+    &lt;div&gt;side&lt;/div&gt;
+    &lt;div&gt;footer&lt;/div&gt;
+    &lt;div&gt;header&lt;/div&gt;
+    &lt;div&gt;main&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="grid container grid-auto-flow-column"&gt;
+    &lt;div&gt;header&lt;/div&gt;
+    &lt;div&gt;main&lt;/div&gt;
+    &lt;div&gt;side&lt;/div&gt;
+    &lt;div&gt;footer&lt;/div&gt;
+    &lt;div&gt;header&lt;/div&gt;
+    &lt;div&gt;main&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    <h3>OUTPUT grid for template rows &amp; columns.</h3>
+    <div class="output">
+        <div class="grid container grid-template-row-col">
+            <div>header</div>
+            <div>main</div>
+            <div>side</div>
+            <div>footer</div>
+            <div>header</div>
+            <div>main</div>
+        </div>
+    </div>
+    <h3>OUTPUT grid for auto flow rows &amp; template columns.</h3>
+    <div class="output">
+        <div class="grid container grid-auto-flow-row">
+            <div>header</div>
+            <div>main</div>
+            <div>side</div>
+            <div>footer</div>
+            <div>header</div>
+            <div>main</div>
+        </div>
+    </div>
+    <h3>OUTPUT grid for auto flow columns &amp; template rows.</h3>
+    <div class="output">
+        <div class="grid container grid-auto-flow-column">
+            <div>header</div>
+            <div>main</div>
+            <div>side</div>
+            <div>footer</div>
+            <div>header</div>
+            <div>main</div>
+        </div>
+    </div>
+    <!------------- Grid row & column line naming -------------->
+
+    <h1>Grid row &amp; column line naming</h1>
+    <p>
+        Consider an grid container which has four items placed in 2 rows and 2 columns.
+        <br>
+        That container will have three row line and three column line.
+        <br>
+        <b>These lines has default names</b>
+        <ul>
+            <li>Three rows lines has name 1,2,3 respectively.</li>
+            <li>Three columns lines has name 1,2,3 respectively.</li>
+        </ul>
+        We can give prefered name to those lines using grid-template-rows, grid-template-columns, grid-template, grid.
+        <br><br>
+        <b>Example</b>
+        <br><br>
+<pre>
+<code>
+grid-template-rows    : [row-start] 30px [row-2] auto [row-3] 30px [row-end] ;
+<br><br>
+grid-template-columns : [col-start] 1fr  [col-2] 1fr  [col-3] 1fr  [col-end] ;
+</code>
+</pre>
+    </p>
+
+    <!------------- Grid column, row, area -------------->
+
+    <h1>Grid column, start, end &amp; row, start, end , area</h1>
+    <p>
+        grid area is the shorthand property for col start,end row start,end.
+        <br><br>
+        <b>Syntax</b>
+        <br>
+        grid-area: [row-start] / [col-start] / [row-end] / [col-end] ;
+    </p>
+    <h3>CODE</h3>
+<pre>
+    ----CSS----
+
+.grid-lines {
+    grid-template: [row-start] 30px [row-2] auto [row-3] 30px [row-end] / [col-start] 1fr  [col-2] 1fr  [col-3] 1fr  [col-end] ;
+}
+.h {
+    /*
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    OR 
+    
+    grid-column-start: col-start;
+    grid-column-end: col-end;
+    grid-row-start: row-start;
+    grid-row-end: row-2;
+    
+    OR
+    
+    grid-column-start: col-start;
+    grid-column-end: span 3;
+    above span value take three column line after col-start.
+    OR
+    grid-column: col-start / col-end;
+    grid-row: row-start / row-2;
+    OR
+    More simple below grid-area
+    it's syntax
+    grid-area: [row-start] / [column-start] / [row-end] / [column-end] ;
+    */
+    grid-area: 1 / 1 / 3 / 3 ;
+}
+.m {
+    grid-area: 2 / 1 / 3 / 3 ;
+}
+.s {
+    grid-area: 2 / 3 / 3 / 4 ;
+}
+
+----HTML----
+
+&lt;div class="grid container grid-lines"&gt;
+    &lt;div class="h"&gt;header&lt;/div&gt;
+    &lt;div class="m"&gt;main&lt;/div&gt;
+    &lt;div class="s"&gt;side&lt;/div&gt;
+    &lt;div class="f"&gt;footer&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    <h3>OUTOUT</h3>
+    <div class="output">
+        <div class="grid container grid-lines">
+            <div class="h">header</div>
+            <div class="m">main</div>
+            <div class="s">side</div>
+            <div class="f">footer</div>
+        </div>
+    </div>
+    </section>
+    <h2><a href="#nav">Back to Nav Link</a></h2>
+    <hr>
+    
+    <!----------------------------- Day24 ------------------------------>
+
+    <h1 id="day24">Day 24</h1>
+    <hr>
+    
+    <h1>CSS selector</h1>
+
+    <!------------------- Basic Selector ------------------->
+
+    <section>
+
+        <hr>
+        <h1>Basic Selector</h1>
+        <hr>
+
+        <h1>Universal selector</h1>
+        <p>
+            This selects all the elements expect ::after &amp; ::before (Pseudo Element) .
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            * {
+                border-radius: 4px;
+            }
+        </pre>
+
+        <h1>Name or type selector</h1>
+        <p>
+            Select the element using element name. Below code selects every div element inside body element.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            div {
+                border-radius: 4px;
+            }
+        </pre>
+
+        <h1>Class selector</h1>
+        <p>
+            Selecting element using it's classname.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            .output {
+                border-radius: 4px;
+            }
+        </pre>
+
+        <h1>Id selector</h1>
+        <p>
+            Selecting element using it's unique Id name.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            #output {
+                border-radius: 4px;
+            }
+        </pre>
+    </section>
+
+    <!------------------- Combinators ------------------->
+
+    <section>
+
+        <hr>
+        <h1>Combinators</h1>
+        <hr>
+
+        <h1>Descendant Selector</h1>
+        <p>
+            Select elements that are descendants of the first element.
+            <br>
+            Select every elements that are direct child , grand child nad multi level grand child of the first element.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            div a {
+                background-color: yellow;
+            }
+        </pre>
+
+        <h1>Direct Child Selector</h1>
+        <p>
+            Select every elements that are direct child of the first element.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            div > a {
+                border-radius: 4px;
+            }
+        </pre>
+
+        <h1>Previous Sibling Selector</h1>
+        <p>
+            There is no Previous Sibling Selector avaliable in CSS till CSS3.
+        </p>
+
+        <h1>General Sibling or Succeeding Sibling Selector</h1>
+        <p>
+            Select elements that are siblings of the first element and come after the first element.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            div ~ a {
+                border-radius: 4px;
+            }
+        </pre>
+
+        <h1>Adjacent Sibling Selector</h1>
+        <p>
+            Select elements that are siblings of the first element and come directly (Immediately) after the first element.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            div + a {
+                border-radius: 4px;
+            }
+        </pre>
+
+        <h1>OR Selector or List Selector</h1>
+        <p>
+            Select elements that match any selector in the list.
+            <br>
+            We can give same style to multiple elements using or selector.
+            <br>
+            <strong>Seleting multiple elements and giving same style to all.</strong>
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            div, a {
+                border-radius: 4px;
+            }
+        </pre>
+
+        <h1>And Selector</h1>
+        <p>
+            Select elements that match all the selector combinations.
+            <br>
+            Below code selects <b>div element which has box class</b>.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            div.box {
+                border-radius: 4px;
+            }
+        </pre>
+
+    </section>
+
+    <!------------------- Attribute Selector ------------------->
+
+    <section>
+
+        <hr>
+        <h1>Attribute Selector</h1>
+        <hr>
+
+        <h1>Has Attribute Selector</h1>
+        <p>
+            Select elements that have that attribute.
+            <br>
+            Below code selects all the elements which contains href attribute
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            [href] {
+                color: yellow;
+            }
+        </pre>
+        <h3>Selected tags</h3>
+        <div>
+            &lt;a href="#"&gt; &lt;/a&gt;
+            <br>
+            &lt;a href="/contact"&gt;  &lt;/a&gt;
+        </div>
+        <h3>Non Selected tags</h3>
+        <div>
+            &lt;a&gt; no link &lt;/a&gt;
+        </div>
+
+        <h1>Exact Attribute Selector</h1>
+        <p>
+            Select elements that have that attribute with exactly that value.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            [class="box"] {
+                color: red;
+            }
+        </pre>
+        <h3>Selected tags</h3>
+        <div>
+            &lt;div class="box"&gt; &lt;/div&gt;
+            <br>
+            &lt;span class="box"&gt; &lt;/span&gt;
+        </div>
+        <h3>Non Selected tags</h3>
+        <div>
+            &lt;div class="box price"&gt; &lt;/div&gt;
+            <br>
+            &lt;div class="box-price"&gt; &lt;/div&gt;
+        </div>
+
+        <h1>Exact Attribute with whitespace</h1>
+        <p>
+            Represents elements with an attribute name of attr whose value is a whitespace-separated list of words, one of which is exactly value.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            [class~="box"] {
+                color: red;
+            }
+        </pre>
+        <h3>Selected tags</h3>
+        <div>
+            &lt;div class="box"&gt; &lt;/div&gt;
+            <br>
+            &lt;div class="box price"&gt; &lt;/div&gt;
+            <br>
+            &lt;div class="abc box price"&gt; &lt;/div&gt;
+        </div>
+        <h3>Non Selected tags</h3>
+        <div>
+            &lt;div class="box-price"&gt; &lt;/div&gt;
+        </div>
+
+        <h1>Exact Attribute with hyphen</h1>
+        <p>
+            Represents elements with an attribute name of attr whose value can be exactly value or can begin with value immediately followed by a hyphen, - (U+002D). It is often used for language subcode matches.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            [class|="box"] {
+                color: red;
+            }
+        </pre>
+        <h3>Selected tags</h3>
+        <div>
+            &lt;a class="box"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a class="box-price"&gt;LINK&lt;/a&gt;
+        </div>
+        <h3>Non Selected tags</h3>
+        <div>
+            &lt;a class="box price"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a class="price box-b"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a class="price-box-b"&gt;LINK&lt;/a&gt;
+        </div>
+
+        <h1>Begins With Attribute</h1>
+        <p>
+            Select every elements that have that attribute which start with that value.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            [href^="http"] {
+                color: red;
+            }
+        </pre>
+        <h3>Selected tags</h3>
+        <div>
+            &lt;a href="https://balu.dev"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="http://balu.dev"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="http-def"&gt;LINK&lt;/a&gt;
+        </div>
+        <h3>Non Selected tags</h3>
+        <div>
+            &lt;a href="HTTPS://balu.dev"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="HTTP://balu.dev"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="HTTP-def"&gt;LINK&lt;/a&gt;
+        </div>
+
+        <h1>Ends With Attribute</h1>
+        <p>
+            Select elements that have that attribute which end with that value.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            [href$="pdf"] {
+                color: red;
+            }
+        </pre>
+        <h3>Selected tags</h3>
+        <div>
+            &lt;a href="pdf"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href=".pdf"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="abcpdf"&gt;LINK&lt;/a&gt;
+        </div>
+        <h3>Non Selected tags</h3>
+        <div>
+            &lt;a href="PDF"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href=".PDF"&gt;LINK&lt;/a&gt;
+        </div>
+
+        <h1>Substring Attribute</h1>
+        <p>
+            Select elements that have that attribute which contain that.
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            [href*="pdf"] {
+                color: red;
+            }
+        </pre>
+        <h3>Selected tags</h3>
+        <div>
+            &lt;a href="start-pdf-end"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="startpdfend"&gt;LINK&lt;/a&gt;
+        </div>
+        <h3>Non Selected tags</h3>
+        <div>
+            &lt;a href="start-PDF-end"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="startPDFend"&gt;LINK&lt;/a&gt;
+        </div>
+
+        <h1>Case insensitive</h1>
+        <p>
+            Syntax:
+            <br>
+            <code>[attr operator="value" i]</code>
+            <br>
+            Adding an i (or I) before the closing bracket causes the value to be compared case-insensitively (for characters within the ASCII range).
+        </p>
+        <h3>CODE</h3>
+        <pre>
+            [href*="pdf" i] {
+                color: red;
+            }
+        </pre>
+        <h3>Selected tags</h3>
+        <div>
+            &lt;a href="start-PDF-end"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="startPDFend"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="start-pdf-end"&gt;LINK&lt;/a&gt;
+            <br>
+            &lt;a href="startpdfend"&gt;LINK&lt;/a&gt;
+        </div>
+
+    </section>
+
+    <h2><a href="#nav">Back to Nav Link</a></h2>
+    <hr>
+
+    <!----------------------------- Day25 ------------------------------>
+    
+    <section id="day25" class="d25">
+        <h1>Day 25</h1><hr>
+
+    <h1>Pseudo Element</h1>
+    <p>
+        pseudo-element is a keyword added to a selector that lets you style a specific part of the selected element.
+    </p>
+    <p>
+        As a rule, double colons (::) should be used instead of a single colon (:). This distinguishes pseudo-classes from pseudo-elements.
+    </p>
+
+    <h2>::after</h2>
+    <p>
+        ::after creates a pseudo-element that is the last child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default.
+    </p>
+    <h3>CODE</h3>
+<pre>
+------CSS------
+
+a::after {
+    content:"&equals;&gt;";
+}
+
+------HTML------
+
+&lt;a href="https://balu.dev"&gt;balu.dev&lt;/a&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <a href="https://balu.dev" after>balu.dev</a>
+    </div>
+
+    <h2>::before</h2>
+    <p>
+        ::before creates a pseudo-element that is the first child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default.
+    </p>
+    <h3>CODE</h3>
+<pre>
+------CSS------
+
+span::before {
+    content:"&copy;";
+}
+
+------HTML------
+
+&lt;span&gt;2020&lt;/span&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <span before>2020</span>
+    </div>
+
+    <h2>::first-letter</h2>
+    <p>
+        ::first-letter CSS pseudo-element applies styles to the first letter of the first line of a block-level element, but only when not preceded by other content (such as images or inline tables).
+    </p>
+    <h3>CODE</h3>
+<pre>
+------CSS------
+
+p::first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+------HTML------
+
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <p class="fletter">This is a paragraph</p>
+    </div>
+
+    <h2>::first-line</h2>
+    <p>
+        ::first-line CSS pseudo-element applies styles to the first line of a block-level element. Note that the length of the first line depends on many factors, including the width of the element, the width of the document, and the font size of the text.
+    </p>
+    <h3>CODE</h3>
+<pre>
+------CSS------
+
+p::first-line {
+    color: red;
+}
+
+------HTML------
+
+&lt;p&gt;
+This is a multiline paragraph. Note that the length of the first line depends on many factors, including the width of the element, the width of the document, and the font size of the text.
+&lt;/p&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <p class="fline">
+            This is a multiline paragraph. Note that the length of the first line depends on many factors, including the width of the element, the width of the document, and the font size of the text.
+        </p>
+    </div>
+
+    <h2>::selection</h2>
+    <p>
+        The ::selection CSS pseudo-element applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text).
+    </p>
+    <h3>CODE</h3>
+<pre>
+------CSS------
+
+p::selection {
+    color: yellow;
+    background-color: darkblue;
+}
+
+------HTML------
+
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <p class="selection">
+            This is a paragraph
+        </p>
+    </div>
+    </section>
+    <h2><a href="#nav">Back to Nav Link</a></h2>
+    <hr>
+
+        
+    <!----------------------------- Day26 ------------------------------>
+    
+    <section id="day26" class="d26">
+        <h1>Day 26</h1><hr>
+
+    <h1>Pseudo Classes</h1>
+    <p>
+        A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s). For example, :hover can be used to change a button's color when the user's pointer hovers over it.
+    </p>
+
+    <hr>
+    <h1>Location pseudo-classes</h1>
+    <p>
+        These pseudo-classes relate to links, and to targeted elements within the current document.
+    </p>
+
+    <h2>:link</h2>
+    <p>
+        The :link CSS pseudo-class represents an element that has <b>not yet been visited</b>. It matches every unvisited &lt;a&gt;, &lt;area&gt;, or &lt;link&gt; element that has an href attribute.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+a:link {
+    color: green;
+}
+
+-----HTML-----
+
+&lt;a href="https://balu.dev"&gt;balu.dev&lt;/a&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <a href="https://balu.dev" link>balu.dev</a>
+    </div>
+
+    <h2>:visited</h2>
+    <p>
+        The :visited CSS pseudo-class represents links that the user has already visited. For privacy reasons, the styles that can be modified using this selector are very limited.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+a:visited {
+    color: orange;
+}
+
+-----HTML-----
+
+&lt;a href="https://balu.dev"&gt;balu.dev&lt;/a&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <a href="https://balu.dev" visited>balu.dev</a>
+    </div>
+
+    <h2>:any-link</h2>
+    <p>
+        The :any-link CSS pseudo-class selector represents an element that acts as the source anchor of a hyperlink, independent of whether it has been visited. In other words, it matches every &lt;a&gt;, &lt;area&gt;, or &lt;link&gt; element that has an href attribute. Thus, it matches all elements that match :link or :visited.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+a:any-link {
+    color: red;
+}
+
+-----HTML-----
+
+&lt;a href="https://balu.dev"&gt;balu.dev&lt;/a&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <a href="https://balu.dev" any-link>balu.dev</a>
+    </div>
+    
+    <h1>User action pseudo-classes</h1>
+
+    <h2>:hover</h2>
+    <p>
+        The :hover CSS pseudo-class matches when the user interacts with an element with a pointing device, but does not necessarily activate it. It is generally triggered when the user hovers over an element with the cursor (mouse pointer).
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+a:hover {
+    color: green;
+}
+
+-----HTML-----
+
+&lt;a href="https://balu.dev"&gt;balu.dev&lt;/a&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <a href="https://balu.dev" hover>balu.dev</a>
+    </div>
+
+    <h2>:active</h2>
+    <p>
+        The :active CSS pseudo-class represents an element (such as a button) that is being activated by the user. When using a mouse, "activation" typically starts when the user presses down the primary mouse button.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+a:active {
+    color: darkcyan;
+}
+
+-----HTML-----
+
+&lt;a href="https://balu.dev"&gt;balu.dev&lt;/a&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <a href="https://balu.dev" active>balu.dev</a>
+    </div>
+
+    <h2>:focus</h2>
+    <p>
+        The :focus CSS pseudo-class represents an element (such as a form input) that has received focus. It is generally triggered when the user clicks or taps on an element or selects it with the keyboard's Tab key.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+a:focus {
+    color: gold;
+}
+
+-----HTML-----
+
+&lt;a href="https://balu.dev"&gt;balu.dev&lt;/a&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <a href="https://balu.dev" focus>balu.dev</a>
+    </div>
+
+    <h2>:focus-within</h2>
+    <p>
+        The :focus-within CSS pseudo-class represents an element that has received focus or contains an element that has received focus. In other words, it represents an element that is itself matched by the :focus pseudo-class or has a descendant that is matched by :focus. (This includes descendants in shadow trees.)
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+p:focus-within {
+    outline: 4px solid red;
+}
+
+-----HTML-----
+
+&lt;p&gt;
+    This is a paragraph.&lt;br&gt;
+    This is a &lt;a href="https://balu.dev"&gt;Link&lt;/a&gt;&lt;br&gt;
+    This is a paragraph.
+&lt;/p&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <p focus-within>
+            This is a paragraph.<br>
+            This is a <a href="https://balu.dev">Link</a><br>
+            This is a paragraph.
+        </p>
+    </div>
+
+    <h1>input pseudo-classes</h1>
+
+    <h2>:enabled &amp; :disabled</h2>
+    <p>
+        The <b>:enabled</b> CSS pseudo-class represents any enabled element. An element is enabled if it can be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has a disabled state, in which it can't be activated or accept focus.
+    </p>
+    <p>
+        The <b>:disabled</b> CSS pseudo-class represents any disabled element. An element is disabled if it can't be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has an enabled state, in which it can be activated or accept focus.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+.d6 input:enabled {
+    border: 2px solid blue;
+}
+.d6 input:disabled {
+    border: 2px solid red;
+}
+
+-----HTML-----
+
+&lt;input type="text" placeholder="Name"&gt; &lt;br&gt;
+&lt;input type="email" placeholder="Email" disabled&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <input type="text" placeholder="Name" class="enabled"> <br>
+        <input type="email" placeholder="Email" class="disabled" disabled>
+    </div>
+
+    <h2>:read-only &amp; :read-write</h2>
+    <p>
+        The <b>:read-only</b> CSS pseudo-class represents an element (such as input or textarea) that is not editable by the user.
+    </p>
+    <p>
+        The <b>:read-write</b> CSS pseudo-class represents an element (such as input or textarea) that is editable by the user.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+.d6 input.read-only:read-only {
+    border: 2px solid gray;
+}
+.d6 input.read-write:read-write {
+    border: 2px solid red;
+}
+
+-----HTML-----
+
+&lt;input type="text" value="read-only" readonly&gt; &lt;br&gt;
+&lt;input type="text" value="read-write"&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <input type="text" class="read-only" value="read-only" readonly> <br>
+        <input type="text" class="read-write" value="read-write">
+    </div>
+
+    <h2>:placeholder-shown</h2>
+    <p>
+        The <b>:placeholder-shown</b> CSS pseudo-class represents any &lt;input&gt; or &lt;textarea&gt; element that is currently displaying placeholder text.
+    </p>
+    <p>
+        <b>These styles are only applied to element only when it's placeholder text is visible.
+            <br>
+            These styles will be removed once user typing information into that element or it holds some value.
+        </b>
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+input:placeholder-shown {
+    border: 2px solid red;
+    color: red;
+}
+
+-----HTML-----
+
+&lt;input type="text" placeholder="Name"&gt;
+&lt;input type="text" placeholder="Name" value="info"&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <input type="text" placeholder="Name" class="placeholder-shown">
+        <input type="text" placeholder="Name" class="placeholder-shown" value="info">
+    </div>
+
+    <h2>:default &amp; :checked</h2>
+    <p>
+        The :default CSS pseudo-class selects form elements that are the default in a group of related elements.
+    </p>
+    <p>
+        The :checked CSS pseudo-class selector represents any radio (&lt;input type="radio"&gt;), checkbox (&lt;input type="checkbox"&gt;), or option (&lt;option&gt; in a &lt;select&gt;) element that is checked or toggled to an on state.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+.d6 input[name="default"]:default + label {
+    color: red;
+}
+.d6 input[name="checked"]:checked + label {
+    color: red;
+}
+
+-----HTML-----
+
+&lt;div&gt;DEFAULT&lt;/div&gt;
+&lt;input type="radio" name="default" id="male" checked&gt;
+&lt;label for="male"&gt;Male&lt;/label&gt;
+&lt;input type="radio" name="default" id="female"&gt;
+&lt;label for="female"&gt;Female&lt;/label&gt;
+&lt;div&gt;CHECKED&lt;/div&gt;
+&lt;input type="radio" name="checked" id="c-male" checked&gt;
+&lt;label for="c-male"&gt;Male&lt;/label&gt;
+&lt;input type="radio" name="checked" id="c-female"&gt;
+&lt;label for="c-female"&gt;Female&lt;/label&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <p>
+        Click the radio button other than the defaultly selected radio button to see the difference between the default and checked.
+    </p>
+    <div class="output">
+        <div>DEFAULT</div>
+        <input type="radio" name="default" id="male" checked>
+        <label for="male">Male</label>
+        <input type="radio" name="default" id="female">
+        <label for="female">Female</label>
+        <div>CHECKED</div>
+        <input type="radio" name="checked" id="c-male" checked>
+        <label for="c-male">Male</label>
+        <input type="radio" name="checked" id="c-female">
+        <label for="c-female">Female</label>
+    </div>
+
+    <h2>:valid &comma; :invalid &comma; :out-of-range</h2>
+    <p>
+        The <b>:valid</b> CSS pseudo-class represents any &lt;input&gt; or other &lt;form&gt; element whose contents validate successfully. This allows to easily make valid fields adopt an appearance that helps the user confirm that their data is formatted properly.
+    </p>
+    <p>
+        The <b>:invalid</b> CSS pseudo-class represents any &lt;input&gt; or other &lt;form&gt; element whose contents fail to validate.
+    </p>
+    <p>
+        The <b>:out-of-range</b> CSS pseudo-class represents an &lt;input&gt; element whose current value is outside the range limits specified by the min and max attributes.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+input:valid {
+    border: 3px solid green;
+}
+input:invalid {
+    border: 3px solid red;
+}
+input:out-of-range {
+    border: 3px solid red;
+}
+
+-----HTML-----
+
+&lt;input type="email" placeholder="Email" value="email"&gt; &lt;br&gt;
+&lt;input type="email" placeholder="Email" value="user@domain.com"&gt; &lt;br&gt;
+&lt;input type="number" min="10" max="30" value="34"&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <input type="email" placeholder="Email" class="valid-invalid" value="email"> <br>
+        <input type="email" placeholder="Email" class="valid-invalid" value="user@domain.com"> <br>
+        <input type="number" min="10" max="30"  class="out-of-range" value="34">
+    </div>
+
+    <h2>:required &comma; :optional</h2>
+    <p>
+        The <b>:required</b> CSS pseudo-class represents any &lt;input&gt;, &lt;select&gt;, or &lt;textarea&gt; element that has the required attribute set on it.
+    </p>
+    <p>
+        The <b>:optional</b> CSS pseudo-class represents any &lt;input&gt;, &lt;select&gt;, or &lt;textarea&gt; element that does not have the required attribute set on it.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+input:required {
+    border: 3px solid red;
+}
+input:optional {
+    border: 3px solid green;
+}
+
+-----HTML-----
+
+&lt;input type="text" placeholder="Name" required&gt; &lt;br&gt;
+&lt;input type="text" placeholder="Name"&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <input type="text" placeholder="Name" class="required" required> <br>
+        <input type="text" placeholder="Name" class="optional">
+    </div>
+
+    </section>
+    <h2><a href="#nav">Back to Nav Link</a></h2>
+    <hr>
+
+
+    <!----------------------------- Day27 ------------------------------>
+    
+    <section id="day27" class="d27">
+        <h1>Day 27</h1><hr>
+
+    <h1>Pseudo-classes</h1>
+    <p>
+        A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s). For example, :hover can be used to change a button's color when the user's pointer hovers over it.
+    </p>
+
+    <hr>
+    <h1>Tree-structural pseudo-classes</h1>
+    <p>
+        These pseudo-classes relate to the location of an element within the document tree.
+    </p>
+
+    <h2>:root</h2>
+    <p>
+        The :root CSS pseudo-class matches the root element of a tree representing the document. In HTML, :root represents the &lt;html&gt; element and is identical to the selector html, except that its specificity is higher.
+    </p>
+    <p>
+        <b>:root can be useful for declaring global CSS variables:</b>
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+:root {
+    --main-color: hotpink;
+    --pane-padding: 5px 42px;
+  }  
+</pre>
+
+    <h2>:nth-child()</h2>
+    <p>
+        The :nth-child() CSS pseudo-class matches elements based on their position in a group of siblings.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+div span:nth-child(2n-1) {
+    background-color: green;
+}
+div span:nth-child(2n) {
+    background-color: red;
+}
+div span:nth-child(3n) {
+    background-color: blue;
+}
+
+-----HTML-----
+
+&lt;div&gt;
+    &lt;span&gt;1&lt;/span&gt; &lt;span&gt;2&lt;/span&gt; &lt;span&gt;3&lt;/span&gt; &lt;span&gt;4&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;span&gt;1&lt;/span&gt; &lt;span&gt;2&lt;/span&gt; &lt;span&gt;3&lt;/span&gt; &lt;span&gt;4&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;span&gt;1&lt;/span&gt; &lt;span&gt;2&lt;/span&gt; &lt;span&gt;3&lt;/span&gt; &lt;span&gt;4&lt;/span&gt;
+&lt;/div&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <div class="odd">
+            <span>1</span> <span>2</span> <span>3</span> <span>4</span>
+        </div>
+        <div class="even">
+            <span>1</span> <span>2</span> <span>3</span> <span>4</span>
+        </div>
+        <div class="third">
+            <span>1</span> <span>2</span> <span>3</span> <span>4</span>
+        </div>
+    </div>
+
+    <h2>:nth-last-child()</h2>
+    <p>
+        The :nth-last-child() CSS pseudo-class matches elements based on their position among a group of siblings, counting from the end.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+div span:nth-last-child(2n-1) {
+    background-color: green;
+}
+div span:nth-last-child(2n) {
+    background-color: red;
+}
+div span:nth-last-child(3n) {
+    background-color: blue;
+}
+
+-----HTML-----
+
+&lt;div&gt;
+    &lt;span&gt;1&lt;/span&gt; &lt;span&gt;2&lt;/span&gt; &lt;span&gt;3&lt;/span&gt; &lt;span&gt;4&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;span&gt;1&lt;/span&gt; &lt;span&gt;2&lt;/span&gt; &lt;span&gt;3&lt;/span&gt; &lt;span&gt;4&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;span&gt;1&lt;/span&gt; &lt;span&gt;2&lt;/span&gt; &lt;span&gt;3&lt;/span&gt; &lt;span&gt;4&lt;/span&gt;
+&lt;/div&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <div class="odd-last">
+            <span>1</span> <span>2</span> <span>3</span> <span>4</span>
+        </div>
+        <div class="even-last">
+            <span>1</span> <span>2</span> <span>3</span> <span>4</span>
+        </div>
+        <div class="third-last">
+            <span>1</span> <span>2</span> <span>3</span> <span>4</span>
+        </div>
+    </div>
+
+    <h2>:first-child &comma; :last-child &comma; :only-child</h2>
+    <p>
+        The :first-child CSS pseudo-class represents the first element among a group of sibling elements.
+    </p>
+    <p>
+        The :last-child CSS pseudo-class represents the last element among a group of sibling elements.
+    </p>
+    <p>
+        The :only-child CSS pseudo-class represents an element without any siblings. This is the same as :first-child:last-child or :nth-child(1):nth-last-child(1), but with a lower specificity.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+div span:first-child {
+    background-color: green;
+}
+div span:last-child {
+    background-color: red;
+}
+div span:only-child {
+    background-color: blue;
+}
+
+-----HTML-----
+
+&lt;div&gt;
+    &lt;span&gt;1&lt;/span&gt; &lt;span&gt;2&lt;/span&gt; &lt;span&gt;3&lt;/span&gt; &lt;span&gt;4&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;span&gt;1&lt;/span&gt;
+&lt;/div&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <div class="first-last-only">
+            <span>1</span> <span>2</span> <span>3</span> <span>4</span>
+        </div>
+        <div class="first-last-only">
+            <span>1</span>
+        </div>
+    </div>
+
+    <h2>:nth-of-type()</h2>
+    <p>
+        The :nth-of-type() CSS pseudo-class matches elements of a given type (tag name), based on their position among a group of siblings.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+div span:nth-child(2n-1) {
+    background-color: green;
+}
+div span:nth-child(2n) {
+    background-color: red;
+}
+div span:nth-child(3n) {
+    background-color: blue;
+}
+
+-----HTML-----
+
+&lt;div&gt;
+    &lt;span&gt;1&lt;/span&gt; &lt;a&gt;a&lt;/a&gt; &lt;span&gt;3&lt;/span&gt; &lt;span&gt;4&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;span&gt;1&lt;/span&gt; &lt;a&gt;a&lt;/a&gt; &lt;span&gt;3&lt;/span&gt; &lt;span&gt;4&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;span&gt;1&lt;/span&gt; &lt;a&gt;a&lt;/a&gt; &lt;span&gt;3&lt;/span&gt; &lt;span&gt;4&lt;/span&gt;
+&lt;/div&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <div class="odd-type">
+            <span>1</span> <a>a</a> <span>3</span> <span>4</span>
+        </div>
+        <div class="even-type">
+            <span>1</span> <a>a</a> <span>3</span> <span>4</span>
+        </div>
+        <div class="third-type">
+            <span>1</span> <a>a</a> <span>3</span> <span>4</span>
+        </div>
+    </div>
+
+    <h2>:nth-last-of-type()</h2>
+    <p>
+        The :nth-last-of-type() CSS pseudo-class matches elements of a given type, based on their position among a group of siblings, counting from the end.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+div span:nth-last-of-type(2n-1) {
+    background-color: green;
+}
+div span:nth-last-of-type(2n) {
+    background-color: red;
+}
+div span:nth-last-of-type(3n) {
+    background-color: blue;
+}
+
+-----HTML-----
+
+&lt;div&gt;
+    &lt;span&gt;1&lt;/span&gt; &lt;a&gt;a&lt;/a&gt; &lt;span&gt;3&lt;/span&gt; &lt;span&gt;4&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;span&gt;1&lt;/span&gt; &lt;a&gt;a&lt;/a&gt; &lt;span&gt;3&lt;/span&gt; &lt;span&gt;4&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;span&gt;1&lt;/span&gt; &lt;a&gt;a&lt;/a&gt; &lt;span&gt;3&lt;/span&gt; &lt;span&gt;4&lt;/span&gt;
+&lt;/div&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <div class="odd-type-last">
+            <span>1</span> <a>a</a> <span>3</span> <span>4</span>
+        </div>
+        <div class="even-type-last">
+            <span>1</span> <a>a</a> <span>3</span> <span>4</span>
+        </div>
+        <div class="third-type-last">
+            <span>1</span> <a>a</a> <span>3</span> <span>4</span>
+        </div>
+    </div>
+
+    <h2>:first-of-type &comma; :last-of-type &comma; :only-of-type</h2>
+    <p>
+        The :first-of-type CSS pseudo-class represents the first element of its type among a group of sibling elements.
+    </p>
+    <p>
+        The :last-of-type CSS pseudo-class represents the last element of its type among a group of sibling elements.
+    </p>
+    <p>
+        The :only-of-type CSS pseudo-class represents an element that has no siblings of the same type.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+div span:first-of-type {
+    background-color: green;
+}
+div span:last-of-type {
+    background-color: red;
+}
+div span:only-of-type {
+    background-color: blue;
+}
+
+-----HTML-----
+
+&lt;div&gt;
+    &lt;a&gt;a&lt;/a&gt; &lt;span&gt;1&lt;/span&gt; &lt;span&gt;2&lt;/span&gt; &lt;a&gt;a&lt;/a&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;span&gt;1&lt;/span&gt; &lt;a&gt;a&lt;/a&gt;
+&lt;/div&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output">
+        <div class="first-last-only-type">
+            <a>a</a><span>1</span> <span>2</span> <a>a</a>
+        </div>
+        <div class="first-last-only-type">
+            <span>1</span> <a>a</a>
+        </div>
+    </div>
+
+    <hr>
+    <h1>user-select</h1>
+    <p>
+        The user-select CSS property controls whether the user can select text. This doesn't have any effect on content loaded as chrome, except in textboxes.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+span {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    }
+
+-----HTML-----
+
+&lt;div&gt;
+    Selectable CONTENT.
+&lt;/div&gt;
+&lt;span&gt;
+    Non Selectable CONTENT.
+&lt;/span&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output user-select">
+        <div>
+            Selectable CONTENT.
+        </div>
+        <span>
+            Non Selectable CONTENT.
+        </span>
+    </div>
+
+    <hr>
+    <h1>cursor</h1>
+    <p>
+        The cursor CSS property sets the type of mouse cursor, if any, to show when the mouse pointer is over an element.
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+div {
+    cursor: pointer;
+}
+
+-----HTML-----
+
+&lt;div&gt;
+    Cursor Pointer
+&lt;/div&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output cursor">
+        <div>
+            Cursor Pointer
+        </div>
+    </div>
+
+    <hr>
+    <h1>float</h1>
+    <p>
+        The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow (in contrast to absolute positioning).
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+p {
+    width: 200px;
+    height: auto;
+    margin: 4px;
+    border: 2px solid blue;
+}
+p img {
+    width: 60px;
+}
+p.float img {
+    float: left;
+}
+
+-----HTML-----
+
+&lt;p class="float"&gt;
+    FLOAT - This is a paragraph which &lt;img src="profile.jpeg"&gt;Which is used to explin use of the float property.
+&lt;/p&gt;
+&lt;p&gt;
+    NO FLOAT - This is a paragraph which &lt;img src="profile.jpeg"&gt;Which is used to explin use of the float property.
+&lt;/p&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output float-container">
+        <p class="float">
+            FLOAT - This is a paragraph which <img src="https://avatars.githubusercontent.com/baluvadivel">Which is used to explin use of the float property.
+        </p>
+        <p>
+            NO FLOAT - This is a paragraph which <img src="https://avatars.githubusercontent.com/baluvadivel">Which is used to explin use of the float property.
+        </p>
+    </div>
+
+    <hr>
+    <h1>writing-mode</h1>
+    <p>
+        The writing-mode CSS property sets whether lines of text are laid out horizontally or vertically, as well as the direction in which blocks progress. When set for an entire document, it should be set on the root element (html element for HTML documents).
+    </p>
+    <h3>CODE</h3>
+<pre>
+-----CSS-----
+
+p {
+    writing-mode: vertical-rl;
+}
+
+-----HTML-----
+
+&lt;p&gt;
+    This is a paragraph.
+&lt;/p&gt;
+
+</pre>
+    <h3>OUTPUT</h3>
+    <div class="output writing-mode">
+        <p>
+            This is a paragraph.
+        </p>
+    </div>
+    </section>
+    <h2><a href="#nav">Back to Nav Link</a></h2>
+    <hr>
+
+<h1><a href="../">Back to Home Page</a></h1>
+</body>
+</html>

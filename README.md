@@ -14,50 +14,8 @@ Am taking this challenge to learn and take notes Everyday. Which helps to revise
 
 ### [Back to top](#100DaysOfCode)
 
-## Day 11 to day 20
+## Day 11 to day 27
 
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/011-to-020/screenshot.png" title="Day 11to20" width="100%">
-
-### [Back to top](#100DaysOfCode)
-
-## Day 21
-
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/021/screenshot.png" title="Day 21" width="100%">
-
-### [Back to top](#100DaysOfCode)
-
-## Day 22
-
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/022/screenshot.png" title="Day 22" width="100%">
-
-### [Back to top](#100DaysOfCode)
-
-## Day 23
-
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/023/screenshot.png" title="Day 23" width="100%">
-
-### [Back to top](#100DaysOfCode)
-
-## Day 24
-
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/024/screenshot.png" title="Day 24" width="100%">
-
-### [Back to top](#100DaysOfCode)
-
-## Day 25
-
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/025/screenshot.png" title="Day 25" width="100%">
-
-### [Back to top](#100DaysOfCode)
-
-## Day 26
-
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/026/screenshot.png" title="Day 26" width="100%">
-
-### [Back to top](#100DaysOfCode)
-
-## Day 27
-
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/027/screenshot.png" title="Day 27" width="100%">
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/011-to-027/screenshot.png" title="Day 11to27" width="100%">
 
 ### [Back to top](#100DaysOfCode)
