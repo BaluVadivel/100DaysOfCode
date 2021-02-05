@@ -19,3 +19,14 @@ Am taking this challenge to learn and take notes Everyday. Which helps to revise
 <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/011-to-027/screenshot.png" title="Day 11to27" width="100%">
 
 ### [Back to top](#100DaysOfCode)
+
+# Day 28 Portfolio
+
+## Recreated my Portfolio website [balu.dev](https://balu.dev)
+## [Source Code](https://github.com/BaluVadivel/Portfolio)
+
+### Feature Automatic Dark and Light theme using css only.
+
+<img src="https://raw.githubusercontent.com/BaluVadivel/Portfolio/main/preview.jpg" title="Balu Vadivel Portfolio" width="100%">
+
+### [Back to top](#100DaysOfCode)
