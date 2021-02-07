@@ -22,8 +22,7 @@ Am taking this challenge to learn and take notes Everyday. Which helps to revise
 
 # Day 28 Portfolio
 
-## Recreated my Portfolio website [balu.dev](https://balu.dev)
-## [Source Code](https://github.com/BaluVadivel/Portfolio)
+## Recreated my Portfolio website [balu.dev](https://balu.dev) and it's [Source Code](https://github.com/BaluVadivel/Portfolio)
 
 ### Feature Automatic Dark and Light theme using css only.
 
