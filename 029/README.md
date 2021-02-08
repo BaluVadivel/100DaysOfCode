@@ -8,4 +8,4 @@ Learning bootstrap (V4.6) by creating product landing page using bootstrap's doc
 
 # screenshot on Mobile
 
-<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/029/mobile.png" title="Day 29" width="100%">
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/029/mobile.png" title="Day 29" width="260px">
