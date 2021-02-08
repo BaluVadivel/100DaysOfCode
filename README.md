@@ -29,3 +29,13 @@ Am taking this challenge to learn and take notes Everyday. Which helps to revise
 <img src="https://raw.githubusercontent.com/BaluVadivel/Portfolio/main/preview.jpg" title="Balu Vadivel Portfolio" width="100%">
 
 ### [Back to top](#100DaysOfCode)
+
+# Day 29 - Bootstrap V4.6
+
+Learning bootstrap (V4.6) by creating product landing page using bootstrap's documentation.
+
+# screenshot
+
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/029/screenshot.png" title="Day 29" width="100%">
+
+### [Back to top](#100DaysOfCode)
