@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Day 30 JavaScript</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    html, body {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+    }
+    a {
+        color:#0000FF;
+    }
+    pre {
+        overflow-x: auto;
+        line-height: 1.6;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        html, body {
+            color: #eee;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+        }
+        a {
+        color:#2626ff;
+        }
+    }
+</style>
+<head>
+<body class="d30">
+    <h1>Day 30 - started learning JavaScript</h1><hr>
+    <h3>What is JavaScript &quest;</h3>
+    <p>
+        JavaScript is a scripting language which gives app like working functionality to websites.
+    </p>
+    <h3>Compiling js</h3>
+    <p>JavaScript can be compiled in two ways</p>
+    <ul>
+        <li>Compiling in browser</li>
+        <li>Compiling in nodejs compiler(Actually runtime)</li>
+    </ul>
+    <h3>Compiling in browser - Include JavaScript in html</h3><hr>
+    <p>
+        <code>&lt;script&gt;</code> tag is used to include JavaScript in html.<br>
+        we can directly include all JavaScript programs within the script tag. OR we can create separate <strong>filename&period;js</strong> file then it can be linked with html using the same &lt;script&gt; tag.<br><br>
+        This <code>&lt;script&gt;</code> tag is mostly place just above the body closing <code>&lt;&sol;body&gt;</code> tag
+    </p>
+    <p>
+        we can Output(log or console.log) and type the JavaScript program through browser devloper tool &minus;&gt; web console.
+    </p>
+
+<h3>Example Code</h3>
+<pre>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt; Learning JavaScript &lt;&sol;title&gt;
+    &lt;&sol;head&gt;
+
+    &lt;body&gt;
+        &lt;h1&gt; Started learning JavaScript &lt;&sol;h1&gt;
+
+        &lt;script&gt;
+            console.log("Hello World");
+        &lt;&sol;script&gt;
+
+        &lt;script scr="script.js"&gt; &lt;&sol;script&gt;
+    &lt;&sol;body&gt;
+&lt;&sol;html&gt;
+</pre>
+    <h3>Compiling in nodejs</h3><hr>
+    <p>
+        JavaScript can be compiled in the terminal using nodejs. Before that you need to install nodejs.
+    </p>
+    <p>
+        we can compile the JavaScript file or else type the js program and see Output(log or console.log).
+    </p>
+<h3>Example Code of terminal</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+&gt; console.log("Hello World");
+Hello World
+&gt; "Hello World"
+Hello World
+OR
+
+balu@balu:~$ node <a href="helloworld.js">helloworld.js</a>
+Hello World
+</pre>
+
+    <script>
+        console.log("Hello World");
+    </script>
+<body>
+</html>
