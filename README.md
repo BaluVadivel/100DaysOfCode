@@ -26,7 +26,8 @@ Am taking this challenge to learn and take notes Everyday. Which helps to revise
 
 ### Feature Automatic Dark and Light theme using css only.
 
-<img src="https://raw.githubusercontent.com/BaluVadivel/Portfolio/main/preview.jpg" title="Balu Vadivel Portfolio" width="100%">
+<img src="https://raw.githubusercontent.com/BaluVadivel/Portfolio/main/assets/thumbnail/dark.png" title="Balu Vadivel Portfolio" width="48%">
+<img src="https://raw.githubusercontent.com/BaluVadivel/Portfolio/main/assets/thumbnail/light.png" title="Balu Vadivel Portfolio" width="48%">
 
 ### [Back to top](#100DaysOfCode)
 
