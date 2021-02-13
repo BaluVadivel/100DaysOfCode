@@ -24,10 +24,7 @@ Am taking this challenge to learn and take notes Everyday. Which helps to revise
 
 ## Recreated my Portfolio website [balu.dev](https://balu.dev) and it's [Source Code](https://github.com/BaluVadivel/Portfolio)
 
-### Feature Automatic Dark and Light theme using css only.
-
-<img src="https://raw.githubusercontent.com/BaluVadivel/Portfolio/main/assets/thumbnail/dark.png" title="Balu Vadivel Portfolio" width="48%">
-<img src="https://raw.githubusercontent.com/BaluVadivel/Portfolio/main/assets/thumbnail/light.png" title="Balu Vadivel Portfolio" width="48%">
+<img src="https://raw.githubusercontent.com/BaluVadivel/Portfolio/main/assets/thumbnail/dark.png" title="Balu Vadivel Portfolio" width="100%">
 
 ### [Back to top](#100DaysOfCode)
 
