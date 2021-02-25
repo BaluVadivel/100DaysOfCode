@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Day 31</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    html, body {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+        font-family: Arial,Verdana, Tahoma, 'Courier New', Courier, "Helvetica Neue", Helvetica, sans-serif;
+    }
+    a {
+        color:#0000FF;
+    }
+    .d31 pre {
+        padding: 0px 6px;
+        border: 2px gray solid;
+        border-radius: 6px;
+        width: calc(100% - 16px);
+        overflow-x: auto;
+        line-height: 1.6;
+    }
+    .d31 dt {
+        font-size: 1.4rem;
+    }
+    .d31 dd {
+        margin-bottom: 14px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        html, body {
+            color: #eee;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+        }
+        a {
+        color:#2626ff;
+        }
+    }
+</style>
+<head>
+<body class="d31">
+    <h1>Day 31</h1><hr>
+    <h3>
+        Numbers
+    </h3>
+    <p>
+        In JavaScript only one number type which includes positive number, negative number, whole numbers(integer), decimal numbers.
+        <br>example: 7, -7, 0.7 -0.7
+    </p>
+<h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> 17
+17
+> -17
+-17
+> 1.9
+1.9
+> -1.9
+-1.9
+> 1.12345678901234567890
+1.1234567890123457
+</pre>
+    <h3>
+        Basic math operations - Arithematic operators
+    </h3>
+    <p>
+        <dl>
+            <dt>
+                +
+            </dt>
+            <dd>
+                Addition to add two numbers
+            </dd>
+            <dt>
+                -
+            </dt>
+            <dd>
+                Subtraction to subtract one number from another number
+            </dd>
+            <dt>
+                *
+            </dt>
+            <dd>
+                Multiplication to multiply two numbers
+            </dd>
+            <dt>
+                /
+            </dt>
+            <dd>
+                Divides the left number by the right
+            </dd>
+            <dt>
+                %
+            </dt>
+            <dd>
+                Remainder(modulo) to return remainder left after integer division
+            </dd>
+            <dt>
+                **
+            </dt>
+            <dd>
+                Exponent(power) that is left side number is multiplied by itself right side number no of times.
+                <br>example: 3 ** 2 &rArr; 3<sup>2</sup>
+            </dd>
+        </dl>
+    </p>
+<h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> 5 + 5
+10
+> 5 - 15
+-10
+> 5 * 5
+25
+> 20 / 5
+4
+> 23 % 5
+3
+> 3 ** 2
+9
+> 4 ** 2
+16
+</pre>
+
+    <h3>
+    NaN
+    </h3>
+    <p>
+        NaN respresents Not a Number.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> 0/0
+NaN
+> 1 + NaN
+NaN
+</pre>
+
+    <h3>
+        Naming Variable - Identifier
+    </h3>
+    <p>
+        Identifier represents variables, functions and properties. Variable can contain alphabets, digits, &dollar;, &UnderBar;. But may not start with digit. In javaScript Identifiers are camelCase stylized.<br>
+        Use captial letter in each word's first letter expect first word's first letter.<br>
+        Use currentDate instead of current_date or currentdate<br>
+        Use isLoggedIn instead of is_logged_in or isloggedin
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> let currentDate = 7;
+undefined
+> currentDate;
+7
+</pre>
+
+    <h3>
+        Variable - let
+    </h3>
+    <p>
+        Variable is used to store data.<br>
+        <code>let</code> - keyword is used to declare variables.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> let firstNum = 7;
+undefined
+> let secondNum = 5;
+undefined
+> let total = firstNum + secondNum;
+undefined
+> total
+12
+</pre>
+
+    <h3>
+        Updating variables
+    </h3>
+    <p>
+        Variable can be updated after the declaration.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> let firstNum = 7;
+undefined
+> firstNum
+7
+> firstNum = 8;
+8
+> firstNum
+8    
+</pre>
+
+    <h3>
+        const
+    </h3>
+    <p>
+        <code>const</code> is just like <code>let</code> but it's value can't be changed.<br>
+        After the declaration it's value can't be changed.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> const num = 7;
+undefined
+> num
+7
+> num = 9;
+Uncaught TypeError: Assignment to constant variable.
+> const num = 9;
+Uncaught SyntaxError: Identifier 'num' has already been declared    
+</pre>
+
+    <h3>
+        var
+    </h3>
+    <p>
+        Before <code>let</code> &amp; <code>const</code>, var is the only keyword for variable declaration.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> var num = 7;
+undefined
+> num
+7
+> num=9;
+9
+> num
+9
+> var num = 10;
+undefined
+> num
+10
+</pre>
+    <h3>
+        Booleans
+    </h3>
+    <p>
+        Boolean values are true or false value.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> let isLoggedIn = true;
+undefined
+> isLoggedIn;
+true
+> isLoggedIn = false;
+false
+> isLoggedIn;
+false
+> isLoggedIn = True;
+Uncaught ReferenceError: True is not defined
+> isLoggedIn = False;
+Uncaught ReferenceError: False is not defined
+</pre>
+
+<body>
+</html>
