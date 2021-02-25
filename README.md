@@ -43,3 +43,9 @@ Learning bootstrap (V4.6) by creating product landing page using bootstrap's doc
 <img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/030/screenshot.png" title="Day 30" width="100%">
 
 ### [Back to top](#100DaysOfCode)
+
+## Day 31
+
+<img src="https://raw.githubusercontent.com/BaluVadivel/100DaysOfCode/main/031/screenshot.png" title="Day 31" width="100%">
+
+### [Back to top](#100DaysOfCode)
