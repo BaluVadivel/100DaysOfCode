@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Day 32</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    html, body {
+        width: calc(100% - 8px);
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+        font-family: Arial,Verdana, Tahoma, 'Courier New', Courier, "Helvetica Neue", Helvetica, sans-serif;
+    }
+    a {
+        color:#0000FF;
+    }
+    .d32 pre {
+        padding: 0px 6px;
+        border: 2px gray solid;
+        border-radius: 6px;
+        width: calc(100% - 16px);
+        overflow-x: auto;
+        line-height: 1.6;
+    }
+    .d32 img.replaceall {
+        width: 100%;
+        max-width: 460px;
+        border-radius: 6px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        html, body {
+            color: #eee;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+        }
+        a {
+        color:#2626ff;
+        }
+    }
+</style>
+<head>
+<body class="d32">
+    <h1>Day 32</h1><hr>
+
+    <h2>
+        Comments
+    </h2>
+    <p>
+        In javaScript comments can be used to explain JavaScript code, and to make it more readable. Comments can also be used to prevent execution, when testing alternative code.
+    </p>
+
+    <h2>
+        Single line Comments
+    </h2>
+    <p>
+        Single line comments start with &sol;&sol;.
+        Any text between &sol;&sol; and the end of the line will be ignored by JavaScript (will not be executed).
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> let a = 10; //Declaring variable
+undefined
+> a
+10
+</pre>
+
+    <h2>
+        Multi line Comments
+    </h2>
+    <p>
+        Multi-line comments start with &sol;&ast; and end with &ast;&sol;. Any text between &sol;&ast; and &ast;&sol; will be ignored by JavaScript.
+
+
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> let a = 10; //Declaring variable
+undefined
+> .editor
+// Entering editor mode (^D to finish, ^C to cancel)
+let b = 20;
+/*
+multi line
+comment
+*/
+undefined
+> b
+20
+</pre>
+
+    <h2>
+        String
+    </h2>
+    <p>
+        The String object is used to represent and manipulate a sequence of characters. String can be any text inside single or double quotes. The backslash (&bsol;) escape character turns special characters into string characters:
+    </p>
+<h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> let nameOne = "Hi i'm balu";
+undefined
+> nameOne
+"Hi i'm balu"
+> let nameTwo = 'Hi i\'m balu';
+undefined
+> nameTwo
+"Hi i'm balu"
+> let nameThree = 'He is called "Balu"';
+undefined
+> nameThree
+'He is called "Balu"'
+> let nameFour = "He is called \"Balu\"";
+undefined
+> nameFour
+"He is called "Balu""
+</pre>
+
+    <h2>
+        String index
+    </h2>
+    <p>
+        The characters in a string can be located using their index value, which represents their position in the string. Enclosing the index in square brackets will select a single character from a string:
+        Characters are indexed from left to right, starting from the position 0, not 1&excl; Blank spaces are also counted as characters.<br>
+        Last char index is one less than it's length because index starts from 0.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> let stringName = "Balu Vadivel";
+undefined
+> stringName
+'Balu Vadivel'
+> stringName[0]
+'B'
+> stringName[5]
+'V'
+> stringName[4] // index 4 is blank space
+' '
+> stringName[20]
+undefined
+</pre>
+
+
+    <hr>
+    <h1>String Methods</h1>
+    <hr>
+
+    <h2>
+        Length
+    </h2>
+    <p>
+        Length property returns the number of characters in the string.
+    </p>
+<h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> let stringName = "Balu Vadivel";
+undefined
+> stringName.length
+12
+> stringName[11]
+'l'
+</pre>
+
+    <h2>
+        charAt()
+    </h2>
+    <p>
+        The String object's charAt() method returns a new string consisting of the single UTF-16 code unit located at the specified offset into the string.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> let myName = "Balu Vadivel";
+undefined
+> myName.charAt(0);
+'B'
+> myName.charAt(5);
+'V'
+> myName.charAt(99); // Returns empty string
+''
+</pre>
+
+    <h2>
+        charCodeAt()
+    </h2>
+    <p>
+        The charCodeAt() method returns an integer between 0 and 65535 representing the UTF-16 code unit at the given index.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> let myName = "Balu Vadivel";
+undefined
+> myName.charCodeAt(0); //returns 66, the Unicode value for B
+66
+> myName.charCodeAt(1); //returns 97, the Unicode value for a
+97
+> myName.charCodeAt(20); //returns NaN, index is out of range
+NaN
+</pre>
+
+
+    <h2>
+        codePointAt()
+    </h2>
+    <p>
+        The codePointAt() method returns the Unicode value of the character at the specified index in a string.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> "ABC".codePointAt(0); // Unicode value of "A" is 65
+65
+> "abc".codePointAt(2); // Unicode value of "a" is 99
+99
+</pre>
+
+    <h2>
+        concat()
+    </h2>
+    <p>
+        The concat() method concatenates the string arguments to the calling string and returns a new string.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> let f = "Balu", l = "Vadivel";
+undefined
+> let name = f.concat(' ',l);
+undefined
+> name
+'Balu Vadivel'
+> let Name = f + ' ' + l; // + instead of concat
+undefined
+> Name
+'Balu Vadivel'
+> Name += f + ' ' + l; // += instead of concat
+'Balu VadivelBalu Vadivel'
+> Name
+'Balu VadivelBalu Vadivel'
+</pre>
+
+    <h2>
+        endsWith()
+    </h2>
+    <p>
+        The endsWith() method determines whether a string ends with the characters of a specified string, returning true or false as appropriate. Optionally we can give string length value, that position considered as end of the string.
+        <br>
+        String.fromCharCode uses the UTF-16 by which most unicode characters can be represented by a single 16-bit value called code unit.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+let Name = "Balu Vadivel"
+> Name.endsWith('vel');
+true
+> Name.endsWith('ve');
+false
+> Name.endsWith('lu',4); // 4 is string length, not index
+true
+</pre>
+
+    <h2>
+        fromCharCode()
+    </h2>
+    <p>
+        The fromCharCode() method converts Unicode values into characters. String.fromCharCode uses the UTF-16 by which most unicode characters can be represented by a single 16-bit value called code unit.
+        <br><b>Fully supported</b>
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> String.fromCharCode(72); // Unicode of 'H' is 72
+'H'
+> String.fromCharCode(72, 69, 76, 76, 79); // multiple values
+'HELLO'
+> String.fromCharCode(0x1F304)  // this supports 16bits
+''
+> String.fromCodePoint(0x1F304); // this supports upto 32bits (4 byte)
+'🌄'
+> String.fromCharCode(0xD83C, 0xDF04); // valid way to pass supplementary characters using surrogate pair
+'🌄'
+</pre>
+
+    <h2>
+        fromCodePoint()
+    </h2>
+    <p>
+        The static String.fromCodePoint() method returns a string created by using the specified sequence of code points.
+        String.fromCodePoint can return 4 byte(32 bits) Unicode characters by taking code point which is UTF-32 code unit for supplementary characters.
+        but 
+        String.fromCharCode uses the UTF-16 by which most unicode characters can be represented by a single 16-bit value called code unit.
+        <br><br>
+        <b>Support from ES6</b>
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> String.fromCodePoint(65);
+'A'
+> String.fromCodePoint(0x1F304); // this supports upto 32bits (4 byte)
+'🌄'
+> String.fromCharCode(0x1F304)  // Given code point of supplementary char, returns invalid character
+''
+> String.fromCharCode(0xD83C, 0xDF04); // valid way to pass supplementary characters using surrogate pair
+'🌄'
+</pre>
+
+    <h2>
+        includes()
+    </h2>
+    <p>
+        The includes() method determines whether one string may be found within another string, returning true or false as appropriate.<br>
+        The position within the string at which to begin searching for searchString. <b>Here value is index value</b>(Defaults to 0).
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> let string = "Hi i'm Balu";
+undefined
+> string
+"Hi i'm Balu"
+> string.includes("Balu");
+true
+> string.includes("balu"); // case sensitive
+false
+> string.includes("Hi",0); // first character index value 0
+true
+> string.includes("Hi",1);
+false
+</pre>
+
+    <h2>
+        indexOf()
+    </h2>
+    <p>
+        The indexOf() method returns the index within the calling String object of the first occurrence of the specified value, starting the search at fromIndex. Returns -1 if the value is not found.
+        The index of the first occurrence of searchValue, or -1 if not found.
+        <br>
+        An integer representing the index at which to start the search. Defaults to 0.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> let string = "Hi i am Balu";
+undefined
+> string
+'Hi i am Balu'
+> string.indexOf("H");
+0
+> string.indexOf("h"); // case sensitive
+-1
+> string.indexOf("i",0);
+1
+> string.indexOf("i",2); // start search from index 2
+3
+> string.indexOf("s",2); // searchValue not found
+-1
+> string.indexOf("i",20);
+-1
+> string.indexOf(""); // searching an empty string
+0
+> string.indexOf("",4); // searching an empty string from index 4
+4
+> string.indexOf("",12); // searching an empty string from last index 12
+12
+> string.indexOf("",20); // searching an empty string from out of range index value
+12
+</pre>
+
+    <h2>
+        lastIndexOf()
+    </h2>
+    <p>
+        The lastIndexOf() method returns the index within the calling String object of the last occurrence of the specified value, searching backwards from fromIndex (The default value is +Infinity). Returns -1 if the value is not found.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> let string = "Hi i am Balu";
+undefined
+> string;
+'Hi i am Balu'
+> string.lastIndexOf("a");
+9
+> string.lastIndexOf("a",8); // search backwards from index 8
+5
+> string.lastIndexOf(""); // search empty string
+12
+> string.lastIndexOf("",7);
+7
+> string.lastIndexOf("",20);
+12
+</pre>
+
+    <h2>
+        localeCompare()
+    </h2>
+    <p>
+        The localeCompare() method returns a number indicating whether a reference string comes before, or after, or is the same as the given string in sort order.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> 'a'.localeCompare('b');// The letter "a" is before "b" yielding a negative value
+-1
+> 'b'.localeCompare('a');// The letter "b" is before "a" yielding a positive value
+1
+> 'a'.localeCompare('a');
+0
+</pre>
+
+    <h2>
+        match()
+    </h2>
+    <p>
+        The match() method searches a string for a match against a regular expression, and returns the matches, as an Array object.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let strOne = "Hi hi hijack";
+undefined
+> string.match(/hi/);
+[ 'hi', index: 3, input: 'Hi hi hijack', groups: undefined ]
+> strOne.match(/hi/g); // global or all match in string
+[ 'hi', 'hi' ]
+> strOne.match(/hi/gi); // global with case insensitive
+[ 'Hi', 'hi', 'hi' ]
+> string.match('Hij'); // not found
+null
+</pre>
+
+    <h2>
+        padEnd()
+    </h2>
+    <p>
+        The padEnd() method pads the current string with a given string (repeated, if needed) so that the resulting string reaches a given length. The padding is applied from the end of the current string.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> let strOne = 'Balu Vadivel';
+undefined
+> strOne.padEnd(16,'123');
+'Balu Vadivel1231'
+> strOne.padEnd(16); // adds empty spaces
+'Balu Vadivel    '
+> strOne.padEnd(4); // can't reduce string length
+'Balu Vadivel'
+</pre>
+
+    <h2>
+        padStart()
+    </h2>
+    <p>
+        The padStart() method pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length. The padding is applied from the start of the current string.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> let strOne = 'Balu Vadivel';
+undefined
+> strOne.padStart(16,'123');
+'1231Balu Vadivel'
+> strOne.padStart(16); // adds empty spaces
+'    Balu Vadivel'
+</pre>
+
+    <h2>
+        String.raw()
+    </h2>
+    <p>
+        The static String.raw() method is a tag function of template literals. It's used to get the raw string form of template literals, that is, substitutions (e.g. ${foo}) are processed, but escapes (e.g. \n) are not. 
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v12.20.1.
+Type ".help" for more information.
+> .editor // string raw
+// Entering editor mode (^D to finish, ^C to cancel)
+let strOne = String.raw`Line-1\nLine-2
+Line-3`;
+console.log(strOne); // output below
+Line-1\nLine-2
+Line-3
+undefined
+> .editor // string template literals
+// Entering editor mode (^D to finish, ^C to cancel)
+let strTwo =`Line-1\nLine-2
+Line-3`;
+console.log(strTwo); // output below
+Line-1
+Line-2
+Line-3
+undefined
+</pre>
+
+    <h2>
+        repeat()
+    </h2>
+    <p>
+        The repeat() method constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together.
+    </p>
+    <h3>Example</h3>
+<pre>
+    balu@balu:~$ node
+    Welcome to Node.js v12.20.1.
+    Type ".help" for more information.
+    > let strOne = 'happy+';
+    undefined
+    > strOne.repeat(3);
+    'happy+happy+happy+'
+    > strOne.repeat(0); // empty String
+    ''
+    > strOne.repeat(2.5); // count will be converted to integer
+    'happy+happy+'
+    > strOne.repeat(-3); // Negative value error
+    Uncaught RangeError: Invalid count value at String.repeat (&lt;anonymous&gt;)
+</pre>
+
+    <h2>
+        replace()
+    </h2>
+    <p>
+        The replace() method returns a new string with some or all matches of a pattern replaced by a replacement. The pattern can be a string or a RegExp, and the replacement can be a string or a function to be called for each match. If pattern is a string, only the first occurrence will be replaced.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let strOne = 'Dog dog dog.';
+undefined
+> strOne.replace('dog','sheep');
+'Dog sheep dog.'
+> strOne.replace(/dog/i,'sheep'); // regex case insensitive
+'sheep dog dog.'
+</pre>
+
+    <h2>
+        replaceAll()
+    </h2>
+    <p>
+        The replaceAll() method returns a new string with all matches of a pattern replaced by a replacement. The pattern can be a string or a RegExp, and the replacement can be a string or a function to be called for each match.
+        <br><br><b>SUPPORT</b><br>
+        chrome 85 - Firefox 77 - Edge 85 - safari 13.1<br>support from ES12
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let strOne = 'Dog dog dog.';
+undefined
+> strOne.replaceAll('dog','sheep'); // no support Node.js v14.16.0.
+Uncaught TypeError: strOne.replaceAll is not a function
+> strOne.replace(/dog/g,'sheep'); // replace with regex global replace
+'Dog sheep sheep.'
+> strOne.replace(/dog/gi,'sheep'); // regex global replace and case insensitive
+'sheep sheep sheep.'
+</pre>
+    <h3>Example from Firefox 77 browser</h3>
+    <img class="replaceall" src="replaceall.png" alt="">
+
+
+    <h2>
+        search()
+    </h2>
+    <p>
+        The search() method searches a string for a specified value, and returns the position of the first occurrence match. The search value can be string or a regular expression. This method returns -1 if no match is found.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> "LETS do it".search('t');
+9
+> "LETS do it".search(/t/i); // case insensitive with RegExp
+2
+</pre>
+
+    <h2>
+        slice()
+    </h2>
+    <p>
+        The slice() method extracts a section of a string and returns it as a new string, without modifying the original string.
+        <br><br>
+        Begin of the string and end of the string specified in index value. End value is optional. If the begin value is higher than end value or greater than or equal to string length then return empty string.
+        <br>if index value is -3, it is treated as str.length - 3
+
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let strOne = 'Balu Vadivel'; // Here string length is 12
+undefined
+> strOne.slice(1);
+'alu Vadivel'
+> strOne.slice(-1);    // returns only last char
+'l'
+> strOne.slice(30);    // returns empty string because begin value higher than last index value 11
+''
+> strOne.slice(2, 8);
+'lu Vad'
+> strOne.slice(-2, 8); // returns empty string because (-2, 8) calculated as (10, 8)
+''
+> strOne.slice(0, -2);
+'Balu Vadiv'
+> strOne.slice(2, 28); // end value considered as last index value 11
+'lu Vadivel'
+</pre>
+
+    <h2>
+        split()
+    </h2>
+    <p>
+        The split() method divides a String into an ordered list of substrings, puts these substrings into an array, and returns the array.  The division is done by searching for a pattern, where the pattern is provided as the first parameter in the method's call.
+        <br><br>
+        Optionally a non-negative integer specifying a limit on the number of substrings to be included in the array.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let strOne = 'AB CD EF';
+undefined
+> let array = strOne.split(' ');
+undefined
+> array;
+[ 'AB', 'CD', 'EF' ]
+> array[2];
+EF
+> strOne.split(' ',2); // return only 2 substring in the array
+[ 'AB', 'CD' ]
+</pre>
+
+    <h2>
+        startsWith()
+    </h2>
+    <p>
+        The startsWith() method determines whether a string begins with the characters of a specified string, returning true or false as appropriate.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let strOne = 'Balu Vadivel';
+undefined
+> strOne.startsWith('Ba');
+true
+> strOne.startsWith('ba'); // Case sensitive
+false
+> strOne.startsWith('Va', 5);
+true
+> strOne.startsWith('Va', 6); // string from index 6 is "adivel"
+false
+</pre>
+
+    <h2>
+        substring()
+    </h2>
+    <p>
+        The substring() method returns the part of the string between the start and end indexes, or to the end of the string.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let strOne = 'Mozilla';
+undefined
+> strOne.substring(1, 3);
+'oz'
+> strOne.substring(3, 1); // swapps start and end value if start value greater than end value
+'oz'
+> strOne.substring(2); // End value is optional.
+'zilla'
+</pre>
+
+    <h2>
+        toLocaleLowerCase()
+    </h2>
+    <p>
+        The toLocaleLowerCase() method returns the value of the string converted to lower case according to any locale-specific case mappings. toLocaleLowerCase() does not affect the value of the string itself. In most cases, this will produce the same result as toLowerCase(), but for some locales, such as Turkish, whose case mappings do not follow the default case mappings in Unicode, there may be a different result.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let strOne = 'Iİstanbul';
+undefined
+> strOne.toLocaleLowerCase('en-US');
+'ii̇stanbul'
+> strOne.toLocaleLowerCase('tr');
+'ıistanbul'
+</pre>
+
+    <h2>
+        toLocaleUpperCase()
+    </h2>
+    <p>
+        The toLocaleUpperCase() method returns the value of the string converted to upper case according to any locale-specific case mappings. toLocaleUpperCase() does not affect the value of the string itself. In most cases, this will produce the same result as toUpperCase(), but for some locales, such as Turkish, whose case mappings do not follow the default case mappings in Unicode, there may be a different result.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let strOne = 'Iİstanbul';
+undefined
+> strOne.toLocaleUpperCase('en-US');
+'IİSTANBUL'
+> strOne.toLocaleUpperCase('tr');
+'IİSTANBUL'
+</pre>
+
+    <h2>
+        toLowerCase()
+    </h2>
+    <p>
+        The toLowerCase() method returns the value of the string converted to lower case. toLowerCase() does not affect the value of the string itself.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let strOne = "AbCdE";
+undefined
+> strOne.toLowerCase();
+'abcde'
+</pre>
+
+    <h2>
+        toUpperCase()
+    </h2>
+    <p>
+        The toUpperCase() method returns the value of the string converted to uppercase. This method does not affect the value of the string itself since JavaScript strings are immutable.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let strOne = "AbCdE";
+undefined
+> strOne.toUpperCase();
+'ABCDE'
+</pre>
+
+    <h2>
+        toString()
+    </h2>
+    <p>
+        The toString() method returns a string representing the specified object.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let strObjOne = new String('Balu');
+undefined
+> strObjOne;
+[String: 'Balu']
+> strObjOne.toString();
+'Balu'
+</pre>
+
+    <h2>
+        trim()
+    </h2>
+    <p>
+        The trim() method returns new string by removing whitespace from both ends of a string. Whitespace in this context is all the whitespace characters (space, tab, no-break space, etc.) and all the line terminator characters (LF, CR, etc.).
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let strOne = "  BalU  ";
+undefined
+> strOne;
+'  BalU  '
+> strOne.trim(); // returns new string
+'BalU'
+</pre>
+
+    <h2>
+        trimStart()
+    </h2>
+    <p>
+        The trimStart() method removes whitespace from the beginning of a string. trimLeft() is an alias of this method.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let strOne = "  BalU  ";
+undefined
+> strOne.trimStart();
+'BalU  '
+</pre>
+
+    <h2>
+        trimEnd()
+    </h2>
+    <p>
+        The trimEnd() method removes whitespace from the end of a string. trimRight() is an alias of this method.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let strOne = "  BalU  ";
+undefined
+> strOne.trimEnd();
+'  BalU'
+</pre>
+
+    <h2>
+        valueOf()
+    </h2>
+    <p>
+        The valueOf() method returns the primitive value of a String object.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let strObjOne = new String('Balu');
+undefined
+> strObjOne;
+[String: 'Balu']
+> strObjOne.valueOf();
+'Balu'
+</pre>
+<body>
+</html>
