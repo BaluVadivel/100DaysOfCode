@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Day 33</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    html, body {
+        width: calc(100% - 8px);
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+        font-family: Arial,Verdana, Tahoma, 'Courier New', Courier, "Helvetica Neue", Helvetica, sans-serif;
+    }
+    a {
+        color:#0000FF;
+    }
+    .d32 p {
+        text-align: justify;
+    }
+    .d32 pre {
+        padding: 0px 6px;
+        border: 2px gray solid;
+        border-radius: 6px;
+        width: calc(100% - 16px);
+        overflow-x: auto;
+        line-height: 1.6;
+    }
+    .d32 img.replaceall {
+        width: 100%;
+        max-width: 460px;
+        border-radius: 6px;
+    }
+    .d32 table {
+        border-collapse: collapse;
+        margin-left: 30%;
+    }
+    .d32 td,th {
+        border: 2px solid orange;
+        padding: 4px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        html, body {
+            color: #eee;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+        }
+        a {
+        color:#2626ff;
+        }
+    }
+</style>
+<head>
+<body class="d32">
+    <h1>Day 33</h1><hr>
+
+    <h2>
+        Escape Sequence or Escape notation in String
+    </h2>
+    <p>
+        Special characters can be encoded using escape notation: Some of the special characters shown below
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Code
+                </th>
+                <th>
+                    Output
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    \'
+                </td>
+                <td>
+                    single quote
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \"
+                </td>
+                <td>
+                    double quote
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \`
+                </td>
+                <td>
+                    backtick
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \\
+                </td>
+                <td>
+                    backslash
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \n
+                </td>
+                <td>
+                    new line
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \r
+                </td>
+                <td>
+                    carriage return
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \v
+                </td>
+                <td>
+                    vertical tab
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \t
+                </td>
+                <td>
+                    tab
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \b
+                </td>
+                <td>
+                    backspace
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let str = " \'Single quotes\', \"Double quotes\", \`backtick\`, \nnewLine \\ backslash";
+undefined
+> console.log(str);
+ 'Single quotes', "Double quotes", `backtick`,
+newLine \ backslash
+</pre>
+
+
+    <h2>
+        Template literals (Template strings)
+    </h2>
+    <p>
+        Template literals are string literals allowing embedded expressions. You can use multi-line strings and string interpolation features with them.
+        <br><br>
+        Template literals can contain placeholders. These are indicated by the dollar sign and curly braces (${expression}). The expressions in the placeholders and the text between the backticks (` `) get passed to a function.
+    </p>
+    <h3>Example</h3>
+<pre>
+    balu@balu:~$ node
+    Welcome to Node.js v14.16.0.
+    Type ".help" for more information.
+    > let str = `Hi 1 + 2 = ${1 + 2}`;
+    undefined
+    > str;
+    'Hi 1 + 2 = 3'
+    > .editor
+    // Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+    let a=10, b=5;
+    console.log(`Here,
+    a = ${a},
+    b = ${b},`);
+
+    Here,
+    a = 10,
+    b = 5,
+
+    > console.log("Here,\na = " + a + ",\nb = " + b +","); // same above without Template literals, \n for new line
+    Here,
+    a = 10,
+    b = 5,
+    > console.log(`Price = $${price}`);
+    Price = $12
+</pre>
+
+    <h2>
+        null
+    </h2>
+    <p>
+        The value null represents the intentional absence of any object value. It is one of JavaScript's primitive values and is treated as falsy for boolean operations. Indicating that a variable points to no object.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let b = 1;
+undefined
+> b+null;
+1
+</pre>
+
+    <h2>
+        undefined
+    </h2>
+    <p>
+        The global undefined property represents the primitive value undefined. It is one of JavaScript's primitive types.
+        <br><br>
+        A variable that has not been assigned a value is of type undefined
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let b = 1;
+undefined
+> b+undefined;
+NaN
+</pre>
+
+    <hr>
+    <h2>
+        Math
+    </h2>
+    <hr>
+    <p>
+        Math is a built-in object that has properties and methods for mathematical constants and functions. It’s not a function object.
+        <br><br>
+        Math works with the Number type. It doesn't work with BigInt.
+    </p>
+
+    <h1>Static property in Math</h1>
+
+    <h2>
+        Math.PI
+    </h2>
+    <p>
+        The Math.PI property represents the ratio of the circumference of a circle to its diameter, approximately 3.14159:
+        <br><br>
+        Math.PI &equals; &pi; &approx; 3.14159
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> Math.PI
+3.141592653589793
+</pre>
+
+    <h1>Static methods in Math</h1>
+
+    <h2>
+        Math.ceil()
+    </h2>
+    <p>
+        The Math.ceil() function always rounds a number up to the next largest integer.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> Math.ceil(4.1);
+5
+> Math.ceil(4);
+4
+> Math.ceil(4.99);
+5
+> Math.ceil(-4.1); // -4 is greater than -4.1
+-4
+</pre>
+
+<h2>
+    Math.floor()
+</h2>
+<p>
+    The Math.floor() function returns the largest integer less than or equal to a given number.
+</p>
+<h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> Math.floor(4.1);
+4
+> Math.floor(4);
+4
+> Math.floor(4.9);
+4
+> Math.floor(-4.1); // -5 is lesser than -4.1
+-5
+</pre>
+
+<h2>
+    Math.round()
+</h2>
+<p>
+    The Math.round() function returns the value of a number rounded to the nearest integer.
+</p>
+<h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> Math.round(4.1);
+4
+> Math.round(4.4);
+4
+> Math.round(4.5);
+5
+> Math.round(-4.5);
+-4
+> Math.round(-4.6);
+-5
+</pre>
+
+<h2>
+    Math.random()
+</h2>
+<p>
+    The Math.random() function returns a floating-point, pseudo-random number in the range 0 to less than 1 (inclusive of 0, but not 1) with approximately uniform distribution over that range — which you can then scale to your desired range. The implementation selects the initial seed to the random number generation algorithm; it cannot be chosen or reset by the user.
+</p>
+<h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> Math.random();
+0.19500068993394604
+> Math.random();
+0.06561566196105684
+> Math.random();
+0.6991511308554281
+> Math.random()*100;
+35.19700903335281
+> Math.random()*100;
+15.596304358880442
+</pre>
+<h3>Source</h3>
+<p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">
+        Math Objects all methods and properties on MDN
+    </a>
+</p>
+<body>
+</html>
