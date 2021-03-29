@@ -811,6 +811,8 @@ undefined
     </h2>
     <p>
         The toString() method returns a string representing the specified object.
+        <br><br>
+        We can convert any integer number into Binary, Octal, Decimal, Hexadecimal numbers.
     </p>
     <h3>Example</h3>
 <pre>
@@ -823,6 +825,14 @@ undefined
 [String: 'Balu']
 > strObjOne.toString();
 'Balu'
+> (15).toString(2); // Binary Number base value 2
+'1111'
+> (15).toString(8); // Octal Number base value 8
+'17'
+> (15).toString(10);// Decimal Number base value 10 (DEFAULT)
+'15'
+> (15).toString(16);// HexaDecimal Number base value 16
+'f'
 </pre>
 
     <h2>
