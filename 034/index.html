@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Day 34</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    html, body {
+        width: calc(100% - 8px);
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+        font-family: Arial,Verdana, Tahoma, 'Courier New', Courier, "Helvetica Neue", Helvetica, sans-serif;
+    }
+    a {
+        color:#0000FF;
+    }
+    .d34 p {
+        text-align: justify;
+    }
+    .d34 pre {
+        padding: 0px 6px;
+        border: 2px gray solid;
+        border-radius: 6px;
+        width: calc(100% - 16px);
+        overflow-x: auto;
+        line-height: 1.6;
+    }
+    .d34 ol {
+        list-style-type: lower-roman;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        html, body {
+            color: #eee;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+        }
+        a {
+        color:#2626ff;
+        }
+    }
+</style>
+<head>
+<body class="d34">
+    <hr>
+    <h1>
+        Day 34
+    </h1>
+    <hr>
+
+    <h1>
+        Checking data types (or) typeOf operator
+    </h1>
+    <p>
+        Check the data type of a certain data type using typeOf Operator.
+        <br><br>
+        The typeOf operator returns a string indicating the type of the unevaluated operand.
+    </p>
+    <h3>Example</h3>
+<pre>
+    balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> typeof 1;             // number
+'number'
+> typeof 1.754;         // number
+'number'
+> typeof "hi";          // string
+'string'
+> typeof true;          // boolean
+'boolean'
+> typeof false;         // boolean
+'boolean'
+> let bool = true;      // boolean
+undefined
+> typeof bool;          // boolean
+'boolean'
+> let b;                // Declare Variable
+undefined
+> b;                    // undefined
+undefined
+> typeof undefined;     // undefined
+'undefined'
+> b = null;             // null is Object type
+null
+> typeof b;             // null is Object type
+'object'
+> typeof null;          // null is Object type
+'object'
+> let c ; c = "hi" - 7; // Creating NaN
+NaN
+> typeof c;             // NaN is Number type
+'number'
+> typeof NaN;           // NaN is Number type
+'number'
+</pre>
+
+    <hr>
+    <h1>
+        Changing data type(Casting)
+    </h1>
+    <hr>
+
+    <p>
+        Converting one data type to another data type. We use parseInt(), parseFloat(), Number(), + sign, String() When we do arithmetic operations string numbers should be first converted to integer or float if not it returns an error.
+    </p>
+
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let num = '7';
+undefined
+> num;                // String
+'7'
+> parseInt(num);      // Number
+7
+> parseFloat(num);    // Number
+7
+> +num;               // Number
+7
+> Number(num);        // Number
+7
+> let numOne = '7.7';
+undefined
+> numOne;             // String
+'7.7'
+> parseInt(numOne);   // Number
+7
+> parseFloat(numOne); // Number
+7.7
+> +numOne;            // Number
+7.7
+> Number(numOne);     // Number
+7.7
+> parseInt(7.7);      // Float number to int number
+7
+</pre>
+
+    <h2>
+        Boolean
+    </h2>
+
+    <p>
+        The Boolean object is an object wrapper for a boolean value.
+        <br><br>
+        The value passed as the first parameter is converted to a boolean value, if necessary. If the value is omitted or is 0, -0, null, false, NaN, undefined, or the empty string (""), the object has an initial value of false. All other values, including any object, an empty array ([]), or the string "false", create an object with an initial value of true.
+        <br><br>
+        Do not confuse the primitive Boolean values true and false with the true and false values of the Boolean object.
+    </p>
+
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> Boolean(false);
+false
+</pre>
+    <h2>
+        Falsy
+    </h2>
+
+    <p>
+        A falsy (sometimes written falsey) value is a value that is considered false when encountered in a Boolean context.
+        <br><br>
+        JavaScript uses type conversion to coerce any value to a Boolean in contexts that require it, such as conditionals and loops.
+        <br><br>
+        Following values are falsy values
+        <ul>
+            <li>false -> The keyword false.</li>
+            <li>0 -> The Number zero (so, also 0.0, etc., and 0x0).</li>
+            <li>-0 -> The Number negative zero (so, also -0.0, etc., and -0x0).</li>
+            <li>0n, -0n -> The BigInt zero and negative zero (so, also 0x0n/-0x0n).</li>
+            <li>"", '', `` -> Empty string value.</li>
+            <li>null -> the absence of any value.</li>
+            <li>undefined -> the primitive value.</li>
+            <li>NaN -> not a number.</li>
+        </ul>
+        Any value other than the above value is true value.
+    </p>
+
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> Boolean(false);
+false
+> Boolean(0);
+false
+> Boolean(-0);
+false
+> Boolean(0n);
+false
+> Boolean(-0n);
+false
+> Boolean("");
+false
+> Boolean('');
+false
+> Boolean(``);
+false
+> Boolean(null);
+false
+> Boolean(undefined);
+false
+> Boolean(NaN);
+false
+</pre>
+
+    <h2>
+        Truthy
+    </h2>
+
+    <p>
+        In JavaScript, a truthy value is a value that is considered true when encountered in a Boolean context. All values are truthy unless they are defined as falsy (i.e., except for false, 0, -0, 0n, "", null, undefined, and NaN).
+    </p>
+
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> Boolean(true);
+true
+> Boolean(1);
+true
+> Boolean(-1);
+true
+> Boolean(1n);
+true
+> Boolean(-1n);
+true
+> Boolean("hi");
+true
+> Boolean('hi');
+true
+> Boolean(`hi`);
+true
+</pre>
+
+    <hr>
+    <h1>
+        Operators
+    </h1>
+    <hr>
+    <p>
+        An operator is a symbol which represent some operation than can be performen on data.
+    </p>
+
+    <h2>
+        Arithmetic Operators
+    </h2>
+    <p>
+        Arithmetic operators are used to do arithematic operations. There are two types
+        <ol>
+            <li>Binary operators</li>
+            <li>Unary operators</li>
+        </ol>
+    </p>
+
+    <h3>
+        Binary operators
+    </h3>
+    <p>
+        A binary operator requires two operands for operations.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> 7 + 7; // Addition
+14
+> 7 - 7; // Subtraction
+0
+> 7 * 7; // Multiplication
+49
+> 7 / 7; // Division
+1
+> 9 % 7; // Modulo-remainder after integer division
+2
+</pre>
+
+    <h3>
+        Unary operators
+    </h3>
+    <p>
+        A unary operator requires a single operand for operations.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let b = 7;
+undefined
+> ++b; // INCREMENT one then return value
+8
+> b++; // return value then INCREMENT one
+8
+> b;   // Above step INCREMENT one here
+9
+> --b; // DECREMENT one then return valueOf
+8
+> b--; // return value then DECREMENT one
+8
+> b;   // Above step DECREMENT one here
+7
+> -b;  // Unary negation
+-7
+> +"7"; // Unary plus-convert the operand to a number
+7
+> +"abc"; // string content is not a number So returns NaN
+NaN
+</pre>
+
+    <h2>
+        Exponentiation (**)
+    </h2>
+    <p>
+        The exponentiation operator (**) returns the result of raising the first operand to the power of the second operand. It is equivalent to Math.pow, except it also accepts BigInts as operands.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> 2 ** 2;
+4
+> 2 ** 3;
+8
+> 2 ** 3 ** 2;
+512
+> 2 ** (3 ** 2);
+512
+</pre>
+
+    <h2>
+        Assignment operator
+    </h2>
+    <p>
+        An assignment operator assigns a value to its left operand based on the value of its right operand. The simple assignment operator is equal (&equals;), which assigns the value of its right operand to its left operand. That is, x &equals; y assigns the value of y to x.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let a = 10;
+undefined
+> let b = a + 10;
+undefined
+> console.log(a , b);
+10 20
+</pre>
+
+    <h2>
+        Comparison operators (or) Relational operators
+    </h2>
+    <p>
+        A comparison operator compares its operands and returns a logical value based on whether the comparison is true. The operands can be numerical, string, logical, or object values. Strings are compared based on standard lexicographical ordering, using Unicode values. In most cases, if the two operands are not of the same type, JavaScript attempts to convert them to an appropriate type for the comparison. This behavior generally results in comparing the operands numerically. The sole exceptions to type conversion within comparisons involve the &equals;&equals;&equals; and &excl;&equals;&equals; operators, which perform strict equality and inequality comparisons. These operators do not attempt to convert the operands to compatible types before checking equality.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> 7 == "7"; // Equal
+true
+> 7 == 7; // Equal
+true
+> 7 != "8"; //Not Equal
+true
+> 7 != 8; // Not Equal
+true
+> 7 === "7"; // Strict Equal
+false
+> 7 === 7; // Strict Equal
+true
+> 7 !== "7"; // Strict not Equal
+true
+> 7 !== 7; // Strict not Equal
+false
+> 7 > 6; // Greater than
+true
+> 7 < 6; // Less than
+false
+> 7 >= 6; // Greater than or equal
+true
+> 7 >= 7; // Greater than or equal
+true
+> 7 <= 6; // Less than or equal
+false
+> 6 <= 6; // Less than or equal
+true
+</pre>
+
+    <h2>
+        Logical operators
+    </h2>
+    <p>
+        Logical operators are typically used with Boolean (logical) values; when they are, they return a Boolean value. However, the &amp;&amp; and &vert;&vert; operators actually return the value of one of the specified operands, so if these operators are used with non-Boolean values, they may return a non-Boolean value.
+        <ul>
+            <li>AND (&amp;&amp;) returns true only when both operands are true, otherwise false</li>
+            <li>OR (&vert;&vert;) returns false only when both operands are false, otherwise true</li>
+            <li>NOT (&excl;) converts true to false and true to false</li>
+        </ul>
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> true && true; // AND returns true only when both operands are true, otherwise false
+true
+> true && false; // AND returns false
+false
+> false && true; // AND returns false
+false
+> false && false; // AND returns false
+false
+> false || false; // OR returns false only when both operands are false, otherwise true
+false
+> false || true; // OR returns true
+true
+> true || false; // OR returns true
+true
+> true || true; // OR returns true
+true
+> !true; // NOT converts true to false
+false
+> !false; // NOT converts false to true
+true
+> (1 === 1) && (1== "1"); // AND returns true only when both operands are true, otherwise false
+true
+> (1 === 1.7) || (1== "2"); // OR returns false only when both operands are false, otherwise true
+false
+> !(1 === 1); // NOT converts true to false
+false
+> !(1 === "1"); // NOT converts false to true
+true
+</pre>
+
+    <h2>
+        Bitwise operators
+    </h2>
+    <p>
+        A bitwise operator treats their operands as a set of 32 bits (zeros and ones), rather than as decimal, hexadecimal, or octal numbers. For example, the decimal number nine has a binary representation of 1001. Bitwise operators perform their operations on such binary representations, but they return standard JavaScript numerical values.
+    </p>
+
+    <h2>
+        Bitwise logical operators
+    </h2>
+    <p>
+        Conceptually, the bitwise logical operators work as follows:
+        <ul>
+            <li>The operands are converted to thirty-two-bit integers and expressed by a series of bits (zeros and ones). Numbers with more than 32 bits get their most significant bits discarded. For example, the following integer with more than 32 bits will be converted to a 32 bit integer: </li>
+            <li>In this 32 bit the first one bit is always preserved to store minus sign if the number is negative. Even if the number is positive that first one bit always is preserved.</li>
+            <li>Each bit in the first operand is paired with the corresponding bit in the second operand: first bit to first bit, second bit to second bit, and so on.</li>
+            <li>The operator is applied to each pair of bits, and the result is constructed bitwise. </li>
+        </ul>
+        bitwise NOT (~) operator is used on an integer, the resulting value is the two’s complement of the integer. The <b>two’s complement of an integer A is given by -(A + 1).</b>
+        <br><br>
+        For example, the binary representation of nine is 1001, and the binary representation of fifteen is 1111. So, when the bitwise operators are applied to these values, the results are as follows:
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> 15 & 9; // bitwise AND 1111 & 1001 = 1001
+9
+> 15 | 9; // bitwise OR  1111 | 1001 = 1111
+15
+> 15 ^ 9; // bitwise XOR 1111 ^ 1001 = 1111
+6
+> (15).toString(2); // 15 binary form
+'1111'
+> (-16).toString(2); // -16 binary form
+'-10000'
+> (~15).toString(2); // ~15 binary form === -16 binary form, bitwise NOT
+'-10000'
+> ~15;    // -( 15 + 1 ) => -16, bitwise NOT
+-16
+> ~(-16);  // -( -16 + 1 ) => 15, bitwise NOT
+15
+</pre>
+
+    <h2>
+        Bitwise shift operators
+    </h2>
+    <p>
+        The bitwise shift operators take two operands: the first is a quantity to be shifted, and the second specifies the number of bit positions by which the first operand is to be shifted. The direction of the shift operation is controlled by the operator used.
+        <br><br>
+        Shift operators convert their operands to thirty-two-bit integers and return a result of either type Number or BigInt: specifically, if the type of the left operand is BigInt, they return BigInt; otherwise, they return Number.
+    </p>
+
+    <h3>
+        Left shift (&lt;&lt;)
+    </h3>
+    <p>
+        The left shift operator (&lt;&lt;) shifts the first operand the specified number of bits to the left. Excess bits shifted off to the left are discarded. Zero bits are shifted in from the right.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let a = 5;
+undefined
+> a.toString(2); // Binary Number base value 2
+'101'
+> (a&lt;&lt;1).toString(2); // binary '1010' => 10
+'1010'
+> (a&lt;&lt;2).toString(2); // binary '10100' => 20
+'10100'
+> a = -5;
+-5
+> a.toString(2);
+'-101'
+> (a&lt;&lt;1).toString(2); // binary '-1010' => -10
+'-1010'
+> (a&lt;&lt;2).toString(2); // binary '-10100' => -20
+'-10100'
+</pre>
+
+    <h3>
+        Right shift (&gt;&gt;)
+    </h3>
+    <p>
+        The right shift operator (&gt;&gt;) shifts the first operand the specified number of bits to the right. Excess bits shifted off to the right are discarded. Copies of the leftmost bit are shifted in from the left. Since the new leftmost bit has the same value as the previous leftmost bit, the sign bit (the leftmost bit) does not change. Hence the name "sign-propagating".
+    </p>
+    <h3>Example</h3>
+<pre>
+> let b = 5;
+undefined
+> b.toString(2);
+'101'
+> (b>>1).toString(2); // binary '10' => 2
+'10'
+> (b>>2).toString(2); // binary '1' => 1
+'1'
+> b = -5;
+-5
+> b.toString(2);
+'-101'
+> (b>>1).toString(2); // binary '-11' => -3
+'-11'
+> (b>>2).toString(2); // binary '-10' => -2
+'-10'
+</pre>
+
+    <h3>
+        Unsigned right shift (>>>)
+    </h3>
+    <p>
+        The unsigned right shift operator (>>>) (zero-fill right shift) shifts the first operand the specified number of bits to the right. Excess bits shifted off to the right are discarded. Zero bits are shifted in from the left. The sign bit becomes 0, so the result is always non-negative. Unlike the other bitwise operators, zero-fill right shift returns an unsigned 32-bit integer.
+    </p>
+    <h3>Example</h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let a = 6;
+undefined
+> a.toString(2);
+'110'
+> (a>>>1).toString(2); // binary '11' => 3
+'11'
+> (a>>>2).toString(2); // binary '1' => 1
+'1'
+> a = -6;
+-6
+> a.toString(2);
+'-110'
+> (a>>>1).toString(2); // binary '1111111111111111111111111111101' => 2147483645
+'1111111111111111111111111111101'
+> (a>>>2).toString(2); // binary '111111111111111111111111111110' => 1073741822
+'111111111111111111111111111110'
+</pre>
+
+    <h2>
+        Conditional (ternary) operator
+    </h2>
+    <p>
+        The conditional operator is the only JavaScript operator that takes three operands. The operator can have one of two values based on a condition. The syntax is:
+        <br><br>
+        <code>
+            condition ? val1 : val2
+        </code>
+        <br><br>
+        If condition is true, the operator has the value of val1. Otherwise it has the value of val2. You can use the conditional operator anywhere you would use a standard operator.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.0.
+Type ".help" for more information.
+> let a = 7;
+undefined
+> let even = (a%2===0) ? true : false; // false
+undefined
+> even; // false
+false
+> a = 100;
+100
+> even = (a%2===0) ? true : false; // true
+true
+> even; // true
+true
+</pre>
+
+<body>
+</html>
