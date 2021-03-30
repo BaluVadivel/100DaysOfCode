@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Day 35</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    html, body {
+        width: calc(100% - 8px);
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+        font-family: Arial,Verdana, Tahoma, 'Courier New', Courier, "Helvetica Neue", Helvetica, sans-serif;
+    }
+    a {
+        color:#0000FF;
+    }
+    .d35 p {
+        text-align: justify;
+    }
+    .d35 pre {
+        padding: 0px 6px;
+        border: 2px gray solid;
+        border-radius: 6px;
+        width: calc(100% - 16px);
+        overflow-x: auto;
+        line-height: 1.6;
+    }
+    .d35 img {
+        width: 100%;
+        max-width: 600px;
+    }
+    .d35 {
+        padding-bottom: 100px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        html, body {
+            color: #eee;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+        }
+        a {
+        color:#2626ff;
+        }
+    }
+</style>
+<head>
+<body class="d35">
+    <hr>
+    <h1>
+        Day 35
+    </h1>
+    <hr>
+
+    <h2>
+        Window.alert()
+    </h2>
+    <p>
+        The Window.alert() method displays an alert dialog with the optional specified content and an OK button. This can be only used in browser.
+    </p>
+    <h3>Code and Output</h3>
+    <img src="./alert.png" alt="">
+
+    <h2>
+        Window.prompt()
+    </h2>
+    <p>
+        The Window.prompt() displays a dialog with an optional message prompting the user to input some text. This can be only used in browser.
+    </p>
+    <h3>Code and Output</h3>
+    <img src="./prombt.png" alt="">
+
+    <h2>
+        Window.confirm()
+    </h2>
+    <p>
+        The Window.confirm() method displays a modal dialog with an optional message and two buttons: OK and Cancel. This can be only used in browser.
+    </p>
+    <h3>Code and Output</h3>
+    <img src="./confirm.png" alt="">
+
+    <h1>
+        Conditional statements - decision making
+    </h1>
+    <p>
+        Conditional statements are used to skip or execute group(block) of statement based on the result of some condition.
+    </p>
+
+    <h2>if...else</h2>
+    <p>
+        The if statement executes a statement if a specified condition is truthy. If the condition is falsy, another statement can be executed.
+    </p>
+    <h3><a href="./if-else.js">if-else.js</a> contains below code</h3>
+<pre>
+let numOne = 6;
+if ( numOne%2 === 0 ) {
+    console.log(`numOne holds ${numOne} which is a EVEN number`);
+} else {
+    console.log(`numOne holds ${numOne} which is a ODD number`);
+}
+
+numOne = 7;
+if ( numOne%2 === 0 ) {
+    console.log(`numOne holds ${numOne} which is a EVEN number`);
+} else {
+    console.log(`numOne holds ${numOne} which is a ODD number`);
+}
+</pre>
+
+    <h3>Compiling <a href="./if-else.js">if-else.js</a> in node</h3>
+<pre>
+balu@balu:~$ node if-else.js
+numOne holds 6 which is a EVEN number
+numOne holds 7 which is a ODD number
+</pre>
+
+
+    <h2>else if</h2>
+    <p>
+        else if atatement is used to take multiway decision. This statement is formed by joining if....else statement in which each else contains another if...else.
+    </p>
+    <h3><a href="./else-if.js">else-if.js</a> contains below code</h3>
+<pre>
+let numOne = 6;
+if ( numOne > 0 ) {
+    console.log(`numOne holds ${numOne} which is a POSITIVE number`);
+} else if ( numOne < 0 ) {
+    console.log(`numOne holds ${numOne} which is a NEGATIVE number`);
+} else {
+    console.log(`numOne holds ${numOne} which is neither POSITIVE or NEGATIVE`);
+}
+
+numOne = -6;
+if ( numOne > 0 ) {
+    console.log(`numOne holds ${numOne} which is a POSITIVE number`);
+} else if ( numOne < 0 ) {
+    console.log(`numOne holds ${numOne} which is a NEGATIVE number`);
+} else {
+    console.log(`numOne holds ${numOne} which is neither POSITIVE or NEGATIVE`);
+}
+
+numOne = 0;
+if ( numOne > 0 ) {
+    console.log(`numOne holds ${numOne} which is a POSITIVE number`);
+} else if ( numOne < 0 ) {
+    console.log(`numOne holds ${numOne} which is a NEGATIVE number`);
+} else {
+    console.log(`numOne holds ${numOne} which is neither POSITIVE or NEGATIVE`);
+}
+</pre>
+
+    <h3>Compiling <a href="./else-if.js">else-if.js</a> in node</h3>
+<pre>
+balu@balu:~$ node else-if.js
+numOne holds 6 which is a POSITIVE number
+numOne holds -6 which is a NEGATIVE number
+numOne holds 0 which is neither POSITIVE or NEGATIVE
+</pre>
+
+
+    <h2>Nested if...else</h2>
+    <p>
+        This statement is formed by joining if...else statements either in the if block or in the else block or both.
+    </p>
+    <h3><a href="./nested-if-else.js">nested-if-else.js</a> contains below code</h3>
+<pre>
+let numOne = 6, numTwo = -6, numThree = 16;
+if ( numOne > numTwo ) {
+    if (numOne > numThree) {
+        console.log(`numOne holds ${numOne} which is the greater than both numTwo &\ numThree`);
+    } else {
+        console.log(`numThree holds ${numThree} which is the greater than both numOne &\ numTwo`);
+    }
+} else {
+    if ( numTwo > numThree) {
+        console.log(`numTwo holds ${numTwo} which is the greater than both numOne &\ numThree`);
+    } else {
+        console.log(`numThree holds ${numThree} which is the greater than both numOne &\ numTwo`);
+    }
+}
+</pre>
+
+    <h3>Compiling <a href="./nested-if-else.js">nested-if-else.js</a> in node</h3>
+<pre>
+balu@balu:~$ node nested-if-else.js
+numThree holds 16 which is the greater than both numOne & numTwo
+</pre>
+
+    <h2>switch</h2>
+    <p>
+        The switch statement evaluates an expression, matching the expression's value to a case clause, and executes statements associated with that case, as well as statements in cases that follow the matching case.
+        <br><br>
+        The optional break statement associated with each case label ensures that the program breaks out of switch once the matched statement is executed
+    </p>
+    <h3><a href="./switch.js">switch.js</a> contains below code</h3>
+<pre>
+let expr = 'monday';
+switch (expr) {
+    case 'monday':
+    case 'tuesday':
+    case 'wednesday':
+    case 'thursday':
+    case 'friday':
+      console.log('Monday to friday');
+        break;
+    case 'saturday':
+    case 'sunday':
+      console.log('Holiday');
+      break;
+    default:
+      console.log(`Sorry, there is no ${expr} in a week`);
+}
+
+expr = 'memesday';
+switch (expr) {
+    case 'monday':
+    case 'tuesday':
+    case 'wednesday':
+    case 'thursday':
+    case 'friday':
+      console.log('Monday to friday');
+        break;
+    case 'saturday':
+    case 'sunday':
+      console.log('Holiday');
+      break;
+    default:
+      console.log(`Sorry, there is no ${expr} in a week`);
+}
+</pre>
+
+    <h3>Compiling <a href="./switch.js">switch.js</a> in node</h3>
+<pre>
+balu@balu:~/git/gith/100DaysOfCode/035$ node switch.js
+Monday to friday
+Sorry, there is no memesday in a week
+</pre>
+
+<body>
+</html>
