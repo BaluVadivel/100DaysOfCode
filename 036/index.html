@@ -46,19 +46,450 @@
     }
 </style>
 <head>
-<body class=.d36">
+<body class="d36">
     <hr>
     <h1>
-        Day 36
+        Array
     </h1>
+    <p>
+        An array is a special variable, which can hold more than one value at a time. Array can store elements of eny type.
+    </p>
+    <p>
+        Each value in an array has an index and each index has a reference in a memory address. Each value can be accessed by using their indexes. The index of an array starts from zero and the last element is less by one from the length of the array.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let data = ['Apple', 'Banana', 1, 2];
+undefined
+> data;
+[ 'Apple', 'Banana', 1, 2 ]
+> data[0]; // First item
+'Apple'
+> data[1]; // Last(Second) item
+'Banana'
+> data[2];
+1
+> data[3];
+2
+</pre>
+
     <hr>
+    <h1>
+        Array Methods
+    </h1>
 
     <h2>
-        Window.alert()
+        Concat()
     </h2>
     <p>
-        The Window.alert() method displays an alert dialog with the optional specified content and an OK button. This can be only used in browser.
+        The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
     </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let toys = ['car','flight'];
+undefined
+> let foods = ['cake','biscuit'];
+undefined
+> toys.concat(foods); // Joins two ARRAY without converting into STRING
+[ 'car', 'flight', 'cake', 'biscuit' ]
+> toys + foods; // This converts ARRAY TO STRING
+'car,flightcake,biscuit'
+</pre>
 
+    <h2>
+        fill()
+    </h2>
+    <p>
+        The fill() method changes all elements in an array to a static value, from a start index (default 0) to an end index (default array.length). It returns the modified array.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let arrayOne = [1, 2, 3, 4];
+undefined
+> arrayOne.fill(6); // fills every index
+[ 6, 6, 6, 6 ]
+> arrayOne.fill(5, 1); // fills 5 from index 1 to last index
+[ 6, 5, 5, 5 ]
+> arrayOne.fill(0, 2, 4); // fills 0 from index 2 to index 4
+[ 6, 5, 0, 0 ]
+</pre>
+
+    <h2>
+        flat()
+    </h2>
+    <p>
+        The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let arrayOne = [0, 1, 2, [3, 4]];
+undefined
+> arrayOne.flat();
+[ 0, 1, 2, 3, 4 ]
+> let arrayTwo = [0, 1, 2, [[[3, 4]]]];
+undefined
+> arrayTwo.flat(2); // here 2 is depth level specifying how deep a nested array structure should be flattened
+[ 0, 1, 2, [ 3, 4 ] ]
+</pre>
+
+    <h2>
+        includes()
+    </h2>
+    <p>
+        The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let arrayOne = [4, 5, 6];
+undefined
+> arrayOne.includes(4);
+true
+> arrayOne.includes(4,2); // search only start from index 2
+false
+> arrayOne.includes(0);
+false
+</pre>
+
+    <h2>
+        indexOf()
+    </h2>
+    <p>
+        The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let pets = ['dog', 'cat', 'fish', 'dog'];
+undefined
+> pets.indexOf('dog');
+0
+> pets.indexOf('dog', 2); // search only start from index 2
+3
+> pets.indexOf('cat', 2); // search only start from index 2
+-1
+> pets.indexOf('ant');
+-1
+</pre>
+
+    <h2>
+        Array.isArray()
+    </h2>
+    <p>
+        The Array.isArray() method determines whether the passed value is an Array.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> Array.isArray([1, 2, 3]);
+true
+> Array.isArray('foobar');
+false
+> Array.isArray(undefined);
+false
+> Array.isArray(17);
+false
+</pre>
+
+    <h2>
+        join()
+    </h2>
+    <p>
+        The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string. If the array has only one item, then that item will be returned without using the separator.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let devTool = ['Linux', 'Git', 'VScode'];
+undefined
+> devTool.join(); // Default separated by commas
+'Linux,Git,VScode'
+> devTool.join(''); // Empty srtring So not yet seprated
+'LinuxGitVScode'
+> devTool.join('-'); // Seprated by hyphen
+'Linux-Git-VScode'
+> devTool.join(' '); // Seprated by one white space
+'Linux Git VScode'
+</pre>
+
+    <h2>
+        lastIndexOf()
+    </h2>
+    <p>
+        The lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
+undefined
+> animals.lastIndexOf('Dodo');
+3
+> animals.lastIndexOf('Tiger');
+1
+</pre>
+
+    <h2>
+        push()
+    </h2>
+    <p>
+        The push() method adds one or more elements to the end of an array and returns the new length of the array.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let animals = ['chickens', 'cats', 'dogs'];
+undefined
+> animals.length;
+3
+> animals.push('cows');
+4
+> animals;
+[ 'chickens', 'cats', 'dogs', 'cows' ]
+</pre>
+
+    <h2>
+        pop()
+    </h2>
+    <p>
+        The pop() method removes the last element from an array and returns that element. This method changes the length of the array.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let animals = ['chickens', 'cats', 'dogs', 'cows'];
+undefined
+> animals.length;
+4
+> animals.pop('cows');
+'cows'
+> animals;
+[ 'chickens', 'cats', 'dogs' ]
+> animals.length;
+3
+</pre>
+
+    <h2>
+        reverse()
+    </h2>
+    <p>
+        The reverse() method reverses an array in place. The first array element becomes the last, and the last array element becomes the first.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let arrayOne = ['one', 'two', 'three'];
+undefined
+> arrayOne;
+[ 'one', 'two', 'three' ]
+> arrayOne.reverse();
+[ 'three', 'two', 'one' ]
+> arrayOne; // reverse the originl string 
+[ 'three', 'two', 'one' ]
+</pre>
+
+    <h2>
+        shift()
+    </h2>
+    <p>
+        The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let arrayOne = [1, 2, 3];
+undefined
+> arrayOne.shift();
+1
+> arrayOne;
+[ 2, 3 ]
+</pre>
+
+    <h2>
+        slice()
+    </h2>
+    <p>
+        The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+        <br><br>
+        SYNTAX
+        <br><br>
+        <code>
+            slice(start, end)
+        </code>
+    </p>
+    <p>
+        <b>
+            start [Optional]
+        </b><br>
+        Zero-based index at which to start extraction.
+    </p>
+    <p>
+        <b>
+            end [Optional]
+        </b><br>
+        Zero-based index before which to end extraction. slice extracts up to but not including end. For example, slice(1,4) extracts the second element through the fourth element (elements indexed 1, 2, and 3).
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let animals = ['ant', 'camel', 'duck', 'cow'];
+undefined
+> animals.slice(1);
+[ 'camel', 'duck', 'cow' ]
+> animals.slice(1, 3);
+[ 'camel', 'duck' ]
+> animals.slice(); // Without any value returns copy of original Array
+['ant', 'camel', 'duck', 'cow']
+</pre>
+
+    <h2>
+        sort()
+    </h2>
+    <p>
+        The sort() method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+    </p>
+    <p>
+        The time and space complexity of the sort cannot be guaranteed as it depends on the implementation.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let arrayMonths = ['March', 'Jan', 'Feb', 'Dec'];
+undefined
+> arrayMonths.sort();
+[ 'Dec', 'Feb', 'Jan', 'March' ]
+> let arrayNum = [1, 30, 4, 21, 100000];
+undefined
+> arrayNum.sort();
+[ 1, 100000, 21, 30, 4 ]
+</pre>
+
+    <h2>
+        splice()
+    </h2>
+    <p>
+        The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let arrayNum = [2, 4, 6, 8, 10];
+undefined
+> arrayNum.splice(2); // deletes every element from index 2
+[ 6, 8, 10 ]
+> arrayNum;
+[ 2, 4 ]
+> arrayNum = [2, 4, 6, 8, 10]; // returing to it's original state
+[ 2, 4, 6, 8, 10 ]
+> arrayNum.splice(1,2); // deletes two element from index 1
+[ 4, 6 ]
+> arrayNum;
+[ 2, 8, 10 ]
+> arrayNum = [2, 4, 6, 8, 10]; // returing to it's original state
+[ 2, 4, 6, 8, 10 ]
+> arrayNum.splice(1,2,100); // deletes two element from index 1 and add 100 in place.
+[ 4, 6 ]
+> arrayNum;
+[ 2, 100, 8, 10 ]
+> arrayNum = [2, 4, 6, 8, 10]; // returing to it's original state
+[ 2, 4, 6, 8, 10 ]
+> arrayNum.splice(1,2,100,200,300); // deletes two element from index 1 and add 100,200,300 in place.
+[ 4, 6 ]
+> arrayNum;
+[ 2, 100, 200, 300, 8, 10 ]
+</pre>
+
+    <h2>
+        unshift()
+    </h2>
+    <p>
+        The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let arrayOne = [1, 2, 3];
+undefined
+> arrayOne.unshift(10);
+4
+> arrayOne;
+[ 10, 1, 2, 3 ]
+> arrayOne.unshift(100, 200);
+6
+> arrayOne;
+[ 100, 200, 10, 1, 2, 3 ]
+</pre>
 <body>
 </html>
