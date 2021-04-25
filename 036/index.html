@@ -107,6 +107,37 @@ undefined
 2
 </pre>
 
+    <h1>
+        Nested Array
+    </h1>
+    <p>
+        Nested Array in JavaScript is defined as Array (Outer array) within another array (inner array). An Array can have one or more inner Arrays. These nested array (inner arrays) are under the scope of outer array means we can access these inner array elements based on outer array object name.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let arrayNest = [ 1, 2, [ 3, 4, 'Balu' ], 5, [[ 6, 7, 8 ]] ];
+undefined
+> arrayNest[0];
+1
+> arrayNest[2];
+[ 3, 4, 'Balu' ]
+> arrayNest[2][0];
+3
+> arrayNest[2][2];
+'Balu'
+> arrayNest[2][2][0];
+'B'
+> arrayNest[4][0];
+[ 6, 7, 8 ]
+> arrayNest[4][0][0];
+6
+</pre>
+
     <hr>
     <h1>
         Array Methods
