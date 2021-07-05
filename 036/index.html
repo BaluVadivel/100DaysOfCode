@@ -20,6 +20,12 @@
     a {
         color:#0000FF;
     }
+    .d36 h1 {
+        color: orangered;
+    }
+    .d36 {
+        margin-bottom: 100px;
+    }
     .d36 p {
         text-align: justify;
     }
@@ -373,7 +379,7 @@ Type ".help" for more information.
 undefined
 > animals.length;
 4
-> animals.pop('cows');
+> animals.pop(); // returns the removed lat element
 'cows'
 > animals;
 [ 'chickens', 'cats', 'dogs' ]
@@ -554,6 +560,119 @@ undefined
 6
 > arrayOne;
 [ 100, 200, 10, 1, 2, 3 ]
+</pre>
+
+    <hr>
+    <h1>
+        Array References and Euality tests
+    </h1>
+
+    <p>
+        Copying one array into another one doesn't create a new array. This actually refers the old array which mean changes in any one of ths array reflects in another array.
+    </p>
+    <h3>
+        Example - array with reference
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+> let array = [ 1, 2 ];
+undefined
+> let arrayCopy = array;
+undefined
+> array.push(3);
+3
+> array;
+[ 1, 2, 3 ]
+> arrayCopy;
+[ 1, 2, 3 ]
+> arrayCopy.pop();
+3
+> array;
+[ 1, 2 ]
+> arrayCopy;
+[ 1, 2 ]
+</pre>
+
+    <h3>
+        Example - array without reference
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+> let array = [ 1, 2 ];
+undefined
+> let arrayCopy = array.slice();
+undefined
+> array.push(3);
+3
+> array;
+[ 1, 2, 3 ]
+> arrayCopy;
+[ 1, 2 ]
+> arrayCopy.pop();
+2
+> arrayCopy;
+[ 1 ]
+> array;
+[ 1, 2 ]
+</pre>
+
+    <h3>
+        Example - array equality tests
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+> 2 == 2 ;
+true
+> [2] == [2] ;
+false
+> let array = [ 1, 2 ];
+undefined
+> let arrayRef = array;
+undefined
+> array == arrayRef;
+true
+> array === arrayRef;
+true
+> let arrayNoRef = array.slice();
+undefined
+> array === arrayNoRef;
+false
+> array == arrayNoRef;
+fals
+</pre>
+
+    <hr>
+    <h1>
+        Const Array
+    </h1>
+    <p>
+        Constant array doesn't accept completely new data or new array but it allows to change array lements, new elements and deleting old elements.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+> const array = [ 1, "two" ];
+undefined
+> array = [ 1, 2];
+Uncaught TypeError: Assignment to constant variable.
+> array[1] = 2;
+2
+> array
+[ 1, 2 ]
+> array.push(0);
+3
+> array
+[ 1, 2, 0 ]
+> array.pop();
+0
+> array
+[ 1, 2 ]
 </pre>
 <body>
 </html>
