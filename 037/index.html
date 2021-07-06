@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Day 37</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    html, body {
+        width: calc(100% - 8px);
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+        font-family: Arial,Verdana, Tahoma, 'Courier New', Courier, "Helvetica Neue", Helvetica, sans-serif;
+    }
+    a {
+        color:#0000FF;
+    }
+    .d37 h1,h2 {
+        color: orangered;
+    }
+    .d37 {
+        margin-bottom: 100px;
+    }
+    .d37 p {
+        text-align: justify;
+    }
+    .d37 pre {
+        padding: 0px 6px;
+        border: 2px gray solid;
+        border-radius: 6px;
+        width: calc(100% - 16px);
+        overflow-x: auto;
+        line-height: 1.6;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        html, body {
+            color: #eee;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+        }
+        a {
+        color:#2626ff;
+        }
+    }
+</style>
+<head>
+<body class="d37">
+    <hr>
+    <h1>
+        Day 37
+    </h1>
+    <hr>
+
+    <h1>
+        Loop
+    </h1>
+    <p>
+        Loop is used to execute a block of code repeatedly for a number of times based on a condition.
+    </p>
+    <p>
+        The statements for loops provided in JavaScript are:
+
+        <ul>
+            <li>while statement</li>
+            <li>do...while statement</li>
+            <li>for statement</li>
+            <li>break statement</li>
+            <li>continue statement</li>
+            <li>labeled statement</li>
+            <li>for...in statement</li>
+            <li>for...of statement</li>
+        </ul>
+
+    </p>
+
+    <h2>
+        while
+    </h2>
+    <p>
+        The while statement creates a loop that executes a specified statement as long as the test condition evaluates to true. The condition is evaluated before executing the statement.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let n = 0, result = '';
+undefined
+> while(n&lt;5) { ++n; result=result+n }
+'12345'
+> result
+'12345'
+> n
+5
+> while(n&lt;5) { ++n; result=result+n } // Loop condition false at first cycle so block code not executed
+undefined
+</pre>
+
+    <h2>
+        do...while
+    </h2>
+    <p>
+        The do...while statement creates a loop that executes a specified statement until the test condition evaluates to false. The condition is evaluated after executing the statement, resulting in the specified statement <b>executing at least once</b>.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let n = 0, result = '';
+undefined
+> do { ++n; result=result+n } while(n&lt;5);
+'12345'
+> result
+'12345'
+> n
+5
+> do { ++n; result=result+n } while(n&lt;5); // Loop condition false at first cycle even though block code executed once
+'123456'
+</pre>
+
+    <h2>
+        for
+    </h2>
+    <p>
+        The for statement creates a loop that consists of three optional expressions, enclosed in parentheses and separated by semicolons, followed by a statement (usually a block statement) to be executed in the loop.
+    </p>
+    <span>SYNTAX</span>
+    <p>
+        <code>
+            for ([initialization]; [condition]; [final-expression])
+            {
+                statement
+            }
+        </code>
+    </p>
+    <p>
+        <b>initialization</b><br>
+        Declare new variables or intialize value for already declared variables.
+        <br><br>
+        <b>condition</b><br>
+        An expression to be evaluated before each loop iteration.
+        <br><br>
+        <b>final-expression</b><br>
+        Update or increment the counter variable.
+    </p>
+        
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let str = '';
+undefined
+> for (let i = 0; i < 5; i++) { str = str + i; }
+'01234'
+> str
+'01234'
+</pre>
+
+    <h2>
+        break
+    </h2>
+    <p>
+        The break statement terminates the current loop, switch, or label statement and transfers program control to the statement following the terminated statement.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+let i = 0;
+while (i &lt; 6) {
+  if (i === 3) {
+    break;
+  }
+  i = i + 1;
+}
+console.log(i); // Below is OUTPUT
+3
+</pre>
+
+    <h2>
+        continue
+    </h2>
+    <p>
+        The continue statement terminates execution of the statements in the current iteration of the current or labeled loop, and continues execution of the loop with the next iteration.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+let text = '';
+for (let i = 0; i &lt; 6; i++) {
+  if (i === 3) {
+    continue;
+  }
+  text = text + i;
+}
+console.log(text); // Below is OUTPUT
+01245
+</pre>
+
+    <h2>
+        Label
+    </h2>
+    <p>
+        You can use a label to identify a loop, and then use the break or continue statements to indicate whether a program should interrupt the loop or continue its execution.
+        <br>
+        Note that JavaScript has no goto statement, you can only use labels with break or continue.
+    </p>
+    
+    <h3>
+        Example - CONTINUE LABEL
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor // CONTINUE LABEL
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+let A, B;
+console.log("<----OUTPUT---->");
+loop1:
+for (A = 0; A < 3; A++) {
+   loop2: // Here this lable just identifies child loop
+   for (B = 0; B < 3; B++) {
+      if (A === 1 && B === 1) {
+         continue loop1;
+      }
+      console.log('A = ' + A + ', B = ' + B);
+   }
+}
+<----OUTPUT---->
+A = 0, B = 0
+A = 0, B = 1
+A = 0, B = 2
+A = 1, B = 0
+A = 2, B = 0
+A = 2, B = 1
+A = 2, B = 2
+</pre>
+
+    <h3>
+        Example - CONTINUE
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor // CONTINUE
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+let C, D;
+console.log("<----OUTPUT---->");
+for (C = 0; C < 3; C++) {
+   for (D = 0; D < 3; D++) {
+      if (C === 1 && D === 1) {
+         continue;
+      }
+      console.log('C = ' + C + ', D = ' + D);
+   }
+}
+<----OUTPUT---->
+C = 0, D = 0
+C = 0, D = 1
+C = 0, D = 2
+C = 1, D = 0
+C = 1, D = 2
+C = 2, D = 0
+C = 2, D = 1
+C = 2, D = 2
+undefined
+</pre>
+
+    <h3>
+        Example - BREAK LABEL
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor // BREAK LABEL
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+let E, F;
+console.log("<----OUTPUT---->");
+loop1:
+for (E = 0; E < 3; E++) {
+   loop2: // Here this lable just identifies child loop
+   for (F = 0; F < 3; F++) {
+      if (E === 1 && F === 1) {
+         break loop1;
+      }
+      console.log('E = ' + E + ', F = ' + F);
+   }
+}
+<----OUTPUT---->
+E = 0, F = 0
+E = 0, F = 1
+E = 0, F = 2
+E = 1, F = 0
+undefined
+</pre>
+
+
+    <h3>
+        Example - BREAK
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor // BREAK
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+let G, H;
+console.log("<----OUTPUT---->");
+for (G = 0; G < 3; G++) {
+   for (H = 0; H < 3; H++) {
+      if (G === 1 && H === 1) {
+         break;
+      }
+      console.log('G = ' + G + ', H = ' + H);
+   }
+}
+<----OUTPUT---->
+G = 0, H = 0
+G = 0, H = 1
+G = 0, H = 2
+G = 1, H = 0
+G = 2, H = 0
+G = 2, H = 1
+G = 2, H = 2
+undefined
+</pre>
+
+
+    <h2>
+        for...of
+    </h2>
+
+    <p>
+        The for...of statement creates a loop iterating over iterable objects, including: built-in String, Array, array-like objects (e.g., arguments or NodeList), TypedArray, Map, Set, and user-defined iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object.
+    </p>
+
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+let array = ['a', 'b', 'c'];
+    console.log("<----OUTPUT---->");
+for (const element of array) 
+{
+  console.log(element);
+}
+<----OUTPUT---->
+a
+b
+c
+undefined
+</pre>
+
+
+    <h2>
+        for...in
+    </h2>
+    <p>
+        The for...in statement iterates over all enumerable properties of an object that are keyed by strings (ignoring ones keyed by Symbols), including inherited enumerable properties.
+
+        This statement use object. <a href="https://www.w3schools.com/js/js_objects.asp" target="_blank">Refer object concept</a>.
+    </p>
+
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+let object = { a: 1, b: "two", c: 3 };
+    console.log("<----OUTPUT---->");
+for (const property in object)
+{
+    console.log(`${property} = ${object[property]}`);
+}
+<----OUTPUT---->
+a = 1
+b = two
+c = 3
+undefine
+</pre>
+
+<body>
+</html>
