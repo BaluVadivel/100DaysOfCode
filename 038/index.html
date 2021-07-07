@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Day 38</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    html, body {
+        width: calc(100% - 8px);
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+        font-family: Arial,Verdana, Tahoma, 'Courier New', Courier, "Helvetica Neue", Helvetica, sans-serif;
+    }
+    a {
+        color:#0000FF;
+    }
+    .d38 h1,h2 {
+        color: orangered;
+    }
+    .d38 {
+        margin-bottom: 100px;
+    }
+    .d38 p {
+        text-align: justify;
+    }
+    .d38 pre {
+        padding: 0px 6px;
+        border: 2px gray solid;
+        border-radius: 6px;
+        width: calc(100% - 16px);
+        overflow-x: auto;
+        line-height: 1.6;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        html, body {
+            color: #eee;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+        }
+        a {
+        color:#2626ff;
+        }
+    }
+</style>
+<head>
+<body class="d38">
+    <hr>
+    <h1>
+        Day 38
+    </h1>
+    <hr>
+
+    <h1>
+        Object
+    </h1>
+    <p>
+        The Object class represents one of JavaScript's data types. It is used to store various keyed collections and more complex entities. Objects can be created using the Object() constructor or the object initializer / literal syntax.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let user = { name: 'Balu Vadivel' };
+undefined
+> user.age = 22;
+22
+> user.isFunny = true;
+true
+> user.tags = [ '#silly', '#lazy' ] ;
+[ '#silly', '#lazy' ]
+> user
+{
+  name: 'Balu Vadivel',
+  age: 22,
+  isFunny: true,
+  tags: [ '#silly', '#lazy' ]
+}
+> user['isFunny'];
+true
+
+> let year = 2000;
+undefined
+> const object = { 1999 : "Good", 2000 : "BAD"  };
+undefined
+> object[2000];
+'BAD'
+> object['2000'];
+'BAD'
+> object[year];// year considered as variable
+'BAD'
+> object['year'];// year considered as property
+undefined
+> object.year; // year considered as property
+undefined
+</pre>
+
+    <h2>
+        delete operator
+    </h2>
+    <p>
+        The JavaScript delete operator removes a property from an object; if no more references to the same property are held, it is eventually released automatically.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const name = { firstName: "Ashok", lastName : "Kumar" };
+console.log( "<--OUTPUT-->\n" + name.lastName);
+delete name.lastName; // delete lastName
+console.log(name.lastName);
+console.log(name);
+<--OUTPUT-->
+Kumar
+undefined
+{ firstName: 'Ashok' }
+</pre>
+
+    <hr>
+    <h1>
+        Object Methods
+    </h1>
+    <hr>
+
+    <h2>
+        Object.assign()
+    </h2>
+    <p>
+        The Object.assign() method copies all enumerable own properties from one or more source objects to a target object. It returns the target object.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let target = { a: 1, b: 2 };
+undefined
+> let source = { b: 4, c: 5 };
+undefined
+> Object.assign(target, source);
+{ a: 1, b: 4, c: 5 }
+> target; // TARGET Object
+{ a: 1, b: 4, c: 5 }
+> source; // SOURCE Object
+{ b: 4, c: 5 }
+</pre>
+
+    <h2>
+        Object.create()
+    </h2>
+    <p>
+        The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> let person = { name: 'Balu Vadivel' };
+undefined
+> let me = Object.create(person);
+undefined
+> me.name = 'Arya Stark'; // inherited properties can be overwritten
+'Arya Stark'
+> me.isFunny = 'false'; // "isFunny" is a property set on "me", but not on "person"
+'false'
+> me;
+{ name: 'Arya Stark', isFunny: 'false' }
+</pre>
+
+
+    <h2>
+        Object.freeze()
+    </h2>
+    <p>
+        The Object.freeze() method freezes an object. A frozen object can no longer be changed; freezing an object prevents new properties from being added to it, existing properties from being removed, prevents changing the enumerability, configurability, or writability of existing properties, and prevents the values of existing properties from being changed.
+    </p>
+    <h3>
+        Example - with freeze
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+.editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const objWF = { prop: 10, prop1 : 20  };
+Object.freeze(objWF); // Freezes the object "objWF"
+delete objWF.prop; // won't delete prop
+objWF.prop1 = 22;  // won't change prop1
+objWF.prop2 = 30;  // won't add prop2
+console.log(objWF);
+{ prop: 10, prop1: 20 }
+undefined
+</pre>
+    <h3>
+        Example - without freeze
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const objWOF = { prop: 10, prop1 : 20  };
+delete objWOF.prop; // deletes prop
+objWOF.prop1 = 22;  // change prop1
+objWOF.prop2 = 30;  // add    prop2
+console.log(objWOF);
+{ prop1: 22, prop2: 30 }
+undefined
+</pre>
+
+
+    <h2>
+        Object.isFrozen()
+    </h2>
+    <p>
+        The Object.isFrozen() determines if an object is frozen.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const count = { a: 1, b: 2 };
+console.log(Object.isFrozen(count));
+Object.freeze(count);
+console.log(Object.isFrozen(count));
+false
+true
+</pre>
+
+
+
+    <h2>
+        Object.seal()
+    </h2>
+    <p>
+        The Object.seal() method seals an object, preventing new properties from being added to it and marking all existing properties as non-configurable. Values of present properties can still be changed as long as they are writable.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const number = { a: 1, b: 2 };
+Object.seal(number);
+delete number.a; // won't delete existing property
+number.b = 20; // change existing property value
+number.c =3; // won't add new property
+console.log(number);
+{ a: 1, b: 20 }
+undefined
+</pre>
+
+
+
+    <h2>
+        Object.isSealed()
+    </h2>
+    <p>
+        The Object.isSealed() method determines if an object is sealed.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const count = { a: 1, b: 2 };
+console.log(Object.isSealed(count));
+Object.seal(count);
+console.log(Object.isSealed(count));
+false
+true
+</pre>
+
+    <h1>
+        Nesting Arrays &amp; objects
+    </h1>
+    <p>
+        Array can be nested into objects, object can be nested into array as well as objects can be nested into objects.
+    </p>
+    <h3>
+        Example - Array inside object
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const studentData = {
+    name  : "Ashok",
+    regNo : "19562342",
+    mark  : [ 70, 75, 80, 85, 90 ]
+};
+console.log("<--OUTPUT-->");
+console.log(studentData.mark);
+console.log(studentData.mark[2]);
+<--OUTPUT-->
+[ 70, 75, 80, 85, 90 ]
+80
+</pre>
+
+    <h3>
+        Example - object inside array
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const studentData = [
+    {
+        name  : "Ashok",
+        regNo : 19562342,
+        total : 470
+    },
+    {
+        name  : "Bala",
+        regNo : 19562343,
+        total : 370
+    }
+];
+console.log("<--OUTPUT-->");
+console.log(studentData[0]);
+console.log(studentData[0]["name"]);
+console.log(studentData[1]["name"]);
+<--OUTPUT-->
+{ name: 'Ashok', regNo: 19562342, total: 470 }
+Ashok
+Bala
+</pre>
+
+    <h3>
+        Example - object inside object
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const studentData = {
+    2100101: {
+        name  : "Ashok",
+        total : 470
+    },
+    2100102: {
+        name  : "Bala",
+        total : 370
+    }
+};
+console.log("<--OUTPUT-->");
+console.log(studentData["2100101"]);
+console.log(studentData["2100101"]["name"]);
+console.log(studentData["2100101"]["total"]);
+<--OUTPUT-->
+{ name: 'Ashok', total: 470 }
+Ashok
+470
+</pre>
+
+<body>
+</html>
