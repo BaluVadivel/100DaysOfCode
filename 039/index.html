@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Day 39</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    html, body {
+        width: calc(100% - 8px);
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+        font-family: Arial,Verdana, Tahoma, 'Courier New', Courier, "Helvetica Neue", Helvetica, sans-serif;
+    }
+    a {
+        color:#0000FF;
+    }
+    .d39 h1,h2 {
+        color: orangered;
+    }
+    .d39 {
+        margin-bottom: 100px;
+    }
+    .d39 p {
+        text-align: justify;
+    }
+    .d39 pre {
+        padding: 0px 6px;
+        border: 2px gray solid;
+        border-radius: 6px;
+        width: calc(100% - 16px);
+        overflow-x: auto;
+        line-height: 1.6;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        html, body {
+            color: #eee;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+        }
+        a {
+        color:#2626ff;
+        }
+    }
+</style>
+<head>
+<body class="d39">
+    <hr>
+    <h1>
+        Day 39
+    </h1>
+    <hr>
+
+    <h1>
+        Function
+    </h1>
+
+    <h2>
+        Function declaration
+    </h2>
+    <p>
+        A function is a block of code designed to perform a certain task. A function is declared by a function key word followed by a name, followed by parentheses (). A parentheses can take a parameter. If a function take a parameter it will be called with argument.
+    </p>
+    <p>
+        Function declarations in JavaScript are hoisted to the top of the enclosing function or global scope. <em> In Function declaration we can call function before it's declaration.</em>
+    </p>
+    <h3>
+        Example - without parameter
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+function after() {
+    console.log("calling AFTER declaration");
+}
+console.log("<--OUTPUT-->");
+
+// calling AFTER declaration
+after();
+
+// calling BEFORE declaration
+before();
+
+function before() {
+    console.log("calling BEFORE declaration");
+}
+<--OUTPUT-->
+calling AFTER declaration
+calling BEFORE declaration
+</pre>
+    <h3>
+        Example - with parameter
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+function square(number) {
+    return number*number;
+}
+console.log(`square of 4 is ${square(4)}`);
+
+function power( value, powerValue) {
+    return (Math.pow(value, powerValue));
+}
+console.log(`number 4 to the power of 3 is ${power(4, 3)}`);
+
+function add(arr) {
+    let total = 0;
+    for ( let num of arr )
+    {
+        total += num;
+    };
+    return total;
+}
+
+let marks = [ 75, 80, 85, 90, 95 ];
+console.log(`total of ${marks} is ${add(marks)}`);
+square of 4 is 16
+number 4 to the power of 3 is 64
+total of 75,80,85,90,95 is 425
+undefined
+</pre>
+
+    <h2>
+        Function scope
+    </h2>
+    <p>
+        Function defined in the global scope can access all variables defined in the global scope. A function defined inside another function can also access all variables defined in its parent function, and any other variables to which the parent function has access.
+    </p>
+    <p>
+        Inside the function var, let and const statements are block-scoped local variable. <em>Inside the function var and let has no scope difference</em>.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+// -----> scope variable exist only on inside function
+function getLoc() {
+    var scope = "function scope";
+    return scope;
+}
+console.log("<--OUTPUT-->");
+console.log(getLoc());
+console.log(scope);
+<--OUTPUT-->
+function scope
+Uncaught ReferenceError: scope is not defined
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+// -----> scope1 variable exist on inside and outside the function
+var scope1 = "global";
+function getLoca() {
+    var scope1 = "function scope";
+    return scope1;
+}
+console.log("<--OUTPUT-->");
+console.log(scope1);
+console.log(getLoca());
+<--OUTPUT-->
+global
+function scope
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+// -----> scope2 var dosen't exist inside function
+var scope2 = "global";
+function getLocal() {
+    return scope2;
+}
+console.log("<--OUTPUT-->");
+console.log(scope2);
+console.log(getLocal());
+<--OUTPUT-->
+global
+global
+</pre>
+
+    <h2>
+        Block
+    </h2>
+    <p>
+        A block statement (or compound statement in other languages) is used to group zero or more statements. The block is delimited by a pair of braces ("curly brackets") and may optionally be labelled:
+    </p>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+var x = 1;
+let y = 1;
+if (true) {
+  var x = 2;
+  let y = 2;
+}
+console.log("varX=" + x);
+console.log("letY=" + y);
+varX=2
+letY=1
+</pre>
+
+    <h2>
+        Block scope
+    </h2>
+    <p>
+        Variables declared with var do not have block scope. Variables declared with let and const do have block scope:
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor // VAR
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+var varKey=5;
+if( true ) {
+    var varKey=10;
+}
+console.log("VARKEY:" + varKey);
+VARKEY:10
+undefined
+> .editor // LET
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+let letKey=5;
+if( true ) {
+    let letKey=10;
+}
+console.log("LETKEY:" + letKey);
+LETKEY:5
+undefined
+> .editor // CONST
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const constKey=5;
+if( true ) {
+    const constKey=10;
+}
+constKey
+console.log("CONSTKEY:" + letKey);
+CONSTKEY:5
+</pre>
+
+    <h2>
+        Lexical scope
+    </h2>
+    <p>
+        Access to an outer function’s scope from an inner function
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+function init() {
+  var name = 'Mozilla';
+  function displayName() {
+    console.log(name); // access variable declared in the parent function
+  }
+  displayName();
+}
+init();
+Mozilla
+</pre>
+
+    <h2>
+        Function expression
+    </h2>
+    <p>
+        Defining a function inside an expression is called function expression. In Function declaration we can call function before it's declaration. In Function expression we can not call function before it's definition.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const getRectArea = function(width, height) {
+  return width * height;
+};
+console.log(getRectArea(3, 4));
+// calling before definition gives error
+console.log(getArea(5, 5));
+const getArea = function(width, height) {
+  return width * height;
+};
+12
+Uncaught ReferenceError: Cannot access 'getArea' before initialization
+</pre>
+
+    <h2>
+        Higher order function
+    </h2>
+    <p>
+        A function that accepts and/or returns another function is called a higher-order function.
+    </p>
+    <h3>
+        Example - Functions as Arguments
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+function callFiveTimes(func) {
+    console.log("Calling 5 times");
+    for ( let i=0 ; i < 5 ; i++ ) {
+        func();
+    }
+}
+function rollDice() {
+    console.log(Math.floor((Math.random() * 10 ) % 6) + 1 );
+}
+> callFiveTimes(rollDice);
+Calling 5 times
+1
+3
+4
+2
+5
+</pre>
+
+    <h3>
+        Example - Returning Functions
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+function makeBetweenFunc(min, max) {
+    return function(num) {
+        return num>=min && num <= max;
+    }
+}
+const isAdult = makeBetweenFunc(19, 63);
+const isSenior = makeBetweenFunc(64, 120);
+> isAdult(17);
+false
+> isAdult(19);
+true
+> isSenior(75);
+true
+> isSenior(60);
+false
+</pre>
+
+    <h2>
+        Defining methods
+    </h2>
+    <p>
+        Method is simply a function that is placed as a property on an object. Every method is a function but every function is not a method.
+    </p>
+    <p>
+        Math is a built-in object that has properties and methods for mathematical constants and functions. Math.floor(x), Math.sqrt(x) are the methods of Math object, where x is the method’s argument.
+    </p>
+    <p>
+        In below example 'cube' method is defined as shorthand syntax. Even though both cube and square methods can be accessed in same way.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const myMath = {
+  PI:3.14159,
+  square: function(num) {
+  	return (num*num);
+  },
+  cube(num) {
+  	return (num*num*num);
+  }
+};
+undefined
+> myMath.PI;
+3.14159
+> myMath.square(3);
+9
+> myMath.cube(3);
+27
+</pre>
+
+    <h2>
+        this keyword
+    </h2>
+    <p>
+        The JavaScript this keyword refers to the object it belongs to. 
+    </p>
+    <p>
+        It has different values depending on where it is used:
+
+        <ul>
+            <li>In a method, this refers to the owner object.</li>
+            <li>Alone, this refers to the global object.</li>
+            <li>In a function, this refers to the global object.</li>
+            <li>In a function, in strict mode, this is undefined.</li>
+            <li>In an event, this refers to the element that received the event.</li>
+            <li>Methods like call(), and apply() can refer this to any object.</li>
+        </ul>
+
+        In a browser global object is window object.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const test = {
+  prop: 42,
+  func: function() {
+    console.log("This is", this);
+    console.log("Value is", this.prop);
+  },
+};
+const saveTest = test.func;
+undefined
+> test.func(); // here this keyword points test object
+This is { prop: 42, func: [Function: func] }
+Value is 42
+> saveTest(); // here this keyword [defaultly] points global object in node and window object in browser.
+This is &lt;ref *1&gt; Object [global] {
+  global: [Circular *1],
+  clearInterval: [Function: clearInterval],
+  clearTimeout: [Function: clearTimeout],
+  setInterval: [Function: setInterval],
+  setTimeout: [Function: setTimeout] {
+    [Symbol(nodejs.util.promisify.custom)]: [Getter]
+  },
+  queueMicrotask: [Function: queueMicrotask],
+  clearImmediate: [Function: clearImmediate],
+  setImmediate: [Function: setImmediate] {
+    [Symbol(nodejs.util.promisify.custom)]: [Getter]
+  }
+}
+Value is undefined
+</pre>
+<body>
+</html>
