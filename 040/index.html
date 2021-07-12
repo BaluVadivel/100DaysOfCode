@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Day 40</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    html, body {
+        width: calc(100% - 8px);
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+        font-family: Arial,Verdana, Tahoma, 'Courier New', Courier, "Helvetica Neue", Helvetica, sans-serif;
+    }
+    a {
+        color:#0000FF;
+    }
+    .d40 h1,h2 {
+        color: orangered;
+    }
+    .d40 {
+        margin-bottom: 100px;
+    }
+    .d40 p {
+        text-align: justify;
+        text-indent: 30px;
+    }
+    .d40 pre {
+        padding: 0px 6px;
+        border: 2px gray solid;
+        border-radius: 6px;
+        width: calc(100% - 16px);
+        overflow-x: auto;
+        line-height: 1.6;
+    }
+    .d40 img.code {
+    width: 100%;
+    max-width: 600px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        html, body {
+            color: #eee;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+        }
+        a {
+        color:#2626ff;
+        }
+    }
+</style>
+<head>
+<body class="d40">
+    <hr>
+    <h1>
+        Day 40
+    </h1>
+    <hr>
+
+    <h2>
+        forEach method
+    </h2>
+    <p>
+        The forEach() method executes a provided function once for each array element. This method is used before introducing the sixth edition of EcmaScript (ES6). For-of loop introduced in the sixth edition of EcmaScript (ES6).
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const numbers = [1, 2, 3];
+function print(num) {
+    console.log(num);
+}
+> numbers.forEach(print);
+1
+2
+3
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const value = [1, 2, 3];
+value.forEach(function(num) {
+    console.log(num);
+});
+1
+2
+3
+</pre>
+
+    <h2>
+        map method
+    </h2>
+    <p>
+        The map() method creates a new array populated with the results of calling a provided function on every element in the calling array. map() method does not execute the function for empty elements.
+    </p>
+    <h3>
+        Example - 1
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const numbers = [4, 9, 16, 25];
+const rootOne = numbers.map(function(num) {
+    return Math.sqrt(num);
+});
+> rootOne;
+[ 2, 3, 4, 5 ]
+> const rootTwo = numbers.map(Math.sqrt);
+undefined
+> rootTwo;
+[ 2, 3, 4, 5 ]
+</pre>
+
+    <h3>
+        Example - 2
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const number = [1, 4, 9];
+const doubles = number.map(function(num) {
+  return num * 2;
+});
+> doubles;
+[ 2, 8, 18 ]
+</pre>
+
+    <h2>
+        setTimeout()
+    </h2>
+    <p>
+        The setTimeout() method sets a timer which executes a function or specified piece of code once the timer expires. It executes the code below the setTimeout() method until the time expiration.
+    </p>
+    <h3>
+        Code
+    </h3>
+<pre>
+console.log("Before");
+setTimeout(() => {
+    console.log("printing After 3 second");
+}, 3000);
+console.log("After");
+</pre>
+    <h3>
+        Execution in browser console
+    </h3>
+    <img class="code" src="./setTimeout.png" alt="" title="setTimeout()">
+
+    
+
+    <h2>
+        setInterval() , clearInterval()
+    </h2>
+    <p>
+        The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call. It returns an interval ID which uniquely identifies the interval, so you can remove it or stops the repeating execution of  later by calling <b>clearInterval()</b>.
+    </p>
+    <p>
+        The clearInterval() method cancels a timed, repeating action which was previously established by a call to setInterval() using the unique interval ID which is returned by the setInterval() method.
+    </p>
+
+    <h3>
+        Code - setInterval
+    </h3>
+<pre>
+let intervalId = setInterval(() => {
+    console.log("printing every 3 seconds");
+}, 3000);
+</pre>
+    <h3>
+        Code - clearInterval
+    </h3>
+<pre>
+clearInterval(intervalId);
+</pre>
+    <h3>
+        Execution in browser console
+    </h3>
+    <img class="code" src="./setInterval.png" alt="" title="setInterval() , clearInterval()">
+
+    <h2>
+        filter method
+    </h2>
+    <p>
+        The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+    </p>
+    <h3>
+        Example - 1
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const words = ['spray', 'limit', 'exuberant', 'present'];
+const result = words.filter(word => word.length > 6);
+console.log(result);
+[ 'exuberant', 'present' ]
+</pre>
+    <h3>
+        Example - 2
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const movies = [
+{ name: "Titanic",   year: 1997, rating: 7.8 },
+{ name: "Avatar",    year: 2009, rating: 7.8 },
+{ name: "Inception", year: 2010, rating: 8.8 },
+{ name: "Divergent", year: 2014, rating: 6.6 },
+{ name: "Parasite",  year: 2019, rating: 8.6 }
+];
+undefined
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const newGoodMovies = movies.filter(
+    movie => movie.year > 1999 && movie.rating > 8
+);
+undefined
+> console.log(newGoodMovies);
+[
+  { name: 'Inception', year: 2010, rating: 8.8 },
+  { name: 'Parasite', year: 2019, rating: 8.6 }
+]
+</pre>
+    <h2>
+        every method
+    </h2>
+    <p>
+        The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const isPass = currentValue => currentValue > 35;
+const markOne = [60, 40, 50, 70, 80, 90];
+const markTwo = [90, 35, 80, 90, 60, 65];
+undefined
+> console.log(markOne.every(isPass));
+true
+undefined
+> console.log(markTwo.every(isPass));
+false
+</pre>
+
+    <h2>
+        some method
+    </h2>
+    <p>
+        The some() method tests whether at least one element in the array passes the test implemented by the provided function. It returns true if, in the array, it finds an element for which the provided function returns true; otherwise it returns false. It doesn't modify the array.
+    </p>
+    <h3>
+        Example
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const isCentum = currentValue => currentValue === 100;
+const markOne = [60, 40, 50, 00, 80, 100];
+const markTwo = [90, 60, 80, 90, 60, 65];
+undefined
+> console.log(markOne.some(isCentum));
+true
+undefined
+> console.log(markTwo.some(isCentum));
+false
+</pre>
+
+    <h2>
+        reduce method
+    </h2>
+    <p>
+        The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value. for more details refer <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce">mdn reduce() method</a>.
+    </p>
+    <h3>
+        Example - 1
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const prices = [40, 60, 90, 130];
+const total = prices.reduce( (total, price) => {
+    total += price;
+    return total;
+});
+undefined
+> total
+320
+</pre>
+    <h3>
+        Example - 2
+    </h3>
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const prices = [40, 60, 10, 130];
+const low = prices.reduce( (min, price) => {
+    if(min>price) {
+        min = price;
+    }
+    return min;
+});
+undefined
+> low
+10
+</pre>
+
+    <h2>
+        arrow function &amp; this
+    </h2>
+    <p>
+        We can not use this keyword inside the arrow function which is defined as object method. But we can use this keyword inside the normal function which is defined as object method.
+    </p>
+    <p>
+        We can not use this keyword inside the normal function which is called by setInterval like window method. Because this keyword inside window method pointss window object. But we can use this keyword inside the arrow function which is called by setInterval like window method. On there this keyword points it's parent object like below eample.
+    </p>
+    <h3>
+        Code
+    </h3>
+<pre>
+const person = {
+firstName: "Balu", lastName : "Vadivel",
+fullName : function() {
+    return `${this.firstName} ${this.lastName}`;
+},
+shoutName: function() {
+setTimeout(() => { console.log(this.fullName());
+}, 3000) } };
+</pre>
+    <h3>
+        Execution in browser console
+    </h3>
+    <img class="code" src="./arrowAndThis.png" alt="" title="arrow function & this">
+<body>
+</html>
