@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Day 41</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    html, body {
+        width: calc(100% - 8px);
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+        font-family: Arial,Verdana, Tahoma, 'Courier New', Courier, "Helvetica Neue", Helvetica, sans-serif;
+    }
+    a {
+        color:#0000FF;
+    }
+    .d41 h1,h2 {
+        color: orangered;
+    }
+    .d41 {
+        margin-bottom: 100px;
+    }
+    .d41 p {
+        text-align: justify;
+        text-indent: 40px;
+    }
+    .d41 pre {
+        padding: 0px 6px;
+        border: 2px gray solid;
+        border-radius: 6px;
+        width: calc(100% - 16px);
+        overflow-x: auto;
+        line-height: 1.6;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        html, body {
+            color: #eee;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+        }
+        a {
+        color:#2626ff;
+        }
+    }
+</style>
+<head>
+<body class="d41">
+    <hr>
+    <h1>
+        Day 41
+    </h1>
+    <hr>
+
+    <h2>
+        Default parameters
+    </h2>
+    <p>
+        Default function parameters allow named parameters to be initialized with default values if no value or undefined is passed. Default parameters are always comes at the last positions So that we can skip those parameter values while calling.
+    </p>
+    <h3>
+        Example - with default parameters
+    </h3>
+<pre>
+balu@balu-PC:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+function multiply(a, b = 1) {
+  return a * b;
+}
+undefined
+> console.log(multiply(5, 2));
+10
+> console.log(multiply(5));
+5
+</pre>
+
+    <h3>
+        Example - without default parameters
+    </h3>
+
+<pre>
+balu@balu:~$ node
+Welcome to Node.js v14.16.1.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+function multiply(a, b) {
+  return a * b;
+}
+undefined
+> console.log(multiply(5, 2));
+10
+> console.log(multiply(5));
+NaN
+</pre>
+
+    <h2>
+        Spread syntax (...)
+    </h2>
+    <p>
+        Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
+    </p>
+    <h3>
+        Example - 1
+    </h3>
+<pre>
+balu@balu-PC:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> let numbers = [1, 12, 3, 6];
+undefined
+> Math.max(1, 10, 6, 9);
+10
+> Math.max(numbers);
+NaN
+> Math.max(...numbers);
+12
+</pre>
+
+    <h3>
+        Example - 2
+    </h3>
+<pre>
+balu@balu-PC:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> let numbers = [1, 12, 3, 6];
+undefined
+> let string = "userName";
+undefined
+> console.log(numbers);
+[ 1, 12, 3, 6 ]
+> console.log(...numbers);
+1 12 3 6
+undefined
+> console.log(string);
+userName
+> console.log(...string);
+u s e r N a m e
+</pre>
+
+    <h3>
+        Example - 3
+    </h3>
+<pre>
+balu@balu-PC:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+let dogs = ["Sam", "Rusty"];
+let cats = ["Tom", "Blue", "Scout"];
+let animalsNested = [dogs, cats];
+let animalsSpreaded = [...dogs, ...cats];
+undefined
+> animalsNested
+[ [ 'Sam', 'Rusty' ], [ 'Tom', 'Blue', 'Scout' ] ]
+> animalsSpreaded
+[ 'Sam', 'Rusty', 'Tom', 'Blue', 'Scout' ]
+</pre>
+
+    <h3>
+        Example - 4
+    </h3>
+<pre>
+balu@balu-PC:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+let name = "Rohit";
+let nameSPreaded = [...name];
+undefined
+> nameSPreaded;
+[ 'R', 'o', 'h', 'i', 't' ]
+</pre>
+
+    <h3>
+        Example - 5
+    </h3>
+<pre>
+balu@balu-PC:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+let userForm = {
+    email   : "example@mail.com",
+    password: "examplePassword"
+};
+let userDataNested = {
+    userForm, userid: 20217070477
+};
+let userDataSpreaded = {
+    ...userForm, userid: 20217070477
+};
+undefined
+> userDataNested
+{
+  userForm: {
+    email: 'example@mail.com',
+    password: 'examplePassword'
+  },
+  userid: 20217070477
+}
+> userDataSpreaded
+{
+  email: 'example@mail.com',
+  password: 'examplePassword',
+  userid: 20217070477
+}
+</pre>
+
+    <h2>
+        Rest parameters
+    </h2>
+    <p>
+        The rest parameter syntax allows a function to accept an indefinite number of arguments as an array. Rest parameter is always need to be placed at last position in the function parameters list.
+    </p>
+    <h3>
+        Example - 1
+    </h3>
+<pre>
+balu@balu-PC:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+function sum(...theArgs) {
+  return theArgs.reduce((previous, current) => previous + current);
+}
+undefined
+> sum(1, 2, 3);
+6
+</pre>
+<h3>
+    Example - 2
+</h3>
+<pre>
+balu@balu-PC:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+function medals(first, ...theArgs) {
+  console.log(`${first} got first rank`);
+  console.log(`Participants are ${theArgs}`);
+}
+undefined
+> medals("Rohit", "Ashok", "Raj Kumar", "Dhivagar");
+Rohit got first rank
+Participants are Ashok,Raj Kumar,Dhivagar
+</pre>
+
+
+    <h2>
+        Destructuring assignment
+    </h2>
+    <p>
+        The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+    </p>
+    <h3>
+        Example - Destructuring arrays
+    </h3>
+<pre>
+balu@balu-PC:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+let rankList = ["Rohit", "Ashok", "Praveen", "Kumar", "Raja"];
+let [ firstRank, secondRank, thirdRank ]=rankList;
+undefined
+> firstRank;
+'Rohit'
+> secondRank;
+'Ashok'
+> thirdRank
+'Praveen'
+</pre>
+
+    <h3>
+        Example - Destructuring arrays with rest parameter
+    </h3>
+<pre>
+balu@balu-PC:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+let rankList = ["Rohit", "Ashok", "Praveen", "Kumar", "Raja"];
+let [ firstRank, secondRank, thirdRank, ...everyoneElse ]=rankList;
+undefined
+> firstRank
+'Rohit'
+> secondRank
+'Ashok'
+> thirdRank
+'Praveen'
+> everyoneElse
+[ 'Kumar', 'Raja' ]
+</pre>
+
+    <h3>
+        Example - Destructuring objects
+    </h3>
+<pre>
+balu@balu-PC:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const user = {
+    email   : "user@email.com",
+    name    : "Tom Cruise",
+    born    : 1962
+};
+const { email, name } =user;
+const { age = "N/A", born: birthYear = "N/A" } =user;
+undefined
+> email
+'user@email.com'
+> name
+'Tom Cruise'
+> age
+'N/A'
+> born
+Uncaught ReferenceError: born is not defined
+> birthYear
+1962
+</pre>
+
+    <h3>
+        Example - Destructuring parameters
+    </h3>
+<pre>
+balu@balu-PC:~$ node
+Welcome to Node.js v14.17.2.
+Type ".help" for more information.
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+const user = {
+    firstName: "Tom",
+    lastName : "Cruise",
+    age      : 59,
+    born     : 1962
+};
+function fullName({firstName, lastName = "N/A"}) {
+    console.log(`${firstName} ${lastName}`);
+}
+undefined
+> fullName(user);
+Tom Cruise
+</pre>
+
+<body>
+</html>
