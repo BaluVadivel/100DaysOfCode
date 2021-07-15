@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Day 42</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    html, body {
+        width: calc(100% - 8px);
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+        font-family: Arial,Verdana, Tahoma, 'Courier New', Courier, "Helvetica Neue", Helvetica, sans-serif;
+    }
+    a {
+        color:#0000FF;
+    }
+    .d42 h1,h2 {
+        color: orangered;
+    }
+    .d42 {
+        margin-bottom: 100px;
+    }
+    .d42 p {
+        text-align: justify;
+        text-indent: 40px;
+    }
+    .d42 img {
+        width: 100%;
+        max-width: 640px;
+    }
+    .d42 #domTree {
+        box-sizing: border-box;
+        border-radius: 6px;
+        border: 2px solid gray;
+    }
+    .d42 pre {
+        padding: 0px 6px;
+        border: 2px gray solid;
+        border-radius: 6px;
+        width: calc(100% - 16px);
+        overflow-x: auto;
+        line-height: 1.6;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        html, body {
+            color: #eee;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+        }
+        a {
+        color:#2626ff;
+        }
+        .d42 #domTree {
+            filter: invert(1);
+        }
+    }
+</style>
+<head>
+<body class="d42">
+    <hr>
+    <h1>
+        Day 42
+    </h1>
+    <hr>
+
+    <h1>
+        DOM
+    </h1>
+    <p>
+        The Document Object Model (DOM) connects web pages to scripts or programming languages by representing the structure of a document—such as the HTML representing a web page—in memory. Usually it refers to JavaScript, even though modeling HTML, SVG, or XML documents as objects are not part of the core JavaScript language.
+    </p>
+    <p>
+        The DOM represents a document with a logical tree.
+    </p>
+    <h3>
+        Dom tree
+    </h3>
+    <p>
+        the following document
+    </p>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;a href="#"&gt;My link&lt;/p&gt;
+    &lt;h1&gt;My header&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+    <p>
+        has a DOM tree that looks like this:
+    </p>
+    <img id="domTree" src="./domTree.png" title="DOM tree" alt="">
+
+    <hr>
+    <h1>
+        Selecting Element
+    </h1>
+    <p>
+        We need to select element before using or manipulating them. we can select element using below document methods.
+    </p>
+    <hr>
+
+    <h2>
+        getElementById
+    </h2>
+    <p>
+        The getElementById() method returns one element that has the ID attribute with the specified value. This method is one of the most common methods in the HTML DOM, and is used almost every time you want to manipulate, or get info from, an element on your document.
+    </p>
+    <h3>
+        <a href="./getElementById.html">Link</a> contain below code
+    </h3>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;getElementById&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;  h1 element  &lt;/h1&gt;
+    &lt;h2&gt;  h2 element  &lt;/h2&gt;
+    &lt;h3 id="new"&gt;  h3 element  &lt;/h3&gt;
+    &lt;script&gt;
+        let idElement = document.getElementById("new");
+        console.log(idElement);
+        console.log('Above element got id attribut value "new"');
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+    <h3>
+        Browser output and console
+    </h3>
+    <img src="./getElementById.png" title="getElementById" alt="">
+
+    <h2>
+        getElementsByTagName
+    </h2>
+    <p>
+        The getElementsByTagName() method returns a collection of all elements in the document with the specified tag name, as an HTMLCollection object. The HTMLCollection object represents a collection of nodes. The nodes can be accessed by index numbers. The index starts at 0.
+    </p>
+    <h3>
+        <a href="./getElementsByTagName.html">Link</a> contain below code
+    </h3>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;getElementsByTagName&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;  h1 element  &lt;/h1&gt;
+    &lt;h2&gt;  h2 element  &lt;/h2&gt;
+    &lt;h1 class="new"&gt;  h1 element with class "new"  &lt;/h1&gt;
+    &lt;script&gt;
+        let h1Element = document.getElementsByTagName("h1");
+        console.log(h1Element);
+        console.log(`There are ${h1Element.length} h1 element present.`);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+    <h3>
+        Browser output and console
+    </h3>
+    <img src="./getElementsByTagName.png" title="getElementsByTagName" alt="">
+
+    <h2>
+        getElementsByClassName
+    </h2>
+    <p>
+        The getElementsByClassName() method returns a collection of all elements in the document with the specified class name, as an HTMLCollection object. The HTMLCollection object represents a collection of nodes. The nodes can be accessed by index numbers. The index starts at 0.
+    </p>
+    <h3>
+        <a href="./getElementsByClassName.html">Link</a> contain below code
+    </h3>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;getElementsByClassName&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 class="first"&gt;  h1 element  &lt;/h1&gt;
+    &lt;h1 class="new"&gt;  h1 element with class "new"  &lt;/h1&gt;
+    &lt;p class="new"&gt;  p element with class "new"  &lt;/p&gt;
+    &lt;script&gt;
+        let newClassElement = document.getElementsByClassName("new");
+        console.log(newClassElement);
+        console.log(`There are ${newClassElement.length} "new" class element present.`);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+    <h3>
+    Browser output and console
+    </h3>
+    <img src="./getElementsByClassName.png" title="getElementsByClassName" alt="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+</html>
