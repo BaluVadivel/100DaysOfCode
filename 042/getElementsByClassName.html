@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByClassName</title>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            html, body {
+                color: #eee;
+                background-color: black;
+            }
+            h2 {
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="first">
+        h1 element
+    </h1>
+    <h1 class="new">
+        h1 element with class "new"
+    </h1>
+    <p class="new">
+        p element with class "new"
+    </p>
+    <script>
+        let newClassElement = document.getElementsByClassName("new");
+        console.log(newClassElement);
+        console.log(`There are ${newClassElement.length} "new" class element present.`);
+    </script>
+</body>
+</html>
