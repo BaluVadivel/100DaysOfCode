@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Day 43</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    html, body {
+        width: calc(100% - 8px);
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
+        min-height: 100%;
+        scroll-behavior: smooth;
+        color: black;
+        background-color: wheat;
+        font-size: 18px;
+        font-family: Arial,Verdana, Tahoma, 'Courier New', Courier, "Helvetica Neue", Helvetica, sans-serif;
+    }
+    a {
+        color:#0000FF;
+    }
+    .d43 h1,h2 {
+        color: orangered;
+    }
+    .d43 {
+        margin-bottom: 100px;
+    }
+    .d43 p {
+        text-align: justify;
+        text-indent: 40px;
+    }
+    .d43 img {
+        width: 100%;
+        max-width: 600px;
+        border: 2px chocolate solid;
+        border-radius: 6px;
+    }
+    .d43 pre {
+        padding: 0px 6px;
+        border: 2px gray solid;
+        border-radius: 6px;
+        width: calc(100% - 16px);
+        overflow-x: auto;
+        line-height: 1.6;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        html, body {
+            color: #eee;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+        }
+        a {
+        color:#2626ff;
+        }
+    }
+</style>
+<head>
+<body class="d43">
+    <hr>
+    <h1>
+        Day 43
+    </h1>
+    <hr>
+
+    <h2>
+        querySelector
+    </h2>
+    <p>
+        The Document method querySelector() returns the first Element within the document that matches the specified selector, or group of selectors. If no matches are found, null is returned.
+    </p>
+    <h3>
+        <a href="./querySelector.html">querySelector.html</a> file contain below code
+    </h3>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;querySelector&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;  h1 element  &lt;/h1&gt;
+    &lt;h2 class="second"&gt;  h2 element  &lt;/h2&gt;
+    &lt;h3 class="new"&gt;
+        &lt;a id="link" href="#"&gt;anchor tag&lt;/a&gt;
+    &lt;/h3&gt;
+    &lt;script&gt;
+        let tagName = document.querySelector("h1");
+        let className = document.querySelector(".second");
+        let combination = document.querySelector("h3.new a#link[href='#']");
+        console.log("querySelector tagName", tagName);
+        console.log("querySelector className", className);
+        console.log("querySelector combination", combination);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+    <h3>
+        Browser output and console
+    </h3>
+    <img src="./querySelector.png" title="querySelector" alt="">
+
+
+    <h2>
+        querySelectorAll
+    </h2>
+    <p>
+        The querySelectorAll() method returns all elements in the document that matches a specified CSS selector(s), as a static NodeList object. The NodeList object represents a collection of nodes. The nodes can be accessed by index numbers. The index starts at 0.
+    </p>
+    <h3>
+        <a href="./querySelectorAll.html">querySelectorAll.html</a> file contain below code
+    </h3>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;querySelectorAll&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 class="first"&gt;
+        h1 element
+    &lt;/h1&gt;
+    &lt;h1 class="second"&gt;
+        h1 element-2
+    &lt;/h1&gt;
+    &lt;h3 class="new"&gt;
+        &lt;a id="topLink" href="#"&gt;anchor tag&lt;/a&gt;
+        &lt;a id="emptyLink" href=""&gt;anchor tag&lt;/a&gt;
+    &lt;/h3&gt;
+    &lt;script&gt;
+        let tagName = document.querySelectorAll("h1");
+        let combination = document.querySelectorAll("h3.new a[href='#']");
+        console.log("querySelectorAll tagName", tagName);
+        console.log("querySelectorAll combination", combination);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+    <h3>
+        Browser output and console
+    </h3>
+    <img src="./querySelectorAll.png" title="querySelectorAll" alt="">
+
+    <h2>
+        getAttribute &amp; setAttribute
+    </h2>
+    <p>
+        The getAttribute() method returns the value of the attribute with the specified name, of an element.
+    </p>
+    <p>
+        The setAttribute() method adds the specified attribute to an element, and gives it the specified value. If the specified attribute already exists, only the value is changed.
+    </p>
+    <h3>
+        <a href="./getAttribute-setAttribute.html">getAttribute-setAttribute.html</a> file contain below code
+    </h3>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt; getAttribute, setAttribute &lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;
+        Wait 4 seconds for the change of placeholder in password input. Refresh to see again
+    &lt;/p&gt;
+    &lt;form&gt;
+        &lt;input id="username" type="text"     placeholder="Enter User Name"&gt; &lt;br&gt; &lt;br&gt;
+        &lt;input id="password" type="password" placeholder="Password"   &gt;
+    &lt;/form&gt;
+    &lt;script&gt;
+        let pwd  = document.getElementById("password");
+        console.log(`Password input placeholder is "${pwd.getAttribute("placeholder")}"`);
+        setTimeout(
+            () =&gt; {
+                pwd.setAttribute("placeholder", "Enter password");
+                console.log(`Password input placeholder is "${pwd.getAttribute("placeholder")}"`);
+            }, 4000);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+    <h3>
+        Browser output and console of this <a href="./getAttribute-setAttribute.html">getAttribute-setAttribute.html</a> page
+    </h3>
+    <img src="./getAttribute-setAttribute.png" title="getAttribute, setAttribute" alt="">
+
+    <h2>
+        innerHTML, textContent &amp; innerText
+    </h2>
+    <p>
+        The innerHTML property sets or returns the HTML content (inner HTML) of an element, including new lines which only present in raw file and not present in browser.
+    </p>
+    <p>
+        The textContent property sets or returns the text content of the specified node, and all its descendants,including new lines which only present in raw file and not present in browser. textContent will return the text of elements that are hidden with CSS. 
+    </p>
+    <p>
+        The innerText property sets or returns the text content of the specified node, and all its descendants. innerText will not return the text of elements that are hidden with CSS. 
+    </p>
+
+    <h3>
+        <a href="./innerHTML-textContent-innerText.html">innerHTML-textContent-innerText.html</a> file contain below code
+    </h3>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt; innerHTML, textContent & innerText &lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p id="first"&gt;
+        first paragraph for get &lt;b style="display: none;"&gt;bold text&lt;/b&gt; &lt;i&gt;italic text&lt;/i&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        Wait 3 seconds, to set content for below empty paragraphs, refresh to see again
+    &lt;/p&gt;
+    &lt;p id="p1"&gt;&lt;/p&gt;
+    &lt;p id="p2"&gt;&lt;/p&gt;
+    &lt;p id="p3"&gt;&lt;/p&gt;
+    &lt;script&gt;
+        let innerHTML   = document.getElementById("first").innerHTML;
+        let textContent = document.getElementById("first").textContent;
+        let innerText   = document.getElementById("first").innerText;
+        console.log(`innerHTML get \n"${innerHTML}"`);
+        console.log(`textContent get \n"${textContent}"`);
+        console.log(`innerText get \n"${innerText}"`);
+        setTimeout(
+            () =&gt; {
+                document.getElementById("p1").innerHTML ='&lt;i&gt;italic text&lt;/i&gt;';
+                document.getElementById("p2").textContent ='&lt;i&gt;italic text&lt;/i&gt;';
+                document.getElementById("p3").innerText ='&lt;i&gt;italic text&lt;/i&gt;';
+            }, 3000);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+    <h3>
+        Browser output and console of this <a href="./innerHTML-textContent-innerText.html">innerHTML-textContent-innerText.html</a> page
+    </h3>
+    <img src="./innerHTML-textContent-innerText.png" title="innerHTML, textContent & innerText" alt="">
+
+<body>
+</html>

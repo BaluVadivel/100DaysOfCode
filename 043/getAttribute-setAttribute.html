@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getAttribute, setAttribute</title>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            html, body {
+                color: #eee;
+                background-color: black;
+            }
+            h2 {
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Wait 4 seconds for the change of placeholder in password input. Refresh to see again
+    </p>
+    <form>
+        <input id="username" type="text"     placeholder="Enter User Name"> <br> <br>
+        <input id="password" type="password" placeholder="Password"   >
+    </form>
+    <script>
+        let pwd  = document.getElementById("password");
+        console.log(`Password input placeholder is "${pwd.getAttribute("placeholder")}"`);
+        setTimeout(
+            () => {
+                pwd.setAttribute("placeholder", "Enter password");
+                console.log(`Password input placeholder is "${pwd.getAttribute("placeholder")}"`);
+            }, 4000);
+    </script>
+</body>
+</html>

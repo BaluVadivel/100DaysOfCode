@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelectorAll</title>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            html, body {
+                color: #eee;
+                background-color: black;
+            }
+            h2 {
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="first">
+        h1 element
+    </h1>
+    <h1 class="second">
+        h1 element-2
+    </h1>
+    <h3 class="new">
+        <a id="topLink" href="#">anchor tag</a>
+        <a id="emptyLink" href="">anchor tag</a>
+    </h3>
+    <script>
+        let tagName = document.querySelectorAll("h1");
+        let combination = document.querySelectorAll("h3.new a[href='#']");
+        console.log("querySelectorAll tagName", tagName);
+        console.log("querySelectorAll combination", combination);
+    </script>
+</body>
+</html>
