@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML, textContent & innerText</title>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            html, body {
+                color: #eee;
+                background-color: black;
+            }
+            h2 {
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p id="first">
+        first paragraph for get <b style="display: none;">bold text</b> <i>italic text</i>
+    </p>
+    <p>
+        Wait 3 seconds, to set content for below empty paragraphs, refresh to see again
+    </p>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <script>
+        let innerHTML   = document.getElementById("first").innerHTML;
+        let textContent = document.getElementById("first").textContent;
+        let innerText   = document.getElementById("first").innerText;
+        console.log(`innerHTML get \n"${innerHTML}"`);
+        console.log(`textContent get \n"${textContent}"`);
+        console.log(`innerText get \n"${innerText}"`);
+        setTimeout(
+            () => {
+                document.getElementById("p1").innerHTML ='<i>italic text</i>';
+                document.getElementById("p2").textContent ='<i>italic text</i>';
+                document.getElementById("p3").innerText ='<i>italic text</i>';
+            }, 3000);
+    </script>
+</body>
+</html>
