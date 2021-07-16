@@ -144,6 +144,38 @@
     <img src="./getElementById.png" title="getElementById" alt="">
 
     <h2>
+        getElementsByName
+    </h2>
+    <p>
+        The getElementsByName() method returns a collection of all elements in the document with the specified name (the value of the name attribute), as an HTMLCollection object. The HTMLCollection object represents a collection of nodes. The nodes can be accessed by index numbers. The index starts at 0.
+    </p>
+    <h3>
+        <a href="./getElementsByName.html">getElementsByName.html</a> file contain below code
+    </h3>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;getElementsByName&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form&gt;
+        &lt;input type="text" name="username" placeholder="username"&gt; &lt;br&gt; &lt;br&gt;
+        &lt;input type="email" name="email" placeholder="email" &gt; &lt;br&gt; &lt;br&gt;
+        &lt;input type="text" name="password" placeholder="password" &gt;
+    &lt;/form&gt;
+    &lt;script&gt;
+        let name = document.getElementsByName("email");
+        console.log('element with name "email"', name);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+    <h3>
+        Browser output and console
+    </h3>
+    <img src="./getElementsByName.png" title="getElementsByName" alt="">
+
+    <h2>
         getElementsByTagName
     </h2>
     <p>
